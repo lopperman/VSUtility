@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MetricsDS" targetNamespace="http://tempuri.org/MetricsDS.xsd" xmlns:mstns="http://tempuri.org/MetricsDS.xsd" xmlns="http://tempuri.org/MetricsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MetricsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MetricsDS" msprop:Generator_UserDSName="MetricsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MetricsTable" msprop:Generator_TableClassName="MetricsTableDataTable" msprop:Generator_TableVarName="tableMetricsTable" msprop:Generator_TablePropName="MetricsTable" msprop:Generator_RowDeletingName="MetricsTableRowDeleting" msprop:Generator_RowChangingName="MetricsTableRowChanging" msprop:Generator_RowEvHandlerName="MetricsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MetricsTableRowDeleted" msprop:Generator_UserTableName="MetricsTable" msprop:Generator_RowChangedName="MetricsTableRowChanged" msprop:Generator_RowEvArgName="MetricsTableRowChangeEvent" msprop:Generator_RowClassName="MetricsTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="CardType" msprop:Generator_ColumnVarNameInTable="columnCardType" msprop:Generator_ColumnPropNameInRow="CardType" msprop:Generator_ColumnPropNameInTable="CardTypeColumn" msprop:Generator_UserColumnName="CardType" type="xs:string" minOccurs="0" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentState" msprop:Generator_ColumnVarNameInTable="columnCurrentState" msprop:Generator_ColumnPropNameInRow="CurrentState" msprop:Generator_ColumnPropNameInTable="CurrentStateColumn" msprop:Generator_UserColumnName="CurrentState" type="xs:string" minOccurs="0" />
+              <xs:element name="SubmittedFirst" msprop:Generator_ColumnVarNameInTable="columnSubmittedFirst" msprop:Generator_ColumnPropNameInRow="SubmittedFirst" msprop:Generator_ColumnPropNameInTable="SubmittedFirstColumn" msprop:Generator_UserColumnName="SubmittedFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SubmittedLast" msprop:Generator_ColumnVarNameInTable="columnSubmittedLast" msprop:Generator_ColumnPropNameInRow="SubmittedLast" msprop:Generator_ColumnPropNameInTable="SubmittedLastColumn" msprop:Generator_UserColumnName="SubmittedLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SubmittedCount" msprop:Generator_ColumnVarNameInTable="columnSubmittedCount" msprop:Generator_ColumnPropNameInRow="SubmittedCount" msprop:Generator_ColumnPropNameInTable="SubmittedCountColumn" msprop:Generator_UserColumnName="SubmittedCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="GroomingFirst" msprop:Generator_ColumnVarNameInTable="columnGroomingFirst" msprop:Generator_ColumnPropNameInRow="GroomingFirst" msprop:Generator_ColumnPropNameInTable="GroomingFirstColumn" msprop:Generator_UserColumnName="GroomingFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GroomingLast" msprop:Generator_ColumnVarNameInTable="columnGroomingLast" msprop:Generator_ColumnPropNameInRow="GroomingLast" msprop:Generator_ColumnPropNameInTable="GroomingLastColumn" msprop:Generator_UserColumnName="GroomingLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GroomingCount" msprop:Generator_ColumnVarNameInTable="columnGroomingCount" msprop:Generator_ColumnPropNameInRow="GroomingCount" msprop:Generator_ColumnPropNameInTable="GroomingCountColumn" msprop:Generator_UserColumnName="GroomingCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="GroomedFirst" msprop:Generator_ColumnVarNameInTable="columnGroomedFirst" msprop:Generator_ColumnPropNameInRow="GroomedFirst" msprop:Generator_ColumnPropNameInTable="GroomedFirstColumn" msprop:Generator_UserColumnName="GroomedFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GroomedLast" msprop:Generator_ColumnVarNameInTable="columnGroomedLast" msprop:Generator_ColumnPropNameInRow="GroomedLast" msprop:Generator_ColumnPropNameInTable="GroomedLastColumn" msprop:Generator_UserColumnName="GroomedLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GroomedCount" msprop:Generator_ColumnVarNameInTable="columnGroomedCount" msprop:Generator_ColumnPropNameInRow="GroomedCount" msprop:Generator_ColumnPropNameInTable="GroomedCountColumn" msprop:Generator_UserColumnName="GroomedCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ActiveFirst" msprop:Generator_ColumnVarNameInTable="columnActiveFirst" msprop:Generator_ColumnPropNameInRow="ActiveFirst" msprop:Generator_ColumnPropNameInTable="ActiveFirstColumn" msprop:Generator_UserColumnName="ActiveFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActiveLast" msprop:Generator_ColumnVarNameInTable="columnActiveLast" msprop:Generator_ColumnPropNameInRow="ActiveLast" msprop:Generator_ColumnPropNameInTable="ActiveLastColumn" msprop:Generator_UserColumnName="ActiveLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActiveCount" msprop:Generator_ColumnVarNameInTable="columnActiveCount" msprop:Generator_ColumnPropNameInRow="ActiveCount" msprop:Generator_ColumnPropNameInTable="ActiveCountColumn" msprop:Generator_UserColumnName="ActiveCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ReadyQAFirst" msprop:Generator_ColumnVarNameInTable="columnReadyQAFirst" msprop:Generator_ColumnPropNameInRow="ReadyQAFirst" msprop:Generator_ColumnPropNameInTable="ReadyQAFirstColumn" msprop:Generator_UserColumnName="ReadyQAFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReadyQALast" msprop:Generator_ColumnVarNameInTable="columnReadyQALast" msprop:Generator_ColumnPropNameInRow="ReadyQALast" msprop:Generator_ColumnPropNameInTable="ReadyQALastColumn" msprop:Generator_UserColumnName="ReadyQALast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReadyQACount" msprop:Generator_ColumnVarNameInTable="columnReadyQACount" msprop:Generator_ColumnPropNameInRow="ReadyQACount" msprop:Generator_ColumnPropNameInTable="ReadyQACountColumn" msprop:Generator_UserColumnName="ReadyQACount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="QAFirst" msprop:Generator_ColumnVarNameInTable="columnQAFirst" msprop:Generator_ColumnPropNameInRow="QAFirst" msprop:Generator_ColumnPropNameInTable="QAFirstColumn" msprop:Generator_UserColumnName="QAFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QALast" msprop:Generator_ColumnVarNameInTable="columnQALast" msprop:Generator_ColumnPropNameInRow="QALast" msprop:Generator_ColumnPropNameInTable="QALastColumn" msprop:Generator_UserColumnName="QALast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QACount" msprop:Generator_ColumnVarNameInTable="columnQACount" msprop:Generator_ColumnPropNameInRow="QACount" msprop:Generator_ColumnPropNameInTable="QACountColumn" msprop:Generator_UserColumnName="QACount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ReadyUATFirst" msprop:Generator_ColumnVarNameInTable="columnReadyUATFirst" msprop:Generator_ColumnPropNameInRow="ReadyUATFirst" msprop:Generator_ColumnPropNameInTable="ReadyUATFirstColumn" msprop:Generator_UserColumnName="ReadyUATFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReadyUATLast" msprop:Generator_ColumnVarNameInTable="columnReadyUATLast" msprop:Generator_ColumnPropNameInRow="ReadyUATLast" msprop:Generator_ColumnPropNameInTable="ReadyUATLastColumn" msprop:Generator_UserColumnName="ReadyUATLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReadyUATCount" msprop:Generator_ColumnVarNameInTable="columnReadyUATCount" msprop:Generator_ColumnPropNameInRow="ReadyUATCount" msprop:Generator_ColumnPropNameInTable="ReadyUATCountColumn" msprop:Generator_UserColumnName="ReadyUATCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="UATFirst" msprop:Generator_ColumnVarNameInTable="columnUATFirst" msprop:Generator_ColumnPropNameInRow="UATFirst" msprop:Generator_ColumnPropNameInTable="UATFirstColumn" msprop:Generator_UserColumnName="UATFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UATLast" msprop:Generator_ColumnVarNameInTable="columnUATLast" msprop:Generator_ColumnPropNameInRow="UATLast" msprop:Generator_ColumnPropNameInTable="UATLastColumn" msprop:Generator_UserColumnName="UATLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UATCount" msprop:Generator_ColumnVarNameInTable="columnUATCount" msprop:Generator_ColumnPropNameInRow="UATCount" msprop:Generator_ColumnPropNameInTable="UATCountColumn" msprop:Generator_UserColumnName="UATCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ClosedFirst" msprop:Generator_ColumnVarNameInTable="columnClosedFirst" msprop:Generator_ColumnPropNameInRow="ClosedFirst" msprop:Generator_ColumnPropNameInTable="ClosedFirstColumn" msprop:Generator_UserColumnName="ClosedFirst" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ClosedLast" msprop:Generator_ColumnVarNameInTable="columnClosedLast" msprop:Generator_ColumnPropNameInRow="ClosedLast" msprop:Generator_ColumnPropNameInTable="ClosedLastColumn" msprop:Generator_UserColumnName="ClosedLast" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ClosedCount" msprop:Generator_ColumnVarNameInTable="columnClosedCount" msprop:Generator_ColumnPropNameInRow="ClosedCount" msprop:Generator_ColumnPropNameInTable="ClosedCountColumn" msprop:Generator_UserColumnName="ClosedCount" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ClosedWeek" msprop:Generator_ColumnVarNameInTable="columnClosedWeek" msprop:Generator_ColumnPropNameInRow="ClosedWeek" msprop:Generator_ColumnPropNameInTable="ClosedWeekColumn" msprop:Generator_UserColumnName="ClosedWeek" type="xs:string" minOccurs="0" />
+              <xs:element name="M_DevWaitTime" msprop:Generator_ColumnVarNameInTable="columnM_DevWaitTime" msprop:Generator_ColumnPropNameInRow="M_DevWaitTime" msprop:Generator_ColumnPropNameInTable="M_DevWaitTimeColumn" msprop:Generator_UserColumnName="M_DevWaitTime" type="xs:int" minOccurs="0" />
+              <xs:element name="M_DevTime" msprop:Generator_ColumnVarNameInTable="columnM_DevTime" msprop:Generator_ColumnPropNameInRow="M_DevTime" msprop:Generator_ColumnPropNameInTable="M_DevTimeColumn" msprop:Generator_UserColumnName="M_DevTime" type="xs:int" minOccurs="0" />
+              <xs:element name="M_QAWaitTime" msprop:Generator_ColumnVarNameInTable="columnM_QAWaitTime" msprop:Generator_ColumnPropNameInRow="M_QAWaitTime" msprop:Generator_ColumnPropNameInTable="M_QAWaitTimeColumn" msprop:Generator_UserColumnName="M_QAWaitTime" type="xs:int" minOccurs="0" />
+              <xs:element name="M_QATime" msprop:Generator_ColumnVarNameInTable="columnM_QATime" msprop:Generator_ColumnPropNameInRow="M_QATime" msprop:Generator_ColumnPropNameInTable="M_QATimeColumn" msprop:Generator_UserColumnName="M_QATime" type="xs:int" minOccurs="0" />
+              <xs:element name="M_QAFailCount" msprop:Generator_ColumnVarNameInTable="columnM_QAFailCount" msprop:Generator_ColumnPropNameInRow="M_QAFailCount" msprop:Generator_ColumnPropNameInTable="M_QAFailCountColumn" msprop:Generator_UserColumnName="M_QAFailCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:MetricsTable" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

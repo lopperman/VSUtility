@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HelperDS" targetNamespace="http://tempuri.org/HelperDS.xsd" xmlns:mstns="http://tempuri.org/HelperDS.xsd" xmlns="http://tempuri.org/HelperDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HelperDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HelperDS" msprop:Generator_UserDSName="HelperDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FeatureBreakdown" msprop:Generator_TableClassName="FeatureBreakdownDataTable" msprop:Generator_TableVarName="tableFeatureBreakdown" msprop:Generator_RowChangedName="FeatureBreakdownRowChanged" msprop:Generator_TablePropName="FeatureBreakdown" msprop:Generator_RowDeletingName="FeatureBreakdownRowDeleting" msprop:Generator_RowChangingName="FeatureBreakdownRowChanging" msprop:Generator_RowEvHandlerName="FeatureBreakdownRowChangeEventHandler" msprop:Generator_RowDeletedName="FeatureBreakdownRowDeleted" msprop:Generator_RowClassName="FeatureBreakdownRow" msprop:Generator_UserTableName="FeatureBreakdown" msprop:Generator_RowEvArgName="FeatureBreakdownRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FeatureId" msprop:Generator_ColumnVarNameInTable="columnFeatureId" msprop:Generator_ColumnPropNameInRow="FeatureId" msprop:Generator_ColumnPropNameInTable="FeatureIdColumn" msprop:Generator_UserColumnName="FeatureId" type="xs:int" minOccurs="0" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalStories" msprop:Generator_ColumnVarNameInTable="columnTotalStories" msprop:Generator_ColumnPropNameInRow="TotalStories" msprop:Generator_ColumnPropNameInTable="TotalStoriesColumn" msprop:Generator_UserColumnName="TotalStories" type="xs:int" minOccurs="0" />
+              <xs:element name="NotStarted" msprop:Generator_ColumnVarNameInTable="columnNotStarted" msprop:Generator_ColumnPropNameInRow="NotStarted" msprop:Generator_ColumnPropNameInTable="NotStartedColumn" msprop:Generator_UserColumnName="NotStarted" type="xs:int" minOccurs="0" />
+              <xs:element name="InDevelopment" msprop:Generator_ColumnVarNameInTable="columnInDevelopment" msprop:Generator_ColumnPropNameInRow="InDevelopment" msprop:Generator_ColumnPropNameInTable="InDevelopmentColumn" msprop:Generator_UserColumnName="InDevelopment" type="xs:int" minOccurs="0" />
+              <xs:element name="InQA" msprop:Generator_ColumnVarNameInTable="columnInQA" msprop:Generator_ColumnPropNameInRow="InQA" msprop:Generator_ColumnPropNameInTable="InQAColumn" msprop:Generator_UserColumnName="InQA" type="xs:int" minOccurs="0" />
+              <xs:element name="InUAT" msprop:Generator_ColumnVarNameInTable="columnInUAT" msprop:Generator_ColumnPropNameInRow="InUAT" msprop:Generator_ColumnPropNameInTable="InUATColumn" msprop:Generator_UserColumnName="InUAT" type="xs:int" minOccurs="0" />
+              <xs:element name="Closed" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" type="xs:int" minOccurs="0" />
+              <xs:element name="DevComplete" msprop:Generator_ColumnVarNameInTable="columnDevComplete" msprop:Generator_ColumnPropNameInRow="DevComplete" msprop:Generator_ColumnPropNameInTable="DevCompleteColumn" msprop:Generator_UserColumnName="DevComplete" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PercentComplete" msprop:Generator_ColumnVarNameInTable="columnPercentComplete" msprop:Generator_ColumnPropNameInRow="PercentComplete" msprop:Generator_ColumnPropNameInTable="PercentCompleteColumn" msprop:Generator_UserColumnName="PercentComplete" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Priority" msprop:Generator_ColumnVarNameInTable="columnPriority" msprop:Generator_ColumnPropNameInRow="Priority" msprop:Generator_ColumnPropNameInTable="PriorityColumn" msprop:Generator_UserColumnName="Priority" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

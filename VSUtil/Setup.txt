@@ -1,0 +1,6 @@
+﻿Use Nuget to install packages found at:  https://docs.microsoft.com/en-us/vsts/integrate/concepts/dotnet-client-libraries
+Visual Studio needs to have the MS Office dev tools installed, as the Excel Interop assembly is needed.
+clone https://github.com/ClosedXML/ClosedXML.git.  This project reference will be needed for exporting grids to excel
+
+
+

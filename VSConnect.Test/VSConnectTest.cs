@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.TeamFoundation.WorkItemTracking.Client;
+using NUnit.Framework;
+
+namespace VSConnect.Test
+{
+    [TestFixture]
+    public class VSConnectTest
+    {
+        Uri tfsUri = new Uri("https://wegmans.visualstudio.com/");
+        Connect connect = null;
+
+        [OneTimeSetUp]
+        public void setup()
+        {
+            connect = new Connect(tfsUri,"","","");
+        }
+
+        [OneTimeTearDown]
+        public void teardown()
+        {
+            connect = null;
+        }
+
+        [Test]
+        public void testConnect()
+        {
+        }
+
+        [Test]
+        public void checkWorkItem()
+        {
+            var item = connect.GetWorkItem(117385);
+
+            var project = connect.GetProject("Marketing Temp");
+
+            var areas = connect.GetTeamAreas(project);
+
+            var info = connect.GetTFSProjectInfo();
+
+            string x = "";
+        }
+
+        [Test]
+        public void GetRevisionHistory()
+        {
+            var ret = connect.GetRevisionHistory(117530);
+
+            string x = "";
+        }
+
+        [Test]
+        public void DisectTheShitOutOfAWorkItem()
+        {
+            List<string> includeFields = new List<string>();
+            includeFields.Add("State Change Date");
+            includeFields.Add("Board Lane");
+            includeFields.Add("Board Column");
+            includeFields.Add("Board Column Done");
+            includeFields.Add("State");
+            includeFields.Add("Changed Date");
+            includeFields.Add("Revised Date");
+
+
+            WorkItem wi = connect.GetWorkItem(118552);
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(string.Format("{0} - {1}", wi.Id, wi.Title));
+
+            sb.AppendLine("Current Revision");
+
+            foreach (Field field in wi.Fields)
+            {
+                if (!includeFields.Contains(field.Name)) continue;
+
+                sb.AppendLine(string.Format("Field: {0}, Value: {1}", field.Name,field.Value));
+            }
+            sb.AppendLine("---");
+            foreach (Revision rev in wi.Revisions)
+            {
+                
+
+                sb.AppendLine(string.Format("Revision {0}",rev.Index));
+                foreach (Field field in rev.Fields)
+                {
+                    if (!includeFields.Contains(field.Name)) continue;
+                    sb.AppendLine(string.Format("Field: {0}, Value: {1}", field.Name, field.Value));
+                }
+                sb.AppendLine("---");
+            }
+
+            string result = sb.ToString();
+
+            string x = "";
+
+        }
+
+    }
+}
