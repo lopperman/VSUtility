@@ -204,23 +204,15 @@ namespace VSConnect
             DumpDataSetTableAdapters.Metrics_CycleTimeTableAdapter metAdap = new DumpDataSetTableAdapters.Metrics_CycleTimeTableAdapter();
             metAdap.Connection.ConnectionString = connString;
             metAdap.Update(ds.Metrics_CycleTime);
-//
+
             DumpDataSetTableAdapters.WorkItemLifeTableAdapter lifeAdap = new DumpDataSetTableAdapters.WorkItemLifeTableAdapter();
             lifeAdap.Connection.ConnectionString = connString;
             lifeAdap.Update(ds.WorkItemLife);
-//
-//            DumpDataSetTableAdapters.WorkItemLife_TaskTableAdapter lifetAdap = new DumpDataSetTableAdapters.WorkItemLife_TaskTableAdapter();
-//            lifetAdap.Connection.ConnectionString = connString;
-//            lifetAdap.Update(ds.WorkItemLife_Task);
-
 
             DumpDataSetTableAdapters.WorkItemMetricsTableAdapter wimAdap = new DumpDataSetTableAdapters.WorkItemMetricsTableAdapter();
             wimAdap.Connection.ConnectionString = connString;
             wimAdap.Update(ds.WorkItemMetrics);
-//
-//            DumpDataSetTableAdapters.WorkItemMetrics_TaskTableAdapter wimtAdap = new DumpDataSetTableAdapters.WorkItemMetrics_TaskTableAdapter();
-//            wimtAdap.Connection.ConnectionString = connString;
-//            wimtAdap.Update(ds.WorkItemMetrics_Task);
+
 
             DumpDataSetTableAdapters.ConfigTableAdapter confAdap = new DumpDataSetTableAdapters.ConfigTableAdapter();
             confAdap.Connection.ConnectionString = connString;

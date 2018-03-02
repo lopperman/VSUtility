@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VSConnect;
 using VSUtil.Classes.Util;
+using VSUtil.Classes.Util.EncryptStringSample;
 
 namespace VSUtil
 {
     public partial class frmLogin : Form
     {
         private Connect connect = null;
+        private string cipherPassphrase = "lgn";
+
 
         public frmLogin()
         {
@@ -22,7 +25,7 @@ namespace VSUtil
 
             txtUri.Text = TFSRegistry.GetUri();
             txtLogin.Text = TFSRegistry.GetLogin();
-            txtPassword.Text = TFSRegistry.GetPassword();
+            txtPassword.Text = StringCipher.Decrypt(TFSRegistry.GetPassword(),cipherPassphrase);
             txtDomain.Text = TFSRegistry.GetDomain();
 
         }
@@ -58,7 +61,7 @@ namespace VSUtil
                 {
                     TFSRegistry.SetUri(txtUri.Text);
                     TFSRegistry.SetLogin(txtLogin.Text);
-                    TFSRegistry.SetPassword(txtPassword.Text);
+                    TFSRegistry.SetPassword(StringCipher.Encrypt(txtPassword.Text,cipherPassphrase));
                     TFSRegistry.SetDomain(txtDomain.Text);
                     StaticUtils.connect = connect;
                     this.DialogResult = DialogResult.OK;

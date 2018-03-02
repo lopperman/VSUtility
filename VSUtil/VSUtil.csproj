@@ -277,6 +277,7 @@
   <ItemGroup>
     <Compile Include="Classes\Util\PrintHelper.cs" />
     <Compile Include="Classes\Util\StaticUtils.cs" />
+    <Compile Include="Classes\Util\StringCipher.cs" />
     <Compile Include="ExcelExport.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
