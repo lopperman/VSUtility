@@ -116,9 +116,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmdUpdateStoryCumulativeFlow = new System.Windows.Forms.Button();
             this.cmdPrintStoryCumulativeFlow = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.tpBugs = new System.Windows.Forms.TabPage();
             this.chartBugs = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdRenderBugs = new System.Windows.Forms.Button();
+            this.dtBugStartDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.tcMain.SuspendLayout();
             this.tpDevMetrics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDevelopment)).BeginInit();
@@ -138,6 +142,7 @@
             this.pnlStoryCumFlowTop.SuspendLayout();
             this.tpBugs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcMain
@@ -1059,6 +1064,7 @@
             // tpBugs
             // 
             this.tpBugs.Controls.Add(this.chartBugs);
+            this.tpBugs.Controls.Add(this.panel1);
             this.tpBugs.Location = new System.Drawing.Point(4, 22);
             this.tpBugs.Name = "tpBugs";
             this.tpBugs.Size = new System.Drawing.Size(1000, 675);
@@ -1080,7 +1086,7 @@
             this.chartBugs.Dock = System.Windows.Forms.DockStyle.Fill;
             legend3.Name = "Legend1";
             this.chartBugs.Legends.Add(legend3);
-            this.chartBugs.Location = new System.Drawing.Point(0, 0);
+            this.chartBugs.Location = new System.Drawing.Point(0, 68);
             this.chartBugs.Name = "chartBugs";
             series13.ChartArea = "ChartArea1";
             series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -1091,9 +1097,49 @@
             series13.Name = "countNew";
             series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.chartBugs.Series.Add(series13);
-            this.chartBugs.Size = new System.Drawing.Size(1000, 675);
+            this.chartBugs.Size = new System.Drawing.Size(1000, 607);
             this.chartBugs.TabIndex = 2;
             this.chartBugs.Text = "chart1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.dtBugStartDate);
+            this.panel1.Controls.Add(this.cmdRenderBugs);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 68);
+            this.panel1.TabIndex = 3;
+            // 
+            // cmdRenderBugs
+            // 
+            this.cmdRenderBugs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdRenderBugs.Location = new System.Drawing.Point(863, 39);
+            this.cmdRenderBugs.Name = "cmdRenderBugs";
+            this.cmdRenderBugs.Size = new System.Drawing.Size(129, 23);
+            this.cmdRenderBugs.TabIndex = 10;
+            this.cmdRenderBugs.Text = "Update Chart";
+            this.cmdRenderBugs.UseVisualStyleBackColor = true;
+            this.cmdRenderBugs.Click += new System.EventHandler(this.cmdRenderBugs_Click);
+            // 
+            // dtBugStartDate
+            // 
+            this.dtBugStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtBugStartDate.Location = new System.Drawing.Point(128, 9);
+            this.dtBugStartDate.Name = "dtBugStartDate";
+            this.dtBugStartDate.Size = new System.Drawing.Size(123, 20);
+            this.dtBugStartDate.TabIndex = 46;
+            this.dtBugStartDate.Value = new System.DateTime(2017, 9, 1, 0, 0, 0, 0);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Show Bugs From:";
             // 
             // frmDevMetrics
             // 
@@ -1128,6 +1174,8 @@
             this.pnlStoryCumFlowTop.PerformLayout();
             this.tpBugs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1204,5 +1252,9 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TabPage tpBugs;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBugs;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtBugStartDate;
+        private System.Windows.Forms.Button cmdRenderBugs;
     }
 }

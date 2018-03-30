@@ -9784,6 +9784,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnActiveThisWeek;
             
+            private global::System.Data.DataColumn columnClosedThisWeek;
+            
             private global::System.Data.DataColumn columnBacklog;
             
             private global::System.Data.DataColumn columnDevelopment;
@@ -9807,6 +9809,8 @@ namespace VSConnect {
             private global::System.Data.DataColumn columnSmoketestDone;
             
             private global::System.Data.DataColumn columnClosed;
+            
+            private global::System.Data.DataColumn columnCount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -9862,6 +9866,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn ActiveThisWeekColumn {
                 get {
                     return this.columnActiveThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedThisWeekColumn {
+                get {
+                    return this.columnClosedThisWeek;
                 }
             }
             
@@ -9963,6 +9975,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CountColumn {
+                get {
+                    return this.columnCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9998,12 +10018,30 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VW_BUG_CUMULATIVE_FLOWRow AddVW_BUG_CUMULATIVE_FLOWRow(System.DateTime WeekEnding, double NewThisWeek, double ActiveThisWeek, double Backlog, double Development, double DevelopmentDone, double AsynchronyQA, double AsynchronyQADone, double WegmansQA, double WegmansQADone, double POReview, double POReviewDone, double Smoketest, double SmoketestDone, double Closed) {
+            public VW_BUG_CUMULATIVE_FLOWRow AddVW_BUG_CUMULATIVE_FLOWRow(
+                        System.DateTime WeekEnding, 
+                        double NewThisWeek, 
+                        double ActiveThisWeek, 
+                        double ClosedThisWeek, 
+                        double Backlog, 
+                        double Development, 
+                        double DevelopmentDone, 
+                        double AsynchronyQA, 
+                        double AsynchronyQADone, 
+                        double WegmansQA, 
+                        double WegmansQADone, 
+                        double POReview, 
+                        double POReviewDone, 
+                        double Smoketest, 
+                        double SmoketestDone, 
+                        double Closed, 
+                        int Count) {
                 VW_BUG_CUMULATIVE_FLOWRow rowVW_BUG_CUMULATIVE_FLOWRow = ((VW_BUG_CUMULATIVE_FLOWRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         WeekEnding,
                         NewThisWeek,
                         ActiveThisWeek,
+                        ClosedThisWeek,
                         Backlog,
                         Development,
                         DevelopmentDone,
@@ -10015,7 +10053,8 @@ namespace VSConnect {
                         POReviewDone,
                         Smoketest,
                         SmoketestDone,
-                        Closed};
+                        Closed,
+                        Count};
                 rowVW_BUG_CUMULATIVE_FLOWRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_BUG_CUMULATIVE_FLOWRow);
                 return rowVW_BUG_CUMULATIVE_FLOWRow;
@@ -10041,6 +10080,7 @@ namespace VSConnect {
                 this.columnWeekEnding = base.Columns["WeekEnding"];
                 this.columnNewThisWeek = base.Columns["NewThisWeek"];
                 this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
+                this.columnClosedThisWeek = base.Columns["ClosedThisWeek"];
                 this.columnBacklog = base.Columns["Backlog"];
                 this.columnDevelopment = base.Columns["Development"];
                 this.columnDevelopmentDone = base.Columns["DevelopmentDone"];
@@ -10053,6 +10093,7 @@ namespace VSConnect {
                 this.columnSmoketest = base.Columns["Smoketest"];
                 this.columnSmoketestDone = base.Columns["SmoketestDone"];
                 this.columnClosed = base.Columns["Closed"];
+                this.columnCount = base.Columns["Count"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10064,6 +10105,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnNewThisWeek);
                 this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActiveThisWeek);
+                this.columnClosedThisWeek = new global::System.Data.DataColumn("ClosedThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedThisWeek);
                 this.columnBacklog = new global::System.Data.DataColumn("Backlog", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBacklog);
                 this.columnDevelopment = new global::System.Data.DataColumn("Development", typeof(double), null, global::System.Data.MappingType.Element);
@@ -10088,6 +10131,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSmoketestDone);
                 this.columnClosed = new global::System.Data.DataColumn("Closed", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClosed);
+                this.columnCount = new global::System.Data.DataColumn("Count", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCount);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25796,6 +25841,23 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ClosedThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_BUG_CUMULATIVE_FLOW.ClosedThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisWeek\' in table \'VW_BUG_CUMULATIVE_FLOW\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_BUG_CUMULATIVE_FLOW.ClosedThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Backlog {
                 get {
                     try {
@@ -25992,6 +26054,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Count {
+                get {
+                    try {
+                        return ((int)(this[this.tableVW_BUG_CUMULATIVE_FLOW.CountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Count\' in table \'VW_BUG_CUMULATIVE_FLOW\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_BUG_CUMULATIVE_FLOW.CountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsWeekEndingNull() {
                 return this.IsNull(this.tableVW_BUG_CUMULATIVE_FLOW.WeekEndingColumn);
             }
@@ -26024,6 +26102,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetActiveThisWeekNull() {
                 this[this.tableVW_BUG_CUMULATIVE_FLOW.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedThisWeekNull() {
+                return this.IsNull(this.tableVW_BUG_CUMULATIVE_FLOW.ClosedThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedThisWeekNull() {
+                this[this.tableVW_BUG_CUMULATIVE_FLOW.ClosedThisWeekColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -26168,6 +26258,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetClosedNull() {
                 this[this.tableVW_BUG_CUMULATIVE_FLOW.ClosedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCountNull() {
+                return this.IsNull(this.tableVW_BUG_CUMULATIVE_FLOW.CountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCountNull() {
+                this[this.tableVW_BUG_CUMULATIVE_FLOW.CountColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -44672,6 +44774,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
             tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
             tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
+            tableMapping.ColumnMappings.Add("ClosedThisWeek", "ClosedThisWeek");
             tableMapping.ColumnMappings.Add("Backlog", "Backlog");
             tableMapping.ColumnMappings.Add("Development", "Development");
             tableMapping.ColumnMappings.Add("DevelopmentDone", "DevelopmentDone");
@@ -44684,6 +44787,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Smoketest", "Smoketest");
             tableMapping.ColumnMappings.Add("SmoketestDone", "SmoketestDone");
             tableMapping.ColumnMappings.Add("Closed", "Closed");
+            tableMapping.ColumnMappings.Add("Count", "Count");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -44700,9 +44804,10 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT WeekEnding, NewThisWeek, ActiveThisWeek, Backlog, Development, Development" +
-                "Done, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, POReview, PORevi" +
-                "ewDone, Smoketest, SmoketestDone, Closed FROM VW_BUG_CUMULATIVE_FLOW";
+            this._commandCollection[0].CommandText = "SELECT WeekEnding, NewThisWeek, ActiveThisWeek, ClosedThisWeek, Backlog, Developm" +
+                "ent, DevelopmentDone, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, " +
+                "POReview, POReviewDone, Smoketest, SmoketestDone, Closed, [Count] FROM VW_BUG_CU" +
+                "MULATIVE_FLOW";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

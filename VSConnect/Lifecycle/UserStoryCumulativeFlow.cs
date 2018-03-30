@@ -12,6 +12,9 @@ namespace VSConnect.Lifecycle
     {
         public static void CreateUserStoryCumulativeData(Connect connect, DumpDataSet ds)
         {
+
+            List<int> bugsClosed = new List<int>();
+
             var workItemRevisions = WorkItemUtil.GetWorkItemRevisions(ds.WorkItemRevision);
 
             LifecycleStates states = new LifecycleStates();
@@ -43,7 +46,8 @@ namespace VSConnect.Lifecycle
                     {
                         row.NewThisWeek = 1;
                     }
-                    //TODO:  Add ActiveThisWEek
+
+
                     for (int i = states.MinStateIndex; i <= states.MaxStateIndex; i++)
                     {
                         row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
@@ -60,6 +64,40 @@ namespace VSConnect.Lifecycle
                     row.WeekEnding = currentWeekEnding;
 
                     if (row.IsNewThisWeekNull()) row.NewThisWeek = 0;
+
+                    if (!row.IsState2Null() && row.State2 == 1) row.ActiveThisWeek = 1;
+                    if (!row.IsState4Null() && row.State4 == 1) row.ActiveThisWeek = 1;
+                    if (row.IsActiveThisWeekNull()) row.ActiveThisWeek = 0;
+
+                    //if there is a 1 in any state greater than 
+                    if (!bugsClosed.Contains(workItem.ID))
+                    {
+                        for (int i = 5; i <= 15; i++)
+                        {
+                            if (!row.IsNull(string.Format("State{0}", i)))
+                            {
+                                if (Convert.ToInt32(row[string.Format("State{0}", i)]) == 1)
+                                {
+                                    bugsClosed.Add(workItem.ID);
+                                    row.Closed = 1;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if (row.IsClosedNull())
+                    {
+                        if (workItem.State == "Closed" || workItem.State == "Resolved")
+                        {
+                            row.Closed = 1;
+                            bugsClosed.Add(workItem.ID);
+                        }
+                        else
+                        {
+                            row.Closed = 0;
+                        }
+                    }
 
                     ds.UserStoryFlow.AddUserStoryFlowRow(row);
                 }

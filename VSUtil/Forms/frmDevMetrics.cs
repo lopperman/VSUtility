@@ -53,6 +53,19 @@ namespace VSUtil.Forms
 
         private void RenderBugs()
         {
+            DateTime startDt = dtBugStartDate.Value.Date;
+            if (startDt.DayOfWeek != DayOfWeek.Friday)
+            {
+                while (true)
+                {
+                    startDt = startDt.AddDays(-1);
+                    if (startDt.DayOfWeek == DayOfWeek.Friday)
+                    {
+                        break;
+                    }
+                }
+            }
+
             while (true)
             {
                 if (chartBugs.Series.Count == 0)
@@ -65,8 +78,61 @@ namespace VSUtil.Forms
             Series series = CreateSeries("countNew", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
                 ChartValueType.DateTime, "New Bugs");
             chartBugs.Series.Add(series);
-            DataView devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, "", "WeekEnding", DataViewRowState.CurrentRows);
+
+            DataTable table = ds.VW_BUG_CUMULATIVE_FLOW;
+
+            if (!table.Columns.Contains("Remaining"))
+            {
+                table.Columns.Add(new DataColumn("Remaining", typeof(Int32)));
+                table.Columns["Remaining"].AllowDBNull = true;
+                foreach (DataRow row in table.Rows)
+                {
+                    int count = 0;
+                    int closed = 0;
+                    if (!row.IsNull("Count"))
+                    {
+                        count = Convert.ToInt32(row["Count"]);
+                    }
+                    if (!row.IsNull("Closed"))
+                    {
+                        closed = Convert.ToInt32(row["Closed"]);
+                    }
+                    row["Remaining"] = count - closed;
+                }
+                table.AcceptChanges();
+
+            }
+
+
+
+            string filter = string.Format("WeekEnding >= #{0}#", startDt.ToShortDateString());
+
+            DataView devview = new DataView(table, filter, "WeekEnding", DataViewRowState.CurrentRows);
             chartBugs.Series["countNew"].Points.DataBind(devview, "WeekEnding", "NewThisWeek", "Tooltip=WeekEnding");
+
+            series = CreateSeries("countActive", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
+                ChartValueType.DateTime, "Active Bugs");
+            chartBugs.Series.Add(series);
+            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
+            chartBugs.Series["countActive"].Points.DataBind(devview, "WeekEnding", "ActiveThisWeek", "Tooltip=WeekEnding");
+
+//            series = CreateSeries("count", SeriesChartType.Line, 2, Color.DarkSlateGray, ChartDashStyle.Solid,
+//                ChartValueType.DateTime, "Total Bugs");
+//            chartBugs.Series.Add(series);
+//            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, "", "WeekEnding", DataViewRowState.CurrentRows);
+//            chartBugs.Series["count"].Points.DataBind(devview, "WeekEnding", "Count", "Tooltip=WeekEnding");
+
+            series = CreateSeries("remaining", SeriesChartType.Line, 2, Color.DarkRed, ChartDashStyle.Solid,
+                ChartValueType.DateTime, "Remaining Bugs");
+            chartBugs.Series.Add(series);
+            devview = new DataView(table, filter, "WeekEnding", DataViewRowState.CurrentRows);
+            chartBugs.Series["remaining"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
+
+            series = CreateSeries("closedThisWeek", SeriesChartType.Line, 2, Color.Goldenrod, ChartDashStyle.Solid,
+                ChartValueType.DateTime, "Closed");
+            chartBugs.Series.Add(series);
+            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
+            chartBugs.Series["closedThisWeek"].Points.DataBind(devview, "WeekEnding", "ClosedThisWeek", "Tooltip=WeekEnding");
 
 //            if (chkShowTrends.Checked)
 //            {
@@ -928,6 +994,11 @@ namespace VSUtil.Forms
         private void tcMain_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmdRenderBugs_Click(object sender, EventArgs e)
+        {
+            RenderBugs();
         }
     }
 }

@@ -1450,7 +1450,7 @@
               <DbSource ConnectionRef="DumpConnectionString (Settings)" DbObjectName="VW_BUG_CUMULATIVE_FLOW" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT WeekEnding, NewThisWeek, ActiveThisWeek, Backlog, Development, DevelopmentDone, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, POReview, POReviewDone, Smoketest, SmoketestDone, Closed FROM VW_BUG_CUMULATIVE_FLOW</CommandText>
+                    <CommandText>SELECT WeekEnding, NewThisWeek, ActiveThisWeek, ClosedThisWeek, Backlog, Development, DevelopmentDone, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, POReview, POReviewDone, Smoketest, SmoketestDone, Closed, [Count] FROM VW_BUG_CUMULATIVE_FLOW</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -1460,6 +1460,7 @@
               <Mapping SourceColumn="WeekEnding" DataSetColumn="WeekEnding" />
               <Mapping SourceColumn="NewThisWeek" DataSetColumn="NewThisWeek" />
               <Mapping SourceColumn="ActiveThisWeek" DataSetColumn="ActiveThisWeek" />
+              <Mapping SourceColumn="ClosedThisWeek" DataSetColumn="ClosedThisWeek" />
               <Mapping SourceColumn="Backlog" DataSetColumn="Backlog" />
               <Mapping SourceColumn="Development" DataSetColumn="Development" />
               <Mapping SourceColumn="DevelopmentDone" DataSetColumn="DevelopmentDone" />
@@ -1472,6 +1473,7 @@
               <Mapping SourceColumn="Smoketest" DataSetColumn="Smoketest" />
               <Mapping SourceColumn="SmoketestDone" DataSetColumn="SmoketestDone" />
               <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2991,6 +2993,7 @@
               <xs:element name="WeekEnding" msprop:Generator_ColumnVarNameInTable="columnWeekEnding" msprop:Generator_ColumnPropNameInRow="WeekEnding" msprop:Generator_ColumnPropNameInTable="WeekEndingColumn" msprop:Generator_UserColumnName="WeekEnding" type="xs:dateTime" minOccurs="0" />
               <xs:element name="NewThisWeek" msprop:Generator_ColumnVarNameInTable="columnNewThisWeek" msprop:Generator_ColumnPropNameInRow="NewThisWeek" msprop:Generator_ColumnPropNameInTable="NewThisWeekColumn" msprop:Generator_UserColumnName="NewThisWeek" type="xs:double" minOccurs="0" />
               <xs:element name="ActiveThisWeek" msprop:Generator_ColumnVarNameInTable="columnActiveThisWeek" msprop:Generator_ColumnPropNameInRow="ActiveThisWeek" msprop:Generator_ColumnPropNameInTable="ActiveThisWeekColumn" msprop:Generator_UserColumnName="ActiveThisWeek" type="xs:double" minOccurs="0" />
+              <xs:element name="ClosedThisWeek" msprop:Generator_ColumnVarNameInTable="columnClosedThisWeek" msprop:Generator_ColumnPropNameInRow="ClosedThisWeek" msprop:Generator_ColumnPropNameInTable="ClosedThisWeekColumn" msprop:Generator_UserColumnName="ClosedThisWeek" type="xs:double" minOccurs="0" />
               <xs:element name="Backlog" msprop:Generator_ColumnVarNameInTable="columnBacklog" msprop:Generator_ColumnPropNameInRow="Backlog" msprop:Generator_ColumnPropNameInTable="BacklogColumn" msprop:Generator_UserColumnName="Backlog" type="xs:double" minOccurs="0" />
               <xs:element name="Development" msprop:Generator_ColumnVarNameInTable="columnDevelopment" msprop:Generator_ColumnPropNameInRow="Development" msprop:Generator_ColumnPropNameInTable="DevelopmentColumn" msprop:Generator_UserColumnName="Development" type="xs:double" minOccurs="0" />
               <xs:element name="DevelopmentDone" msprop:Generator_ColumnVarNameInTable="columnDevelopmentDone" msprop:Generator_ColumnPropNameInRow="DevelopmentDone" msprop:Generator_ColumnPropNameInTable="DevelopmentDoneColumn" msprop:Generator_UserColumnName="DevelopmentDone" type="xs:double" minOccurs="0" />
@@ -3003,6 +3006,7 @@
               <xs:element name="Smoketest" msprop:Generator_ColumnVarNameInTable="columnSmoketest" msprop:Generator_ColumnPropNameInRow="Smoketest" msprop:Generator_ColumnPropNameInTable="SmoketestColumn" msprop:Generator_UserColumnName="Smoketest" type="xs:double" minOccurs="0" />
               <xs:element name="SmoketestDone" msprop:Generator_ColumnVarNameInTable="columnSmoketestDone" msprop:Generator_ColumnPropNameInRow="SmoketestDone" msprop:Generator_ColumnPropNameInTable="SmoketestDoneColumn" msprop:Generator_UserColumnName="SmoketestDone" type="xs:double" minOccurs="0" />
               <xs:element name="Closed" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" type="xs:double" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
