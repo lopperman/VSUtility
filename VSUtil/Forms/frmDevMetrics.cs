@@ -83,6 +83,8 @@ namespace VSUtil.Forms
 
             if (!table.Columns.Contains("Remaining"))
             {
+                chartBugs.Titles.Add(string.Format("Bug Summary From {0} to {1}", startDt.ToShortDateString(),DateTime.Today.ToShortDateString()));
+
                 table.Columns.Add(new DataColumn("Remaining", typeof(Int32)));
                 table.Columns["Remaining"].AllowDBNull = true;
                 foreach (DataRow row in table.Rows)
@@ -102,8 +104,6 @@ namespace VSUtil.Forms
                 table.AcceptChanges();
 
             }
-
-
 
             string filter = string.Format("WeekEnding >= #{0}#", startDt.ToShortDateString());
 
