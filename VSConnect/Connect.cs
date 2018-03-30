@@ -22,6 +22,8 @@ namespace VSConnect
         {
             tfsUri = vsUri;
 
+            
+
             NetworkCredential cred = new NetworkCredential(userName, password, domain);
             ProjectCollection.Credentials = cred;
         }
@@ -326,6 +328,11 @@ ORDER BY [System.Id] mode(Recursive)", parentId);
             return ProjectCollection.GetService<T>();
         }
 
+
+        public void testtest()
+        {
+            
+        }
 
     }
 }

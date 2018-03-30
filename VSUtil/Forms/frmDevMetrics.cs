@@ -24,7 +24,7 @@ namespace VSUtil.Forms
         private bool renderedBlockers = false;
         private int AreaID = 0;
         private string ProjectName = string.Empty;
-
+        private bool renderedBugs = false;
         public frmDevMetrics()
         {
             InitializeComponent();
@@ -44,9 +44,45 @@ namespace VSUtil.Forms
 
             GetFeatureOptions();
 
+            RenderBugs();
+
             Render();
 
             SetStoryCumulativeFlowDefaultColors();
+        }
+
+        private void RenderBugs()
+        {
+            while (true)
+            {
+                if (chartBugs.Series.Count == 0)
+                {
+                    break;
+                }
+                chartBugs.Series.Remove(chartBugs.Series.FirstOrDefault());
+            }
+
+            Series series = CreateSeries("countNew", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
+                ChartValueType.DateTime, "New Bugs");
+            chartBugs.Series.Add(series);
+            DataView devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, "", "WeekEnding", DataViewRowState.CurrentRows);
+            chartBugs.Series["countNew"].Points.DataBind(devview, "WeekEnding", "NewThisWeek", "Tooltip=WeekEnding");
+
+//            if (chkShowTrends.Checked)
+//            {
+//                Series trendline = new Series("CountTrendline");
+//                trendline.ChartType = SeriesChartType.Line;
+//                trendline.BorderWidth = 1;
+//                trendline.BorderDashStyle = ChartDashStyle.Dash;
+//                trendline.Color = Color.Blue;
+//                chartDevelopment.Series.Add(trendline);
+//                string forecast = string.Format("Linear,{0},false,false", Convert.ToInt32(forecastWeeks.Value));
+//                chartDevelopment.DataManipulator.FinancialFormula(FinancialFormula.Forecasting, forecast, chartDevelopment.Series["count"], chartDevelopment.Series["CountTrendline"]);
+//                chartDevelopment.Series["CountTrendline"].LegendText = "Dev Complete Trend";
+//            }
+
+
+            chartBugs.Update();
         }
 
         private void SetStoryCumulativeFlowDefaultColors()
@@ -886,6 +922,11 @@ namespace VSUtil.Forms
                 clrClosed.BackColor = colorDialog1.Color;
                 UpdateStoryCumulativeFlow();
             }
+
+        }
+
+        private void tcMain_Click(object sender, EventArgs e)
+        {
 
         }
     }

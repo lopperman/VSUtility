@@ -24,8 +24,14 @@ namespace VSConnect.Lifecycle
             {
                 DateTime searchDate = new DateTime(currentWeekEnding.Year,currentWeekEnding.Month,currentWeekEnding.Day,23,59,59);
 
-                foreach (var workItem in ds.WorkItem.Where(x => x.Type == "User Story" && x.CreatedDate <= searchDate))
+                foreach (var workItem in ds.WorkItem.Where(x => x.CreatedDate <= searchDate))
                 {
+                    if (workItem.Type != "User Story" && workItem.Type != "Bug")
+                    {
+                        continue;
+                    }
+
+
                     //all revisions up to searchDate
                     var revisions = workItemRevisions.Where(x => x.ID == workItem.ID && x.RevisedDate <= searchDate).OrderBy(y => y.Rev).ToList();
 
@@ -37,6 +43,7 @@ namespace VSConnect.Lifecycle
                     {
                         row.NewThisWeek = 1;
                     }
+                    //TODO:  Add ActiveThisWEek
                     for (int i = states.MinStateIndex; i <= states.MaxStateIndex; i++)
                     {
                         row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
@@ -51,6 +58,9 @@ namespace VSConnect.Lifecycle
                         row[columnName] = 1;
                     }
                     row.WeekEnding = currentWeekEnding;
+
+                    if (row.IsNewThisWeekNull()) row.NewThisWeek = 0;
+
                     ds.UserStoryFlow.AddUserStoryFlowRow(row);
                 }
 

@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea28 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend28 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series166 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series167 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series168 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea27 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend27 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series157 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series158 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series159 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series160 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series161 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series162 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series163 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series164 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series165 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpDevMetrics = new System.Windows.Forms.TabPage();
             this.chartDevelopment = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -84,36 +87,38 @@
             this.tpStoryCumulativeFlow = new System.Windows.Forms.TabPage();
             this.chartStoryCumulativeFlow = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlStoryCumFlowTop = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmdUpdateStoryCumulativeFlow = new System.Windows.Forms.Button();
-            this.cmdPrintStoryCumulativeFlow = new System.Windows.Forms.Button();
-            this.chkFlow_ShowBacklog = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowDevelopment = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowDevelopmentDone = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowWegmansQA = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowAsynchronyQADone = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowAsynchronyQA = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowPOReviewDone = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowPOReview = new System.Windows.Forms.CheckBox();
-            this.chkFlow_ShowWegmansQADone = new System.Windows.Forms.CheckBox();
+            this.cmdFlowUncheckAll = new System.Windows.Forms.Button();
+            this.cmdFlowCheckAll = new System.Windows.Forms.Button();
+            this.clrClosed = new System.Windows.Forms.Panel();
+            this.clrPOReviewDone = new System.Windows.Forms.Panel();
+            this.clrSmoketestDone = new System.Windows.Forms.Panel();
+            this.clrWegmansQA = new System.Windows.Forms.Panel();
+            this.clrSmoketest = new System.Windows.Forms.Panel();
+            this.clrPOReview = new System.Windows.Forms.Panel();
+            this.clrAsynchronyQADone = new System.Windows.Forms.Panel();
+            this.clrWegmansQADone = new System.Windows.Forms.Panel();
+            this.clrDevelopmentDone = new System.Windows.Forms.Panel();
+            this.clrAsynchronyQA = new System.Windows.Forms.Panel();
+            this.clrDevelopment = new System.Windows.Forms.Panel();
+            this.clrBacklog = new System.Windows.Forms.Panel();
             this.chkFlow_ShowClosed = new System.Windows.Forms.CheckBox();
             this.chkFlow_ShowSmoketestDone = new System.Windows.Forms.CheckBox();
             this.chkFlow_ShowSmoketest = new System.Windows.Forms.CheckBox();
-            this.clrBacklog = new System.Windows.Forms.Panel();
-            this.clrDevelopment = new System.Windows.Forms.Panel();
-            this.clrDevelopmentDone = new System.Windows.Forms.Panel();
-            this.clrWegmansQA = new System.Windows.Forms.Panel();
-            this.clrAsynchronyQADone = new System.Windows.Forms.Panel();
-            this.clrAsynchronyQA = new System.Windows.Forms.Panel();
-            this.clrPOReviewDone = new System.Windows.Forms.Panel();
-            this.clrPOReview = new System.Windows.Forms.Panel();
-            this.clrWegmansQADone = new System.Windows.Forms.Panel();
-            this.clrClosed = new System.Windows.Forms.Panel();
-            this.clrSmoketestDone = new System.Windows.Forms.Panel();
-            this.clrSmoketest = new System.Windows.Forms.Panel();
-            this.cmdFlowCheckAll = new System.Windows.Forms.Button();
-            this.cmdFlowUncheckAll = new System.Windows.Forms.Button();
+            this.chkFlow_ShowPOReviewDone = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowPOReview = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowWegmansQADone = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowWegmansQA = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowAsynchronyQADone = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowAsynchronyQA = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowDevelopmentDone = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowDevelopment = new System.Windows.Forms.CheckBox();
+            this.chkFlow_ShowBacklog = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmdUpdateStoryCumulativeFlow = new System.Windows.Forms.Button();
+            this.cmdPrintStoryCumulativeFlow = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tpBugs = new System.Windows.Forms.TabPage();
+            this.chartBugs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tcMain.SuspendLayout();
             this.tpDevMetrics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDevelopment)).BeginInit();
@@ -131,6 +136,8 @@
             this.tpStoryCumulativeFlow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStoryCumulativeFlow)).BeginInit();
             this.pnlStoryCumFlowTop.SuspendLayout();
+            this.tpBugs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMain
@@ -139,12 +146,14 @@
             this.tcMain.Controls.Add(this.tpFeatures);
             this.tcMain.Controls.Add(this.tpCompletedWork);
             this.tcMain.Controls.Add(this.tpStoryCumulativeFlow);
+            this.tcMain.Controls.Add(this.tpBugs);
             this.tcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMain.Location = new System.Drawing.Point(0, 0);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
             this.tcMain.Size = new System.Drawing.Size(1008, 701);
             this.tcMain.TabIndex = 0;
+            this.tcMain.Click += new System.EventHandler(this.tcMain_Click);
             // 
             // tpDevMetrics
             // 
@@ -160,47 +169,47 @@
             // 
             // chartDevelopment
             // 
-            chartArea28.AxisX.Interval = 7D;
-            chartArea28.AxisX.MajorGrid.Enabled = false;
-            chartArea28.AxisX.MajorGrid.Interval = 0D;
-            chartArea28.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea28.AxisX.MajorTickMark.Interval = 0D;
-            chartArea28.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea28.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea28.Name = "ChartArea1";
-            this.chartDevelopment.ChartAreas.Add(chartArea28);
+            chartArea1.AxisX.Interval = 7D;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorGrid.Interval = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.AxisX.MajorTickMark.Interval = 0D;
+            chartArea1.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.Name = "ChartArea1";
+            this.chartDevelopment.ChartAreas.Add(chartArea1);
             this.chartDevelopment.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend28.Name = "Legend1";
-            this.chartDevelopment.Legends.Add(legend28);
+            legend1.Name = "Legend1";
+            this.chartDevelopment.Legends.Add(legend1);
             this.chartDevelopment.Location = new System.Drawing.Point(3, 71);
             this.chartDevelopment.Name = "chartDevelopment";
-            series166.ChartArea = "ChartArea1";
-            series166.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series166.Color = System.Drawing.Color.MediumBlue;
-            series166.IsValueShownAsLabel = true;
-            series166.Legend = "Legend1";
-            series166.LegendText = "Dev Completed";
-            series166.Name = "count";
-            series166.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series167.ChartArea = "ChartArea1";
-            series167.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series167.Color = System.Drawing.Color.Red;
-            series167.IsValueShownAsLabel = true;
-            series167.Legend = "Legend1";
-            series167.LegendText = "QA Completed";
-            series167.Name = "qacount";
-            series167.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series168.ChartArea = "ChartArea1";
-            series168.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series168.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series168.IsValueShownAsLabel = true;
-            series168.Legend = "Legend1";
-            series168.LegendText = "UAT Completed";
-            series168.Name = "uatcount";
-            series168.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartDevelopment.Series.Add(series166);
-            this.chartDevelopment.Series.Add(series167);
-            this.chartDevelopment.Series.Add(series168);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.MediumBlue;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Dev Completed";
+            series1.Name = "count";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.LegendText = "QA Completed";
+            series2.Name = "qacount";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.LegendText = "UAT Completed";
+            series3.Name = "uatcount";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartDevelopment.Series.Add(series1);
+            this.chartDevelopment.Series.Add(series2);
+            this.chartDevelopment.Series.Add(series3);
             this.chartDevelopment.Size = new System.Drawing.Size(994, 601);
             this.chartDevelopment.TabIndex = 1;
             this.chartDevelopment.Text = "chart1";
@@ -377,8 +386,8 @@
             // 
             this.gridFeatures.AllowUserToAddRows = false;
             this.gridFeatures.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridFeatures.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridFeatures.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridFeatures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFeatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridFeatures.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -522,8 +531,8 @@
             // 
             this.gridCompletedWork.AllowUserToAddRows = false;
             this.gridCompletedWork.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridCompletedWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridCompletedWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridCompletedWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCompletedWork.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCompletedWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -595,117 +604,117 @@
             // 
             // chartStoryCumulativeFlow
             // 
-            chartArea27.AxisX.Interval = 7D;
-            chartArea27.AxisX.MajorGrid.Enabled = false;
-            chartArea27.AxisX.MajorGrid.Interval = 0D;
-            chartArea27.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea27.AxisX.MajorTickMark.Interval = 0D;
-            chartArea27.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea27.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea27.Name = "ChartArea1";
-            this.chartStoryCumulativeFlow.ChartAreas.Add(chartArea27);
+            chartArea2.AxisX.Interval = 7D;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorGrid.Interval = 0D;
+            chartArea2.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.AxisX.MajorTickMark.Interval = 0D;
+            chartArea2.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.Name = "ChartArea1";
+            this.chartStoryCumulativeFlow.ChartAreas.Add(chartArea2);
             this.chartStoryCumulativeFlow.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend27.Name = "Legend1";
-            this.chartStoryCumulativeFlow.Legends.Add(legend27);
+            legend2.Name = "Legend1";
+            this.chartStoryCumulativeFlow.Legends.Add(legend2);
             this.chartStoryCumulativeFlow.Location = new System.Drawing.Point(0, 103);
             this.chartStoryCumulativeFlow.Name = "chartStoryCumulativeFlow";
-            series157.ChartArea = "ChartArea1";
-            series157.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series157.Color = System.Drawing.Color.DarkSeaGreen;
-            series157.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series157.IsValueShownAsLabel = true;
-            series157.Legend = "Legend1";
-            series157.LegendText = "Done";
-            series157.Name = "done";
-            series157.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series157.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series158.ChartArea = "ChartArea1";
-            series158.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series158.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series158.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series158.IsValueShownAsLabel = true;
-            series158.Legend = "Legend1";
-            series158.LegendText = "In Progress";
-            series158.Name = "inProgress";
-            series158.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series158.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series159.ChartArea = "ChartArea1";
-            series159.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series159.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series159.IsValueShownAsLabel = true;
-            series159.Legend = "Legend1";
-            series159.LegendText = "Committed";
-            series159.Name = "committed";
-            series159.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series159.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series160.ChartArea = "ChartArea1";
-            series160.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series160.Color = System.Drawing.Color.LightCoral;
-            series160.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series160.IsValueShownAsLabel = true;
-            series160.Legend = "Legend1";
-            series160.LegendText = "Approved";
-            series160.Name = "approved";
-            series160.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series160.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series161.ChartArea = "ChartArea1";
-            series161.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series161.Color = System.Drawing.Color.LightSlateGray;
-            series161.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series161.IsValueShownAsLabel = true;
-            series161.LabelToolTip = "Backlog";
-            series161.Legend = "Legend1";
-            series161.LegendText = "Backlog";
-            series161.Name = "backlog";
-            series161.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series161.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series162.BorderWidth = 2;
-            series162.ChartArea = "ChartArea1";
-            series162.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series162.Color = System.Drawing.Color.Yellow;
-            series162.Legend = "Legend1";
-            series162.LegendText = "New Features";
-            series162.Name = "newFeatures";
-            series162.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series163.ChartArea = "ChartArea1";
-            series163.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series163.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series163.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series163.IsValueShownAsLabel = true;
-            series163.LabelToolTip = "Backlog_HighValue";
-            series163.Legend = "Legend1";
-            series163.LegendText = "Backlog High Value";
-            series163.Name = "Backlog_HighValue";
-            series163.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series164.ChartArea = "ChartArea1";
-            series164.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series164.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series164.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series164.IsValueShownAsLabel = true;
-            series164.LabelToolTip = "Analysis";
-            series164.Legend = "Legend1";
-            series164.LegendText = "Analysis";
-            series164.Name = "analysis";
-            series164.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series165.ChartArea = "ChartArea1";
-            series165.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series165.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            series165.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series165.IsValueShownAsLabel = true;
-            series165.LabelToolTip = "Verification";
-            series165.Legend = "Legend1";
-            series165.LegendText = "Verification";
-            series165.Name = "verification";
-            series165.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartStoryCumulativeFlow.Series.Add(series157);
-            this.chartStoryCumulativeFlow.Series.Add(series158);
-            this.chartStoryCumulativeFlow.Series.Add(series159);
-            this.chartStoryCumulativeFlow.Series.Add(series160);
-            this.chartStoryCumulativeFlow.Series.Add(series161);
-            this.chartStoryCumulativeFlow.Series.Add(series162);
-            this.chartStoryCumulativeFlow.Series.Add(series163);
-            this.chartStoryCumulativeFlow.Series.Add(series164);
-            this.chartStoryCumulativeFlow.Series.Add(series165);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series4.Color = System.Drawing.Color.DarkSeaGreen;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.LegendText = "Done";
+            series4.Name = "done";
+            series4.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.LegendText = "In Progress";
+            series5.Name = "inProgress";
+            series5.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series6.IsValueShownAsLabel = true;
+            series6.Legend = "Legend1";
+            series6.LegendText = "Committed";
+            series6.Name = "committed";
+            series6.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series7.Color = System.Drawing.Color.LightCoral;
+            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series7.IsValueShownAsLabel = true;
+            series7.Legend = "Legend1";
+            series7.LegendText = "Approved";
+            series7.Name = "approved";
+            series7.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series8.Color = System.Drawing.Color.LightSlateGray;
+            series8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series8.IsValueShownAsLabel = true;
+            series8.LabelToolTip = "Backlog";
+            series8.Legend = "Legend1";
+            series8.LegendText = "Backlog";
+            series8.Name = "backlog";
+            series8.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Color = System.Drawing.Color.Yellow;
+            series9.Legend = "Legend1";
+            series9.LegendText = "New Features";
+            series9.Name = "newFeatures";
+            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series10.IsValueShownAsLabel = true;
+            series10.LabelToolTip = "Backlog_HighValue";
+            series10.Legend = "Legend1";
+            series10.LegendText = "Backlog High Value";
+            series10.Name = "Backlog_HighValue";
+            series10.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series11.IsValueShownAsLabel = true;
+            series11.LabelToolTip = "Analysis";
+            series11.Legend = "Legend1";
+            series11.LegendText = "Analysis";
+            series11.Name = "analysis";
+            series11.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series12.IsValueShownAsLabel = true;
+            series12.LabelToolTip = "Verification";
+            series12.Legend = "Legend1";
+            series12.LegendText = "Verification";
+            series12.Name = "verification";
+            series12.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartStoryCumulativeFlow.Series.Add(series4);
+            this.chartStoryCumulativeFlow.Series.Add(series5);
+            this.chartStoryCumulativeFlow.Series.Add(series6);
+            this.chartStoryCumulativeFlow.Series.Add(series7);
+            this.chartStoryCumulativeFlow.Series.Add(series8);
+            this.chartStoryCumulativeFlow.Series.Add(series9);
+            this.chartStoryCumulativeFlow.Series.Add(series10);
+            this.chartStoryCumulativeFlow.Series.Add(series11);
+            this.chartStoryCumulativeFlow.Series.Add(series12);
             this.chartStoryCumulativeFlow.Size = new System.Drawing.Size(1000, 572);
             this.chartStoryCumulativeFlow.TabIndex = 5;
             this.chartStoryCumulativeFlow.Text = "chart1";
@@ -747,150 +756,121 @@
             this.pnlStoryCumFlowTop.Size = new System.Drawing.Size(1000, 103);
             this.pnlStoryCumFlowTop.TabIndex = 4;
             // 
-            // label4
+            // cmdFlowUncheckAll
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Note:  This chart is tuned for a specific Project.";
+            this.cmdFlowUncheckAll.Location = new System.Drawing.Point(657, 57);
+            this.cmdFlowUncheckAll.Name = "cmdFlowUncheckAll";
+            this.cmdFlowUncheckAll.Size = new System.Drawing.Size(102, 23);
+            this.cmdFlowUncheckAll.TabIndex = 35;
+            this.cmdFlowUncheckAll.Text = "Uncheck All";
+            this.cmdFlowUncheckAll.UseVisualStyleBackColor = true;
+            this.cmdFlowUncheckAll.Click += new System.EventHandler(this.cmdFlowUncheckAll_Click);
             // 
-            // cmdUpdateStoryCumulativeFlow
+            // cmdFlowCheckAll
             // 
-            this.cmdUpdateStoryCumulativeFlow.Location = new System.Drawing.Point(8, 5);
-            this.cmdUpdateStoryCumulativeFlow.Name = "cmdUpdateStoryCumulativeFlow";
-            this.cmdUpdateStoryCumulativeFlow.Size = new System.Drawing.Size(129, 23);
-            this.cmdUpdateStoryCumulativeFlow.TabIndex = 11;
-            this.cmdUpdateStoryCumulativeFlow.Text = "Update Chart";
-            this.cmdUpdateStoryCumulativeFlow.UseVisualStyleBackColor = true;
-            this.cmdUpdateStoryCumulativeFlow.Click += new System.EventHandler(this.cmdUpdateStoryCumulativeFlow_Click);
+            this.cmdFlowCheckAll.Location = new System.Drawing.Point(657, 34);
+            this.cmdFlowCheckAll.Name = "cmdFlowCheckAll";
+            this.cmdFlowCheckAll.Size = new System.Drawing.Size(102, 23);
+            this.cmdFlowCheckAll.TabIndex = 34;
+            this.cmdFlowCheckAll.Text = "Check All";
+            this.cmdFlowCheckAll.UseVisualStyleBackColor = true;
+            this.cmdFlowCheckAll.Click += new System.EventHandler(this.cmdFlowCheckAll_Click);
             // 
-            // cmdPrintStoryCumulativeFlow
+            // clrClosed
             // 
-            this.cmdPrintStoryCumulativeFlow.Location = new System.Drawing.Point(143, 5);
-            this.cmdPrintStoryCumulativeFlow.Name = "cmdPrintStoryCumulativeFlow";
-            this.cmdPrintStoryCumulativeFlow.Size = new System.Drawing.Size(129, 23);
-            this.cmdPrintStoryCumulativeFlow.TabIndex = 5;
-            this.cmdPrintStoryCumulativeFlow.Text = "Print";
-            this.cmdPrintStoryCumulativeFlow.UseVisualStyleBackColor = true;
+            this.clrClosed.Location = new System.Drawing.Point(495, 80);
+            this.clrClosed.Name = "clrClosed";
+            this.clrClosed.Size = new System.Drawing.Size(24, 17);
+            this.clrClosed.TabIndex = 33;
+            this.clrClosed.Click += new System.EventHandler(this.clrClosed_Click);
             // 
-            // chkFlow_ShowBacklog
+            // clrPOReviewDone
             // 
-            this.chkFlow_ShowBacklog.AutoSize = true;
-            this.chkFlow_ShowBacklog.Checked = true;
-            this.chkFlow_ShowBacklog.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowBacklog.Location = new System.Drawing.Point(38, 34);
-            this.chkFlow_ShowBacklog.Name = "chkFlow_ShowBacklog";
-            this.chkFlow_ShowBacklog.Size = new System.Drawing.Size(65, 17);
-            this.chkFlow_ShowBacklog.TabIndex = 16;
-            this.chkFlow_ShowBacklog.Text = "Backlog";
-            this.chkFlow_ShowBacklog.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowBacklog.CheckedChanged += new System.EventHandler(this.chkFlow_ShowBacklog_CheckedChanged);
+            this.clrPOReviewDone.Location = new System.Drawing.Point(334, 80);
+            this.clrPOReviewDone.Name = "clrPOReviewDone";
+            this.clrPOReviewDone.Size = new System.Drawing.Size(24, 17);
+            this.clrPOReviewDone.TabIndex = 33;
+            this.clrPOReviewDone.Click += new System.EventHandler(this.clrPOReviewDone_Click);
             // 
-            // chkFlow_ShowDevelopment
+            // clrSmoketestDone
             // 
-            this.chkFlow_ShowDevelopment.AutoSize = true;
-            this.chkFlow_ShowDevelopment.Checked = true;
-            this.chkFlow_ShowDevelopment.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowDevelopment.Location = new System.Drawing.Point(38, 57);
-            this.chkFlow_ShowDevelopment.Name = "chkFlow_ShowDevelopment";
-            this.chkFlow_ShowDevelopment.Size = new System.Drawing.Size(89, 17);
-            this.chkFlow_ShowDevelopment.TabIndex = 17;
-            this.chkFlow_ShowDevelopment.Text = "Development";
-            this.chkFlow_ShowDevelopment.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowDevelopment.CheckedChanged += new System.EventHandler(this.chkFlow_ShowDevelopment_CheckedChanged);
+            this.clrSmoketestDone.Location = new System.Drawing.Point(495, 57);
+            this.clrSmoketestDone.Name = "clrSmoketestDone";
+            this.clrSmoketestDone.Size = new System.Drawing.Size(24, 17);
+            this.clrSmoketestDone.TabIndex = 32;
+            this.clrSmoketestDone.Click += new System.EventHandler(this.clrSmoketestDone_Click);
             // 
-            // chkFlow_ShowDevelopmentDone
+            // clrWegmansQA
             // 
-            this.chkFlow_ShowDevelopmentDone.AutoSize = true;
-            this.chkFlow_ShowDevelopmentDone.Checked = true;
-            this.chkFlow_ShowDevelopmentDone.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowDevelopmentDone.Location = new System.Drawing.Point(38, 80);
-            this.chkFlow_ShowDevelopmentDone.Name = "chkFlow_ShowDevelopmentDone";
-            this.chkFlow_ShowDevelopmentDone.Size = new System.Drawing.Size(118, 17);
-            this.chkFlow_ShowDevelopmentDone.TabIndex = 18;
-            this.chkFlow_ShowDevelopmentDone.Text = "Development Done";
-            this.chkFlow_ShowDevelopmentDone.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowDevelopmentDone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowDevelopmentDone_CheckedChanged);
+            this.clrWegmansQA.Location = new System.Drawing.Point(162, 80);
+            this.clrWegmansQA.Name = "clrWegmansQA";
+            this.clrWegmansQA.Size = new System.Drawing.Size(24, 17);
+            this.clrWegmansQA.TabIndex = 33;
+            this.clrWegmansQA.Click += new System.EventHandler(this.clrWegmansQA_Click);
             // 
-            // chkFlow_ShowWegmansQA
+            // clrSmoketest
             // 
-            this.chkFlow_ShowWegmansQA.AutoSize = true;
-            this.chkFlow_ShowWegmansQA.Checked = true;
-            this.chkFlow_ShowWegmansQA.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowWegmansQA.Location = new System.Drawing.Point(192, 80);
-            this.chkFlow_ShowWegmansQA.Name = "chkFlow_ShowWegmansQA";
-            this.chkFlow_ShowWegmansQA.Size = new System.Drawing.Size(92, 17);
-            this.chkFlow_ShowWegmansQA.TabIndex = 21;
-            this.chkFlow_ShowWegmansQA.Text = "Wegmans QA";
-            this.chkFlow_ShowWegmansQA.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowWegmansQA.CheckedChanged += new System.EventHandler(this.chkFlow_ShowWegmansQA_CheckedChanged);
+            this.clrSmoketest.Location = new System.Drawing.Point(495, 34);
+            this.clrSmoketest.Name = "clrSmoketest";
+            this.clrSmoketest.Size = new System.Drawing.Size(24, 17);
+            this.clrSmoketest.TabIndex = 31;
+            this.clrSmoketest.Click += new System.EventHandler(this.clrSmoketest_Click);
             // 
-            // chkFlow_ShowAsynchronyQADone
+            // clrPOReview
             // 
-            this.chkFlow_ShowAsynchronyQADone.AutoSize = true;
-            this.chkFlow_ShowAsynchronyQADone.Checked = true;
-            this.chkFlow_ShowAsynchronyQADone.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowAsynchronyQADone.Location = new System.Drawing.Point(192, 57);
-            this.chkFlow_ShowAsynchronyQADone.Name = "chkFlow_ShowAsynchronyQADone";
-            this.chkFlow_ShowAsynchronyQADone.Size = new System.Drawing.Size(128, 17);
-            this.chkFlow_ShowAsynchronyQADone.TabIndex = 20;
-            this.chkFlow_ShowAsynchronyQADone.Text = "Asynchrony QA Done";
-            this.chkFlow_ShowAsynchronyQADone.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowAsynchronyQADone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowAsynchronyQADone_CheckedChanged);
+            this.clrPOReview.Location = new System.Drawing.Point(334, 57);
+            this.clrPOReview.Name = "clrPOReview";
+            this.clrPOReview.Size = new System.Drawing.Size(24, 17);
+            this.clrPOReview.TabIndex = 32;
+            this.clrPOReview.Click += new System.EventHandler(this.clrPOReview_Click);
             // 
-            // chkFlow_ShowAsynchronyQA
+            // clrAsynchronyQADone
             // 
-            this.chkFlow_ShowAsynchronyQA.AutoSize = true;
-            this.chkFlow_ShowAsynchronyQA.Checked = true;
-            this.chkFlow_ShowAsynchronyQA.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowAsynchronyQA.Location = new System.Drawing.Point(192, 34);
-            this.chkFlow_ShowAsynchronyQA.Name = "chkFlow_ShowAsynchronyQA";
-            this.chkFlow_ShowAsynchronyQA.Size = new System.Drawing.Size(99, 17);
-            this.chkFlow_ShowAsynchronyQA.TabIndex = 19;
-            this.chkFlow_ShowAsynchronyQA.Text = "Asynchrony QA";
-            this.chkFlow_ShowAsynchronyQA.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowAsynchronyQA.CheckedChanged += new System.EventHandler(this.chkFlow_ShowAsynchronyQA_CheckedChanged);
+            this.clrAsynchronyQADone.Location = new System.Drawing.Point(162, 57);
+            this.clrAsynchronyQADone.Name = "clrAsynchronyQADone";
+            this.clrAsynchronyQADone.Size = new System.Drawing.Size(24, 17);
+            this.clrAsynchronyQADone.TabIndex = 32;
+            this.clrAsynchronyQADone.Click += new System.EventHandler(this.clrAsynchronyQADone_Click);
             // 
-            // chkFlow_ShowPOReviewDone
+            // clrWegmansQADone
             // 
-            this.chkFlow_ShowPOReviewDone.AutoSize = true;
-            this.chkFlow_ShowPOReviewDone.Checked = true;
-            this.chkFlow_ShowPOReviewDone.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowPOReviewDone.Location = new System.Drawing.Point(364, 80);
-            this.chkFlow_ShowPOReviewDone.Name = "chkFlow_ShowPOReviewDone";
-            this.chkFlow_ShowPOReviewDone.Size = new System.Drawing.Size(109, 17);
-            this.chkFlow_ShowPOReviewDone.TabIndex = 24;
-            this.chkFlow_ShowPOReviewDone.Text = "PO Review Done";
-            this.chkFlow_ShowPOReviewDone.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowPOReviewDone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowPOReviewDone_CheckedChanged);
+            this.clrWegmansQADone.Location = new System.Drawing.Point(334, 34);
+            this.clrWegmansQADone.Name = "clrWegmansQADone";
+            this.clrWegmansQADone.Size = new System.Drawing.Size(24, 17);
+            this.clrWegmansQADone.TabIndex = 31;
+            this.clrWegmansQADone.Click += new System.EventHandler(this.clrWegmansQADone_Click);
             // 
-            // chkFlow_ShowPOReview
+            // clrDevelopmentDone
             // 
-            this.chkFlow_ShowPOReview.AutoSize = true;
-            this.chkFlow_ShowPOReview.Checked = true;
-            this.chkFlow_ShowPOReview.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowPOReview.Location = new System.Drawing.Point(364, 57);
-            this.chkFlow_ShowPOReview.Name = "chkFlow_ShowPOReview";
-            this.chkFlow_ShowPOReview.Size = new System.Drawing.Size(80, 17);
-            this.chkFlow_ShowPOReview.TabIndex = 23;
-            this.chkFlow_ShowPOReview.Text = "PO Review";
-            this.chkFlow_ShowPOReview.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowPOReview.CheckedChanged += new System.EventHandler(this.chkFlow_ShowPOReview_CheckedChanged);
+            this.clrDevelopmentDone.Location = new System.Drawing.Point(8, 80);
+            this.clrDevelopmentDone.Name = "clrDevelopmentDone";
+            this.clrDevelopmentDone.Size = new System.Drawing.Size(24, 17);
+            this.clrDevelopmentDone.TabIndex = 30;
+            this.clrDevelopmentDone.Click += new System.EventHandler(this.clrDevelopmentDone_Click);
             // 
-            // chkFlow_ShowWegmansQADone
+            // clrAsynchronyQA
             // 
-            this.chkFlow_ShowWegmansQADone.AutoSize = true;
-            this.chkFlow_ShowWegmansQADone.Checked = true;
-            this.chkFlow_ShowWegmansQADone.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFlow_ShowWegmansQADone.Location = new System.Drawing.Point(364, 34);
-            this.chkFlow_ShowWegmansQADone.Name = "chkFlow_ShowWegmansQADone";
-            this.chkFlow_ShowWegmansQADone.Size = new System.Drawing.Size(121, 17);
-            this.chkFlow_ShowWegmansQADone.TabIndex = 22;
-            this.chkFlow_ShowWegmansQADone.Text = "Wegmans QA Done";
-            this.chkFlow_ShowWegmansQADone.UseVisualStyleBackColor = true;
-            this.chkFlow_ShowWegmansQADone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowWegmansQADone_CheckedChanged);
+            this.clrAsynchronyQA.Location = new System.Drawing.Point(162, 34);
+            this.clrAsynchronyQA.Name = "clrAsynchronyQA";
+            this.clrAsynchronyQA.Size = new System.Drawing.Size(24, 17);
+            this.clrAsynchronyQA.TabIndex = 31;
+            this.clrAsynchronyQA.Click += new System.EventHandler(this.clrAsynchronyQA_Click);
+            // 
+            // clrDevelopment
+            // 
+            this.clrDevelopment.Location = new System.Drawing.Point(8, 57);
+            this.clrDevelopment.Name = "clrDevelopment";
+            this.clrDevelopment.Size = new System.Drawing.Size(24, 17);
+            this.clrDevelopment.TabIndex = 29;
+            this.clrDevelopment.Click += new System.EventHandler(this.clrDevelopment_Click);
+            // 
+            // clrBacklog
+            // 
+            this.clrBacklog.Location = new System.Drawing.Point(8, 34);
+            this.clrBacklog.Name = "clrBacklog";
+            this.clrBacklog.Size = new System.Drawing.Size(24, 17);
+            this.clrBacklog.TabIndex = 28;
+            this.clrBacklog.Click += new System.EventHandler(this.clrBacklog_Click);
             // 
             // chkFlow_ShowClosed
             // 
@@ -931,121 +911,189 @@
             this.chkFlow_ShowSmoketest.UseVisualStyleBackColor = true;
             this.chkFlow_ShowSmoketest.CheckedChanged += new System.EventHandler(this.chkFlow_ShowSmoketest_CheckedChanged);
             // 
-            // clrBacklog
+            // chkFlow_ShowPOReviewDone
             // 
-            this.clrBacklog.Location = new System.Drawing.Point(8, 34);
-            this.clrBacklog.Name = "clrBacklog";
-            this.clrBacklog.Size = new System.Drawing.Size(24, 17);
-            this.clrBacklog.TabIndex = 28;
-            this.clrBacklog.Click += new System.EventHandler(this.clrBacklog_Click);
+            this.chkFlow_ShowPOReviewDone.AutoSize = true;
+            this.chkFlow_ShowPOReviewDone.Checked = true;
+            this.chkFlow_ShowPOReviewDone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowPOReviewDone.Location = new System.Drawing.Point(364, 80);
+            this.chkFlow_ShowPOReviewDone.Name = "chkFlow_ShowPOReviewDone";
+            this.chkFlow_ShowPOReviewDone.Size = new System.Drawing.Size(109, 17);
+            this.chkFlow_ShowPOReviewDone.TabIndex = 24;
+            this.chkFlow_ShowPOReviewDone.Text = "PO Review Done";
+            this.chkFlow_ShowPOReviewDone.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowPOReviewDone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowPOReviewDone_CheckedChanged);
             // 
-            // clrDevelopment
+            // chkFlow_ShowPOReview
             // 
-            this.clrDevelopment.Location = new System.Drawing.Point(8, 57);
-            this.clrDevelopment.Name = "clrDevelopment";
-            this.clrDevelopment.Size = new System.Drawing.Size(24, 17);
-            this.clrDevelopment.TabIndex = 29;
-            this.clrDevelopment.Click += new System.EventHandler(this.clrDevelopment_Click);
+            this.chkFlow_ShowPOReview.AutoSize = true;
+            this.chkFlow_ShowPOReview.Checked = true;
+            this.chkFlow_ShowPOReview.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowPOReview.Location = new System.Drawing.Point(364, 57);
+            this.chkFlow_ShowPOReview.Name = "chkFlow_ShowPOReview";
+            this.chkFlow_ShowPOReview.Size = new System.Drawing.Size(80, 17);
+            this.chkFlow_ShowPOReview.TabIndex = 23;
+            this.chkFlow_ShowPOReview.Text = "PO Review";
+            this.chkFlow_ShowPOReview.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowPOReview.CheckedChanged += new System.EventHandler(this.chkFlow_ShowPOReview_CheckedChanged);
             // 
-            // clrDevelopmentDone
+            // chkFlow_ShowWegmansQADone
             // 
-            this.clrDevelopmentDone.Location = new System.Drawing.Point(8, 80);
-            this.clrDevelopmentDone.Name = "clrDevelopmentDone";
-            this.clrDevelopmentDone.Size = new System.Drawing.Size(24, 17);
-            this.clrDevelopmentDone.TabIndex = 30;
-            this.clrDevelopmentDone.Click += new System.EventHandler(this.clrDevelopmentDone_Click);
+            this.chkFlow_ShowWegmansQADone.AutoSize = true;
+            this.chkFlow_ShowWegmansQADone.Checked = true;
+            this.chkFlow_ShowWegmansQADone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowWegmansQADone.Location = new System.Drawing.Point(364, 34);
+            this.chkFlow_ShowWegmansQADone.Name = "chkFlow_ShowWegmansQADone";
+            this.chkFlow_ShowWegmansQADone.Size = new System.Drawing.Size(121, 17);
+            this.chkFlow_ShowWegmansQADone.TabIndex = 22;
+            this.chkFlow_ShowWegmansQADone.Text = "Wegmans QA Done";
+            this.chkFlow_ShowWegmansQADone.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowWegmansQADone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowWegmansQADone_CheckedChanged);
             // 
-            // clrWegmansQA
+            // chkFlow_ShowWegmansQA
             // 
-            this.clrWegmansQA.Location = new System.Drawing.Point(162, 80);
-            this.clrWegmansQA.Name = "clrWegmansQA";
-            this.clrWegmansQA.Size = new System.Drawing.Size(24, 17);
-            this.clrWegmansQA.TabIndex = 33;
-            this.clrWegmansQA.Click += new System.EventHandler(this.clrWegmansQA_Click);
+            this.chkFlow_ShowWegmansQA.AutoSize = true;
+            this.chkFlow_ShowWegmansQA.Checked = true;
+            this.chkFlow_ShowWegmansQA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowWegmansQA.Location = new System.Drawing.Point(192, 80);
+            this.chkFlow_ShowWegmansQA.Name = "chkFlow_ShowWegmansQA";
+            this.chkFlow_ShowWegmansQA.Size = new System.Drawing.Size(92, 17);
+            this.chkFlow_ShowWegmansQA.TabIndex = 21;
+            this.chkFlow_ShowWegmansQA.Text = "Wegmans QA";
+            this.chkFlow_ShowWegmansQA.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowWegmansQA.CheckedChanged += new System.EventHandler(this.chkFlow_ShowWegmansQA_CheckedChanged);
             // 
-            // clrAsynchronyQADone
+            // chkFlow_ShowAsynchronyQADone
             // 
-            this.clrAsynchronyQADone.Location = new System.Drawing.Point(162, 57);
-            this.clrAsynchronyQADone.Name = "clrAsynchronyQADone";
-            this.clrAsynchronyQADone.Size = new System.Drawing.Size(24, 17);
-            this.clrAsynchronyQADone.TabIndex = 32;
-            this.clrAsynchronyQADone.Click += new System.EventHandler(this.clrAsynchronyQADone_Click);
+            this.chkFlow_ShowAsynchronyQADone.AutoSize = true;
+            this.chkFlow_ShowAsynchronyQADone.Checked = true;
+            this.chkFlow_ShowAsynchronyQADone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowAsynchronyQADone.Location = new System.Drawing.Point(192, 57);
+            this.chkFlow_ShowAsynchronyQADone.Name = "chkFlow_ShowAsynchronyQADone";
+            this.chkFlow_ShowAsynchronyQADone.Size = new System.Drawing.Size(128, 17);
+            this.chkFlow_ShowAsynchronyQADone.TabIndex = 20;
+            this.chkFlow_ShowAsynchronyQADone.Text = "Asynchrony QA Done";
+            this.chkFlow_ShowAsynchronyQADone.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowAsynchronyQADone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowAsynchronyQADone_CheckedChanged);
             // 
-            // clrAsynchronyQA
+            // chkFlow_ShowAsynchronyQA
             // 
-            this.clrAsynchronyQA.Location = new System.Drawing.Point(162, 34);
-            this.clrAsynchronyQA.Name = "clrAsynchronyQA";
-            this.clrAsynchronyQA.Size = new System.Drawing.Size(24, 17);
-            this.clrAsynchronyQA.TabIndex = 31;
-            this.clrAsynchronyQA.Click += new System.EventHandler(this.clrAsynchronyQA_Click);
+            this.chkFlow_ShowAsynchronyQA.AutoSize = true;
+            this.chkFlow_ShowAsynchronyQA.Checked = true;
+            this.chkFlow_ShowAsynchronyQA.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowAsynchronyQA.Location = new System.Drawing.Point(192, 34);
+            this.chkFlow_ShowAsynchronyQA.Name = "chkFlow_ShowAsynchronyQA";
+            this.chkFlow_ShowAsynchronyQA.Size = new System.Drawing.Size(99, 17);
+            this.chkFlow_ShowAsynchronyQA.TabIndex = 19;
+            this.chkFlow_ShowAsynchronyQA.Text = "Asynchrony QA";
+            this.chkFlow_ShowAsynchronyQA.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowAsynchronyQA.CheckedChanged += new System.EventHandler(this.chkFlow_ShowAsynchronyQA_CheckedChanged);
             // 
-            // clrPOReviewDone
+            // chkFlow_ShowDevelopmentDone
             // 
-            this.clrPOReviewDone.Location = new System.Drawing.Point(334, 80);
-            this.clrPOReviewDone.Name = "clrPOReviewDone";
-            this.clrPOReviewDone.Size = new System.Drawing.Size(24, 17);
-            this.clrPOReviewDone.TabIndex = 33;
-            this.clrPOReviewDone.Click += new System.EventHandler(this.clrPOReviewDone_Click);
+            this.chkFlow_ShowDevelopmentDone.AutoSize = true;
+            this.chkFlow_ShowDevelopmentDone.Checked = true;
+            this.chkFlow_ShowDevelopmentDone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowDevelopmentDone.Location = new System.Drawing.Point(38, 80);
+            this.chkFlow_ShowDevelopmentDone.Name = "chkFlow_ShowDevelopmentDone";
+            this.chkFlow_ShowDevelopmentDone.Size = new System.Drawing.Size(118, 17);
+            this.chkFlow_ShowDevelopmentDone.TabIndex = 18;
+            this.chkFlow_ShowDevelopmentDone.Text = "Development Done";
+            this.chkFlow_ShowDevelopmentDone.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowDevelopmentDone.CheckedChanged += new System.EventHandler(this.chkFlow_ShowDevelopmentDone_CheckedChanged);
             // 
-            // clrPOReview
+            // chkFlow_ShowDevelopment
             // 
-            this.clrPOReview.Location = new System.Drawing.Point(334, 57);
-            this.clrPOReview.Name = "clrPOReview";
-            this.clrPOReview.Size = new System.Drawing.Size(24, 17);
-            this.clrPOReview.TabIndex = 32;
-            this.clrPOReview.Click += new System.EventHandler(this.clrPOReview_Click);
+            this.chkFlow_ShowDevelopment.AutoSize = true;
+            this.chkFlow_ShowDevelopment.Checked = true;
+            this.chkFlow_ShowDevelopment.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowDevelopment.Location = new System.Drawing.Point(38, 57);
+            this.chkFlow_ShowDevelopment.Name = "chkFlow_ShowDevelopment";
+            this.chkFlow_ShowDevelopment.Size = new System.Drawing.Size(89, 17);
+            this.chkFlow_ShowDevelopment.TabIndex = 17;
+            this.chkFlow_ShowDevelopment.Text = "Development";
+            this.chkFlow_ShowDevelopment.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowDevelopment.CheckedChanged += new System.EventHandler(this.chkFlow_ShowDevelopment_CheckedChanged);
             // 
-            // clrWegmansQADone
+            // chkFlow_ShowBacklog
             // 
-            this.clrWegmansQADone.Location = new System.Drawing.Point(334, 34);
-            this.clrWegmansQADone.Name = "clrWegmansQADone";
-            this.clrWegmansQADone.Size = new System.Drawing.Size(24, 17);
-            this.clrWegmansQADone.TabIndex = 31;
-            this.clrWegmansQADone.Click += new System.EventHandler(this.clrWegmansQADone_Click);
+            this.chkFlow_ShowBacklog.AutoSize = true;
+            this.chkFlow_ShowBacklog.Checked = true;
+            this.chkFlow_ShowBacklog.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFlow_ShowBacklog.Location = new System.Drawing.Point(38, 34);
+            this.chkFlow_ShowBacklog.Name = "chkFlow_ShowBacklog";
+            this.chkFlow_ShowBacklog.Size = new System.Drawing.Size(65, 17);
+            this.chkFlow_ShowBacklog.TabIndex = 16;
+            this.chkFlow_ShowBacklog.Text = "Backlog";
+            this.chkFlow_ShowBacklog.UseVisualStyleBackColor = true;
+            this.chkFlow_ShowBacklog.CheckedChanged += new System.EventHandler(this.chkFlow_ShowBacklog_CheckedChanged);
             // 
-            // clrClosed
+            // label4
             // 
-            this.clrClosed.Location = new System.Drawing.Point(495, 80);
-            this.clrClosed.Name = "clrClosed";
-            this.clrClosed.Size = new System.Drawing.Size(24, 17);
-            this.clrClosed.TabIndex = 33;
-            this.clrClosed.Click += new System.EventHandler(this.clrClosed_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(228, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Note:  This chart is tuned for a specific Project.";
             // 
-            // clrSmoketestDone
+            // cmdUpdateStoryCumulativeFlow
             // 
-            this.clrSmoketestDone.Location = new System.Drawing.Point(495, 57);
-            this.clrSmoketestDone.Name = "clrSmoketestDone";
-            this.clrSmoketestDone.Size = new System.Drawing.Size(24, 17);
-            this.clrSmoketestDone.TabIndex = 32;
-            this.clrSmoketestDone.Click += new System.EventHandler(this.clrSmoketestDone_Click);
+            this.cmdUpdateStoryCumulativeFlow.Location = new System.Drawing.Point(8, 5);
+            this.cmdUpdateStoryCumulativeFlow.Name = "cmdUpdateStoryCumulativeFlow";
+            this.cmdUpdateStoryCumulativeFlow.Size = new System.Drawing.Size(129, 23);
+            this.cmdUpdateStoryCumulativeFlow.TabIndex = 11;
+            this.cmdUpdateStoryCumulativeFlow.Text = "Update Chart";
+            this.cmdUpdateStoryCumulativeFlow.UseVisualStyleBackColor = true;
+            this.cmdUpdateStoryCumulativeFlow.Click += new System.EventHandler(this.cmdUpdateStoryCumulativeFlow_Click);
             // 
-            // clrSmoketest
+            // cmdPrintStoryCumulativeFlow
             // 
-            this.clrSmoketest.Location = new System.Drawing.Point(495, 34);
-            this.clrSmoketest.Name = "clrSmoketest";
-            this.clrSmoketest.Size = new System.Drawing.Size(24, 17);
-            this.clrSmoketest.TabIndex = 31;
-            this.clrSmoketest.Click += new System.EventHandler(this.clrSmoketest_Click);
+            this.cmdPrintStoryCumulativeFlow.Location = new System.Drawing.Point(143, 5);
+            this.cmdPrintStoryCumulativeFlow.Name = "cmdPrintStoryCumulativeFlow";
+            this.cmdPrintStoryCumulativeFlow.Size = new System.Drawing.Size(129, 23);
+            this.cmdPrintStoryCumulativeFlow.TabIndex = 5;
+            this.cmdPrintStoryCumulativeFlow.Text = "Print";
+            this.cmdPrintStoryCumulativeFlow.UseVisualStyleBackColor = true;
             // 
-            // cmdFlowCheckAll
+            // tpBugs
             // 
-            this.cmdFlowCheckAll.Location = new System.Drawing.Point(657, 34);
-            this.cmdFlowCheckAll.Name = "cmdFlowCheckAll";
-            this.cmdFlowCheckAll.Size = new System.Drawing.Size(102, 23);
-            this.cmdFlowCheckAll.TabIndex = 34;
-            this.cmdFlowCheckAll.Text = "Check All";
-            this.cmdFlowCheckAll.UseVisualStyleBackColor = true;
-            this.cmdFlowCheckAll.Click += new System.EventHandler(this.cmdFlowCheckAll_Click);
+            this.tpBugs.Controls.Add(this.chartBugs);
+            this.tpBugs.Location = new System.Drawing.Point(4, 22);
+            this.tpBugs.Name = "tpBugs";
+            this.tpBugs.Size = new System.Drawing.Size(1000, 675);
+            this.tpBugs.TabIndex = 4;
+            this.tpBugs.Text = "Bugs";
+            this.tpBugs.UseVisualStyleBackColor = true;
             // 
-            // cmdFlowUncheckAll
+            // chartBugs
             // 
-            this.cmdFlowUncheckAll.Location = new System.Drawing.Point(657, 57);
-            this.cmdFlowUncheckAll.Name = "cmdFlowUncheckAll";
-            this.cmdFlowUncheckAll.Size = new System.Drawing.Size(102, 23);
-            this.cmdFlowUncheckAll.TabIndex = 35;
-            this.cmdFlowUncheckAll.Text = "Uncheck All";
-            this.cmdFlowUncheckAll.UseVisualStyleBackColor = true;
-            this.cmdFlowUncheckAll.Click += new System.EventHandler(this.cmdFlowUncheckAll_Click);
+            chartArea3.AxisX.Interval = 7D;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.MajorGrid.Interval = 0D;
+            chartArea3.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.AxisX.MajorTickMark.Interval = 0D;
+            chartArea3.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.Name = "ChartArea1";
+            this.chartBugs.ChartAreas.Add(chartArea3);
+            this.chartBugs.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.chartBugs.Legends.Add(legend3);
+            this.chartBugs.Location = new System.Drawing.Point(0, 0);
+            this.chartBugs.Name = "chartBugs";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Color = System.Drawing.Color.MediumBlue;
+            series13.IsValueShownAsLabel = true;
+            series13.Legend = "Legend1";
+            series13.LegendText = "New";
+            series13.Name = "countNew";
+            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartBugs.Series.Add(series13);
+            this.chartBugs.Size = new System.Drawing.Size(1000, 675);
+            this.chartBugs.TabIndex = 2;
+            this.chartBugs.Text = "chart1";
             // 
             // frmDevMetrics
             // 
@@ -1078,6 +1126,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartStoryCumulativeFlow)).EndInit();
             this.pnlStoryCumFlowTop.ResumeLayout(false);
             this.pnlStoryCumFlowTop.PerformLayout();
+            this.tpBugs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1152,5 +1202,7 @@
         private System.Windows.Forms.Button cmdFlowUncheckAll;
         private System.Windows.Forms.Button cmdFlowCheckAll;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TabPage tpBugs;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBugs;
     }
 }

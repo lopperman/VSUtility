@@ -62,6 +62,10 @@ namespace VSConnect
         public void DumpWorkItems(string saveFilePath)
         {
 
+            //get area path
+            string systemAreaPath = connect.GetTeamAreas(connect.GetProject(projectname)).First(x => x.Id == systemAreadId).Name;
+
+
             tmpFile = Path.GetTempFileName().Replace(".tmp", ".mdb");
             tmpFile = Path.GetFileName(tmpFile);
             Notify("creating " + tmpFile);
@@ -71,7 +75,7 @@ namespace VSConnect
             ds = new DumpDataSet();
 
             //string query1 = string.Format("SELECT * FROM WorkItems WHERE System.AreaId = {0}", systemAreadId);
-            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature') or System.AreaId = {1}", projectname,systemAreadId);
+            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature') or System.AreaPath Under 'Marketing Temp\\{1}'", projectname,systemAreaPath);
             Notify("fetching WorkItems from TFS");
             List<WorkItem> results = connect.ExecuteWorkItemWIQL(query1);
 
@@ -91,8 +95,6 @@ namespace VSConnect
 
             foreach (WorkItem wi in results)
             {
-
-                //if (wi.Id != 118552) continue;
 
                 if (!workItems.Contains(wi.Type.Name))
                 {

@@ -54,6 +54,32 @@ namespace VSConnect.Test
         }
 
         [Test]
+        public void GetTemporalData()
+        {
+            //            string date = "3/13/2018";
+            //            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.CreatedDate >= '{0}') or (System.ChangedDate >= '{0}')", date);
+
+            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.AreaPath Under 'Marketing Temp\\Wegmans Mobile App') AND (System.IterationPath Under 'Marketing Temp\\Asynchrony')");
+
+            var results = connect.ExecuteWorkItemWIQL(query1);
+
+            bool tryit = results.Any(x => x.Id == 120431);
+
+            int count = results.Count;
+        }
+
+        [Test]
+        public void GetParents()
+        {
+            string q =
+                "select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State] from WorkItemLinks where ([System.Links.LinkType] = 'System.LinkTypes.Hierarchy-Forward') and (Target.[System.Id] = 119412) order by [System.Id] mode (Recursive, ReturnMatchingChildren)";
+
+            var results = connect.ExecuteWorkItemWIQL(q);
+
+            int count = results.Count;
+        }
+
+        [Test]
         public void DisectTheShitOutOfAWorkItem()
         {
             List<string> includeFields = new List<string>();
@@ -66,7 +92,7 @@ namespace VSConnect.Test
             includeFields.Add("Revised Date");
 
 
-            WorkItem wi = connect.GetWorkItem(118552);
+            WorkItem wi = connect.GetWorkItem(120431);
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Format("{0} - {1}", wi.Id, wi.Title));

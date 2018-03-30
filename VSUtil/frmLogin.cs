@@ -24,7 +24,7 @@ namespace VSUtil
             InitializeComponent();
 
             txtUri.Text = TFSRegistry.GetUri();
-            txtLogin.Text = TFSRegistry.GetLogin();
+            txtLogin.Text = StringCipher.Decrypt(TFSRegistry.GetLogin(),cipherPassphrase);
             txtPassword.Text = StringCipher.Decrypt(TFSRegistry.GetPassword(),cipherPassphrase);
             txtDomain.Text = TFSRegistry.GetDomain();
 
@@ -60,7 +60,7 @@ namespace VSUtil
                 if (connect != null)
                 {
                     TFSRegistry.SetUri(txtUri.Text);
-                    TFSRegistry.SetLogin(txtLogin.Text);
+                    TFSRegistry.SetLogin(StringCipher.Encrypt(txtLogin.Text,cipherPassphrase));
                     TFSRegistry.SetPassword(StringCipher.Encrypt(txtPassword.Text,cipherPassphrase));
                     TFSRegistry.SetDomain(txtDomain.Text);
                     StaticUtils.connect = connect;
