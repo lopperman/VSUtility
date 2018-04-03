@@ -1744,6 +1744,38 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_STORY_CUMULATIVE_FLOW_2TableAdapter" GeneratorDataComponentClassName="VW_STORY_CUMULATIVE_FLOW_2TableAdapter" Name="VW_STORY_CUMULATIVE_FLOW_2" UserDataComponentName="VW_STORY_CUMULATIVE_FLOW_2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DumpConnectionString (Settings)" DbObjectName="VW_STORY_CUMULATIVE_FLOW_2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT WeekEnding, NewThisWeek, ActiveThisWeek, ClosedThisWeek, Backlog, Development, DevelopmentDone, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, POReview, POReviewDone, Smoketest, SmoketestDone, Closed, [Count] FROM VW_STORY_CUMULATIVE_FLOW_2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WeekEnding" DataSetColumn="WeekEnding" />
+              <Mapping SourceColumn="NewThisWeek" DataSetColumn="NewThisWeek" />
+              <Mapping SourceColumn="ActiveThisWeek" DataSetColumn="ActiveThisWeek" />
+              <Mapping SourceColumn="ClosedThisWeek" DataSetColumn="ClosedThisWeek" />
+              <Mapping SourceColumn="Backlog" DataSetColumn="Backlog" />
+              <Mapping SourceColumn="Development" DataSetColumn="Development" />
+              <Mapping SourceColumn="DevelopmentDone" DataSetColumn="DevelopmentDone" />
+              <Mapping SourceColumn="AsynchronyQA" DataSetColumn="AsynchronyQA" />
+              <Mapping SourceColumn="AsynchronyQADone" DataSetColumn="AsynchronyQADone" />
+              <Mapping SourceColumn="WegmansQA" DataSetColumn="WegmansQA" />
+              <Mapping SourceColumn="WegmansQADone" DataSetColumn="WegmansQADone" />
+              <Mapping SourceColumn="POReview" DataSetColumn="POReview" />
+              <Mapping SourceColumn="POReviewDone" DataSetColumn="POReviewDone" />
+              <Mapping SourceColumn="Smoketest" DataSetColumn="Smoketest" />
+              <Mapping SourceColumn="SmoketestDone" DataSetColumn="SmoketestDone" />
+              <Mapping SourceColumn="Closed" DataSetColumn="Closed" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_TaskTableAdapter" GeneratorDataComponentClassName="VW_TaskTableAdapter" Name="VW_Task" UserDataComponentName="VW_TaskTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="DumpConnectionString (Settings)" DbObjectName="VW_Task" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -2002,6 +2034,24 @@
               <Mapping SourceColumn="ChangedDate" DataSetColumn="ChangedDate" />
               <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
               <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_VELOCITYTableAdapter" GeneratorDataComponentClassName="VW_VELOCITYTableAdapter" Name="VW_VELOCITY" UserDataComponentName="VW_VELOCITYTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DumpConnectionString (Settings)" DbObjectName="VW_VELOCITY" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT WeekEnding, DevDone, QADone FROM VW_VELOCITY</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WeekEnding" DataSetColumn="WeekEnding" />
+              <Mapping SourceColumn="DevDone" DataSetColumn="DevDone" />
+              <Mapping SourceColumn="QADone" DataSetColumn="QADone" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -3486,6 +3536,29 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="VW_STORY_CUMULATIVE_FLOW_2" msprop:Generator_TableClassName="VW_STORY_CUMULATIVE_FLOW_2DataTable" msprop:Generator_TableVarName="tableVW_STORY_CUMULATIVE_FLOW_2" msprop:Generator_TablePropName="VW_STORY_CUMULATIVE_FLOW_2" msprop:Generator_RowDeletingName="VW_STORY_CUMULATIVE_FLOW_2RowDeleting" msprop:Generator_RowChangingName="VW_STORY_CUMULATIVE_FLOW_2RowChanging" msprop:Generator_RowEvHandlerName="VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler" msprop:Generator_RowDeletedName="VW_STORY_CUMULATIVE_FLOW_2RowDeleted" msprop:Generator_UserTableName="VW_STORY_CUMULATIVE_FLOW_2" msprop:Generator_RowChangedName="VW_STORY_CUMULATIVE_FLOW_2RowChanged" msprop:Generator_RowEvArgName="VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent" msprop:Generator_RowClassName="VW_STORY_CUMULATIVE_FLOW_2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WeekEnding" msprop:Generator_ColumnVarNameInTable="columnWeekEnding" msprop:Generator_ColumnPropNameInRow="WeekEnding" msprop:Generator_ColumnPropNameInTable="WeekEndingColumn" msprop:Generator_UserColumnName="WeekEnding" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NewThisWeek" msprop:Generator_ColumnVarNameInTable="columnNewThisWeek" msprop:Generator_ColumnPropNameInRow="NewThisWeek" msprop:Generator_ColumnPropNameInTable="NewThisWeekColumn" msprop:Generator_UserColumnName="NewThisWeek" type="xs:double" minOccurs="0" />
+              <xs:element name="ActiveThisWeek" msprop:Generator_ColumnVarNameInTable="columnActiveThisWeek" msprop:Generator_ColumnPropNameInRow="ActiveThisWeek" msprop:Generator_ColumnPropNameInTable="ActiveThisWeekColumn" msprop:Generator_UserColumnName="ActiveThisWeek" type="xs:double" minOccurs="0" />
+              <xs:element name="ClosedThisWeek" msprop:Generator_ColumnVarNameInTable="columnClosedThisWeek" msprop:Generator_ColumnPropNameInRow="ClosedThisWeek" msprop:Generator_ColumnPropNameInTable="ClosedThisWeekColumn" msprop:Generator_UserColumnName="ClosedThisWeek" type="xs:double" minOccurs="0" />
+              <xs:element name="Backlog" msprop:Generator_ColumnVarNameInTable="columnBacklog" msprop:Generator_ColumnPropNameInRow="Backlog" msprop:Generator_ColumnPropNameInTable="BacklogColumn" msprop:Generator_UserColumnName="Backlog" type="xs:double" minOccurs="0" />
+              <xs:element name="Development" msprop:Generator_ColumnVarNameInTable="columnDevelopment" msprop:Generator_ColumnPropNameInRow="Development" msprop:Generator_ColumnPropNameInTable="DevelopmentColumn" msprop:Generator_UserColumnName="Development" type="xs:double" minOccurs="0" />
+              <xs:element name="DevelopmentDone" msprop:Generator_ColumnVarNameInTable="columnDevelopmentDone" msprop:Generator_ColumnPropNameInRow="DevelopmentDone" msprop:Generator_ColumnPropNameInTable="DevelopmentDoneColumn" msprop:Generator_UserColumnName="DevelopmentDone" type="xs:double" minOccurs="0" />
+              <xs:element name="AsynchronyQA" msprop:Generator_ColumnVarNameInTable="columnAsynchronyQA" msprop:Generator_ColumnPropNameInRow="AsynchronyQA" msprop:Generator_ColumnPropNameInTable="AsynchronyQAColumn" msprop:Generator_UserColumnName="AsynchronyQA" type="xs:double" minOccurs="0" />
+              <xs:element name="AsynchronyQADone" msprop:Generator_ColumnVarNameInTable="columnAsynchronyQADone" msprop:Generator_ColumnPropNameInRow="AsynchronyQADone" msprop:Generator_ColumnPropNameInTable="AsynchronyQADoneColumn" msprop:Generator_UserColumnName="AsynchronyQADone" type="xs:double" minOccurs="0" />
+              <xs:element name="WegmansQA" msprop:Generator_ColumnVarNameInTable="columnWegmansQA" msprop:Generator_ColumnPropNameInRow="WegmansQA" msprop:Generator_ColumnPropNameInTable="WegmansQAColumn" msprop:Generator_UserColumnName="WegmansQA" type="xs:double" minOccurs="0" />
+              <xs:element name="WegmansQADone" msprop:Generator_ColumnVarNameInTable="columnWegmansQADone" msprop:Generator_ColumnPropNameInRow="WegmansQADone" msprop:Generator_ColumnPropNameInTable="WegmansQADoneColumn" msprop:Generator_UserColumnName="WegmansQADone" type="xs:double" minOccurs="0" />
+              <xs:element name="POReview" msprop:Generator_ColumnVarNameInTable="columnPOReview" msprop:Generator_ColumnPropNameInRow="POReview" msprop:Generator_ColumnPropNameInTable="POReviewColumn" msprop:Generator_UserColumnName="POReview" type="xs:double" minOccurs="0" />
+              <xs:element name="POReviewDone" msprop:Generator_ColumnVarNameInTable="columnPOReviewDone" msprop:Generator_ColumnPropNameInRow="POReviewDone" msprop:Generator_ColumnPropNameInTable="POReviewDoneColumn" msprop:Generator_UserColumnName="POReviewDone" type="xs:double" minOccurs="0" />
+              <xs:element name="Smoketest" msprop:Generator_ColumnVarNameInTable="columnSmoketest" msprop:Generator_ColumnPropNameInRow="Smoketest" msprop:Generator_ColumnPropNameInTable="SmoketestColumn" msprop:Generator_UserColumnName="Smoketest" type="xs:double" minOccurs="0" />
+              <xs:element name="SmoketestDone" msprop:Generator_ColumnVarNameInTable="columnSmoketestDone" msprop:Generator_ColumnPropNameInRow="SmoketestDone" msprop:Generator_ColumnPropNameInTable="SmoketestDoneColumn" msprop:Generator_UserColumnName="SmoketestDone" type="xs:double" minOccurs="0" />
+              <xs:element name="Closed" msprop:Generator_ColumnVarNameInTable="columnClosed" msprop:Generator_ColumnPropNameInRow="Closed" msprop:Generator_ColumnPropNameInTable="ClosedColumn" msprop:Generator_UserColumnName="Closed" type="xs:double" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="VW_Task" msprop:Generator_TableClassName="VW_TaskDataTable" msprop:Generator_TableVarName="tableVW_Task" msprop:Generator_TablePropName="VW_Task" msprop:Generator_RowDeletingName="VW_TaskRowDeleting" msprop:Generator_RowChangingName="VW_TaskRowChanging" msprop:Generator_RowEvHandlerName="VW_TaskRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_TaskRowDeleted" msprop:Generator_UserTableName="VW_Task" msprop:Generator_RowChangedName="VW_TaskRowChanged" msprop:Generator_RowEvArgName="VW_TaskRowChangeEvent" msprop:Generator_RowClassName="VW_TaskRow">
           <xs:complexType>
             <xs:sequence>
@@ -4209,6 +4282,15 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_VELOCITY" msprop:Generator_TableClassName="VW_VELOCITYDataTable" msprop:Generator_TableVarName="tableVW_VELOCITY" msprop:Generator_TablePropName="VW_VELOCITY" msprop:Generator_RowDeletingName="VW_VELOCITYRowDeleting" msprop:Generator_RowChangingName="VW_VELOCITYRowChanging" msprop:Generator_RowEvHandlerName="VW_VELOCITYRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_VELOCITYRowDeleted" msprop:Generator_UserTableName="VW_VELOCITY" msprop:Generator_RowChangedName="VW_VELOCITYRowChanged" msprop:Generator_RowEvArgName="VW_VELOCITYRowChangeEvent" msprop:Generator_RowClassName="VW_VELOCITYRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WeekEnding" msprop:Generator_ColumnVarNameInTable="columnWeekEnding" msprop:Generator_ColumnPropNameInRow="WeekEnding" msprop:Generator_ColumnPropNameInTable="WeekEndingColumn" msprop:Generator_UserColumnName="WeekEnding" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DevDone" msprop:Generator_ColumnVarNameInTable="columnDevDone" msprop:Generator_ColumnPropNameInRow="DevDone" msprop:Generator_ColumnPropNameInTable="DevDoneColumn" msprop:Generator_UserColumnName="DevDone" type="xs:double" minOccurs="0" />
+              <xs:element name="QADone" msprop:Generator_ColumnVarNameInTable="columnQADone" msprop:Generator_ColumnPropNameInRow="QADone" msprop:Generator_ColumnPropNameInTable="QADoneColumn" msprop:Generator_UserColumnName="QADone" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

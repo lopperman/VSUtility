@@ -95,9 +95,9 @@ namespace VSUtil.Forms
                     {
                         count = Convert.ToInt32(row["Count"]);
                     }
-                    if (!row.IsNull("ClosedThisWeek"))
+                    if (!row.IsNull("Closed"))
                     {
-                        closed = Convert.ToInt32(row["ClosedThisWeek"]);
+                        closed = Convert.ToInt32(row["Closed"]);
                     }
                     row["Remaining"] = count - closed;
                 }
@@ -117,7 +117,7 @@ namespace VSUtil.Forms
             chartBugs.Series["countActive"].Points.DataBind(devview, "WeekEnding", "ActiveThisWeek", "Tooltip=WeekEnding");
 
             series = CreateSeries("remaining", SeriesChartType.Line, 2, Color.DarkRed, ChartDashStyle.Solid,
-                ChartValueType.DateTime, "Remaining Bugs");
+                ChartValueType.DateTime, "Total Open Bugs");
             chartBugs.Series.Add(series);
             devview = new DataView(table, filter, "WeekEnding", DataViewRowState.CurrentRows);
             chartBugs.Series["remaining"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
@@ -174,16 +174,17 @@ namespace VSUtil.Forms
                     }
                 }
 
+                string s = "";
+                s = "WeekEnding>='" + date + "' AND WeekEnding<='" + dateEnding + "'";
+
                 if (chkDevComplete.Checked)
                 {
-                    string s = "";
-                    s = "(((WeekEnding)>='" + date + "') AND ((WeekEnding)<='" + dateEnding + "') AND ((WorkItemType)<>'Bug') AND ((State)='Active'))";
 
                     Series series = CreateSeries("count", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
                         ChartValueType.DateTime, "Dev Complete");
                     chartDevelopment.Series.Add(series);
-                    DataView devview = new DataView(ds.WorkItemMetrics, s, "WeekEnding", DataViewRowState.CurrentRows);
-                    chartDevelopment.Series["count"].Points.DataBind(devview, "WeekEnding", "StoryCount", "Tooltip=WeekEnding");
+                    DataView devview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    chartDevelopment.Series["count"].Points.DataBind(devview, "WeekEnding", "DevDone", "Tooltip=WeekEnding");
 
                     if (chkShowTrends.Checked)
                     {
@@ -202,16 +203,13 @@ namespace VSUtil.Forms
                 }
                 if (chkQAComplete.Checked)
                 {
-                    string s = "";
-                    s = "(((WeekEnding)>='" + date + "') AND ((WeekEnding)<='" + dateEnding + "') AND ((WorkItemType)<>'Bug') AND ((State)='QA'))";
-
 
                     Series series = CreateSeries("qacount", SeriesChartType.Line, 2, Color.Red, ChartDashStyle.Solid,
                         ChartValueType.DateTime, "QA Complete");
 
                     chartDevelopment.Series.Add(series);
-                    DataView qaview = new DataView(ds.WorkItemMetrics, s, "WeekEnding", DataViewRowState.CurrentRows);
-                    chartDevelopment.Series["qacount"].Points.DataBind(qaview, "WeekEnding", "StoryCount", "Tooltip=WeekEnding");
+                    DataView qaview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    chartDevelopment.Series["qacount"].Points.DataBind(qaview, "WeekEnding", "QADone", "Tooltip=WeekEnding");
 
                     if (chkShowTrends.Checked)
                     {
@@ -227,34 +225,34 @@ namespace VSUtil.Forms
 
                     }
                 }
-                if (chkUatComplete.Checked)
-                {
-                    string s = "";
-                    s = "(((WeekEnding)>='" + date + "') AND ((WeekEnding)<='" + dateEnding + "') AND ((WorkItemType)<>'Bug') AND ((State)='UAT'))";
-
-                    Series series = CreateSeries("uatcount", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
-                        ChartValueType.DateTime, "UAT Complete");
-
-                    chartDevelopment.Series.Add(series);
-                    DataView uatview = new DataView(ds.WorkItemMetrics, s, "WeekEnding", DataViewRowState.CurrentRows);
-                    chartDevelopment.Series["uatcount"].Points.DataBind(uatview, "WeekEnding", "StoryCount", "Tooltip=WeekEnding");
-
-
-                    if (chkShowTrends.Checked)
-                    {
-                        Series trendline = new Series("UATCountTrendline");
-                        trendline.ChartType = SeriesChartType.Line;
-                        trendline.BorderWidth = 1;
-                        trendline.BorderDashStyle = ChartDashStyle.Dash;
-                        trendline.Color = Color.Green;
-                        chartDevelopment.Series.Add(trendline);
-                        string forecast = string.Format("Linear,{0},false,false", Convert.ToInt32(forecastWeeks.Value));
-                        chartDevelopment.DataManipulator.FinancialFormula(FinancialFormula.Forecasting, forecast, chartDevelopment.Series["uatcount"], chartDevelopment.Series["UATCountTrendline"]);
-                        chartDevelopment.Series["UATCountTrendline"].LegendText = "UAT Complete Trend";
-
-                    }
-
-                }
+//                if (chkUatComplete.Checked)
+//                {
+//                    string s = "";
+//                    s = "(((WeekEnding)>='" + date + "') AND ((WeekEnding)<='" + dateEnding + "') AND ((WorkItemType)<>'Bug') AND ((State)='UAT'))";
+//
+//                    Series series = CreateSeries("uatcount", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
+//                        ChartValueType.DateTime, "UAT Complete");
+//
+//                    chartDevelopment.Series.Add(series);
+//                    DataView uatview = new DataView(ds.WorkItemMetrics, s, "WeekEnding", DataViewRowState.CurrentRows);
+//                    chartDevelopment.Series["uatcount"].Points.DataBind(uatview, "WeekEnding", "StoryCount", "Tooltip=WeekEnding");
+//
+//
+//                    if (chkShowTrends.Checked)
+//                    {
+//                        Series trendline = new Series("UATCountTrendline");
+//                        trendline.ChartType = SeriesChartType.Line;
+//                        trendline.BorderWidth = 1;
+//                        trendline.BorderDashStyle = ChartDashStyle.Dash;
+//                        trendline.Color = Color.Green;
+//                        chartDevelopment.Series.Add(trendline);
+//                        string forecast = string.Format("Linear,{0},false,false", Convert.ToInt32(forecastWeeks.Value));
+//                        chartDevelopment.DataManipulator.FinancialFormula(FinancialFormula.Forecasting, forecast, chartDevelopment.Series["uatcount"], chartDevelopment.Series["UATCountTrendline"]);
+//                        chartDevelopment.Series["UATCountTrendline"].LegendText = "UAT Complete Trend";
+//
+//                    }
+//
+//                }
 
                 chartDevelopment.Update();
 

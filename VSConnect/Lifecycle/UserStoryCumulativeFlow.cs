@@ -49,16 +49,18 @@ namespace VSConnect.Lifecycle
                         row.NewThisWeek = 1;
                     }
 
-                    if (row.ID == 117096)
-                    {
-                        string asdf = "asdf";
-                    }
+//                    if (row.ID == 117097 && searchDate.Month == 3 && searchDate.Day == 30)
+//                    {
+//                        string asdf = "asdf";
+//                    }
 
                     for (int i = states.MinStateIndex; i <= states.MaxStateIndex; i++)
                     {
+
+
                         row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
 
-                        if (states.WasInState(revisions, i, searchDate, searchDate.AddDays(-7)))
+                        if (states.WasInState(revisions, i, searchDate.AddDays(-7), searchDate))
                         {
                             row[string.Format("State{0}", i)] = 1;
                         }

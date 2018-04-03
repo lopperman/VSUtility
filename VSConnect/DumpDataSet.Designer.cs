@@ -80,6 +80,8 @@ namespace VSConnect {
         
         private VW_STORY_CUMULATIVE_FLOWDataTable tableVW_STORY_CUMULATIVE_FLOW;
         
+        private VW_STORY_CUMULATIVE_FLOW_2DataTable tableVW_STORY_CUMULATIVE_FLOW_2;
+        
         private VW_TaskDataTable tableVW_Task;
         
         private VW_Task_CurrentDataTable tableVW_Task_Current;
@@ -93,6 +95,8 @@ namespace VSConnect {
         private VW_UserStoryDataTable tableVW_UserStory;
         
         private VW_UserStory_CurrentDataTable tableVW_UserStory_Current;
+        
+        private VW_VELOCITYDataTable tableVW_VELOCITY;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -206,6 +210,9 @@ namespace VSConnect {
                 if ((ds.Tables["VW_STORY_CUMULATIVE_FLOW"] != null)) {
                     base.Tables.Add(new VW_STORY_CUMULATIVE_FLOWDataTable(ds.Tables["VW_STORY_CUMULATIVE_FLOW"]));
                 }
+                if ((ds.Tables["VW_STORY_CUMULATIVE_FLOW_2"] != null)) {
+                    base.Tables.Add(new VW_STORY_CUMULATIVE_FLOW_2DataTable(ds.Tables["VW_STORY_CUMULATIVE_FLOW_2"]));
+                }
                 if ((ds.Tables["VW_Task"] != null)) {
                     base.Tables.Add(new VW_TaskDataTable(ds.Tables["VW_Task"]));
                 }
@@ -226,6 +233,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["VW_UserStory_Current"] != null)) {
                     base.Tables.Add(new VW_UserStory_CurrentDataTable(ds.Tables["VW_UserStory_Current"]));
+                }
+                if ((ds.Tables["VW_VELOCITY"] != null)) {
+                    base.Tables.Add(new VW_VELOCITYDataTable(ds.Tables["VW_VELOCITY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -529,6 +539,16 @@ namespace VSConnect {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_STORY_CUMULATIVE_FLOW_2DataTable VW_STORY_CUMULATIVE_FLOW_2 {
+            get {
+                return this.tableVW_STORY_CUMULATIVE_FLOW_2;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public VW_TaskDataTable VW_Task {
             get {
                 return this.tableVW_Task;
@@ -592,6 +612,16 @@ namespace VSConnect {
         public VW_UserStory_CurrentDataTable VW_UserStory_Current {
             get {
                 return this.tableVW_UserStory_Current;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_VELOCITYDataTable VW_VELOCITY {
+            get {
+                return this.tableVW_VELOCITY;
             }
         }
         
@@ -746,6 +776,9 @@ namespace VSConnect {
                 if ((ds.Tables["VW_STORY_CUMULATIVE_FLOW"] != null)) {
                     base.Tables.Add(new VW_STORY_CUMULATIVE_FLOWDataTable(ds.Tables["VW_STORY_CUMULATIVE_FLOW"]));
                 }
+                if ((ds.Tables["VW_STORY_CUMULATIVE_FLOW_2"] != null)) {
+                    base.Tables.Add(new VW_STORY_CUMULATIVE_FLOW_2DataTable(ds.Tables["VW_STORY_CUMULATIVE_FLOW_2"]));
+                }
                 if ((ds.Tables["VW_Task"] != null)) {
                     base.Tables.Add(new VW_TaskDataTable(ds.Tables["VW_Task"]));
                 }
@@ -766,6 +799,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["VW_UserStory_Current"] != null)) {
                     base.Tables.Add(new VW_UserStory_CurrentDataTable(ds.Tables["VW_UserStory_Current"]));
+                }
+                if ((ds.Tables["VW_VELOCITY"] != null)) {
+                    base.Tables.Add(new VW_VELOCITYDataTable(ds.Tables["VW_VELOCITY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -968,6 +1004,12 @@ namespace VSConnect {
                     this.tableVW_STORY_CUMULATIVE_FLOW.InitVars();
                 }
             }
+            this.tableVW_STORY_CUMULATIVE_FLOW_2 = ((VW_STORY_CUMULATIVE_FLOW_2DataTable)(base.Tables["VW_STORY_CUMULATIVE_FLOW_2"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_STORY_CUMULATIVE_FLOW_2 != null)) {
+                    this.tableVW_STORY_CUMULATIVE_FLOW_2.InitVars();
+                }
+            }
             this.tableVW_Task = ((VW_TaskDataTable)(base.Tables["VW_Task"]));
             if ((initTable == true)) {
                 if ((this.tableVW_Task != null)) {
@@ -1008,6 +1050,12 @@ namespace VSConnect {
             if ((initTable == true)) {
                 if ((this.tableVW_UserStory_Current != null)) {
                     this.tableVW_UserStory_Current.InitVars();
+                }
+            }
+            this.tableVW_VELOCITY = ((VW_VELOCITYDataTable)(base.Tables["VW_VELOCITY"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_VELOCITY != null)) {
+                    this.tableVW_VELOCITY.InitVars();
                 }
             }
         }
@@ -1076,6 +1124,8 @@ namespace VSConnect {
             base.Tables.Add(this.tableVW_Orphans);
             this.tableVW_STORY_CUMULATIVE_FLOW = new VW_STORY_CUMULATIVE_FLOWDataTable();
             base.Tables.Add(this.tableVW_STORY_CUMULATIVE_FLOW);
+            this.tableVW_STORY_CUMULATIVE_FLOW_2 = new VW_STORY_CUMULATIVE_FLOW_2DataTable();
+            base.Tables.Add(this.tableVW_STORY_CUMULATIVE_FLOW_2);
             this.tableVW_Task = new VW_TaskDataTable();
             base.Tables.Add(this.tableVW_Task);
             this.tableVW_Task_Current = new VW_Task_CurrentDataTable();
@@ -1090,6 +1140,8 @@ namespace VSConnect {
             base.Tables.Add(this.tableVW_UserStory);
             this.tableVW_UserStory_Current = new VW_UserStory_CurrentDataTable();
             base.Tables.Add(this.tableVW_UserStory_Current);
+            this.tableVW_VELOCITY = new VW_VELOCITYDataTable();
+            base.Tables.Add(this.tableVW_VELOCITY);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1262,6 +1314,12 @@ namespace VSConnect {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVW_STORY_CUMULATIVE_FLOW_2() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeVW_Task() {
             return false;
         }
@@ -1299,6 +1357,12 @@ namespace VSConnect {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeVW_UserStory_Current() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVW_VELOCITY() {
             return false;
         }
         
@@ -1442,6 +1506,9 @@ namespace VSConnect {
         public delegate void VW_STORY_CUMULATIVE_FLOWRowChangeEventHandler(object sender, VW_STORY_CUMULATIVE_FLOWRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler(object sender, VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VW_TaskRowChangeEventHandler(object sender, VW_TaskRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1461,6 +1528,9 @@ namespace VSConnect {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VW_UserStory_CurrentRowChangeEventHandler(object sender, VW_UserStory_CurrentRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void VW_VELOCITYRowChangeEventHandler(object sender, VW_VELOCITYRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -14358,6 +14428,494 @@ namespace VSConnect {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_STORY_CUMULATIVE_FLOW_2DataTable : global::System.Data.TypedTableBase<VW_STORY_CUMULATIVE_FLOW_2Row> {
+            
+            private global::System.Data.DataColumn columnWeekEnding;
+            
+            private global::System.Data.DataColumn columnNewThisWeek;
+            
+            private global::System.Data.DataColumn columnActiveThisWeek;
+            
+            private global::System.Data.DataColumn columnClosedThisWeek;
+            
+            private global::System.Data.DataColumn columnBacklog;
+            
+            private global::System.Data.DataColumn columnDevelopment;
+            
+            private global::System.Data.DataColumn columnDevelopmentDone;
+            
+            private global::System.Data.DataColumn columnAsynchronyQA;
+            
+            private global::System.Data.DataColumn columnAsynchronyQADone;
+            
+            private global::System.Data.DataColumn columnWegmansQA;
+            
+            private global::System.Data.DataColumn columnWegmansQADone;
+            
+            private global::System.Data.DataColumn columnPOReview;
+            
+            private global::System.Data.DataColumn columnPOReviewDone;
+            
+            private global::System.Data.DataColumn columnSmoketest;
+            
+            private global::System.Data.DataColumn columnSmoketestDone;
+            
+            private global::System.Data.DataColumn columnClosed;
+            
+            private global::System.Data.DataColumn columnCount;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2DataTable() {
+                this.TableName = "VW_STORY_CUMULATIVE_FLOW_2";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_STORY_CUMULATIVE_FLOW_2DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected VW_STORY_CUMULATIVE_FLOW_2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingColumn {
+                get {
+                    return this.columnWeekEnding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NewThisWeekColumn {
+                get {
+                    return this.columnNewThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActiveThisWeekColumn {
+                get {
+                    return this.columnActiveThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedThisWeekColumn {
+                get {
+                    return this.columnClosedThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BacklogColumn {
+                get {
+                    return this.columnBacklog;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DevelopmentColumn {
+                get {
+                    return this.columnDevelopment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DevelopmentDoneColumn {
+                get {
+                    return this.columnDevelopmentDone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AsynchronyQAColumn {
+                get {
+                    return this.columnAsynchronyQA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AsynchronyQADoneColumn {
+                get {
+                    return this.columnAsynchronyQADone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WegmansQAColumn {
+                get {
+                    return this.columnWegmansQA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WegmansQADoneColumn {
+                get {
+                    return this.columnWegmansQADone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn POReviewColumn {
+                get {
+                    return this.columnPOReview;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn POReviewDoneColumn {
+                get {
+                    return this.columnPOReviewDone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SmoketestColumn {
+                get {
+                    return this.columnSmoketest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SmoketestDoneColumn {
+                get {
+                    return this.columnSmoketestDone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedColumn {
+                get {
+                    return this.columnClosed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CountColumn {
+                get {
+                    return this.columnCount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2Row this[int index] {
+                get {
+                    return ((VW_STORY_CUMULATIVE_FLOW_2Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler VW_STORY_CUMULATIVE_FLOW_2RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler VW_STORY_CUMULATIVE_FLOW_2RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler VW_STORY_CUMULATIVE_FLOW_2RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_STORY_CUMULATIVE_FLOW_2RowChangeEventHandler VW_STORY_CUMULATIVE_FLOW_2RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVW_STORY_CUMULATIVE_FLOW_2Row(VW_STORY_CUMULATIVE_FLOW_2Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2Row AddVW_STORY_CUMULATIVE_FLOW_2Row(
+                        System.DateTime WeekEnding, 
+                        double NewThisWeek, 
+                        double ActiveThisWeek, 
+                        double ClosedThisWeek, 
+                        double Backlog, 
+                        double Development, 
+                        double DevelopmentDone, 
+                        double AsynchronyQA, 
+                        double AsynchronyQADone, 
+                        double WegmansQA, 
+                        double WegmansQADone, 
+                        double POReview, 
+                        double POReviewDone, 
+                        double Smoketest, 
+                        double SmoketestDone, 
+                        double Closed, 
+                        int Count) {
+                VW_STORY_CUMULATIVE_FLOW_2Row rowVW_STORY_CUMULATIVE_FLOW_2Row = ((VW_STORY_CUMULATIVE_FLOW_2Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        WeekEnding,
+                        NewThisWeek,
+                        ActiveThisWeek,
+                        ClosedThisWeek,
+                        Backlog,
+                        Development,
+                        DevelopmentDone,
+                        AsynchronyQA,
+                        AsynchronyQADone,
+                        WegmansQA,
+                        WegmansQADone,
+                        POReview,
+                        POReviewDone,
+                        Smoketest,
+                        SmoketestDone,
+                        Closed,
+                        Count};
+                rowVW_STORY_CUMULATIVE_FLOW_2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_STORY_CUMULATIVE_FLOW_2Row);
+                return rowVW_STORY_CUMULATIVE_FLOW_2Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_STORY_CUMULATIVE_FLOW_2DataTable cln = ((VW_STORY_CUMULATIVE_FLOW_2DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_STORY_CUMULATIVE_FLOW_2DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWeekEnding = base.Columns["WeekEnding"];
+                this.columnNewThisWeek = base.Columns["NewThisWeek"];
+                this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
+                this.columnClosedThisWeek = base.Columns["ClosedThisWeek"];
+                this.columnBacklog = base.Columns["Backlog"];
+                this.columnDevelopment = base.Columns["Development"];
+                this.columnDevelopmentDone = base.Columns["DevelopmentDone"];
+                this.columnAsynchronyQA = base.Columns["AsynchronyQA"];
+                this.columnAsynchronyQADone = base.Columns["AsynchronyQADone"];
+                this.columnWegmansQA = base.Columns["WegmansQA"];
+                this.columnWegmansQADone = base.Columns["WegmansQADone"];
+                this.columnPOReview = base.Columns["POReview"];
+                this.columnPOReviewDone = base.Columns["POReviewDone"];
+                this.columnSmoketest = base.Columns["Smoketest"];
+                this.columnSmoketestDone = base.Columns["SmoketestDone"];
+                this.columnClosed = base.Columns["Closed"];
+                this.columnCount = base.Columns["Count"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEnding);
+                this.columnNewThisWeek = new global::System.Data.DataColumn("NewThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewThisWeek);
+                this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActiveThisWeek);
+                this.columnClosedThisWeek = new global::System.Data.DataColumn("ClosedThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedThisWeek);
+                this.columnBacklog = new global::System.Data.DataColumn("Backlog", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBacklog);
+                this.columnDevelopment = new global::System.Data.DataColumn("Development", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDevelopment);
+                this.columnDevelopmentDone = new global::System.Data.DataColumn("DevelopmentDone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDevelopmentDone);
+                this.columnAsynchronyQA = new global::System.Data.DataColumn("AsynchronyQA", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsynchronyQA);
+                this.columnAsynchronyQADone = new global::System.Data.DataColumn("AsynchronyQADone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsynchronyQADone);
+                this.columnWegmansQA = new global::System.Data.DataColumn("WegmansQA", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWegmansQA);
+                this.columnWegmansQADone = new global::System.Data.DataColumn("WegmansQADone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWegmansQADone);
+                this.columnPOReview = new global::System.Data.DataColumn("POReview", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOReview);
+                this.columnPOReviewDone = new global::System.Data.DataColumn("POReviewDone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOReviewDone);
+                this.columnSmoketest = new global::System.Data.DataColumn("Smoketest", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSmoketest);
+                this.columnSmoketestDone = new global::System.Data.DataColumn("SmoketestDone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSmoketestDone);
+                this.columnClosed = new global::System.Data.DataColumn("Closed", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosed);
+                this.columnCount = new global::System.Data.DataColumn("Count", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCount);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2Row NewVW_STORY_CUMULATIVE_FLOW_2Row() {
+                return ((VW_STORY_CUMULATIVE_FLOW_2Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_STORY_CUMULATIVE_FLOW_2Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_STORY_CUMULATIVE_FLOW_2Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_STORY_CUMULATIVE_FLOW_2RowChanged != null)) {
+                    this.VW_STORY_CUMULATIVE_FLOW_2RowChanged(this, new VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent(((VW_STORY_CUMULATIVE_FLOW_2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_STORY_CUMULATIVE_FLOW_2RowChanging != null)) {
+                    this.VW_STORY_CUMULATIVE_FLOW_2RowChanging(this, new VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent(((VW_STORY_CUMULATIVE_FLOW_2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_STORY_CUMULATIVE_FLOW_2RowDeleted != null)) {
+                    this.VW_STORY_CUMULATIVE_FLOW_2RowDeleted(this, new VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent(((VW_STORY_CUMULATIVE_FLOW_2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_STORY_CUMULATIVE_FLOW_2RowDeleting != null)) {
+                    this.VW_STORY_CUMULATIVE_FLOW_2RowDeleting(this, new VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent(((VW_STORY_CUMULATIVE_FLOW_2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVW_STORY_CUMULATIVE_FLOW_2Row(VW_STORY_CUMULATIVE_FLOW_2Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DumpDataSet ds = new DumpDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_STORY_CUMULATIVE_FLOW_2DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class VW_TaskDataTable : global::System.Data.TypedTableBase<VW_TaskRow> {
             
             private global::System.Data.DataColumn columnID;
@@ -18444,6 +19002,281 @@ namespace VSConnect {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "VW_UserStory_CurrentDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_VELOCITYDataTable : global::System.Data.TypedTableBase<VW_VELOCITYRow> {
+            
+            private global::System.Data.DataColumn columnWeekEnding;
+            
+            private global::System.Data.DataColumn columnDevDone;
+            
+            private global::System.Data.DataColumn columnQADone;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYDataTable() {
+                this.TableName = "VW_VELOCITY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_VELOCITYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected VW_VELOCITYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingColumn {
+                get {
+                    return this.columnWeekEnding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DevDoneColumn {
+                get {
+                    return this.columnDevDone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QADoneColumn {
+                get {
+                    return this.columnQADone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYRow this[int index] {
+                get {
+                    return ((VW_VELOCITYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITYRowChangeEventHandler VW_VELOCITYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITYRowChangeEventHandler VW_VELOCITYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITYRowChangeEventHandler VW_VELOCITYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITYRowChangeEventHandler VW_VELOCITYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVW_VELOCITYRow(VW_VELOCITYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYRow AddVW_VELOCITYRow(System.DateTime WeekEnding, double DevDone, double QADone) {
+                VW_VELOCITYRow rowVW_VELOCITYRow = ((VW_VELOCITYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        WeekEnding,
+                        DevDone,
+                        QADone};
+                rowVW_VELOCITYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_VELOCITYRow);
+                return rowVW_VELOCITYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_VELOCITYDataTable cln = ((VW_VELOCITYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_VELOCITYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWeekEnding = base.Columns["WeekEnding"];
+                this.columnDevDone = base.Columns["DevDone"];
+                this.columnQADone = base.Columns["QADone"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEnding);
+                this.columnDevDone = new global::System.Data.DataColumn("DevDone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDevDone);
+                this.columnQADone = new global::System.Data.DataColumn("QADone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQADone);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYRow NewVW_VELOCITYRow() {
+                return ((VW_VELOCITYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_VELOCITYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_VELOCITYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_VELOCITYRowChanged != null)) {
+                    this.VW_VELOCITYRowChanged(this, new VW_VELOCITYRowChangeEvent(((VW_VELOCITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_VELOCITYRowChanging != null)) {
+                    this.VW_VELOCITYRowChanging(this, new VW_VELOCITYRowChangeEvent(((VW_VELOCITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_VELOCITYRowDeleted != null)) {
+                    this.VW_VELOCITYRowDeleted(this, new VW_VELOCITYRowChangeEvent(((VW_VELOCITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_VELOCITYRowDeleting != null)) {
+                    this.VW_VELOCITYRowDeleting(this, new VW_VELOCITYRowChangeEvent(((VW_VELOCITYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVW_VELOCITYRow(VW_VELOCITYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DumpDataSet ds = new DumpDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_VELOCITYDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -30022,6 +30855,510 @@ namespace VSConnect {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class VW_STORY_CUMULATIVE_FLOW_2Row : global::System.Data.DataRow {
+            
+            private VW_STORY_CUMULATIVE_FLOW_2DataTable tableVW_STORY_CUMULATIVE_FLOW_2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_STORY_CUMULATIVE_FLOW_2Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_STORY_CUMULATIVE_FLOW_2 = ((VW_STORY_CUMULATIVE_FLOW_2DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime WeekEnding {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WeekEndingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WeekEndingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double NewThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.NewThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewThisWeek\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.NewThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ActiveThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ActiveThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActiveThisWeek\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ActiveThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ClosedThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisWeek\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Backlog {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.BacklogColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Backlog\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.BacklogColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Development {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Development\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DevelopmentDone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentDoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DevelopmentDone\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentDoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AsynchronyQA {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AsynchronyQA\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double AsynchronyQADone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQADoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AsynchronyQADone\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQADoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double WegmansQA {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WegmansQA\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double WegmansQADone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQADoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WegmansQADone\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQADoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double POReview {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'POReview\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double POReviewDone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewDoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'POReviewDone\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewDoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Smoketest {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Smoketest\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double SmoketestDone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestDoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SmoketestDone\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestDoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Closed {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Closed\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Count {
+                get {
+                    try {
+                        return ((int)(this[this.tableVW_STORY_CUMULATIVE_FLOW_2.CountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Count\' in table \'VW_STORY_CUMULATIVE_FLOW_2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_STORY_CUMULATIVE_FLOW_2.CountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.WeekEndingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WeekEndingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNewThisWeekNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.NewThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNewThisWeekNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.NewThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsActiveThisWeekNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.ActiveThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetActiveThisWeekNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedThisWeekNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedThisWeekNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBacklogNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.BacklogColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBacklogNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.BacklogColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDevelopmentNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDevelopmentNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDevelopmentDoneNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentDoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDevelopmentDoneNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.DevelopmentDoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsynchronyQANull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsynchronyQANull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsynchronyQADoneNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQADoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsynchronyQADoneNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.AsynchronyQADoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWegmansQANull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWegmansQANull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWegmansQADoneNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQADoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWegmansQADoneNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.WegmansQADoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPOReviewNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPOReviewNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPOReviewDoneNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewDoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPOReviewDoneNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.POReviewDoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSmoketestNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSmoketestNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSmoketestDoneNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestDoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSmoketestDoneNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.SmoketestDoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.ClosedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCountNull() {
+                return this.IsNull(this.tableVW_STORY_CUMULATIVE_FLOW_2.CountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCountNull() {
+                this[this.tableVW_STORY_CUMULATIVE_FLOW_2.CountColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class VW_TaskRow : global::System.Data.DataRow {
             
             private VW_TaskDataTable tableVW_Task;
@@ -34302,6 +35639,105 @@ namespace VSConnect {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VW_VELOCITYRow : global::System.Data.DataRow {
+            
+            private VW_VELOCITYDataTable tableVW_VELOCITY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_VELOCITYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_VELOCITY = ((VW_VELOCITYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime WeekEnding {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_VELOCITY.WeekEndingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'VW_VELOCITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY.WeekEndingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DevDone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_VELOCITY.DevDoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DevDone\' in table \'VW_VELOCITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY.DevDoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double QADone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_VELOCITY.QADoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QADone\' in table \'VW_VELOCITY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY.QADoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingNull() {
+                return this.IsNull(this.tableVW_VELOCITY.WeekEndingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingNull() {
+                this[this.tableVW_VELOCITY.WeekEndingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDevDoneNull() {
+                return this.IsNull(this.tableVW_VELOCITY.DevDoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDevDoneNull() {
+                this[this.tableVW_VELOCITY.DevDoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQADoneNull() {
+                return this.IsNull(this.tableVW_VELOCITY.QADoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQADoneNull() {
+                this[this.tableVW_VELOCITY.QADoneColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -35257,6 +36693,40 @@ namespace VSConnect {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent : global::System.EventArgs {
+            
+            private VW_STORY_CUMULATIVE_FLOW_2Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2RowChangeEvent(VW_STORY_CUMULATIVE_FLOW_2Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_STORY_CUMULATIVE_FLOW_2Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class VW_TaskRowChangeEvent : global::System.EventArgs {
             
             private VW_TaskRow eventRow;
@@ -35477,6 +36947,40 @@ namespace VSConnect {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_UserStory_CurrentRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class VW_VELOCITYRowChangeEvent : global::System.EventArgs {
+            
+            private VW_VELOCITYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYRowChangeEvent(VW_VELOCITYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -46577,6 +48081,189 @@ namespace VSConnect.DumpDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_STORY_CUMULATIVE_FLOW_2TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public VW_STORY_CUMULATIVE_FLOW_2TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_STORY_CUMULATIVE_FLOW_2";
+            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
+            tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
+            tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
+            tableMapping.ColumnMappings.Add("ClosedThisWeek", "ClosedThisWeek");
+            tableMapping.ColumnMappings.Add("Backlog", "Backlog");
+            tableMapping.ColumnMappings.Add("Development", "Development");
+            tableMapping.ColumnMappings.Add("DevelopmentDone", "DevelopmentDone");
+            tableMapping.ColumnMappings.Add("AsynchronyQA", "AsynchronyQA");
+            tableMapping.ColumnMappings.Add("AsynchronyQADone", "AsynchronyQADone");
+            tableMapping.ColumnMappings.Add("WegmansQA", "WegmansQA");
+            tableMapping.ColumnMappings.Add("WegmansQADone", "WegmansQADone");
+            tableMapping.ColumnMappings.Add("POReview", "POReview");
+            tableMapping.ColumnMappings.Add("POReviewDone", "POReviewDone");
+            tableMapping.ColumnMappings.Add("Smoketest", "Smoketest");
+            tableMapping.ColumnMappings.Add("SmoketestDone", "SmoketestDone");
+            tableMapping.ColumnMappings.Add("Closed", "Closed");
+            tableMapping.ColumnMappings.Add("Count", "Count");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::VSConnect.Properties.Settings.Default.DumpConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT WeekEnding, NewThisWeek, ActiveThisWeek, ClosedThisWeek, Backlog, Development, DevelopmentDone, AsynchronyQA, AsynchronyQADone, WegmansQA, WegmansQADone, POReview, POReviewDone, Smoketest, SmoketestDone, Closed, [Count] FROM VW_STORY_CUMULATIVE_FLOW_2";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DumpDataSet.VW_STORY_CUMULATIVE_FLOW_2DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DumpDataSet.VW_STORY_CUMULATIVE_FLOW_2DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DumpDataSet.VW_STORY_CUMULATIVE_FLOW_2DataTable dataTable = new DumpDataSet.VW_STORY_CUMULATIVE_FLOW_2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class VW_TaskTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
@@ -47887,6 +49574,175 @@ namespace VSConnect.DumpDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_VELOCITYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public VW_VELOCITYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_VELOCITY";
+            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
+            tableMapping.ColumnMappings.Add("DevDone", "DevDone");
+            tableMapping.ColumnMappings.Add("QADone", "QADone");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::VSConnect.Properties.Settings.Default.DumpConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT WeekEnding, DevDone, QADone FROM VW_VELOCITY";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DumpDataSet.VW_VELOCITYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DumpDataSet.VW_VELOCITYDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DumpDataSet.VW_VELOCITYDataTable dataTable = new DumpDataSet.VW_VELOCITYDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48333,15 +50189,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._workItemRevisionTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._workItemRevisionTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._configTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Config.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -48405,6 +50252,15 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._releaseBurndownTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._releaseBurndownTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._userStoryFlowTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -48459,12 +50315,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._releaseBurndownTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._workItemRevisionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._releaseBurndownTableAdapter.Update(updatedRows));
+                    result = (result + this._workItemRevisionTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -48483,14 +50339,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._attachmentTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._workItemRevisionTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._workItemRevisionTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -48550,6 +50398,14 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._releaseBurndownTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._releaseBurndownTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._userStoryFlowTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -48598,11 +50454,11 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._releaseBurndownTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._workItemRevisionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._releaseBurndownTableAdapter.Update(addedRows));
+                    result = (result + this._workItemRevisionTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -48616,11 +50472,11 @@ namespace VSConnect.DumpDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DumpDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._releaseBurndownTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._workItemRevisionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._releaseBurndownTableAdapter.Update(deletedRows));
+                    result = (result + this._workItemRevisionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -48669,6 +50525,14 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._userStoryFlowTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._releaseBurndownTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ReleaseBurndown.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._releaseBurndownTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -48725,14 +50589,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._configTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._workItemRevisionTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._workItemRevisionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
