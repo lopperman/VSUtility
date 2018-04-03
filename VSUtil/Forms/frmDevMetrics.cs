@@ -95,9 +95,9 @@ namespace VSUtil.Forms
                     {
                         count = Convert.ToInt32(row["Count"]);
                     }
-                    if (!row.IsNull("Closed"))
+                    if (!row.IsNull("ClosedThisWeek"))
                     {
-                        closed = Convert.ToInt32(row["Closed"]);
+                        closed = Convert.ToInt32(row["ClosedThisWeek"]);
                     }
                     row["Remaining"] = count - closed;
                 }
@@ -111,16 +111,10 @@ namespace VSUtil.Forms
             chartBugs.Series["countNew"].Points.DataBind(devview, "WeekEnding", "NewThisWeek", "Tooltip=WeekEnding");
 
             series = CreateSeries("countActive", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
-                ChartValueType.DateTime, "Active Bugs");
+                ChartValueType.DateTime, "Worked Bugs");
             chartBugs.Series.Add(series);
             devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
             chartBugs.Series["countActive"].Points.DataBind(devview, "WeekEnding", "ActiveThisWeek", "Tooltip=WeekEnding");
-
-//            series = CreateSeries("count", SeriesChartType.Line, 2, Color.DarkSlateGray, ChartDashStyle.Solid,
-//                ChartValueType.DateTime, "Total Bugs");
-//            chartBugs.Series.Add(series);
-//            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, "", "WeekEnding", DataViewRowState.CurrentRows);
-//            chartBugs.Series["count"].Points.DataBind(devview, "WeekEnding", "Count", "Tooltip=WeekEnding");
 
             series = CreateSeries("remaining", SeriesChartType.Line, 2, Color.DarkRed, ChartDashStyle.Solid,
                 ChartValueType.DateTime, "Remaining Bugs");
@@ -133,19 +127,6 @@ namespace VSUtil.Forms
             chartBugs.Series.Add(series);
             devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
             chartBugs.Series["closedThisWeek"].Points.DataBind(devview, "WeekEnding", "ClosedThisWeek", "Tooltip=WeekEnding");
-
-//            if (chkShowTrends.Checked)
-//            {
-//                Series trendline = new Series("CountTrendline");
-//                trendline.ChartType = SeriesChartType.Line;
-//                trendline.BorderWidth = 1;
-//                trendline.BorderDashStyle = ChartDashStyle.Dash;
-//                trendline.Color = Color.Blue;
-//                chartDevelopment.Series.Add(trendline);
-//                string forecast = string.Format("Linear,{0},false,false", Convert.ToInt32(forecastWeeks.Value));
-//                chartDevelopment.DataManipulator.FinancialFormula(FinancialFormula.Forecasting, forecast, chartDevelopment.Series["count"], chartDevelopment.Series["CountTrendline"]);
-//                chartDevelopment.Series["CountTrendline"].LegendText = "Dev Complete Trend";
-//            }
 
 
             chartBugs.Update();

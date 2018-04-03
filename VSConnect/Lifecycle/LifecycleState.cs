@@ -50,6 +50,11 @@ namespace VSConnect.Lifecycle
                 state = states.FirstOrDefault(x => x.WorkItemState == witem.State);
             }
 
+            if (state == null)
+            {
+                throw new Exception("Cannot determine state for WItem " + witem.ID + ", revision " + witem.Rev);
+            }
+
             return state;
         }
 
@@ -151,6 +156,39 @@ namespace VSConnect.Lifecycle
             states.Add(new LifecycleState("Closed", "Closed", "Closed", false, 12));
 
             return states;
+        }
+
+        public bool WasInState(List<WItem> revisions, int state, DateTime startDt, DateTime endDt)
+        {
+            var ret = false;
+
+            //first, check if a revision exists between dates
+            var revs = revisions.Where(x => x.ChangedDate >= startDt && x.ChangedDate <= endDt).ToList();
+            if (revs != null && revs.Any())
+            {
+                foreach (var rev in revs)
+                {
+                    if (this.GetCurrentWorkItemStateCategory(rev).Position == state)
+                    {
+                        ret = true;
+                        break;
+                    }
+                }
+            }
+            //otherwise, take the latest rev BEFORE start date, and that is the state
+            else
+            {
+                var rev = revisions.Where(x => x.ChangedDate <= startDt).OrderBy(y => y.Rev).LastOrDefault();
+                if (rev != null)
+                {
+                    if (this.GetCurrentWorkItemStateCategory(rev).Position == state)
+                    {
+                        ret = true;
+                    }
+                }
+            }
+
+            return ret;
         }
     }
 

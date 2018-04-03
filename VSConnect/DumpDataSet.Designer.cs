@@ -4718,6 +4718,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnID;
             
+            private global::System.Data.DataColumn columnType;
+            
             private global::System.Data.DataColumn columnTitle;
             
             private global::System.Data.DataColumn columnWeekEnding;
@@ -4725,6 +4727,8 @@ namespace VSConnect {
             private global::System.Data.DataColumn columnNewThisWeek;
             
             private global::System.Data.DataColumn columnActiveThisWeek;
+            
+            private global::System.Data.DataColumn columnWeekEndingState;
             
             private global::System.Data.DataColumn columnClosed;
             
@@ -4831,6 +4835,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn TitleColumn {
                 get {
                     return this.columnTitle;
@@ -4858,6 +4870,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn ActiveThisWeekColumn {
                 get {
                     return this.columnActiveThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingStateColumn {
+                get {
+                    return this.columnWeekEndingState;
                 }
             }
             
@@ -5148,10 +5168,12 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UserStoryFlowRow AddUserStoryFlowRow(
                         int ID, 
+                        string Type, 
                         string Title, 
                         System.DateTime WeekEnding, 
                         short NewThisWeek, 
                         short ActiveThisWeek, 
+                        int WeekEndingState, 
                         int Closed, 
                         string State1Desc, 
                         int State1, 
@@ -5182,14 +5204,16 @@ namespace VSConnect {
                         string State14Desc, 
                         int State14, 
                         string State15Desc, 
-                        string State15) {
+                        int State15) {
                 UserStoryFlowRow rowUserStoryFlowRow = ((UserStoryFlowRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
+                        Type,
                         Title,
                         WeekEnding,
                         NewThisWeek,
                         ActiveThisWeek,
+                        WeekEndingState,
                         Closed,
                         State1Desc,
                         State1,
@@ -5244,10 +5268,12 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
+                this.columnType = base.Columns["Type"];
                 this.columnTitle = base.Columns["Title"];
                 this.columnWeekEnding = base.Columns["WeekEnding"];
                 this.columnNewThisWeek = base.Columns["NewThisWeek"];
                 this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
+                this.columnWeekEndingState = base.Columns["WeekEndingState"];
                 this.columnClosed = base.Columns["Closed"];
                 this.columnState1Desc = base.Columns["State1Desc"];
                 this.columnState1 = base.Columns["State1"];
@@ -5286,6 +5312,8 @@ namespace VSConnect {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
                 this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitle);
                 this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -5294,6 +5322,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnNewThisWeek);
                 this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActiveThisWeek);
+                this.columnWeekEndingState = new global::System.Data.DataColumn("WeekEndingState", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEndingState);
                 this.columnClosed = new global::System.Data.DataColumn("Closed", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClosed);
                 this.columnState1Desc = new global::System.Data.DataColumn("State1Desc", typeof(string), null, global::System.Data.MappingType.Element);
@@ -5354,8 +5384,9 @@ namespace VSConnect {
                 base.Columns.Add(this.columnState14);
                 this.columnState15Desc = new global::System.Data.DataColumn("State15Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState15Desc);
-                this.columnState15 = new global::System.Data.DataColumn("State15", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnState15 = new global::System.Data.DataColumn("State15", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState15);
+                this.columnType.MaxLength = 255;
                 this.columnTitle.MaxLength = 255;
                 this.columnState1Desc.MaxLength = 255;
                 this.columnState2Desc.MaxLength = 255;
@@ -5372,7 +5403,6 @@ namespace VSConnect {
                 this.columnState13Desc.MaxLength = 255;
                 this.columnState14Desc.MaxLength = 255;
                 this.columnState15Desc.MaxLength = 255;
-                this.columnState15.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20771,6 +20801,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow.TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Title {
                 get {
                     try {
@@ -20830,6 +20876,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.ActiveThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int WeekEndingState {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.WeekEndingStateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEndingState\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.WeekEndingStateColumn] = value;
                 }
             }
             
@@ -21315,10 +21377,10 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string State15 {
+            public int State15 {
                 get {
                     try {
-                        return ((string)(this[this.tableUserStoryFlow.State15Column]));
+                        return ((int)(this[this.tableUserStoryFlow.State15Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'State15\' in table \'UserStoryFlow\' is DBNull.", e);
@@ -21339,6 +21401,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIDNull() {
                 this[this.tableUserStoryFlow.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTypeNull() {
+                return this.IsNull(this.tableUserStoryFlow.TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTypeNull() {
+                this[this.tableUserStoryFlow.TypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21387,6 +21461,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetActiveThisWeekNull() {
                 this[this.tableUserStoryFlow.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingStateNull() {
+                return this.IsNull(this.tableUserStoryFlow.WeekEndingStateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingStateNull() {
+                this[this.tableUserStoryFlow.WeekEndingStateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -38380,10 +38466,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "UserStoryFlow";
             tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Type", "Type");
             tableMapping.ColumnMappings.Add("Title", "Title");
             tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
             tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
             tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
+            tableMapping.ColumnMappings.Add("WeekEndingState", "WeekEndingState");
             tableMapping.ColumnMappings.Add("Closed", "Closed");
             tableMapping.ColumnMappings.Add("State1Desc", "State1Desc");
             tableMapping.ColumnMappings.Add("State1", "State1");
@@ -38418,13 +38506,15 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow` (`ID`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `Closed`, `State1Desc`, `State1`, `State2Desc`, `State2`, `State3Desc`, `State3`, `State4Desc`, `State4`, `State5Desc`, `State5`, `State6Desc`, `State6`, `State7Desc`, `State7`, `State8Desc`, `State8`, `State9Desc`, `State9`, `State10Desc`, `State10`, `State11Desc`, `State11`, `State12Desc`, `State12`, `State13Desc`, `State13`, `State14Desc`, `State14`, `State15Desc`, `State15`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow` (`ID`, `Type`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `WeekEndingState`, `Closed`, `State1Desc`, `State1`, `State2Desc`, `State2`, `State3Desc`, `State3`, `State4Desc`, `State4`, `State5Desc`, `State5`, `State6Desc`, `State6`, `State7Desc`, `State7`, `State8Desc`, `State8`, `State9Desc`, `State9`, `State10Desc`, `State10`, `State11Desc`, `State11`, `State12Desc`, `State12`, `State13Desc`, `State13`, `State14Desc`, `State14`, `State15Desc`, `State15`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Title", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEnding", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEnding", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NewThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NewThisWeek", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ActiveThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ActiveThisWeek", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEndingState", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEndingState", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Closed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Closed", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1", global::System.Data.DataRowVersion.Current, false, null));
@@ -38455,7 +38545,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15Desc", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -38471,7 +38561,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Title, WeekEnding, NewThisWeek, ActiveThisWeek, Closed, State1Desc, State1, State2Desc, State2, State3Desc, State3, State4Desc, State4, State5Desc, State5, State6Desc, State6, State7Desc, State7, State8Desc, State8, State9Desc, State9, State10Desc, State10, State11Desc, State11, State12Desc, State12, State13Desc, State13, State14Desc, State14, State15Desc, State15 FROM UserStoryFlow";
+            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, WeekEnding, NewThisWeek, ActiveThisWeek, WeekEndingState, Closed, State1Desc, State1, State2Desc, State2, State3Desc, State3, State4Desc, State4, State5Desc, State5, State6Desc, State6, State7Desc, State7, State8Desc, State8, State9Desc, State9, State10Desc, State10, State11Desc, State11, State12Desc, State12, State13Desc, State13, State14Desc, State14, State15Desc, State15 FROM UserStoryFlow";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -38534,10 +38624,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
                     int ID, 
+                    string Type, 
                     string Title, 
                     global::System.Nullable<global::System.DateTime> WeekEnding, 
                     global::System.Nullable<short> NewThisWeek, 
                     global::System.Nullable<short> ActiveThisWeek, 
+                    global::System.Nullable<int> WeekEndingState, 
                     global::System.Nullable<int> Closed, 
                     string State1Desc, 
                     global::System.Nullable<int> State1, 
@@ -38568,217 +38660,229 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string State14Desc, 
                     global::System.Nullable<int> State14, 
                     string State15Desc, 
-                    string State15) {
+                    global::System.Nullable<int> State15) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
-            if ((Title == null)) {
+            if ((Type == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Title));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Type));
             }
-            if ((WeekEnding.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(WeekEnding.Value));
-            }
-            else {
+            if ((Title == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((NewThisWeek.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((short)(NewThisWeek.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Title));
+            }
+            if ((WeekEnding.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(WeekEnding.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((ActiveThisWeek.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(ActiveThisWeek.Value));
+            if ((NewThisWeek.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(NewThisWeek.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Closed.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Closed.Value));
+            if ((ActiveThisWeek.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((short)(ActiveThisWeek.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((State1Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((WeekEndingState.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(WeekEndingState.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(State1Desc));
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((State1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(State1.Value));
+            if ((Closed.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Closed.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((State2Desc == null)) {
+            if ((State1Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(State2Desc));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(State1Desc));
             }
-            if ((State2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(State2.Value));
+            if ((State1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(State1.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((State3Desc == null)) {
+            if ((State2Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(State3Desc));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(State2Desc));
             }
-            if ((State3.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(State3.Value));
+            if ((State2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(State2.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((State4Desc == null)) {
+            if ((State3Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(State4Desc));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(State3Desc));
             }
-            if ((State4.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(State4.Value));
+            if ((State3.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(State3.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((State5Desc == null)) {
+            if ((State4Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(State5Desc));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(State4Desc));
             }
-            if ((State5.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(State5.Value));
+            if ((State4.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(State4.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((State6Desc == null)) {
+            if ((State5Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(State6Desc));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(State5Desc));
             }
-            if ((State6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(State6.Value));
+            if ((State5.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(State5.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((State7Desc == null)) {
+            if ((State6Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(State7Desc));
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(State6Desc));
             }
-            if ((State7.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(State7.Value));
+            if ((State6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(State6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((State8Desc == null)) {
+            if ((State7Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(State8Desc));
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(State7Desc));
             }
-            if ((State8.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((int)(State8.Value));
+            if ((State7.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((int)(State7.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((State9Desc == null)) {
+            if ((State8Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(State9Desc));
+                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(State8Desc));
             }
-            if ((State9.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((int)(State9.Value));
+            if ((State8.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((int)(State8.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((State10Desc == null)) {
+            if ((State9Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(State10Desc));
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(State9Desc));
             }
-            if ((State10.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(State10.Value));
+            if ((State9.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(State9.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((State11Desc == null)) {
+            if ((State10Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(State11Desc));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(State10Desc));
             }
-            if ((State11.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(State11.Value));
+            if ((State10.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(State10.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((State12Desc == null)) {
+            if ((State11Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(State12Desc));
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(State11Desc));
             }
-            if ((State12.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(State12.Value));
+            if ((State11.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(State11.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((State13Desc == null)) {
+            if ((State12Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(State13Desc));
+                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(State12Desc));
             }
-            if ((State13.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(State13.Value));
+            if ((State12.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(State12.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((State14Desc == null)) {
+            if ((State13Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(State14Desc));
+                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(State13Desc));
             }
-            if ((State14.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(State14.Value));
+            if ((State13.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(State13.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
-            if ((State15Desc == null)) {
+            if ((State14Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(State15Desc));
+                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(State14Desc));
             }
-            if ((State15 == null)) {
-                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            if ((State14.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((int)(State14.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(State15));
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((State15Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(State15Desc));
+            }
+            if ((State15.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((int)(State15.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
