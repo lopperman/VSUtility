@@ -1,4 +1,5 @@
 ﻿using System;
+using VSConnect.Lifecycle;
 
 namespace VSConnect
 {
@@ -19,6 +20,8 @@ namespace VSConnect
         public bool BoardColumnDone { get; set; }
 
         public string Key => $"{State}-{BoardColumn}-{BoardColumnDone}";
+
+        public int LifecycleState => new LifecycleStates().GetCurrentWorkItemStateCategory(this).Position;
     }
 
     public class WItemLife

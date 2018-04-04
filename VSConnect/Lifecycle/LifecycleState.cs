@@ -89,7 +89,7 @@ namespace VSConnect.Lifecycle
 
                 if (results.Any())
                 {
-                    ret = results.OrderBy(x => x.RevisedDate).First().RevisedDate;
+                    ret = results.OrderBy(x => x.ChangedDate).First().ChangedDate;
                     break;
                 }
 
@@ -116,7 +116,7 @@ namespace VSConnect.Lifecycle
 
                 if (results.Any())
                 {
-                    ret = results.OrderBy(x => x.RevisedDate).First().RevisedDate;
+                    ret = results.OrderBy(x => x.ChangedDate).First().ChangedDate;
                     break;
                 }
 
@@ -187,6 +187,43 @@ namespace VSConnect.Lifecycle
                     }
                 }
             }
+
+            return ret;
+        }
+
+        public bool EnteredState(List<WItem> revisions, int state, DateTime startDt, DateTime endDt)
+        {
+            var ret = false;
+            var revisionsInDateRange = revisions.Where(x => x.ChangedDate >= startDt && x.ChangedDate <= endDt)
+                .OrderBy(y=>y.Rev).ToList();
+
+            int startState = 0;
+
+            if (revisions.Any(x => x.ChangedDate < startDt))
+            {
+                startState = revisions.Where(x => x.ChangedDate < startDt).OrderBy(x => x.Rev).Last().LifecycleState;
+            }
+
+            if (startState != state)
+            {
+                foreach (var rev in revisionsInDateRange)
+                {
+                    if (rev.LifecycleState == state) return true;
+                }
+            }
+            else
+            {
+                //if is state we're looking for, then did state change, then change back to state, then true
+
+                var firstRevOfDifferentState = revisionsInDateRange.Where(x => x.LifecycleState != state).FirstOrDefault();
+                if (firstRevOfDifferentState == null) return false;
+
+                int firstDifferentRev = firstRevOfDifferentState.Rev;
+
+                return revisionsInDateRange.Where(x => x.Rev > firstDifferentRev && x.LifecycleState == state).Any();
+            }
+
+
 
             return ret;
         }

@@ -25,10 +25,22 @@ namespace VSConnect.Lifecycle
 
             while (currentWeekEnding <= LastFriday())
             {
+
+
                 DateTime searchDate = new DateTime(currentWeekEnding.Year,currentWeekEnding.Month,currentWeekEnding.Day,23,59,59);
+
+                DateTime searchBeginning = searchDate.AddDays(-7);
 
                 foreach (var workItem in ds.WorkItem.Where(x => x.CreatedDate <= searchDate))
                 {
+                    if (currentWeekEnding.Month == 2 && currentWeekEnding.Day == 23 && workItem.ID == 116240)
+                    {
+                        string asdf = "asdf";
+                    }
+
+
+
+
                     if (workItem.Type != "User Story" && workItem.Type != "Bug")
                     {
                         continue;
@@ -37,6 +49,11 @@ namespace VSConnect.Lifecycle
                     //all revisions up to searchDate
                     var revisions = workItemRevisions.Where(x => x.ID == workItem.ID && x.ChangedDate <= searchDate).OrderBy(y => y.Rev).ToList();
 
+                    if (!revisions.Any())
+                    {
+                        continue;
+                    }
+
                     DumpDataSet.UserStoryFlowRow row = ds.UserStoryFlow.NewUserStoryFlowRow();
 
                     row.ID = workItem.ID;
@@ -44,7 +61,7 @@ namespace VSConnect.Lifecycle
                     row.Type = workItem.Type;
                     row.WeekEndingState = states.GetCurrentWorkItemStateCategory(revisions.Last()).Position;
 
-                    if (workItem.CreatedDate <= searchDate && workItem.CreatedDate >= searchDate.AddDays(-7))
+                    if (workItem.CreatedDate <= searchDate && workItem.CreatedDate >= searchBeginning)
                     {
                         row.NewThisWeek = 1;
                     }
@@ -60,13 +77,22 @@ namespace VSConnect.Lifecycle
 
                         row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
 
-                        if (states.WasInState(revisions, i, searchDate.AddDays(-7), searchDate))
+                        if (states.WasInState(revisions, i, searchBeginning, searchDate))
                         {
                             row[string.Format("State{0}", i)] = 1;
                         }
                         else
                         {
                             row[string.Format("State{0}", i)] = 0;
+                        }
+
+                        if (states.EnteredState(revisions, i, searchBeginning, searchDate))
+                        {
+                            row[string.Format("State{0}Entered", i)] = 1;
+                        }
+                        else 
+                        {
+                            row[string.Format("State{0}Entered", i)] = 0;
                         }
                     }
 

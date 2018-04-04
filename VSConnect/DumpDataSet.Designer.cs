@@ -4806,61 +4806,91 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnState1;
             
+            private global::System.Data.DataColumn columnState1Entered;
+            
             private global::System.Data.DataColumn columnState2Desc;
             
             private global::System.Data.DataColumn columnState2;
+            
+            private global::System.Data.DataColumn columnState2Entered;
             
             private global::System.Data.DataColumn columnState3Desc;
             
             private global::System.Data.DataColumn columnState3;
             
+            private global::System.Data.DataColumn columnState3Entered;
+            
             private global::System.Data.DataColumn columnState4Desc;
             
             private global::System.Data.DataColumn columnState4;
+            
+            private global::System.Data.DataColumn columnState4Entered;
             
             private global::System.Data.DataColumn columnState5Desc;
             
             private global::System.Data.DataColumn columnState5;
             
+            private global::System.Data.DataColumn columnState5Entered;
+            
             private global::System.Data.DataColumn columnState6Desc;
             
             private global::System.Data.DataColumn columnState6;
+            
+            private global::System.Data.DataColumn columnState6Entered;
             
             private global::System.Data.DataColumn columnState7Desc;
             
             private global::System.Data.DataColumn columnState7;
             
+            private global::System.Data.DataColumn columnState7Entered;
+            
             private global::System.Data.DataColumn columnState8Desc;
             
             private global::System.Data.DataColumn columnState8;
+            
+            private global::System.Data.DataColumn columnState8Entered;
             
             private global::System.Data.DataColumn columnState9Desc;
             
             private global::System.Data.DataColumn columnState9;
             
+            private global::System.Data.DataColumn columnState9Entered;
+            
             private global::System.Data.DataColumn columnState10Desc;
             
             private global::System.Data.DataColumn columnState10;
+            
+            private global::System.Data.DataColumn columnState10Entered;
             
             private global::System.Data.DataColumn columnState11Desc;
             
             private global::System.Data.DataColumn columnState11;
             
+            private global::System.Data.DataColumn columnState11Entered;
+            
             private global::System.Data.DataColumn columnState12Desc;
             
             private global::System.Data.DataColumn columnState12;
+            
+            private global::System.Data.DataColumn columnState12Entered;
             
             private global::System.Data.DataColumn columnState13Desc;
             
             private global::System.Data.DataColumn columnState13;
             
+            private global::System.Data.DataColumn columnState13Entered;
+            
             private global::System.Data.DataColumn columnState14Desc;
             
             private global::System.Data.DataColumn columnState14;
             
+            private global::System.Data.DataColumn columnState14Entered;
+            
             private global::System.Data.DataColumn columnState15Desc;
             
             private global::System.Data.DataColumn columnState15;
+            
+            private global::System.Data.DataColumn columnState15Entered;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4977,6 +5007,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1EnteredColumn {
+                get {
+                    return this.columnState1Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State2DescColumn {
                 get {
                     return this.columnState2Desc;
@@ -4988,6 +5026,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State2Column {
                 get {
                     return this.columnState2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2EnteredColumn {
+                get {
+                    return this.columnState2Entered;
                 }
             }
             
@@ -5009,6 +5055,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3EnteredColumn {
+                get {
+                    return this.columnState3Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State4DescColumn {
                 get {
                     return this.columnState4Desc;
@@ -5020,6 +5074,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State4Column {
                 get {
                     return this.columnState4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4EnteredColumn {
+                get {
+                    return this.columnState4Entered;
                 }
             }
             
@@ -5041,6 +5103,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5EnteredColumn {
+                get {
+                    return this.columnState5Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State6DescColumn {
                 get {
                     return this.columnState6Desc;
@@ -5052,6 +5122,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State6Column {
                 get {
                     return this.columnState6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6EnteredColumn {
+                get {
+                    return this.columnState6Entered;
                 }
             }
             
@@ -5073,6 +5151,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7EnteredColumn {
+                get {
+                    return this.columnState7Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State8DescColumn {
                 get {
                     return this.columnState8Desc;
@@ -5084,6 +5170,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State8Column {
                 get {
                     return this.columnState8;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8EnteredColumn {
+                get {
+                    return this.columnState8Entered;
                 }
             }
             
@@ -5105,6 +5199,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9EnteredColumn {
+                get {
+                    return this.columnState9Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State10DescColumn {
                 get {
                     return this.columnState10Desc;
@@ -5116,6 +5218,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State10Column {
                 get {
                     return this.columnState10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10EnteredColumn {
+                get {
+                    return this.columnState10Entered;
                 }
             }
             
@@ -5137,6 +5247,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11EnteredColumn {
+                get {
+                    return this.columnState11Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State12DescColumn {
                 get {
                     return this.columnState12Desc;
@@ -5148,6 +5266,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State12Column {
                 get {
                     return this.columnState12;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12EnteredColumn {
+                get {
+                    return this.columnState12Entered;
                 }
             }
             
@@ -5169,6 +5295,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13EnteredColumn {
+                get {
+                    return this.columnState13Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State14DescColumn {
                 get {
                     return this.columnState14Desc;
@@ -5185,6 +5319,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14EnteredColumn {
+                get {
+                    return this.columnState14Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn State15DescColumn {
                 get {
                     return this.columnState15Desc;
@@ -5196,6 +5338,14 @@ namespace VSConnect {
             public global::System.Data.DataColumn State15Column {
                 get {
                     return this.columnState15;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15EnteredColumn {
+                get {
+                    return this.columnState15Entered;
                 }
             }
             
@@ -5247,34 +5397,49 @@ namespace VSConnect {
                         int Closed, 
                         string State1Desc, 
                         int State1, 
+                        int State1Entered, 
                         string State2Desc, 
                         int State2, 
+                        int State2Entered, 
                         string State3Desc, 
                         int State3, 
+                        int State3Entered, 
                         string State4Desc, 
                         int State4, 
+                        int State4Entered, 
                         string State5Desc, 
                         int State5, 
+                        int State5Entered, 
                         string State6Desc, 
                         int State6, 
+                        int State6Entered, 
                         string State7Desc, 
                         int State7, 
+                        int State7Entered, 
                         string State8Desc, 
                         int State8, 
+                        int State8Entered, 
                         string State9Desc, 
                         int State9, 
+                        int State9Entered, 
                         string State10Desc, 
                         int State10, 
+                        int State10Entered, 
                         string State11Desc, 
                         int State11, 
+                        int State11Entered, 
                         string State12Desc, 
                         int State12, 
+                        int State12Entered, 
                         string State13Desc, 
                         int State13, 
+                        int State13Entered, 
                         string State14Desc, 
                         int State14, 
+                        int State14Entered, 
                         string State15Desc, 
-                        int State15) {
+                        int State15, 
+                        int State15Entered) {
                 UserStoryFlowRow rowUserStoryFlowRow = ((UserStoryFlowRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -5287,34 +5452,49 @@ namespace VSConnect {
                         Closed,
                         State1Desc,
                         State1,
+                        State1Entered,
                         State2Desc,
                         State2,
+                        State2Entered,
                         State3Desc,
                         State3,
+                        State3Entered,
                         State4Desc,
                         State4,
+                        State4Entered,
                         State5Desc,
                         State5,
+                        State5Entered,
                         State6Desc,
                         State6,
+                        State6Entered,
                         State7Desc,
                         State7,
+                        State7Entered,
                         State8Desc,
                         State8,
+                        State8Entered,
                         State9Desc,
                         State9,
+                        State9Entered,
                         State10Desc,
                         State10,
+                        State10Entered,
                         State11Desc,
                         State11,
+                        State11Entered,
                         State12Desc,
                         State12,
+                        State12Entered,
                         State13Desc,
                         State13,
+                        State13Entered,
                         State14Desc,
                         State14,
+                        State14Entered,
                         State15Desc,
-                        State15};
+                        State15,
+                        State15Entered};
                 rowUserStoryFlowRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserStoryFlowRow);
                 return rowUserStoryFlowRow;
@@ -5347,34 +5527,49 @@ namespace VSConnect {
                 this.columnClosed = base.Columns["Closed"];
                 this.columnState1Desc = base.Columns["State1Desc"];
                 this.columnState1 = base.Columns["State1"];
+                this.columnState1Entered = base.Columns["State1Entered"];
                 this.columnState2Desc = base.Columns["State2Desc"];
                 this.columnState2 = base.Columns["State2"];
+                this.columnState2Entered = base.Columns["State2Entered"];
                 this.columnState3Desc = base.Columns["State3Desc"];
                 this.columnState3 = base.Columns["State3"];
+                this.columnState3Entered = base.Columns["State3Entered"];
                 this.columnState4Desc = base.Columns["State4Desc"];
                 this.columnState4 = base.Columns["State4"];
+                this.columnState4Entered = base.Columns["State4Entered"];
                 this.columnState5Desc = base.Columns["State5Desc"];
                 this.columnState5 = base.Columns["State5"];
+                this.columnState5Entered = base.Columns["State5Entered"];
                 this.columnState6Desc = base.Columns["State6Desc"];
                 this.columnState6 = base.Columns["State6"];
+                this.columnState6Entered = base.Columns["State6Entered"];
                 this.columnState7Desc = base.Columns["State7Desc"];
                 this.columnState7 = base.Columns["State7"];
+                this.columnState7Entered = base.Columns["State7Entered"];
                 this.columnState8Desc = base.Columns["State8Desc"];
                 this.columnState8 = base.Columns["State8"];
+                this.columnState8Entered = base.Columns["State8Entered"];
                 this.columnState9Desc = base.Columns["State9Desc"];
                 this.columnState9 = base.Columns["State9"];
+                this.columnState9Entered = base.Columns["State9Entered"];
                 this.columnState10Desc = base.Columns["State10Desc"];
                 this.columnState10 = base.Columns["State10"];
+                this.columnState10Entered = base.Columns["State10Entered"];
                 this.columnState11Desc = base.Columns["State11Desc"];
                 this.columnState11 = base.Columns["State11"];
+                this.columnState11Entered = base.Columns["State11Entered"];
                 this.columnState12Desc = base.Columns["State12Desc"];
                 this.columnState12 = base.Columns["State12"];
+                this.columnState12Entered = base.Columns["State12Entered"];
                 this.columnState13Desc = base.Columns["State13Desc"];
                 this.columnState13 = base.Columns["State13"];
+                this.columnState13Entered = base.Columns["State13Entered"];
                 this.columnState14Desc = base.Columns["State14Desc"];
                 this.columnState14 = base.Columns["State14"];
+                this.columnState14Entered = base.Columns["State14Entered"];
                 this.columnState15Desc = base.Columns["State15Desc"];
                 this.columnState15 = base.Columns["State15"];
+                this.columnState15Entered = base.Columns["State15Entered"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5400,62 +5595,92 @@ namespace VSConnect {
                 base.Columns.Add(this.columnState1Desc);
                 this.columnState1 = new global::System.Data.DataColumn("State1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState1);
+                this.columnState1Entered = new global::System.Data.DataColumn("State1Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1Entered);
                 this.columnState2Desc = new global::System.Data.DataColumn("State2Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState2Desc);
                 this.columnState2 = new global::System.Data.DataColumn("State2", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState2);
+                this.columnState2Entered = new global::System.Data.DataColumn("State2Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2Entered);
                 this.columnState3Desc = new global::System.Data.DataColumn("State3Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState3Desc);
                 this.columnState3 = new global::System.Data.DataColumn("State3", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState3);
+                this.columnState3Entered = new global::System.Data.DataColumn("State3Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3Entered);
                 this.columnState4Desc = new global::System.Data.DataColumn("State4Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState4Desc);
                 this.columnState4 = new global::System.Data.DataColumn("State4", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState4);
+                this.columnState4Entered = new global::System.Data.DataColumn("State4Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4Entered);
                 this.columnState5Desc = new global::System.Data.DataColumn("State5Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState5Desc);
                 this.columnState5 = new global::System.Data.DataColumn("State5", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState5);
+                this.columnState5Entered = new global::System.Data.DataColumn("State5Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5Entered);
                 this.columnState6Desc = new global::System.Data.DataColumn("State6Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState6Desc);
                 this.columnState6 = new global::System.Data.DataColumn("State6", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState6);
+                this.columnState6Entered = new global::System.Data.DataColumn("State6Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6Entered);
                 this.columnState7Desc = new global::System.Data.DataColumn("State7Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState7Desc);
                 this.columnState7 = new global::System.Data.DataColumn("State7", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState7);
+                this.columnState7Entered = new global::System.Data.DataColumn("State7Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7Entered);
                 this.columnState8Desc = new global::System.Data.DataColumn("State8Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState8Desc);
                 this.columnState8 = new global::System.Data.DataColumn("State8", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState8);
+                this.columnState8Entered = new global::System.Data.DataColumn("State8Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8Entered);
                 this.columnState9Desc = new global::System.Data.DataColumn("State9Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState9Desc);
                 this.columnState9 = new global::System.Data.DataColumn("State9", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState9);
+                this.columnState9Entered = new global::System.Data.DataColumn("State9Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9Entered);
                 this.columnState10Desc = new global::System.Data.DataColumn("State10Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState10Desc);
                 this.columnState10 = new global::System.Data.DataColumn("State10", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState10);
+                this.columnState10Entered = new global::System.Data.DataColumn("State10Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10Entered);
                 this.columnState11Desc = new global::System.Data.DataColumn("State11Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState11Desc);
                 this.columnState11 = new global::System.Data.DataColumn("State11", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState11);
+                this.columnState11Entered = new global::System.Data.DataColumn("State11Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11Entered);
                 this.columnState12Desc = new global::System.Data.DataColumn("State12Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState12Desc);
                 this.columnState12 = new global::System.Data.DataColumn("State12", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState12);
+                this.columnState12Entered = new global::System.Data.DataColumn("State12Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12Entered);
                 this.columnState13Desc = new global::System.Data.DataColumn("State13Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState13Desc);
                 this.columnState13 = new global::System.Data.DataColumn("State13", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState13);
+                this.columnState13Entered = new global::System.Data.DataColumn("State13Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13Entered);
                 this.columnState14Desc = new global::System.Data.DataColumn("State14Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState14Desc);
                 this.columnState14 = new global::System.Data.DataColumn("State14", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState14);
+                this.columnState14Entered = new global::System.Data.DataColumn("State14Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14Entered);
                 this.columnState15Desc = new global::System.Data.DataColumn("State15Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState15Desc);
                 this.columnState15 = new global::System.Data.DataColumn("State15", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState15);
+                this.columnState15Entered = new global::System.Data.DataColumn("State15Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15Entered);
                 this.columnType.MaxLength = 255;
                 this.columnTitle.MaxLength = 255;
                 this.columnState1Desc.MaxLength = 255;
@@ -21778,6 +22003,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State1Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State1EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State1EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State2Desc {
                 get {
                     try {
@@ -21805,6 +22046,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State2Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State2EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State2EnteredColumn] = value;
                 }
             }
             
@@ -21842,6 +22099,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State3Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State3EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State3EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State4Desc {
                 get {
                     try {
@@ -21869,6 +22142,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State4Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State4EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State4EnteredColumn] = value;
                 }
             }
             
@@ -21906,6 +22195,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State5Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State5EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State5EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State6Desc {
                 get {
                     try {
@@ -21933,6 +22238,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State6Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State6EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State6EnteredColumn] = value;
                 }
             }
             
@@ -21970,6 +22291,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State7Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State7EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State7EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State8Desc {
                 get {
                     try {
@@ -21997,6 +22334,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State8Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State8Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State8EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State8EnteredColumn] = value;
                 }
             }
             
@@ -22034,6 +22387,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State9Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State9EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State9EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State10Desc {
                 get {
                     try {
@@ -22061,6 +22430,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State10Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State10EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State10EnteredColumn] = value;
                 }
             }
             
@@ -22098,6 +22483,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State11Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State11EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State11EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State12Desc {
                 get {
                     try {
@@ -22125,6 +22526,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State12Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State12EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State12EnteredColumn] = value;
                 }
             }
             
@@ -22162,6 +22579,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State13Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State13EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State13EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State14Desc {
                 get {
                     try {
@@ -22194,6 +22627,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State14Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State14EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State14EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string State15Desc {
                 get {
                     try {
@@ -22221,6 +22670,22 @@ namespace VSConnect {
                 }
                 set {
                     this[this.tableUserStoryFlow.State15Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State15Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow.State15EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15Entered\' in table \'UserStoryFlow\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow.State15EnteredColumn] = value;
                 }
             }
             
@@ -22346,6 +22811,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State1EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1EnteredNull() {
+                this[this.tableUserStoryFlow.State1EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState2DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State2DescColumn);
             }
@@ -22366,6 +22843,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState2Null() {
                 this[this.tableUserStoryFlow.State2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State2EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2EnteredNull() {
+                this[this.tableUserStoryFlow.State2EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22394,6 +22883,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State3EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3EnteredNull() {
+                this[this.tableUserStoryFlow.State3EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState4DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State4DescColumn);
             }
@@ -22414,6 +22915,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState4Null() {
                 this[this.tableUserStoryFlow.State4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State4EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4EnteredNull() {
+                this[this.tableUserStoryFlow.State4EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22442,6 +22955,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State5EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5EnteredNull() {
+                this[this.tableUserStoryFlow.State5EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState6DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State6DescColumn);
             }
@@ -22462,6 +22987,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState6Null() {
                 this[this.tableUserStoryFlow.State6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State6EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6EnteredNull() {
+                this[this.tableUserStoryFlow.State6EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22490,6 +23027,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State7EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7EnteredNull() {
+                this[this.tableUserStoryFlow.State7EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState8DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State8DescColumn);
             }
@@ -22510,6 +23059,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState8Null() {
                 this[this.tableUserStoryFlow.State8Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State8EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8EnteredNull() {
+                this[this.tableUserStoryFlow.State8EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22538,6 +23099,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State9EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9EnteredNull() {
+                this[this.tableUserStoryFlow.State9EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState10DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State10DescColumn);
             }
@@ -22558,6 +23131,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState10Null() {
                 this[this.tableUserStoryFlow.State10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State10EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10EnteredNull() {
+                this[this.tableUserStoryFlow.State10EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22586,6 +23171,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State11EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11EnteredNull() {
+                this[this.tableUserStoryFlow.State11EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState12DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State12DescColumn);
             }
@@ -22606,6 +23203,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState12Null() {
                 this[this.tableUserStoryFlow.State12Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State12EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12EnteredNull() {
+                this[this.tableUserStoryFlow.State12EnteredColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22634,6 +23243,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State13EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13EnteredNull() {
+                this[this.tableUserStoryFlow.State13EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState14DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State14DescColumn);
             }
@@ -22658,6 +23279,18 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State14EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14EnteredNull() {
+                this[this.tableUserStoryFlow.State14EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsState15DescNull() {
                 return this.IsNull(this.tableUserStoryFlow.State15DescColumn);
             }
@@ -22678,6 +23311,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState15Null() {
                 this[this.tableUserStoryFlow.State15Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow.State15EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15EnteredNull() {
+                this[this.tableUserStoryFlow.State15EnteredColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -39979,38 +40624,53 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Closed", "Closed");
             tableMapping.ColumnMappings.Add("State1Desc", "State1Desc");
             tableMapping.ColumnMappings.Add("State1", "State1");
+            tableMapping.ColumnMappings.Add("State1Entered", "State1Entered");
             tableMapping.ColumnMappings.Add("State2Desc", "State2Desc");
             tableMapping.ColumnMappings.Add("State2", "State2");
+            tableMapping.ColumnMappings.Add("State2Entered", "State2Entered");
             tableMapping.ColumnMappings.Add("State3Desc", "State3Desc");
             tableMapping.ColumnMappings.Add("State3", "State3");
+            tableMapping.ColumnMappings.Add("State3Entered", "State3Entered");
             tableMapping.ColumnMappings.Add("State4Desc", "State4Desc");
             tableMapping.ColumnMappings.Add("State4", "State4");
+            tableMapping.ColumnMappings.Add("State4Entered", "State4Entered");
             tableMapping.ColumnMappings.Add("State5Desc", "State5Desc");
             tableMapping.ColumnMappings.Add("State5", "State5");
+            tableMapping.ColumnMappings.Add("State5Entered", "State5Entered");
             tableMapping.ColumnMappings.Add("State6Desc", "State6Desc");
             tableMapping.ColumnMappings.Add("State6", "State6");
+            tableMapping.ColumnMappings.Add("State6Entered", "State6Entered");
             tableMapping.ColumnMappings.Add("State7Desc", "State7Desc");
             tableMapping.ColumnMappings.Add("State7", "State7");
+            tableMapping.ColumnMappings.Add("State7Entered", "State7Entered");
             tableMapping.ColumnMappings.Add("State8Desc", "State8Desc");
             tableMapping.ColumnMappings.Add("State8", "State8");
+            tableMapping.ColumnMappings.Add("State8Entered", "State8Entered");
             tableMapping.ColumnMappings.Add("State9Desc", "State9Desc");
             tableMapping.ColumnMappings.Add("State9", "State9");
+            tableMapping.ColumnMappings.Add("State9Entered", "State9Entered");
             tableMapping.ColumnMappings.Add("State10Desc", "State10Desc");
             tableMapping.ColumnMappings.Add("State10", "State10");
+            tableMapping.ColumnMappings.Add("State10Entered", "State10Entered");
             tableMapping.ColumnMappings.Add("State11Desc", "State11Desc");
             tableMapping.ColumnMappings.Add("State11", "State11");
+            tableMapping.ColumnMappings.Add("State11Entered", "State11Entered");
             tableMapping.ColumnMappings.Add("State12Desc", "State12Desc");
             tableMapping.ColumnMappings.Add("State12", "State12");
+            tableMapping.ColumnMappings.Add("State12Entered", "State12Entered");
             tableMapping.ColumnMappings.Add("State13Desc", "State13Desc");
             tableMapping.ColumnMappings.Add("State13", "State13");
+            tableMapping.ColumnMappings.Add("State13Entered", "State13Entered");
             tableMapping.ColumnMappings.Add("State14Desc", "State14Desc");
             tableMapping.ColumnMappings.Add("State14", "State14");
+            tableMapping.ColumnMappings.Add("State14Entered", "State14Entered");
             tableMapping.ColumnMappings.Add("State15Desc", "State15Desc");
             tableMapping.ColumnMappings.Add("State15", "State15");
+            tableMapping.ColumnMappings.Add("State15Entered", "State15Entered");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow` (`ID`, `Type`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `WeekEndingState`, `Closed`, `State1Desc`, `State1`, `State2Desc`, `State2`, `State3Desc`, `State3`, `State4Desc`, `State4`, `State5Desc`, `State5`, `State6Desc`, `State6`, `State7Desc`, `State7`, `State8Desc`, `State8`, `State9Desc`, `State9`, `State10Desc`, `State10`, `State11Desc`, `State11`, `State12Desc`, `State12`, `State13Desc`, `State13`, `State14Desc`, `State14`, `State15Desc`, `State15`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow` (`ID`, `Type`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `WeekEndingState`, `Closed`, `State1Desc`, `State1`, `State1Entered`, `State2Desc`, `State2`, `State2Entered`, `State3Desc`, `State3`, `State3Entered`, `State4Desc`, `State4`, `State4Entered`, `State5Desc`, `State5`, `State5Entered`, `State6Desc`, `State6`, `State6Entered`, `State7Desc`, `State7`, `State7Entered`, `State8Desc`, `State8`, `State8Entered`, `State9Desc`, `State9`, `State9Entered`, `State10Desc`, `State10`, `State10Entered`, `State11Desc`, `State11`, `State11Entered`, `State12Desc`, `State12`, `State12Entered`, `State13Desc`, `State13`, `State13Entered`, `State14Desc`, `State14`, `State14Entered`, `State15Desc`, `State15`, `State15Entered`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Type", global::System.Data.DataRowVersion.Current, false, null));
@@ -40022,34 +40682,49 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Closed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Closed", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14Entered", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15Entered", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -40065,7 +40740,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, WeekEnding, NewThisWeek, ActiveThisWeek, WeekEndingState, Closed, State1Desc, State1, State2Desc, State2, State3Desc, State3, State4Desc, State4, State5Desc, State5, State6Desc, State6, State7Desc, State7, State8Desc, State8, State9Desc, State9, State10Desc, State10, State11Desc, State11, State12Desc, State12, State13Desc, State13, State14Desc, State14, State15Desc, State15 FROM UserStoryFlow";
+            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, WeekEnding, NewThisWeek, ActiveThisWeek, WeekEndingState, Closed, State1Desc, State1, State1Entered, State2Desc, State2, State2Entered, State3Desc, State3, State3Entered, State4Desc, State4, State4Entered, State5Desc, State5, State5Entered, State6Desc, State6, State6Entered, State7Desc, State7, State7Entered, State8Desc, State8, State8Entered, State9Desc, State9, State9Entered, State10Desc, State10, State10Entered, State11Desc, State11, State11Entered, State12Desc, State12, State12Entered, State13Desc, State13, State13Entered, State14Desc, State14, State14Entered, State15Desc, State15, State15Entered FROM UserStoryFlow";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -40137,34 +40812,49 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> Closed, 
                     string State1Desc, 
                     global::System.Nullable<int> State1, 
+                    global::System.Nullable<int> State1Entered, 
                     string State2Desc, 
                     global::System.Nullable<int> State2, 
+                    global::System.Nullable<int> State2Entered, 
                     string State3Desc, 
                     global::System.Nullable<int> State3, 
+                    global::System.Nullable<int> State3Entered, 
                     string State4Desc, 
                     global::System.Nullable<int> State4, 
+                    global::System.Nullable<int> State4Entered, 
                     string State5Desc, 
                     global::System.Nullable<int> State5, 
+                    global::System.Nullable<int> State5Entered, 
                     string State6Desc, 
                     global::System.Nullable<int> State6, 
+                    global::System.Nullable<int> State6Entered, 
                     string State7Desc, 
                     global::System.Nullable<int> State7, 
+                    global::System.Nullable<int> State7Entered, 
                     string State8Desc, 
                     global::System.Nullable<int> State8, 
+                    global::System.Nullable<int> State8Entered, 
                     string State9Desc, 
                     global::System.Nullable<int> State9, 
+                    global::System.Nullable<int> State9Entered, 
                     string State10Desc, 
                     global::System.Nullable<int> State10, 
+                    global::System.Nullable<int> State10Entered, 
                     string State11Desc, 
                     global::System.Nullable<int> State11, 
+                    global::System.Nullable<int> State11Entered, 
                     string State12Desc, 
                     global::System.Nullable<int> State12, 
+                    global::System.Nullable<int> State12Entered, 
                     string State13Desc, 
                     global::System.Nullable<int> State13, 
+                    global::System.Nullable<int> State13Entered, 
                     string State14Desc, 
                     global::System.Nullable<int> State14, 
+                    global::System.Nullable<int> State14Entered, 
                     string State15Desc, 
-                    global::System.Nullable<int> State15) {
+                    global::System.Nullable<int> State15, 
+                    global::System.Nullable<int> State15Entered) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((Type == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -40220,173 +40910,263 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((State2Desc == null)) {
+            if ((State1Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(State1Entered.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(State2Desc));
-            }
-            if ((State2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(State2.Value));
-            }
-            else {
+            if ((State2Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((State3Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(State2Desc));
+            }
+            if ((State2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(State2.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(State3Desc));
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((State3.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(State3.Value));
+            if ((State2Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(State2Entered.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((State4Desc == null)) {
+            if ((State3Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(State4Desc));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(State3Desc));
             }
-            if ((State4.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(State4.Value));
+            if ((State3.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(State3.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((State5Desc == null)) {
+            if ((State3Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(State3Entered.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(State5Desc));
-            }
-            if ((State5.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(State5.Value));
-            }
-            else {
+            if ((State4Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((State6Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(State4Desc));
+            }
+            if ((State4.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((int)(State4.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(State6Desc));
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((State6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(State6.Value));
+            if ((State4Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(State4Entered.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((State7Desc == null)) {
+            if ((State5Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(State7Desc));
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(State5Desc));
             }
-            if ((State7.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((int)(State7.Value));
+            if ((State5.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((int)(State5.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((State8Desc == null)) {
+            if ((State5Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((int)(State5Entered.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(State8Desc));
-            }
-            if ((State8.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((int)(State8.Value));
-            }
-            else {
+            if ((State6Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((State9Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(State6Desc));
+            }
+            if ((State6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(State6.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(State9Desc));
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((State9.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(State9.Value));
+            if ((State6Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(State6Entered.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((State10Desc == null)) {
+            if ((State7Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(State10Desc));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(State7Desc));
             }
-            if ((State10.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(State10.Value));
+            if ((State7.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(State7.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((State11Desc == null)) {
+            if ((State7Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((int)(State7Entered.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(State11Desc));
-            }
-            if ((State11.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(State11.Value));
-            }
-            else {
+            if ((State8Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((State12Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((string)(State8Desc));
+            }
+            if ((State8.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((int)(State8.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(State12Desc));
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((State12.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(State12.Value));
+            if ((State8Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(State8Entered.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((State13Desc == null)) {
+            if ((State9Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(State13Desc));
+                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(State9Desc));
             }
-            if ((State13.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(State13.Value));
+            if ((State9.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(State9.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
-            if ((State14Desc == null)) {
+            if ((State9Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(State9Entered.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(State14Desc));
-            }
-            if ((State14.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[35].Value = ((int)(State14.Value));
-            }
-            else {
+            if ((State10Desc == null)) {
                 this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
-            if ((State15Desc == null)) {
-                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(State10Desc));
+            }
+            if ((State10.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((int)(State10.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(State15Desc));
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            if ((State15.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[37].Value = ((int)(State15.Value));
+            if ((State10Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((int)(State10Entered.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((State11Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((string)(State11Desc));
+            }
+            if ((State11.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((int)(State11.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            if ((State11Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[40].Value = ((int)(State11Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            if ((State12Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[41].Value = ((string)(State12Desc));
+            }
+            if ((State12.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[42].Value = ((int)(State12.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((State12Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[43].Value = ((int)(State12Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((State13Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[44].Value = ((string)(State13Desc));
+            }
+            if ((State13.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[45].Value = ((int)(State13.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            if ((State13Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[46].Value = ((int)(State13Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((State14Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[47].Value = ((string)(State14Desc));
+            }
+            if ((State14.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[48].Value = ((int)(State14.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((State14Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[49].Value = ((int)(State14Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            if ((State15Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[50].Value = ((string)(State15Desc));
+            }
+            if ((State15.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[51].Value = ((int)(State15.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            if ((State15Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[52].Value = ((int)(State15Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
