@@ -118,11 +118,12 @@
             this.cmdPrintStoryCumulativeFlow = new System.Windows.Forms.Button();
             this.tpBugs = new System.Windows.Forms.TabPage();
             this.chartBugs = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdRenderBugs = new System.Windows.Forms.Button();
-            this.dtBugStartDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtBugStartDate = new System.Windows.Forms.DateTimePicker();
+            this.cmdRenderBugs = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.chkShowRemainingBugs = new System.Windows.Forms.CheckBox();
             this.tcMain.SuspendLayout();
             this.tpDevMetrics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDevelopment)).BeginInit();
@@ -1103,6 +1104,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkShowRemainingBugs);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dtBugStartDate);
             this.panel1.Controls.Add(this.cmdRenderBugs);
@@ -1111,6 +1113,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 68);
             this.panel1.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Show Bugs From:";
+            // 
+            // dtBugStartDate
+            // 
+            this.dtBugStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtBugStartDate.Location = new System.Drawing.Point(128, 9);
+            this.dtBugStartDate.Name = "dtBugStartDate";
+            this.dtBugStartDate.Size = new System.Drawing.Size(123, 20);
+            this.dtBugStartDate.TabIndex = 46;
+            this.dtBugStartDate.Value = new System.DateTime(2017, 9, 1, 0, 0, 0, 0);
             // 
             // cmdRenderBugs
             // 
@@ -1123,23 +1143,17 @@
             this.cmdRenderBugs.UseVisualStyleBackColor = true;
             this.cmdRenderBugs.Click += new System.EventHandler(this.cmdRenderBugs_Click);
             // 
-            // dtBugStartDate
+            // chkShowRemainingBugs
             // 
-            this.dtBugStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtBugStartDate.Location = new System.Drawing.Point(128, 9);
-            this.dtBugStartDate.Name = "dtBugStartDate";
-            this.dtBugStartDate.Size = new System.Drawing.Size(123, 20);
-            this.dtBugStartDate.TabIndex = 46;
-            this.dtBugStartDate.Value = new System.DateTime(2017, 9, 1, 0, 0, 0, 0);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Show Bugs From:";
+            this.chkShowRemainingBugs.AutoSize = true;
+            this.chkShowRemainingBugs.Checked = true;
+            this.chkShowRemainingBugs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowRemainingBugs.Location = new System.Drawing.Point(267, 11);
+            this.chkShowRemainingBugs.Name = "chkShowRemainingBugs";
+            this.chkShowRemainingBugs.Size = new System.Drawing.Size(133, 17);
+            this.chkShowRemainingBugs.TabIndex = 48;
+            this.chkShowRemainingBugs.Text = "Show Remaining Bugs";
+            this.chkShowRemainingBugs.UseVisualStyleBackColor = true;
             // 
             // frmDevMetrics
             // 
@@ -1256,5 +1270,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtBugStartDate;
         private System.Windows.Forms.Button cmdRenderBugs;
+        private System.Windows.Forms.CheckBox chkShowRemainingBugs;
     }
 }

@@ -1057,17 +1057,20 @@ namespace VSConnect
 
             foreach (Revision rev in wi.Revisions)
             {
-                AddWorkItemRevision(rev);
+                AddWorkItemRevision(rev, wi);
             }
         }
 
-        private void AddWorkItemRevision(Revision rev)
+        private void AddWorkItemRevision(Revision rev, WorkItem wi)
         {
             DumpDataSet.WorkItemRevisionRow row = ds.WorkItemRevision.NewWorkItemRevisionRow();
 
             SetRowValue(row, "ID", rev.Fields, "ID");
             SetRowValue(row, "Rev", rev.Fields, "Rev");
-            SetRowValue(row, "WorkItemType", rev.Fields, "Work Item Type");
+
+            row.WorkItemType = wi.Type.Name;
+//            SetRowValue(row, "WorkItemType", rev.Fields, "Work Item Type");
+
             SetRowValue(row, "Title", rev.Fields, "Title");
             SetRowValue(row, "State", rev.Fields, "State");
             SetRowValue(row, "TargetRelease", rev.Fields, "Target Release");

@@ -33,13 +33,6 @@ namespace VSConnect.Lifecycle
 
                 foreach (var workItem in ds.WorkItem.Where(x => x.CreatedDate <= searchDate))
                 {
-                    if (currentWeekEnding.Month == 2 && currentWeekEnding.Day == 23 && workItem.ID == 116240)
-                    {
-                        string asdf = "asdf";
-                    }
-
-
-
 
                     if (workItem.Type != "User Story" && workItem.Type != "Bug")
                     {
@@ -66,15 +59,9 @@ namespace VSConnect.Lifecycle
                         row.NewThisWeek = 1;
                     }
 
-//                    if (row.ID == 117097 && searchDate.Month == 3 && searchDate.Day == 30)
-//                    {
-//                        string asdf = "asdf";
-//                    }
 
                     for (int i = states.MinStateIndex; i <= states.MaxStateIndex; i++)
                     {
-
-
                         row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
 
                         if (states.WasInState(revisions, i, searchBeginning, searchDate))
@@ -96,37 +83,40 @@ namespace VSConnect.Lifecycle
                         }
                     }
 
-
                     row.WeekEnding = currentWeekEnding;
 
                     if (row.IsNewThisWeekNull()) row.NewThisWeek = 0;
 
                     if (!row.IsState2Null() && row.State2 == 1) row.ActiveThisWeek = 1;
                     if (!row.IsState4Null() && row.State4 == 1) row.ActiveThisWeek = 1;
+
                     if (row.IsActiveThisWeekNull()) row.ActiveThisWeek = 0;
 
-                    //if there is a 1 in any state greater than or equal to 5
-                    if (row.WeekEndingState >= 5 && !workItemClosed.Contains(workItem.ID))
+                    //closed logic should be:  state was <=4 before this week, and >=5 by the end of this week
+                    bool wasInClosedDuringThisWeek = row.WeekEndingState >= 5;
+                    bool wasClosedBeforeThisWeek = false;
+
+                    var latestRevFromLastWeek = revisions.Where(x => x.ChangedDate < searchBeginning)
+                        .OrderBy(x => x.Rev).LastOrDefault();
+                    if (latestRevFromLastWeek != null)
                     {
-                        workItemClosed.Add(workItem.ID);
-                        row.Closed = 1;
+                        if (latestRevFromLastWeek.LifecycleState >= 5)
+                        {
+                            wasClosedBeforeThisWeek = true;
+                        }
                     }
-                    else
+
+                    row.Closed = (wasInClosedDuringThisWeek || wasClosedBeforeThisWeek) ? 1 : 0;
+
+                    if (!wasClosedBeforeThisWeek && wasInClosedDuringThisWeek)
                     {
-                        row.Closed = 0;
+                        row.ClosedThisWeek = 1;
                     }
-//                    else if (row.IsClosedNull())
-                    //                    {
-                    //                        if (workItem.State == "Closed" || workItem.State == "Resolved")
-                    //                        {
-                    //                            row.Closed = 1;
-                    //                            workItemClosed.Add(workItem.ID);
-                    //                        }
-                    //                        else
-                    //                        {
-                    //                            row.Closed = 0;
-                    //                        }
-                    //                    }
+                    else 
+                    {
+                        row.ClosedThisWeek = 0;
+                    }
+
 
                     ds.UserStoryFlow.AddUserStoryFlowRow(row);
                 }
