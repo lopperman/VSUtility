@@ -1047,6 +1047,8 @@ namespace VSConnect
             SetRowValue(row, "BoardLane", wi.Fields, "Board Lane");
             SetRowValue(row, "BoardColumnDone", wi.Fields, "Board Column Done");
             SetRowValue(row, "BoardColumn", wi.Fields, "Board Column");
+            SetRowValue(row, "Priority", wi.Fields, "Priority");
+            SetRowValue(row, "Severity", wi.Fields, "Severity");
             
             ds.WorkItem.AddWorkItemRow(row);
         }
@@ -1085,6 +1087,7 @@ namespace VSConnect
             SetRowValue(row, "ClosedDate", rev.Fields, "Closed Date");
             SetRowValue(row, "AttachedFileCount", rev.Fields, "Attached File Count");
             SetRowValue(row, "Priority", rev.Fields, "Priority");
+            SetRowValue(row, "Severity", rev.Fields, "Severity");
             SetRowValue(row, "BusinessPriority", rev.Fields, "Business Priority", 0);
             SetRowValue(row, "BusinessValue", rev.Fields, "Business Value");
             SetRowValue(row, "StackRank", rev.Fields, "Stack Rank");

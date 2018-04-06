@@ -92,7 +92,7 @@ namespace VSConnect.Test
             includeFields.Add("Revised Date");
 
 
-            WorkItem wi = connect.GetWorkItem(117097);
+            WorkItem wi = connect.GetWorkItem(119599);
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Format("{0} - {1}", wi.Id, wi.Title));

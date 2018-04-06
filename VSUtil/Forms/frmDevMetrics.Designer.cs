@@ -119,11 +119,13 @@
             this.tpBugs = new System.Windows.Forms.TabPage();
             this.chartBugs = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkShowRemainingBugs = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtBugStartDate = new System.Windows.Forms.DateTimePicker();
             this.cmdRenderBugs = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.chkShowRemainingBugs = new System.Windows.Forms.CheckBox();
+            this.chkShowRemainingBugsBySeverity = new System.Windows.Forms.CheckBox();
+            this.chkShowNewWorkedClosedBugs = new System.Windows.Forms.CheckBox();
             this.tcMain.SuspendLayout();
             this.tpDevMetrics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDevelopment)).BeginInit();
@@ -1104,6 +1106,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkShowNewWorkedClosedBugs);
+            this.panel1.Controls.Add(this.chkShowRemainingBugsBySeverity);
             this.panel1.Controls.Add(this.chkShowRemainingBugs);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dtBugStartDate);
@@ -1113,6 +1117,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 68);
             this.panel1.TabIndex = 3;
+            // 
+            // chkShowRemainingBugs
+            // 
+            this.chkShowRemainingBugs.AutoSize = true;
+            this.chkShowRemainingBugs.Checked = true;
+            this.chkShowRemainingBugs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowRemainingBugs.Location = new System.Drawing.Point(267, 11);
+            this.chkShowRemainingBugs.Name = "chkShowRemainingBugs";
+            this.chkShowRemainingBugs.Size = new System.Drawing.Size(160, 17);
+            this.chkShowRemainingBugs.TabIndex = 48;
+            this.chkShowRemainingBugs.Text = "Show Remaining Bugs Total";
+            this.chkShowRemainingBugs.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -1143,17 +1159,29 @@
             this.cmdRenderBugs.UseVisualStyleBackColor = true;
             this.cmdRenderBugs.Click += new System.EventHandler(this.cmdRenderBugs_Click);
             // 
-            // chkShowRemainingBugs
+            // chkShowRemainingBugsBySeverity
             // 
-            this.chkShowRemainingBugs.AutoSize = true;
-            this.chkShowRemainingBugs.Checked = true;
-            this.chkShowRemainingBugs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkShowRemainingBugs.Location = new System.Drawing.Point(267, 11);
-            this.chkShowRemainingBugs.Name = "chkShowRemainingBugs";
-            this.chkShowRemainingBugs.Size = new System.Drawing.Size(133, 17);
-            this.chkShowRemainingBugs.TabIndex = 48;
-            this.chkShowRemainingBugs.Text = "Show Remaining Bugs";
-            this.chkShowRemainingBugs.UseVisualStyleBackColor = true;
+            this.chkShowRemainingBugsBySeverity.AutoSize = true;
+            this.chkShowRemainingBugsBySeverity.Checked = true;
+            this.chkShowRemainingBugsBySeverity.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowRemainingBugsBySeverity.Location = new System.Drawing.Point(448, 11);
+            this.chkShowRemainingBugsBySeverity.Name = "chkShowRemainingBugsBySeverity";
+            this.chkShowRemainingBugsBySeverity.Size = new System.Drawing.Size(162, 17);
+            this.chkShowRemainingBugsBySeverity.TabIndex = 49;
+            this.chkShowRemainingBugsBySeverity.Text = "Show Remaining By Severity";
+            this.chkShowRemainingBugsBySeverity.UseVisualStyleBackColor = true;
+            // 
+            // chkShowNewWorkedClosedBugs
+            // 
+            this.chkShowNewWorkedClosedBugs.AutoSize = true;
+            this.chkShowNewWorkedClosedBugs.Checked = true;
+            this.chkShowNewWorkedClosedBugs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowNewWorkedClosedBugs.Location = new System.Drawing.Point(267, 43);
+            this.chkShowNewWorkedClosedBugs.Name = "chkShowNewWorkedClosedBugs";
+            this.chkShowNewWorkedClosedBugs.Size = new System.Drawing.Size(160, 17);
+            this.chkShowNewWorkedClosedBugs.TabIndex = 50;
+            this.chkShowNewWorkedClosedBugs.Text = "Show New, Worked, Closed";
+            this.chkShowNewWorkedClosedBugs.UseVisualStyleBackColor = true;
             // 
             // frmDevMetrics
             // 
@@ -1271,5 +1299,7 @@
         private System.Windows.Forms.DateTimePicker dtBugStartDate;
         private System.Windows.Forms.Button cmdRenderBugs;
         private System.Windows.Forms.CheckBox chkShowRemainingBugs;
+        private System.Windows.Forms.CheckBox chkShowRemainingBugsBySeverity;
+        private System.Windows.Forms.CheckBox chkShowNewWorkedClosedBugs;
     }
 }

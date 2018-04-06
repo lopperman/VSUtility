@@ -75,11 +75,16 @@ namespace VSUtil.Forms
                 chartBugs.Series.Remove(chartBugs.Series.FirstOrDefault());
             }
 
-            Series series = CreateSeries("countNew", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
-                ChartValueType.DateTime, "New Bugs");
-            chartBugs.Series.Add(series);
 
             DataTable table = ds.VW_BUG_CUMULATIVE_FLOW;
+            DataTable table_severity = ds.VW_BUG_CUMULATIVE_FLOW_SEVERITY;
+
+            string filter = string.Format("WeekEnding >= #{0}#", startDt.ToShortDateString());
+
+            Series series = null;
+            DataView devview = null;
+
+
 
             if (!table.Columns.Contains("Remaining"))
             {
@@ -103,18 +108,47 @@ namespace VSUtil.Forms
                 }
                 table.AcceptChanges();
 
+                table_severity.Columns.Add(new DataColumn("Remaining", typeof(Int32)));
+                table_severity.Columns["Remaining"].AllowDBNull = true;
+                foreach (DataRow row in table_severity.Rows)
+                {
+                    int count = 0;
+                    int closed = 0;
+                    if (!row.IsNull("Count"))
+                    {
+                        count = Convert.ToInt32(row["Count"]);
+                    }
+                    if (!row.IsNull("Closed"))
+                    {
+                        closed = Convert.ToInt32(row["Closed"]);
+                    }
+                    row["Remaining"] = count - closed;
+                }
+                table_severity.AcceptChanges();
+
             }
 
-            string filter = string.Format("WeekEnding >= #{0}#", startDt.ToShortDateString());
 
-            DataView devview = new DataView(table, filter, "WeekEnding", DataViewRowState.CurrentRows);
-            chartBugs.Series["countNew"].Points.DataBind(devview, "WeekEnding", "NewThisWeek", "Tooltip=WeekEnding");
+            if (chkShowNewWorkedClosedBugs.Checked)
+            {
+                series = CreateSeries("countNew", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "New Bugs");
+                chartBugs.Series.Add(series);
+                devview = new DataView(table, filter, "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["countNew"].Points.DataBind(devview, "WeekEnding", "NewThisWeek", "Tooltip=WeekEnding");
 
-            series = CreateSeries("countActive", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
-                ChartValueType.DateTime, "Worked Bugs");
-            chartBugs.Series.Add(series);
-            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
-            chartBugs.Series["countActive"].Points.DataBind(devview, "WeekEnding", "ActiveThisWeek", "Tooltip=WeekEnding");
+                series = CreateSeries("countActive", SeriesChartType.Line, 2, Color.Green, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Worked Bugs");
+                chartBugs.Series.Add(series);
+                devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["countActive"].Points.DataBind(devview, "WeekEnding", "ActiveThisWeek", "Tooltip=WeekEnding");
+
+                series = CreateSeries("closedThisWeek", SeriesChartType.Line, 2, Color.Goldenrod, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Closed");
+                chartBugs.Series.Add(series);
+                devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["closedThisWeek"].Points.DataBind(devview, "WeekEnding", "DoneThisWeek", "Tooltip=WeekEnding");
+            }
 
             if (chkShowRemainingBugs.Checked)
             {
@@ -125,11 +159,34 @@ namespace VSUtil.Forms
                 chartBugs.Series["remaining"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
             }
 
-            series = CreateSeries("closedThisWeek", SeriesChartType.Line, 2, Color.Goldenrod, ChartDashStyle.Solid,
-                ChartValueType.DateTime, "Closed");
-            chartBugs.Series.Add(series);
-            devview = new DataView(ds.VW_BUG_CUMULATIVE_FLOW, filter, "WeekEnding", DataViewRowState.CurrentRows);
-            chartBugs.Series["closedThisWeek"].Points.DataBind(devview, "WeekEnding", "DoneThisWeek", "Tooltip=WeekEnding");
+            if (chkShowRemainingBugsBySeverity.Checked)
+            {
+                series = CreateSeries("severity_critical", SeriesChartType.Line, 2, Color.Red, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Remaining - Critical");
+                chartBugs.Series.Add(series);
+                devview = new DataView(table_severity, filter + " AND SEVERITY = '1 - Critical'", "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["severity_critical"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
+
+                series = CreateSeries("severity_high", SeriesChartType.Line, 2, Color.Coral, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Remaining - High");
+                chartBugs.Series.Add(series);
+                devview = new DataView(table_severity, filter + " AND SEVERITY = '2 - High'", "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["severity_high"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
+
+                series = CreateSeries("severity_medium", SeriesChartType.Line, 2, Color.PaleVioletRed, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Remaining - Medium");
+                chartBugs.Series.Add(series);
+                devview = new DataView(table_severity, filter + " AND SEVERITY = '3 - Medium'", "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["severity_medium"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
+
+                series = CreateSeries("severity_low", SeriesChartType.Line, 2, Color.LightBlue, ChartDashStyle.Solid,
+                    ChartValueType.DateTime, "Remaining - Low");
+                chartBugs.Series.Add(series);
+                devview = new DataView(table_severity, filter + " AND SEVERITY = '4 - Low'", "WeekEnding", DataViewRowState.CurrentRows);
+                chartBugs.Series["severity_low"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
+            }
+
+
 
 
             chartBugs.Update();
