@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboProject = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dynamicChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,8 @@
             // 
             this.utilitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workItemHistoryToolStripMenuItem,
-            this.developmentMetricsToolStripMenuItem});
+            this.developmentMetricsToolStripMenuItem,
+            this.dynamicChartToolStripMenuItem});
             this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
             this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.utilitiesToolStripMenuItem.Text = "&Utilities";
@@ -130,6 +132,13 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Project/Team:";
             // 
+            // dynamicChartToolStripMenuItem
+            // 
+            this.dynamicChartToolStripMenuItem.Name = "dynamicChartToolStripMenuItem";
+            this.dynamicChartToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.dynamicChartToolStripMenuItem.Text = "Dynamic Chart";
+            this.dynamicChartToolStripMenuItem.Click += new System.EventHandler(this.dynamicChartToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +174,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboProject;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem dynamicChartToolStripMenuItem;
     }
 }
 

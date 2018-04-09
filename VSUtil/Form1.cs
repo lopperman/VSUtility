@@ -269,5 +269,45 @@ namespace VSUtil
                 f.Show();
             }
         }
+
+        private void dynamicChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!initialized)
+            {
+                init();
+                initialized = true;
+            }
+
+            //get the last update date from the file
+            if (File.Exists(TFSRegistry.GetTFSMdbPath()) && VSCommon.GetDumpFileAreaId(TFSRegistry.GetTFSMdbPath()) == AreaId)
+            {
+                DateTime? dumpDate = VSCommon.GetDumpDate(TFSRegistry.GetTFSMdbPath());
+                if (DateTime.Now.Subtract(dumpDate.Value).TotalHours >= 4)
+                {
+                    if (MessageBox.Show("The data used by this application hasn't been updated since " + dumpDate.Value.ToString() + Environment.NewLine + "Would you like to update now?", "Update Ira Dump Data", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        if (DumpTFS() == false) return;
+                    }
+                }
+            }
+            else
+            {
+                if (DumpTFS() == false) return;
+            }
+
+
+            if (File.Exists(TFSRegistry.GetTFSMdbPath()))
+            {
+                if (VSCommon.IsFileLocked(TFSRegistry.GetTFSMdbPath()))
+                {
+                    MessageBox.Show("Cannot update data from TFS because the TFS.accdb file is open on your machine.  Please close it, then try again.");
+                    return;
+                }
+
+                var f = new frmDynamicChart(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboProject.Text);
+                f.Show();
+            }
+
+        }
     }
 }

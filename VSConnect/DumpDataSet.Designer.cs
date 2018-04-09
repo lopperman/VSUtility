@@ -68,6 +68,8 @@ namespace VSConnect {
         
         private VW_Created_StartedDataTable tableVW_Created_Started;
         
+        private VW_CUM_FLOW_SUMMARYDataTable tableVW_CUM_FLOW_SUMMARY;
+        
         private VW_CYCLETIME_ACTIVEDataTable tableVW_CYCLETIME_ACTIVE;
         
         private VW_FeatureDataTable tableVW_Feature;
@@ -193,6 +195,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["VW_Created_Started"] != null)) {
                     base.Tables.Add(new VW_Created_StartedDataTable(ds.Tables["VW_Created_Started"]));
+                }
+                if ((ds.Tables["VW_CUM_FLOW_SUMMARY"] != null)) {
+                    base.Tables.Add(new VW_CUM_FLOW_SUMMARYDataTable(ds.Tables["VW_CUM_FLOW_SUMMARY"]));
                 }
                 if ((ds.Tables["VW_CYCLETIME_ACTIVE"] != null)) {
                     base.Tables.Add(new VW_CYCLETIME_ACTIVEDataTable(ds.Tables["VW_CYCLETIME_ACTIVE"]));
@@ -477,6 +482,16 @@ namespace VSConnect {
         public VW_Created_StartedDataTable VW_Created_Started {
             get {
                 return this.tableVW_Created_Started;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_CUM_FLOW_SUMMARYDataTable VW_CUM_FLOW_SUMMARY {
+            get {
+                return this.tableVW_CUM_FLOW_SUMMARY;
             }
         }
         
@@ -773,6 +788,9 @@ namespace VSConnect {
                 if ((ds.Tables["VW_Created_Started"] != null)) {
                     base.Tables.Add(new VW_Created_StartedDataTable(ds.Tables["VW_Created_Started"]));
                 }
+                if ((ds.Tables["VW_CUM_FLOW_SUMMARY"] != null)) {
+                    base.Tables.Add(new VW_CUM_FLOW_SUMMARYDataTable(ds.Tables["VW_CUM_FLOW_SUMMARY"]));
+                }
                 if ((ds.Tables["VW_CYCLETIME_ACTIVE"] != null)) {
                     base.Tables.Add(new VW_CYCLETIME_ACTIVEDataTable(ds.Tables["VW_CYCLETIME_ACTIVE"]));
                 }
@@ -986,6 +1004,12 @@ namespace VSConnect {
                     this.tableVW_Created_Started.InitVars();
                 }
             }
+            this.tableVW_CUM_FLOW_SUMMARY = ((VW_CUM_FLOW_SUMMARYDataTable)(base.Tables["VW_CUM_FLOW_SUMMARY"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_CUM_FLOW_SUMMARY != null)) {
+                    this.tableVW_CUM_FLOW_SUMMARY.InitVars();
+                }
+            }
             this.tableVW_CYCLETIME_ACTIVE = ((VW_CYCLETIME_ACTIVEDataTable)(base.Tables["VW_CYCLETIME_ACTIVE"]));
             if ((initTable == true)) {
                 if ((this.tableVW_CYCLETIME_ACTIVE != null)) {
@@ -1136,6 +1160,8 @@ namespace VSConnect {
             base.Tables.Add(this.tableVW_Bug_Current);
             this.tableVW_Created_Started = new VW_Created_StartedDataTable();
             base.Tables.Add(this.tableVW_Created_Started);
+            this.tableVW_CUM_FLOW_SUMMARY = new VW_CUM_FLOW_SUMMARYDataTable();
+            base.Tables.Add(this.tableVW_CUM_FLOW_SUMMARY);
             this.tableVW_CYCLETIME_ACTIVE = new VW_CYCLETIME_ACTIVEDataTable();
             base.Tables.Add(this.tableVW_CYCLETIME_ACTIVE);
             this.tableVW_Feature = new VW_FeatureDataTable();
@@ -1299,6 +1325,12 @@ namespace VSConnect {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeVW_Created_Started() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVW_CUM_FLOW_SUMMARY() {
             return false;
         }
         
@@ -1518,6 +1550,9 @@ namespace VSConnect {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VW_Created_StartedRowChangeEventHandler(object sender, VW_Created_StartedRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void VW_CUM_FLOW_SUMMARYRowChangeEventHandler(object sender, VW_CUM_FLOW_SUMMARYRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VW_CYCLETIME_ACTIVERowChangeEventHandler(object sender, VW_CYCLETIME_ACTIVERowChangeEvent e);
@@ -12083,6 +12118,1020 @@ namespace VSConnect {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "VW_Created_StartedDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_CUM_FLOW_SUMMARYDataTable : global::System.Data.TypedTableBase<VW_CUM_FLOW_SUMMARYRow> {
+            
+            private global::System.Data.DataColumn columnWeekEnding;
+            
+            private global::System.Data.DataColumn columnType;
+            
+            private global::System.Data.DataColumn columnNewThisWeek;
+            
+            private global::System.Data.DataColumn columnActiveThisWeek;
+            
+            private global::System.Data.DataColumn columnClosedTotal;
+            
+            private global::System.Data.DataColumn columnClosedThisWeek;
+            
+            private global::System.Data.DataColumn columnState1Desc;
+            
+            private global::System.Data.DataColumn columnState1;
+            
+            private global::System.Data.DataColumn columnState1Entered;
+            
+            private global::System.Data.DataColumn columnState2Desc;
+            
+            private global::System.Data.DataColumn columnState2;
+            
+            private global::System.Data.DataColumn columnState2Entered;
+            
+            private global::System.Data.DataColumn columnState3Desc;
+            
+            private global::System.Data.DataColumn columnState3;
+            
+            private global::System.Data.DataColumn columnState3Entered;
+            
+            private global::System.Data.DataColumn columnState4Desc;
+            
+            private global::System.Data.DataColumn columnState4;
+            
+            private global::System.Data.DataColumn columnState4Entered;
+            
+            private global::System.Data.DataColumn columnState5Desc;
+            
+            private global::System.Data.DataColumn columnState5;
+            
+            private global::System.Data.DataColumn columnState5Entered;
+            
+            private global::System.Data.DataColumn columnState6Desc;
+            
+            private global::System.Data.DataColumn columnState6;
+            
+            private global::System.Data.DataColumn columnState6Entered;
+            
+            private global::System.Data.DataColumn columnState7Desc;
+            
+            private global::System.Data.DataColumn columnState7;
+            
+            private global::System.Data.DataColumn columnState7Entered;
+            
+            private global::System.Data.DataColumn columnState8Desc;
+            
+            private global::System.Data.DataColumn columnState8;
+            
+            private global::System.Data.DataColumn columnState8Entered;
+            
+            private global::System.Data.DataColumn columnState9Desc;
+            
+            private global::System.Data.DataColumn columnState9;
+            
+            private global::System.Data.DataColumn columnState9Entered;
+            
+            private global::System.Data.DataColumn columnState10Desc;
+            
+            private global::System.Data.DataColumn columnState10;
+            
+            private global::System.Data.DataColumn columnState10Entered;
+            
+            private global::System.Data.DataColumn columnState11Desc;
+            
+            private global::System.Data.DataColumn columnState11;
+            
+            private global::System.Data.DataColumn columnState11Entered;
+            
+            private global::System.Data.DataColumn columnState12Desc;
+            
+            private global::System.Data.DataColumn columnState12;
+            
+            private global::System.Data.DataColumn columnState12Entered;
+            
+            private global::System.Data.DataColumn columnState13Desc;
+            
+            private global::System.Data.DataColumn columnState13;
+            
+            private global::System.Data.DataColumn columnState13Entered;
+            
+            private global::System.Data.DataColumn columnState14Desc;
+            
+            private global::System.Data.DataColumn columnState14;
+            
+            private global::System.Data.DataColumn columnState14Entered;
+            
+            private global::System.Data.DataColumn columnState15Desc;
+            
+            private global::System.Data.DataColumn columnState15;
+            
+            private global::System.Data.DataColumn columnState15Entered;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYDataTable() {
+                this.TableName = "VW_CUM_FLOW_SUMMARY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_CUM_FLOW_SUMMARYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected VW_CUM_FLOW_SUMMARYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingColumn {
+                get {
+                    return this.columnWeekEnding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NewThisWeekColumn {
+                get {
+                    return this.columnNewThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActiveThisWeekColumn {
+                get {
+                    return this.columnActiveThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedTotalColumn {
+                get {
+                    return this.columnClosedTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedThisWeekColumn {
+                get {
+                    return this.columnClosedThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1DescColumn {
+                get {
+                    return this.columnState1Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1Column {
+                get {
+                    return this.columnState1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1EnteredColumn {
+                get {
+                    return this.columnState1Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2DescColumn {
+                get {
+                    return this.columnState2Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2Column {
+                get {
+                    return this.columnState2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2EnteredColumn {
+                get {
+                    return this.columnState2Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3DescColumn {
+                get {
+                    return this.columnState3Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3Column {
+                get {
+                    return this.columnState3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3EnteredColumn {
+                get {
+                    return this.columnState3Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4DescColumn {
+                get {
+                    return this.columnState4Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4Column {
+                get {
+                    return this.columnState4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4EnteredColumn {
+                get {
+                    return this.columnState4Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5DescColumn {
+                get {
+                    return this.columnState5Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5Column {
+                get {
+                    return this.columnState5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5EnteredColumn {
+                get {
+                    return this.columnState5Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6DescColumn {
+                get {
+                    return this.columnState6Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6Column {
+                get {
+                    return this.columnState6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6EnteredColumn {
+                get {
+                    return this.columnState6Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7DescColumn {
+                get {
+                    return this.columnState7Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7Column {
+                get {
+                    return this.columnState7;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7EnteredColumn {
+                get {
+                    return this.columnState7Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8DescColumn {
+                get {
+                    return this.columnState8Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8Column {
+                get {
+                    return this.columnState8;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8EnteredColumn {
+                get {
+                    return this.columnState8Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9DescColumn {
+                get {
+                    return this.columnState9Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9Column {
+                get {
+                    return this.columnState9;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9EnteredColumn {
+                get {
+                    return this.columnState9Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10DescColumn {
+                get {
+                    return this.columnState10Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10Column {
+                get {
+                    return this.columnState10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10EnteredColumn {
+                get {
+                    return this.columnState10Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11DescColumn {
+                get {
+                    return this.columnState11Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11Column {
+                get {
+                    return this.columnState11;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11EnteredColumn {
+                get {
+                    return this.columnState11Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12DescColumn {
+                get {
+                    return this.columnState12Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12Column {
+                get {
+                    return this.columnState12;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12EnteredColumn {
+                get {
+                    return this.columnState12Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13DescColumn {
+                get {
+                    return this.columnState13Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13Column {
+                get {
+                    return this.columnState13;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13EnteredColumn {
+                get {
+                    return this.columnState13Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14DescColumn {
+                get {
+                    return this.columnState14Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14Column {
+                get {
+                    return this.columnState14;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14EnteredColumn {
+                get {
+                    return this.columnState14Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15DescColumn {
+                get {
+                    return this.columnState15Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15Column {
+                get {
+                    return this.columnState15;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15EnteredColumn {
+                get {
+                    return this.columnState15Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYRow this[int index] {
+                get {
+                    return ((VW_CUM_FLOW_SUMMARYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_CUM_FLOW_SUMMARYRowChangeEventHandler VW_CUM_FLOW_SUMMARYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_CUM_FLOW_SUMMARYRowChangeEventHandler VW_CUM_FLOW_SUMMARYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_CUM_FLOW_SUMMARYRowChangeEventHandler VW_CUM_FLOW_SUMMARYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_CUM_FLOW_SUMMARYRowChangeEventHandler VW_CUM_FLOW_SUMMARYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVW_CUM_FLOW_SUMMARYRow(VW_CUM_FLOW_SUMMARYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYRow AddVW_CUM_FLOW_SUMMARYRow(
+                        System.DateTime WeekEnding, 
+                        string Type, 
+                        double NewThisWeek, 
+                        double ActiveThisWeek, 
+                        double ClosedTotal, 
+                        double ClosedThisWeek, 
+                        string State1Desc, 
+                        double State1, 
+                        double State1Entered, 
+                        string State2Desc, 
+                        double State2, 
+                        double State2Entered, 
+                        string State3Desc, 
+                        double State3, 
+                        double State3Entered, 
+                        string State4Desc, 
+                        double State4, 
+                        double State4Entered, 
+                        string State5Desc, 
+                        double State5, 
+                        double State5Entered, 
+                        string State6Desc, 
+                        double State6, 
+                        double State6Entered, 
+                        string State7Desc, 
+                        double State7, 
+                        double State7Entered, 
+                        string State8Desc, 
+                        double State8, 
+                        double State8Entered, 
+                        string State9Desc, 
+                        double State9, 
+                        double State9Entered, 
+                        string State10Desc, 
+                        double State10, 
+                        double State10Entered, 
+                        string State11Desc, 
+                        double State11, 
+                        double State11Entered, 
+                        string State12Desc, 
+                        double State12, 
+                        double State12Entered, 
+                        string State13Desc, 
+                        double State13, 
+                        double State13Entered, 
+                        string State14Desc, 
+                        double State14, 
+                        double State14Entered, 
+                        string State15Desc, 
+                        double State15, 
+                        double State15Entered) {
+                VW_CUM_FLOW_SUMMARYRow rowVW_CUM_FLOW_SUMMARYRow = ((VW_CUM_FLOW_SUMMARYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        WeekEnding,
+                        Type,
+                        NewThisWeek,
+                        ActiveThisWeek,
+                        ClosedTotal,
+                        ClosedThisWeek,
+                        State1Desc,
+                        State1,
+                        State1Entered,
+                        State2Desc,
+                        State2,
+                        State2Entered,
+                        State3Desc,
+                        State3,
+                        State3Entered,
+                        State4Desc,
+                        State4,
+                        State4Entered,
+                        State5Desc,
+                        State5,
+                        State5Entered,
+                        State6Desc,
+                        State6,
+                        State6Entered,
+                        State7Desc,
+                        State7,
+                        State7Entered,
+                        State8Desc,
+                        State8,
+                        State8Entered,
+                        State9Desc,
+                        State9,
+                        State9Entered,
+                        State10Desc,
+                        State10,
+                        State10Entered,
+                        State11Desc,
+                        State11,
+                        State11Entered,
+                        State12Desc,
+                        State12,
+                        State12Entered,
+                        State13Desc,
+                        State13,
+                        State13Entered,
+                        State14Desc,
+                        State14,
+                        State14Entered,
+                        State15Desc,
+                        State15,
+                        State15Entered};
+                rowVW_CUM_FLOW_SUMMARYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_CUM_FLOW_SUMMARYRow);
+                return rowVW_CUM_FLOW_SUMMARYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_CUM_FLOW_SUMMARYDataTable cln = ((VW_CUM_FLOW_SUMMARYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_CUM_FLOW_SUMMARYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWeekEnding = base.Columns["WeekEnding"];
+                this.columnType = base.Columns["Type"];
+                this.columnNewThisWeek = base.Columns["NewThisWeek"];
+                this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
+                this.columnClosedTotal = base.Columns["ClosedTotal"];
+                this.columnClosedThisWeek = base.Columns["ClosedThisWeek"];
+                this.columnState1Desc = base.Columns["State1Desc"];
+                this.columnState1 = base.Columns["State1"];
+                this.columnState1Entered = base.Columns["State1Entered"];
+                this.columnState2Desc = base.Columns["State2Desc"];
+                this.columnState2 = base.Columns["State2"];
+                this.columnState2Entered = base.Columns["State2Entered"];
+                this.columnState3Desc = base.Columns["State3Desc"];
+                this.columnState3 = base.Columns["State3"];
+                this.columnState3Entered = base.Columns["State3Entered"];
+                this.columnState4Desc = base.Columns["State4Desc"];
+                this.columnState4 = base.Columns["State4"];
+                this.columnState4Entered = base.Columns["State4Entered"];
+                this.columnState5Desc = base.Columns["State5Desc"];
+                this.columnState5 = base.Columns["State5"];
+                this.columnState5Entered = base.Columns["State5Entered"];
+                this.columnState6Desc = base.Columns["State6Desc"];
+                this.columnState6 = base.Columns["State6"];
+                this.columnState6Entered = base.Columns["State6Entered"];
+                this.columnState7Desc = base.Columns["State7Desc"];
+                this.columnState7 = base.Columns["State7"];
+                this.columnState7Entered = base.Columns["State7Entered"];
+                this.columnState8Desc = base.Columns["State8Desc"];
+                this.columnState8 = base.Columns["State8"];
+                this.columnState8Entered = base.Columns["State8Entered"];
+                this.columnState9Desc = base.Columns["State9Desc"];
+                this.columnState9 = base.Columns["State9"];
+                this.columnState9Entered = base.Columns["State9Entered"];
+                this.columnState10Desc = base.Columns["State10Desc"];
+                this.columnState10 = base.Columns["State10"];
+                this.columnState10Entered = base.Columns["State10Entered"];
+                this.columnState11Desc = base.Columns["State11Desc"];
+                this.columnState11 = base.Columns["State11"];
+                this.columnState11Entered = base.Columns["State11Entered"];
+                this.columnState12Desc = base.Columns["State12Desc"];
+                this.columnState12 = base.Columns["State12"];
+                this.columnState12Entered = base.Columns["State12Entered"];
+                this.columnState13Desc = base.Columns["State13Desc"];
+                this.columnState13 = base.Columns["State13"];
+                this.columnState13Entered = base.Columns["State13Entered"];
+                this.columnState14Desc = base.Columns["State14Desc"];
+                this.columnState14 = base.Columns["State14"];
+                this.columnState14Entered = base.Columns["State14Entered"];
+                this.columnState15Desc = base.Columns["State15Desc"];
+                this.columnState15 = base.Columns["State15"];
+                this.columnState15Entered = base.Columns["State15Entered"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEnding);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnNewThisWeek = new global::System.Data.DataColumn("NewThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewThisWeek);
+                this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActiveThisWeek);
+                this.columnClosedTotal = new global::System.Data.DataColumn("ClosedTotal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedTotal);
+                this.columnClosedThisWeek = new global::System.Data.DataColumn("ClosedThisWeek", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedThisWeek);
+                this.columnState1Desc = new global::System.Data.DataColumn("State1Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1Desc);
+                this.columnState1 = new global::System.Data.DataColumn("State1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1);
+                this.columnState1Entered = new global::System.Data.DataColumn("State1Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1Entered);
+                this.columnState2Desc = new global::System.Data.DataColumn("State2Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2Desc);
+                this.columnState2 = new global::System.Data.DataColumn("State2", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2);
+                this.columnState2Entered = new global::System.Data.DataColumn("State2Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2Entered);
+                this.columnState3Desc = new global::System.Data.DataColumn("State3Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3Desc);
+                this.columnState3 = new global::System.Data.DataColumn("State3", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3);
+                this.columnState3Entered = new global::System.Data.DataColumn("State3Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3Entered);
+                this.columnState4Desc = new global::System.Data.DataColumn("State4Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4Desc);
+                this.columnState4 = new global::System.Data.DataColumn("State4", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4);
+                this.columnState4Entered = new global::System.Data.DataColumn("State4Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4Entered);
+                this.columnState5Desc = new global::System.Data.DataColumn("State5Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5Desc);
+                this.columnState5 = new global::System.Data.DataColumn("State5", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5);
+                this.columnState5Entered = new global::System.Data.DataColumn("State5Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5Entered);
+                this.columnState6Desc = new global::System.Data.DataColumn("State6Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6Desc);
+                this.columnState6 = new global::System.Data.DataColumn("State6", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6);
+                this.columnState6Entered = new global::System.Data.DataColumn("State6Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6Entered);
+                this.columnState7Desc = new global::System.Data.DataColumn("State7Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7Desc);
+                this.columnState7 = new global::System.Data.DataColumn("State7", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7);
+                this.columnState7Entered = new global::System.Data.DataColumn("State7Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7Entered);
+                this.columnState8Desc = new global::System.Data.DataColumn("State8Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8Desc);
+                this.columnState8 = new global::System.Data.DataColumn("State8", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8);
+                this.columnState8Entered = new global::System.Data.DataColumn("State8Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8Entered);
+                this.columnState9Desc = new global::System.Data.DataColumn("State9Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9Desc);
+                this.columnState9 = new global::System.Data.DataColumn("State9", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9);
+                this.columnState9Entered = new global::System.Data.DataColumn("State9Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9Entered);
+                this.columnState10Desc = new global::System.Data.DataColumn("State10Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10Desc);
+                this.columnState10 = new global::System.Data.DataColumn("State10", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10);
+                this.columnState10Entered = new global::System.Data.DataColumn("State10Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10Entered);
+                this.columnState11Desc = new global::System.Data.DataColumn("State11Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11Desc);
+                this.columnState11 = new global::System.Data.DataColumn("State11", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11);
+                this.columnState11Entered = new global::System.Data.DataColumn("State11Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11Entered);
+                this.columnState12Desc = new global::System.Data.DataColumn("State12Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12Desc);
+                this.columnState12 = new global::System.Data.DataColumn("State12", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12);
+                this.columnState12Entered = new global::System.Data.DataColumn("State12Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12Entered);
+                this.columnState13Desc = new global::System.Data.DataColumn("State13Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13Desc);
+                this.columnState13 = new global::System.Data.DataColumn("State13", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13);
+                this.columnState13Entered = new global::System.Data.DataColumn("State13Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13Entered);
+                this.columnState14Desc = new global::System.Data.DataColumn("State14Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14Desc);
+                this.columnState14 = new global::System.Data.DataColumn("State14", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14);
+                this.columnState14Entered = new global::System.Data.DataColumn("State14Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14Entered);
+                this.columnState15Desc = new global::System.Data.DataColumn("State15Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15Desc);
+                this.columnState15 = new global::System.Data.DataColumn("State15", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15);
+                this.columnState15Entered = new global::System.Data.DataColumn("State15Entered", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15Entered);
+                this.columnType.MaxLength = 255;
+                this.columnState1Desc.MaxLength = 255;
+                this.columnState2Desc.MaxLength = 255;
+                this.columnState3Desc.MaxLength = 255;
+                this.columnState4Desc.MaxLength = 255;
+                this.columnState5Desc.MaxLength = 255;
+                this.columnState6Desc.MaxLength = 255;
+                this.columnState7Desc.MaxLength = 255;
+                this.columnState8Desc.MaxLength = 255;
+                this.columnState9Desc.MaxLength = 255;
+                this.columnState10Desc.MaxLength = 255;
+                this.columnState11Desc.MaxLength = 255;
+                this.columnState12Desc.MaxLength = 255;
+                this.columnState13Desc.MaxLength = 255;
+                this.columnState14Desc.MaxLength = 255;
+                this.columnState15Desc.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYRow NewVW_CUM_FLOW_SUMMARYRow() {
+                return ((VW_CUM_FLOW_SUMMARYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_CUM_FLOW_SUMMARYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_CUM_FLOW_SUMMARYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_CUM_FLOW_SUMMARYRowChanged != null)) {
+                    this.VW_CUM_FLOW_SUMMARYRowChanged(this, new VW_CUM_FLOW_SUMMARYRowChangeEvent(((VW_CUM_FLOW_SUMMARYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_CUM_FLOW_SUMMARYRowChanging != null)) {
+                    this.VW_CUM_FLOW_SUMMARYRowChanging(this, new VW_CUM_FLOW_SUMMARYRowChangeEvent(((VW_CUM_FLOW_SUMMARYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_CUM_FLOW_SUMMARYRowDeleted != null)) {
+                    this.VW_CUM_FLOW_SUMMARYRowDeleted(this, new VW_CUM_FLOW_SUMMARYRowChangeEvent(((VW_CUM_FLOW_SUMMARYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_CUM_FLOW_SUMMARYRowDeleting != null)) {
+                    this.VW_CUM_FLOW_SUMMARYRowDeleting(this, new VW_CUM_FLOW_SUMMARYRowChangeEvent(((VW_CUM_FLOW_SUMMARYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVW_CUM_FLOW_SUMMARYRow(VW_CUM_FLOW_SUMMARYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DumpDataSet ds = new DumpDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_CUM_FLOW_SUMMARYDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -30126,6 +31175,1449 @@ namespace VSConnect {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class VW_CUM_FLOW_SUMMARYRow : global::System.Data.DataRow {
+            
+            private VW_CUM_FLOW_SUMMARYDataTable tableVW_CUM_FLOW_SUMMARY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_CUM_FLOW_SUMMARYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_CUM_FLOW_SUMMARY = ((VW_CUM_FLOW_SUMMARYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime WeekEnding {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_CUM_FLOW_SUMMARY.WeekEndingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.WeekEndingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double NewThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.NewThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewThisWeek\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.NewThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ActiveThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.ActiveThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActiveThisWeek\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.ActiveThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ClosedTotal {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.ClosedTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedTotal\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.ClosedTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ClosedThisWeek {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.ClosedThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisWeek\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.ClosedThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State1Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State1DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State1DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State1 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State1Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State1EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State1EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State2Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State2DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State2DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State2 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State2Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State2EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State2EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State3Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State3DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State3DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State3 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State3Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State3EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State3EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State4Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State4DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State4DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State4 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State4Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State4EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State4EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State5Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State5DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State5DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State5 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State5Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State5EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State5EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State6Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State6DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State6DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State6 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State6Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State6Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State6EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State6EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State7Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State7DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State7DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State7 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State7Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State7Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State7Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State7EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State7EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State8Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State8DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State8DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State8 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State8Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State8Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State8Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State8EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State8EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State9Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State9DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State9DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State9 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State9Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State9Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State9Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State9EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State9EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State10Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State10DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State10DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State10 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State10Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State10EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State10EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State11Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State11DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State11DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State11 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State11Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State11Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State11EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State11EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State12Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State12DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State12DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State12 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State12Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State12Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State12EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State12EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State13Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State13DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State13DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State13 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State13Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State13Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State13Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State13EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State13EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State14Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State14DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State14DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State14 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State14Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State14Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State14Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State14EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State14EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State15Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_CUM_FLOW_SUMMARY.State15DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15Desc\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State15DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State15 {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State15Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State15Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double State15Entered {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_CUM_FLOW_SUMMARY.State15EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15Entered\' in table \'VW_CUM_FLOW_SUMMARY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_CUM_FLOW_SUMMARY.State15EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.WeekEndingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.WeekEndingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTypeNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTypeNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNewThisWeekNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.NewThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNewThisWeekNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.NewThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsActiveThisWeekNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.ActiveThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetActiveThisWeekNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedTotalNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.ClosedTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedTotalNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.ClosedTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedThisWeekNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.ClosedThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedThisWeekNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.ClosedThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State1DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State1DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State1EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State1EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State2DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State2DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State2EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State2EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State3DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State3DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State3EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State3EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State4DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State4DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State4EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State4EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State5DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State5DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State5EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State5EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State6DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State6DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State6Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State6EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State6EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State7DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State7DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State7Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State7Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State7EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State7EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State8DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State8DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State8Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State8Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State8EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State8EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State9DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State9DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State9Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State9Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State9EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State9EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State10DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State10DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State10EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State10EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State11DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State11DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State11Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State11Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State11EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State11EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State12DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State12DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State12Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State12Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State12EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State12EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State13DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State13DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State13Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State13Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State13EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State13EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State14DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State14DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State14Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State14Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State14EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State14EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15DescNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State15DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15DescNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State15DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15Null() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State15Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15Null() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State15Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15EnteredNull() {
+                return this.IsNull(this.tableVW_CUM_FLOW_SUMMARY.State15EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15EnteredNull() {
+                this[this.tableVW_CUM_FLOW_SUMMARY.State15EnteredColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class VW_CYCLETIME_ACTIVERow : global::System.Data.DataRow {
             
             private VW_CYCLETIME_ACTIVEDataTable tableVW_CYCLETIME_ACTIVE;
@@ -38930,6 +41422,40 @@ namespace VSConnect {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_Created_StartedRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class VW_CUM_FLOW_SUMMARYRowChangeEvent : global::System.EventArgs {
+            
+            private VW_CUM_FLOW_SUMMARYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYRowChangeEvent(VW_CUM_FLOW_SUMMARYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_CUM_FLOW_SUMMARYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -49763,6 +52289,223 @@ namespace VSConnect.DumpDataSetTableAdapters {
         public virtual DumpDataSet.VW_Created_StartedDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             DumpDataSet.VW_Created_StartedDataTable dataTable = new DumpDataSet.VW_Created_StartedDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_CUM_FLOW_SUMMARYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public VW_CUM_FLOW_SUMMARYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_CUM_FLOW_SUMMARY";
+            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
+            tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
+            tableMapping.ColumnMappings.Add("ClosedTotal", "ClosedTotal");
+            tableMapping.ColumnMappings.Add("ClosedThisWeek", "ClosedThisWeek");
+            tableMapping.ColumnMappings.Add("State1Desc", "State1Desc");
+            tableMapping.ColumnMappings.Add("State1", "State1");
+            tableMapping.ColumnMappings.Add("State1Entered", "State1Entered");
+            tableMapping.ColumnMappings.Add("State2Desc", "State2Desc");
+            tableMapping.ColumnMappings.Add("State2", "State2");
+            tableMapping.ColumnMappings.Add("State2Entered", "State2Entered");
+            tableMapping.ColumnMappings.Add("State3Desc", "State3Desc");
+            tableMapping.ColumnMappings.Add("State3", "State3");
+            tableMapping.ColumnMappings.Add("State3Entered", "State3Entered");
+            tableMapping.ColumnMappings.Add("State4Desc", "State4Desc");
+            tableMapping.ColumnMappings.Add("State4", "State4");
+            tableMapping.ColumnMappings.Add("State4Entered", "State4Entered");
+            tableMapping.ColumnMappings.Add("State5Desc", "State5Desc");
+            tableMapping.ColumnMappings.Add("State5", "State5");
+            tableMapping.ColumnMappings.Add("State5Entered", "State5Entered");
+            tableMapping.ColumnMappings.Add("State6Desc", "State6Desc");
+            tableMapping.ColumnMappings.Add("State6", "State6");
+            tableMapping.ColumnMappings.Add("State6Entered", "State6Entered");
+            tableMapping.ColumnMappings.Add("State7Desc", "State7Desc");
+            tableMapping.ColumnMappings.Add("State7", "State7");
+            tableMapping.ColumnMappings.Add("State7Entered", "State7Entered");
+            tableMapping.ColumnMappings.Add("State8Desc", "State8Desc");
+            tableMapping.ColumnMappings.Add("State8", "State8");
+            tableMapping.ColumnMappings.Add("State8Entered", "State8Entered");
+            tableMapping.ColumnMappings.Add("State9Desc", "State9Desc");
+            tableMapping.ColumnMappings.Add("State9", "State9");
+            tableMapping.ColumnMappings.Add("State9Entered", "State9Entered");
+            tableMapping.ColumnMappings.Add("State10Desc", "State10Desc");
+            tableMapping.ColumnMappings.Add("State10", "State10");
+            tableMapping.ColumnMappings.Add("State10Entered", "State10Entered");
+            tableMapping.ColumnMappings.Add("State11Desc", "State11Desc");
+            tableMapping.ColumnMappings.Add("State11", "State11");
+            tableMapping.ColumnMappings.Add("State11Entered", "State11Entered");
+            tableMapping.ColumnMappings.Add("State12Desc", "State12Desc");
+            tableMapping.ColumnMappings.Add("State12", "State12");
+            tableMapping.ColumnMappings.Add("State12Entered", "State12Entered");
+            tableMapping.ColumnMappings.Add("State13Desc", "State13Desc");
+            tableMapping.ColumnMappings.Add("State13", "State13");
+            tableMapping.ColumnMappings.Add("State13Entered", "State13Entered");
+            tableMapping.ColumnMappings.Add("State14Desc", "State14Desc");
+            tableMapping.ColumnMappings.Add("State14", "State14");
+            tableMapping.ColumnMappings.Add("State14Entered", "State14Entered");
+            tableMapping.ColumnMappings.Add("State15Desc", "State15Desc");
+            tableMapping.ColumnMappings.Add("State15", "State15");
+            tableMapping.ColumnMappings.Add("State15Entered", "State15Entered");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::VSConnect.Properties.Settings.Default.DumpConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT WeekEnding, Type, NewThisWeek, ActiveThisWeek, ClosedTotal, ClosedThisWeek, State1Desc, State1, State1Entered, State2Desc, State2, State2Entered, State3Desc, State3, State3Entered, State4Desc, State4, State4Entered, State5Desc, State5, State5Entered, State6Desc, State6, State6Entered, State7Desc, State7, State7Entered, State8Desc, State8, State8Entered, State9Desc, State9, State9Entered, State10Desc, State10, State10Entered, State11Desc, State11, State11Entered, State12Desc, State12, State12Entered, State13Desc, State13, State13Entered, State14Desc, State14, State14Entered, State15Desc, State15, State15Entered FROM VW_CUM_FLOW_SUMMARY";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DumpDataSet.VW_CUM_FLOW_SUMMARYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DumpDataSet.VW_CUM_FLOW_SUMMARYDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DumpDataSet.VW_CUM_FLOW_SUMMARYDataTable dataTable = new DumpDataSet.VW_CUM_FLOW_SUMMARYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

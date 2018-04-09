@@ -167,19 +167,19 @@ namespace VSUtil.Forms
                 devview = new DataView(table_severity, filter + " AND SEVERITY = '1 - Critical'", "WeekEnding", DataViewRowState.CurrentRows);
                 chartBugs.Series["severity_critical"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
 
-                series = CreateSeries("severity_high", SeriesChartType.Line, 2, Color.Coral, ChartDashStyle.Solid,
+                series = CreateSeries("severity_high", SeriesChartType.Line, 2, Color.LightCoral, ChartDashStyle.Solid,
                     ChartValueType.DateTime, "Remaining - High");
                 chartBugs.Series.Add(series);
                 devview = new DataView(table_severity, filter + " AND SEVERITY = '2 - High'", "WeekEnding", DataViewRowState.CurrentRows);
                 chartBugs.Series["severity_high"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
 
-                series = CreateSeries("severity_medium", SeriesChartType.Line, 2, Color.PaleVioletRed, ChartDashStyle.Solid,
+                series = CreateSeries("severity_medium", SeriesChartType.Line, 2, Color.DarkGray, ChartDashStyle.Solid,
                     ChartValueType.DateTime, "Remaining - Medium");
                 chartBugs.Series.Add(series);
                 devview = new DataView(table_severity, filter + " AND SEVERITY = '3 - Medium'", "WeekEnding", DataViewRowState.CurrentRows);
                 chartBugs.Series["severity_medium"].Points.DataBind(devview, "WeekEnding", "Remaining", "Tooltip=WeekEnding");
 
-                series = CreateSeries("severity_low", SeriesChartType.Line, 2, Color.LightBlue, ChartDashStyle.Solid,
+                series = CreateSeries("severity_low", SeriesChartType.Line, 2, Color.LightGray, ChartDashStyle.Solid,
                     ChartValueType.DateTime, "Remaining - Low");
                 chartBugs.Series.Add(series);
                 devview = new DataView(table_severity, filter + " AND SEVERITY = '4 - Low'", "WeekEnding", DataViewRowState.CurrentRows);

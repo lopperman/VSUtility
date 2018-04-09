@@ -291,6 +291,12 @@
     <Compile Include="Forms\frmDevMetrics.Designer.cs">
       <DependentUpon>frmDevMetrics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmDynamicChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDynamicChart.Designer.cs">
+      <DependentUpon>frmDynamicChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InfoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDevMetrics.resx">
       <DependentUpon>frmDevMetrics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDynamicChart.resx">
+      <DependentUpon>frmDynamicChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfoFrm.resx">
       <DependentUpon>InfoFrm.cs</DependentUpon>
