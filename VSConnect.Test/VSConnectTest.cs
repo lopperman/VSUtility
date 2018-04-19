@@ -80,6 +80,42 @@ namespace VSConnect.Test
         }
 
         [Test]
+        public void GetTeamKanbanBoards()
+        {
+            var project = connect.GetProject("Marketing Temp");
+
+            var areas = project.AreaRootNodes;
+
+            var x = "";
+
+
+        }
+
+        [Test]
+        public void TestGetTeams()
+        {
+            var project = connect.GetProject("Marketing Temp");
+            var test = connect.GetTeams(project);
+        }
+
+        [Test]
+        public void GetTeamAreas()
+        {
+            var teams = connect.GetTeams(connect.GetProject("Marketing Temp")).ToList();
+
+            foreach (var team in teams)
+            {
+                var areas = connect.GetTeamAreas(team);
+
+                if (areas.Count > 1)
+                {
+                    string x = "";
+                }
+            }
+
+        }
+
+        [Test]
         public void DisectTheShitOutOfAWorkItem()
         {
             List<string> includeFields = new List<string>();

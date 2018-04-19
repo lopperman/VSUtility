@@ -21,5 +21,31 @@ namespace VSConnect
             Id = id;
             Name = name;
         }
+
+        public override string ToString()
+        {
+            return $"{Id} - {Name}";
+        }
+    }
+    public class TfsTeam
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public TfsTeam()
+        {
+
+        }
+
+        public TfsTeam(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        public override string ToString()
+        {
+            return $"{Id} - {Name}";
+        }
     }
 }

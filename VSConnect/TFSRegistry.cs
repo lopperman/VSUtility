@@ -133,6 +133,47 @@ public static class TFSRegistry
     }
 
 
+    public static string GetDefaultProjectName(string defaultProjectName)
+    {
+        string projectName = GetRegistryKey("DefaultProjectName");
+
+        if (string.IsNullOrWhiteSpace(projectName))
+        {
+            return defaultProjectName;
+        }
+
+        return projectName;
+
+    }
+
+    public static void SetDefaultProjectName(string defaultProjectName)
+    {
+        if (defaultProjectName == GetDefaultProjectName(""))
+        {
+            return;
+        }
+
+        SetRegistryKey("DefaultProjedctName",defaultProjectName);
+    }
+
+    public static string GetDefaultTeamName(string defaultTeamName)
+    {
+        string ret = GetRegistryKey("TeamName");
+
+        if (string.IsNullOrWhiteSpace(ret))
+        {
+            SetDefaultTeamName(defaultTeamName);
+            ret = defaultTeamName;
+        }
+
+        return ret;
+    }
+
+    public static void SetDefaultTeamName(string defaultTeamName)
+    {
+        SetRegistryKey("TeamName",defaultTeamName);
+    }
+
     public static int GetDefaultAreaId()
     {
         string areaid = GetRegistryKey("AreaId");

@@ -6,10 +6,17 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.TeamFoundation.Client;
+using Microsoft.TeamFoundation.Core.WebApi;
 using Microsoft.TeamFoundation.Framework.Client;
 using Microsoft.TeamFoundation.Framework.Common;
+using Microsoft.TeamFoundation.ProcessConfiguration.Client;
 using Microsoft.TeamFoundation.Server;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
+using Microsoft.VisualStudio.Services.Common;
+using Microsoft.VisualStudio.Services.WebApi;
+using Field = Microsoft.TeamFoundation.WorkItemTracking.Client.Field;
+using ProjectInfo = Microsoft.TeamFoundation.Server.ProjectInfo;
+using WindowsCredential = Microsoft.TeamFoundation.Client.WindowsCredential;
 
 namespace VSConnect
 {
@@ -22,11 +29,21 @@ namespace VSConnect
         {
             tfsUri = vsUri;
 
+            this.UserName = userName;
+            this.Password = password;
+            this.Domain = domain;
             
 
             NetworkCredential cred = new NetworkCredential(userName, password, domain);
             ProjectCollection.Credentials = cred;
         }
+
+        public string Domain
+        { get; set; }
+
+        public string Password { get; set; }
+
+        public string UserName { get; set; }
 
         public TfsTeamProjectCollection ProjectCollection
         {
@@ -66,6 +83,36 @@ namespace VSConnect
             }
 
             return areas;
+        }
+
+        public List<TeamFoundationTeam> GetTeams(Project project)
+        {
+            TfsTeamService _teamService = tfs.GetService<TfsTeamService>();
+            IEnumerable<TeamFoundationTeam> _teams = _teamService.QueryTeams(project.Uri.ToString());
+
+            
+
+            return _teams.ToList();
+
+        }
+
+
+        public List<string> GetTeamAreas(TeamFoundationTeam team)
+        {
+            List<string> ret = new List<string>();
+
+            var _teamConfig = tfs.GetService<TeamSettingsConfigurationService>();
+
+            var _configs = _teamConfig.GetTeamConfigurations(new Guid[] { team.Identity.TeamFoundationId });
+
+            foreach (var _config in _configs)
+            {
+                foreach (var _area in _config.TeamSettings.TeamFieldValues)
+                {
+                    ret.Add(_area.Value);                    
+                }
+            }
+            return ret;
         }
 
         public List<TfsArea> GetNodeNamesAndIds(Node node)

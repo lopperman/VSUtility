@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.TeamFoundation.Client;
+using Microsoft.TeamFoundation.WorkItemTracking.Client;
 using TFSUtilities.Forms;
 using VSConnect;
 using VSUtil.Classes.Util;
@@ -22,6 +24,9 @@ namespace VSUtil
         bool initialized = false;
         string tfsPath = TFSRegistry.GetTFSMdbPath();
 
+        private List<TfsArea> availableTeamAreas = new List<TfsArea>();
+        private List<int> selectedTeamAreaIds = new List<int>();
+
         public Form1()
         {
             InitializeComponent();
@@ -30,20 +35,54 @@ namespace VSUtil
 
             PopulateProjectAreasAndSetDefault();
 
-            cboProject.SelectedIndexChanged += CboProject_SelectedIndexChanged;
+            cboTeam.SelectedIndexChanged += CboTeamSelectedIndexChanged;
+            cboRealProject.SelectedIndexChanged += new System.EventHandler(this.cboRealProject_SelectedIndexChanged);
+            lstTeamAreas.CheckOnClick = true;
+
+            lstTeamAreas.ItemCheck += LstTeamAreas_ItemCheck;
+            lblInfo.Text = "Properties for: " + connect.ProjectCollection.Uri;
 
         }
 
-        private void CboProject_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstTeamAreas_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            try
+            ShowWait();
+
+            if (SelectedTeam != null && SelectedProject != null)
             {
-                TFSRegistry.SetDefaultAreaId(AreaId);
+                if (availableTeamAreas.Count == 0)
+                {
+                    availableTeamAreas.AddRange(connect.GetTeamAreas(SelectedProject));
+                }
+
+
             }
-            catch
-            {
-                
-            }
+
+            ShowDefault();
+        }
+
+        private void ShowDefault()
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void ShowWait()
+        {
+            this.Cursor = Cursors.WaitCursor;
+        }
+
+        private void CboTeamSelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateTeamAreas();
+
+//            try
+//            {
+//                TFSRegistry.SetDefaultAreaId(AreaId);
+//            }
+//            catch
+//            {
+//                
+//            }
         }
 
         private void init()
@@ -174,19 +213,73 @@ namespace VSUtil
             cboRealProject.DisplayMember = "Name";
             cboRealProject.ValueMember = "Id";
 
+            string defaultProjectName = TFSRegistry.GetDefaultProjectName("Marketing Temp");
+            var proj = connect.GetProject(defaultProjectName);
+            cboRealProject.SelectedValue = proj.Id;
 
-            var proj = connect.GetProject("Marketing Temp");
-            var areas = connect.GetTeamAreas(proj);
-            cboProject.DataSource = areas;
-            cboProject.DisplayMember = "Name";
-            cboProject.ValueMember = "Id";
+            var teams = connect.GetTeams(proj);
+            cboTeam.DataSource = teams;
+            cboTeam.ValueMember = "Identity";
+            cboTeam.DisplayMember = "Name";
 
-            if (TFSRegistry.GetDefaultAreaId() != 0)
+            if (teams.Any(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")))
             {
-                cboProject.SelectedValue = TFSRegistry.GetDefaultAreaId();
+                cboTeam.SelectedValue =
+                    teams.First(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")).Identity;
             }
-            VSCommon.LastDayOfWeek = TFSRegistry.LastDayOfWeek;
 
+            UpdateTeamAreas();
+
+            //            cboTeam.DataSource = areas;
+            //            cboTeam.DisplayMember = "Name";
+            //            cboTeam.ValueMember = "Id";
+            //
+            //            if (TFSRegistry.GetDefaultAreaId() != 0)
+            //            {
+            //                cboTeam.SelectedValue = TFSRegistry.GetDefaultAreaId();
+            //            }
+            //            VSCommon.LastDayOfWeek = TFSRegistry.LastDayOfWeek;
+
+        }
+
+        private void UpdateTeamAreas()
+        {
+            if (cboTeam.SelectedIndex >= 0)
+            {
+                var teamAreas = connect.GetTeamAreas(cboTeam.SelectedItem as TeamFoundationTeam);
+
+                foreach (string area in teamAreas)
+                {
+                    lstTeamAreas.Items.Add(area, true);
+                }
+            }
+        }
+
+        private Project SelectedProject
+        {
+            get
+            {
+                if (cboRealProject.SelectedIndex >= 0)
+                {
+                    return connect.GetProject(cboRealProject.Text);
+                }
+
+                return null;
+            }
+        }
+
+        private TeamFoundationTeam SelectedTeam
+        {
+            get
+            {
+                if (cboTeam.SelectedIndex >= 0)
+                {
+                    return cboTeam.SelectedItem as TeamFoundationTeam;
+                    ;
+                }
+
+                return null;
+            }
         }
 
         private int AreaId
@@ -195,7 +288,7 @@ namespace VSUtil
             {
                 int areaId = 0;
 
-                Int32.TryParse(cboProject.SelectedValue.ToString(), out areaId);
+                Int32.TryParse(cboTeam.SelectedValue.ToString(), out areaId);
 
                 return areaId;
             }
@@ -265,7 +358,7 @@ namespace VSUtil
                     return;
                 }
 
-                var f = new frmDevMetrics(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboProject.Text);
+                var f = new frmDevMetrics(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboTeam.Text);
                 f.Show();
             }
         }
@@ -304,9 +397,33 @@ namespace VSUtil
                     return;
                 }
 
-                var f = new frmDynamicChart(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboProject.Text);
+                var f = new frmDynamicChart(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboTeam.Text);
                 f.Show();
             }
+
+        }
+
+        private void cboRealProject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+//            string defaultProjectName = TFSRegistry.GetDefaultProjectName("Marketing Temp");
+//            var proj = connect.GetProject(defaultProjectName);
+//            cboRealProject.SelectedValue = proj.Id;
+//
+//            var teams = connect.GetTeams(proj);
+//            cboTeam.DataSource = teams;
+//            cboTeam.ValueMember = "Identity";
+//            cboTeam.DisplayMember = "Name";
+//
+//            if (teams.Any(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")))
+//            {
+//                cboTeam.SelectedValue =
+//                    teams.First(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")).Identity;
+//            }
+
+
+
+
 
         }
     }

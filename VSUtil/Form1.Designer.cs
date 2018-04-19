@@ -35,17 +35,20 @@
             this.utilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workItemHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.developmentMetricsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dynamicChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cboRealProject = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboProject = new System.Windows.Forms.ComboBox();
+            this.cboTeam = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dynamicChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lstTeamAreas = new System.Windows.Forms.CheckedListBox();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 38);
+            this.button1.Location = new System.Drawing.Point(347, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -55,11 +58,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 109);
+            this.textBox1.Location = new System.Drawing.Point(12, 282);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(739, 407);
+            this.textBox1.Size = new System.Drawing.Size(739, 234);
             this.textBox1.TabIndex = 1;
             // 
             // menuStrip1
@@ -96,42 +99,6 @@
             this.developmentMetricsToolStripMenuItem.Text = "&Development Metrics";
             this.developmentMetricsToolStripMenuItem.Click += new System.EventHandler(this.developmentMetricsToolStripMenuItem_Click);
             // 
-            // cboRealProject
-            // 
-            this.cboRealProject.FormattingEnabled = true;
-            this.cboRealProject.Location = new System.Drawing.Point(107, 65);
-            this.cboRealProject.Name = "cboRealProject";
-            this.cboRealProject.Size = new System.Drawing.Size(220, 21);
-            this.cboRealProject.TabIndex = 29;
-            this.cboRealProject.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Project:";
-            this.label3.Visible = false;
-            // 
-            // cboProject
-            // 
-            this.cboProject.FormattingEnabled = true;
-            this.cboProject.Location = new System.Drawing.Point(107, 38);
-            this.cboProject.Name = "cboProject";
-            this.cboProject.Size = new System.Drawing.Size(261, 21);
-            this.cboProject.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Project/Team:";
-            // 
             // dynamicChartToolStripMenuItem
             // 
             this.dynamicChartToolStripMenuItem.Name = "dynamicChartToolStripMenuItem";
@@ -139,12 +106,77 @@
             this.dynamicChartToolStripMenuItem.Text = "Dynamic Chart";
             this.dynamicChartToolStripMenuItem.Click += new System.EventHandler(this.dynamicChartToolStripMenuItem_Click);
             // 
+            // cboRealProject
+            // 
+            this.cboRealProject.FormattingEnabled = true;
+            this.cboRealProject.Location = new System.Drawing.Point(80, 92);
+            this.cboRealProject.Name = "cboRealProject";
+            this.cboRealProject.Size = new System.Drawing.Size(220, 21);
+            this.cboRealProject.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Project:";
+            // 
+            // cboTeam
+            // 
+            this.cboTeam.FormattingEnabled = true;
+            this.cboTeam.Location = new System.Drawing.Point(80, 119);
+            this.cboTeam.Name = "cboTeam";
+            this.cboTeam.Size = new System.Drawing.Size(261, 21);
+            this.cboTeam.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Team:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Areas:";
+            // 
+            // lstTeamAreas
+            // 
+            this.lstTeamAreas.FormattingEnabled = true;
+            this.lstTeamAreas.Location = new System.Drawing.Point(80, 146);
+            this.lstTeamAreas.Name = "lstTeamAreas";
+            this.lstTeamAreas.Size = new System.Drawing.Size(261, 94);
+            this.lstTeamAreas.TabIndex = 34;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblInfo.Location = new System.Drawing.Point(31, 36);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(81, 24);
+            this.lblInfo.TabIndex = 35;
+            this.lblInfo.Text = "Project:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 550);
-            this.Controls.Add(this.cboProject);
+            this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.lstTeamAreas);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboTeam);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboRealProject);
             this.Controls.Add(this.label3);
@@ -172,9 +204,12 @@
         private System.Windows.Forms.ToolStripMenuItem developmentMetricsToolStripMenuItem;
         private System.Windows.Forms.ComboBox cboRealProject;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboProject;
+        private System.Windows.Forms.ComboBox cboTeam;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem dynamicChartToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox lstTeamAreas;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 
