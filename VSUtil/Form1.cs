@@ -48,15 +48,16 @@ namespace VSUtil
         {
             ShowWait();
 
-            if (SelectedTeam != null && SelectedProject != null)
+            int index = e.Index;
+            if (e.NewValue == CheckState.Checked)
             {
-                if (availableTeamAreas.Count == 0)
+                for (int i = 0; i < lstTeamAreas.Items.Count; i++)
                 {
-                    availableTeamAreas.AddRange(connect.GetTeamAreas(SelectedProject));
+                    lstTeamAreas.SetItemChecked(i, false);
                 }
-
-
             }
+
+
 
             ShowDefault();
         }
@@ -186,7 +187,7 @@ namespace VSUtil
                 wait.Show(this);
                 Application.DoEvents();
 
-                DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, 2884, wait, "Marketing Temp", TFSRegistry.LastDayOfWeek);
+                DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, SelectedProject.Name, TFSRegistry.LastDayOfWeek);
                 dump.DumpWorkItems(path);
 
                 wait.Close();
@@ -198,6 +199,22 @@ namespace VSUtil
 
             }
 
+        }
+
+        public int SelectedAreaId
+        {
+            get
+            {
+                int selectedAreId = -1;
+
+                foreach (object s in lstTeamAreas.CheckedItems)
+                {
+                    selectedAreId = (s as TfsArea).Id;
+                    break;
+                }
+
+                return selectedAreId;
+            }
         }
 
         private void workItemHistoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -217,10 +234,7 @@ namespace VSUtil
             var proj = connect.GetProject(defaultProjectName);
             cboRealProject.SelectedValue = proj.Id;
 
-            var teams = connect.GetTeams(proj);
-            cboTeam.DataSource = teams;
-            cboTeam.ValueMember = "Identity";
-            cboTeam.DisplayMember = "Name";
+            var teams = UpdateTeams(proj);
 
             if (teams.Any(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")))
             {
@@ -230,27 +244,32 @@ namespace VSUtil
 
             UpdateTeamAreas();
 
-            //            cboTeam.DataSource = areas;
-            //            cboTeam.DisplayMember = "Name";
-            //            cboTeam.ValueMember = "Id";
-            //
-            //            if (TFSRegistry.GetDefaultAreaId() != 0)
-            //            {
-            //                cboTeam.SelectedValue = TFSRegistry.GetDefaultAreaId();
-            //            }
-            //            VSCommon.LastDayOfWeek = TFSRegistry.LastDayOfWeek;
+        }
 
+        private List<TeamFoundationTeam> UpdateTeams(Project proj)
+        {
+            var teams = connect.GetTeams(proj);
+            cboTeam.DataSource = teams;
+            cboTeam.ValueMember = "Identity";
+            cboTeam.DisplayMember = "Name";
+            return teams;
         }
 
         private void UpdateTeamAreas()
         {
+            //lstTeamAreas.Items.Clear();
+
             if (cboTeam.SelectedIndex >= 0)
             {
-                var teamAreas = connect.GetTeamAreas(cboTeam.SelectedItem as TeamFoundationTeam);
+                var teamAreas = connect.GetTeamAreas(cboTeam.SelectedItem as TeamFoundationTeam, SelectedProject);
 
-                foreach (string area in teamAreas)
+                lstTeamAreas.DataSource = teamAreas;
+                lstTeamAreas.ValueMember = "Id";
+                lstTeamAreas.DisplayMember = "Name";
+
+                for (int i = 0; i < lstTeamAreas.Items.Count; i++)
                 {
-                    lstTeamAreas.Items.Add(area, true);
+                    lstTeamAreas.SetItemChecked(i, false);
                 }
             }
         }
@@ -282,17 +301,6 @@ namespace VSUtil
             }
         }
 
-        private int AreaId
-        {
-            get
-            {
-                int areaId = 0;
-
-                Int32.TryParse(cboTeam.SelectedValue.ToString(), out areaId);
-
-                return areaId;
-            }
-        }
 
         private bool DumpTFS()
         {
@@ -311,7 +319,7 @@ namespace VSUtil
             wait.Show(this);
             Application.DoEvents();
 
-            DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, AreaId, wait, "Marketing Temp", TFSRegistry.LastDayOfWeek);
+            DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, "Marketing Temp", TFSRegistry.LastDayOfWeek);
             dump.DumpWorkItems(path);
 
             wait.Close();
@@ -333,7 +341,7 @@ namespace VSUtil
             }
 
             //get the last update date from the file
-            if (File.Exists(TFSRegistry.GetTFSMdbPath()) && VSCommon.GetDumpFileAreaId(TFSRegistry.GetTFSMdbPath()) == AreaId)
+            if (File.Exists(TFSRegistry.GetTFSMdbPath()) && VSCommon.GetDumpFileAreaId(TFSRegistry.GetTFSMdbPath()) == SelectedAreaId)
             {
                 DateTime? dumpDate = VSCommon.GetDumpDate(TFSRegistry.GetTFSMdbPath());
                 if (DateTime.Now.Subtract(dumpDate.Value).TotalHours >= 4)
@@ -358,7 +366,7 @@ namespace VSUtil
                     return;
                 }
 
-                var f = new frmDevMetrics(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboTeam.Text);
+                var f = new frmDevMetrics(TFSRegistry.GetTFSMdbPath(), connect, SelectedAreaId, cboTeam.Text);
                 f.Show();
             }
         }
@@ -372,7 +380,7 @@ namespace VSUtil
             }
 
             //get the last update date from the file
-            if (File.Exists(TFSRegistry.GetTFSMdbPath()) && VSCommon.GetDumpFileAreaId(TFSRegistry.GetTFSMdbPath()) == AreaId)
+            if (File.Exists(TFSRegistry.GetTFSMdbPath()) && VSCommon.GetDumpFileAreaId(TFSRegistry.GetTFSMdbPath()) == SelectedAreaId)
             {
                 DateTime? dumpDate = VSCommon.GetDumpDate(TFSRegistry.GetTFSMdbPath());
                 if (DateTime.Now.Subtract(dumpDate.Value).TotalHours >= 4)
@@ -397,7 +405,7 @@ namespace VSUtil
                     return;
                 }
 
-                var f = new frmDynamicChart(TFSRegistry.GetTFSMdbPath(), connect, AreaId, cboTeam.Text);
+                var f = new frmDynamicChart(TFSRegistry.GetTFSMdbPath(), connect, SelectedAreaId, cboTeam.Text);
                 f.Show();
             }
 
@@ -405,26 +413,12 @@ namespace VSUtil
 
         private void cboRealProject_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateTeams(SelectedProject);
 
-//            string defaultProjectName = TFSRegistry.GetDefaultProjectName("Marketing Temp");
-//            var proj = connect.GetProject(defaultProjectName);
-//            cboRealProject.SelectedValue = proj.Id;
-//
-//            var teams = connect.GetTeams(proj);
-//            cboTeam.DataSource = teams;
-//            cboTeam.ValueMember = "Identity";
-//            cboTeam.DisplayMember = "Name";
-//
-//            if (teams.Any(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")))
-//            {
-//                cboTeam.SelectedValue =
-//                    teams.First(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")).Identity;
-//            }
-
-
-
-
-
+            if (cboTeam.SelectedIndex >= 0)
+            {
+                UpdateTeamAreas();
+            }
         }
     }
 }

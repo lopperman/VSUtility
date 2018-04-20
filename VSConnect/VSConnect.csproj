@@ -280,6 +280,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HelperDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="INotify.cs" />
     <Compile Include="Lifecycle\LifecycleState.cs" />
     <Compile Include="Lifecycle\UserStoryCumulativeFlow.cs" />
@@ -298,6 +299,8 @@
     <Compile Include="TfsArea.cs" />
     <Compile Include="TfsProject.cs" />
     <Compile Include="TFSRegistry.cs" />
+    <Compile Include="TFSState.cs" />
+    <Compile Include="TFSStateManager.cs" />
     <Compile Include="VSCommon.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

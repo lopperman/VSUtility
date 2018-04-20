@@ -97,7 +97,7 @@ namespace VSConnect
         }
 
 
-        public List<string> GetTeamAreas(TeamFoundationTeam team)
+        public List<TfsArea> GetTeamAreas(TeamFoundationTeam team, Project project)
         {
             List<string> ret = new List<string>();
 
@@ -112,7 +112,20 @@ namespace VSConnect
                     ret.Add(_area.Value);                    
                 }
             }
-            return ret;
+
+            //get all areas for project, so we can return areas with ids
+            List<TfsArea> areas = new List<TfsArea>();
+
+            foreach (var a in this.GetTeamAreas(project))
+            {
+                if (ret.Contains(string.Format("{0}\\{1}",project.Name,a.Name)))
+                {
+                    areas.Add(new TfsArea(a.Id,a.Name));
+                }
+            }
+
+
+            return areas;
         }
 
         public List<TfsArea> GetNodeNamesAndIds(Node node)

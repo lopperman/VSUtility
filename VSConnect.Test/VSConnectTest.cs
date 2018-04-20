@@ -105,7 +105,7 @@ namespace VSConnect.Test
 
             foreach (var team in teams)
             {
-                var areas = connect.GetTeamAreas(team);
+                var areas = connect.GetTeamAreas(team, connect.GetProject("Marketing Temp"));
 
                 if (areas.Count > 1)
                 {
