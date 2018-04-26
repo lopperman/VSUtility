@@ -10,16 +10,14 @@ namespace VSConnect.Lifecycle
 {
     public class UserStoryCumulativeFlow
     {
-        public static void CreateUserStoryCumulativeData(Connect connect, DumpDataSet ds)
+        public static void CreateUserStoryCumulativeData(Connect connect, DumpDataSet ds, int areaId)
         {
 
             List<int> workItemClosed = new List<int>();
 
             var workItemRevisions = WorkItemUtil.GetWorkItemRevisions(ds.WorkItemRevision);
 
-            LifecycleStates states = new LifecycleStates();
-
-            if (states.MaxStateIndex > 15) throw new Exception("UserStoryCumulativeFlow.CreateUserStoryCumulativeData cannot support more than 15 states.");
+            if (StaticUtil.CurrentFuzzFile.MaxStateIndex > 15) throw new Exception("UserStoryCumulativeFlow.CreateUserStoryCumulativeData cannot support more than 15 states.");
 
             DateTime currentWeekEnding = FirstFriday(ds.WorkItem);
 
@@ -52,7 +50,7 @@ namespace VSConnect.Lifecycle
                     row.ID = workItem.ID;
                     row.Title = workItem.Title;
                     row.Type = workItem.Type;
-                    row.WeekEndingState = states.GetCurrentWorkItemStateCategory(revisions.Last()).Position;
+                    row.WeekEndingState = StaticUtil.CurrentFuzzFile.GetCurrentWorkItemState(revisions.Last()).CategoryIndex;
 
                     if (workItem.CreatedDate <= searchDate && workItem.CreatedDate >= searchBeginning)
                     {
@@ -60,11 +58,11 @@ namespace VSConnect.Lifecycle
                     }
 
 
-                    for (int i = states.MinStateIndex; i <= states.MaxStateIndex; i++)
+                    for (int i = StaticUtil.CurrentFuzzFile.MinStateIndex; i <= StaticUtil.CurrentFuzzFile.MaxStateIndex; i++)
                     {
-                        row[string.Format("State{0}Desc", i)] = states.GetStates(i).First().StateCategory;
+                        row[string.Format("State{0}Desc", i)] = StaticUtil.CurrentFuzzFile.GetStates(i).First().Category;
 
-                        if (states.WasInState(revisions, i, searchBeginning, searchDate))
+                        if (StaticUtil.CurrentFuzzFile.WasInState(revisions, i, searchBeginning, searchDate))
                         {
                             row[string.Format("State{0}", i)] = 1;
                         }
@@ -73,7 +71,7 @@ namespace VSConnect.Lifecycle
                             row[string.Format("State{0}", i)] = 0;
                         }
 
-                        if (states.EnteredState(revisions, i, searchBeginning, searchDate))
+                        if (StaticUtil.CurrentFuzzFile.EnteredState(revisions, i, searchBeginning, searchDate))
                         {
                             row[string.Format("State{0}Entered", i)] = 1;
                         }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.utilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workItemHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lstTeamAreas = new System.Windows.Forms.CheckedListBox();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.lstFuzzFile = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,15 +56,6 @@
             this.button1.Text = "Dump Data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 282);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(739, 234);
-            this.textBox1.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -168,11 +160,32 @@
             this.lblInfo.TabIndex = 35;
             this.lblInfo.Text = "Project:";
             // 
+            // lstFuzzFile
+            // 
+            this.lstFuzzFile.FormattingEnabled = true;
+            this.lstFuzzFile.Location = new System.Drawing.Point(80, 293);
+            this.lstFuzzFile.Name = "lstFuzzFile";
+            this.lstFuzzFile.Size = new System.Drawing.Size(842, 212);
+            this.lstFuzzFile.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(76, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 24);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Current Fuzz File";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 550);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lstFuzzFile);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lstTeamAreas);
             this.Controls.Add(this.label1);
@@ -180,7 +193,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboRealProject);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -197,7 +209,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem utilitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workItemHistoryToolStripMenuItem;
@@ -210,6 +221,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox lstTeamAreas;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.ListBox lstFuzzFile;
+        private System.Windows.Forms.Label label4;
     }
 }
 

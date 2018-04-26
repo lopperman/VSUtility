@@ -39,7 +39,7 @@ namespace VSConnect
         INotify notify = null;
         private string projectname = string.Empty;
         private DayOfWeek lastDayOfWeek;
-        private LifecycleStates lcStates = new LifecycleStates();
+        //private TFSStateManager lcStates = null;
 
         private void Notify(string message)
         {
@@ -57,6 +57,8 @@ namespace VSConnect
             connect = conn;
             Notify("connectiong to: " + conn.ProjectCollection.Uri);
             this.systemAreadId = systemAreaId;
+
+            
         }
 
         public void DumpWorkItems(string saveFilePath)
@@ -235,7 +237,7 @@ namespace VSConnect
             ds.AcceptChanges();
 
             Notify("creating user story cumulative data ...");
-            UserStoryCumulativeFlow.CreateUserStoryCumulativeData(connect,ds);
+            UserStoryCumulativeFlow.CreateUserStoryCumulativeData(connect,ds,systemAreadId);
             Notify("saving user story cumulative data ...");
             DumpDataSetTableAdapters.UserStoryFlowTableAdapter usfAdap = new DumpDataSetTableAdapters.UserStoryFlowTableAdapter();
             usfAdap.Connection.ConnectionString = connString;
@@ -675,20 +677,23 @@ namespace VSConnect
 
                 var revisions = workItemRevisions.Where(x => x.ID == wItem.ID).OrderBy(x => x.Rev).ToList();
 
+
+                //TODO:  TFSSTateManger Fix -- the hardcoded numbers below won't work.
+
                 WItemLife life = new WItemLife();
                 life.ID = wItem.ID;
                 life.WorkItemType = wItem.WorkItemType;
                 life.Title = wItem.Title;
                 life.BusinessPriority = wItem.BusinessPriority;
-                life.SubmittedEnd = lcStates.GetEndDate(revisions, 1);
-                life.ActiveEnd = lcStates.GetEndDate(revisions, 2);
-                life.GroomedEnd = lcStates.GetEndDate(revisions, 1);
-                life.GroomingEnd = lcStates.GetEndDate(revisions, 1);
-                life.ReadyQAEnd = lcStates.GetEndDate(revisions, 3);
-                life.QAEnd = lcStates.GetEndDate(revisions, 4);
-                life.ReadyUATEnd = lcStates.GetEndDate(revisions, 5);
-                life.UATEnd = lcStates.GetEndDate(revisions, 6);
-                life.Closed = lcStates.GetEndDate(revisions, lcStates.MaxStateIndex);
+                life.SubmittedEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 1);
+                life.ActiveEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 2);
+                life.GroomedEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 1);
+                life.GroomingEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 1);
+                life.ReadyQAEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 3);
+                life.QAEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 4);
+                life.ReadyUATEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 5);
+                life.UATEnd = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, 6);
+                life.Closed = StaticUtil.CurrentFuzzFile.GetEndDate(revisions, StaticUtil.CurrentFuzzFile.MaxStateIndex);
 
                 life.SubmittedDays = GetDaysInState(revisions, "New");
                 life.GroomingDays = GetDaysInState(revisions, "Grooming");

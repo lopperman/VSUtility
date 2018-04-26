@@ -42,6 +42,8 @@ namespace VSUtil.Forms
 
             chartDevelopment.Titles.Add(string.Format("{0} Stories (as of {1})", ProjectName, lastDumpDate));
 
+            lstBoxCompletedWorkTFSStateList.DataSource = StaticUtil.CurrentFuzzFile.States.Select(x=>x.Category).Distinct().ToList();
+
             GetFeatureOptions();
 
             RenderBugs();
@@ -422,15 +424,23 @@ namespace VSUtil.Forms
             table.Columns.Add(new DataColumn("Parent", typeof(string)));
             table.Columns.Add(new DataColumn("Priority", typeof(int)));
 
+            int categoryIndex =
+                StaticUtil.CurrentFuzzFile.GetCategoryIndex(lstBoxCompletedWorkTFSStateList.SelectedValue.ToString());
+
+
+
+
             string filter = string.Empty;
-            if (chkBaseOffQA.Checked)
-            {
-                filter = "QAEnd";
-            }
-            else
-            {
-                filter = "ActiveEnd";
-            }
+//            if (chkBaseOffQA.Checked)
+//            {
+//                filter = "QAEnd";
+//            }
+//            else
+//            {
+//                filter = "ActiveEnd";
+//            }
+
+
 
             DataView view = new DataView(ds.WorkItemLife,
                 filter + ">= #" + dtCompletedWorkStart.Value.Date.ToShortDateString() + "# and " + filter + " < #" +

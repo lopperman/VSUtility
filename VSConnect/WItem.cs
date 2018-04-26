@@ -21,7 +21,8 @@ namespace VSConnect
 
         public string Key => $"{State}-{BoardColumn}-{BoardColumnDone}";
 
-        public int LifecycleState => new LifecycleStates().GetCurrentWorkItemStateCategory(this).Position;
+        //TODO:  Fix this
+        public int LifecycleState => StaticUtil.CurrentFuzzFile.GetCurrentWorkItemState(this).CategoryIndex;
     }
 
     public class WItemLife

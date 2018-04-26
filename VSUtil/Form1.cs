@@ -40,6 +40,8 @@ namespace VSUtil
             lstTeamAreas.CheckOnClick = true;
 
             lstTeamAreas.ItemCheck += LstTeamAreas_ItemCheck;
+            
+
             lblInfo.Text = "Properties for: " + connect.ProjectCollection.Uri;
 
         }
@@ -58,6 +60,15 @@ namespace VSUtil
             }
 
 
+
+            if (FuzzFileValid)
+            {
+                lstFuzzFile.DataSource = StaticUtil.CurrentFuzzFile.States;
+            }
+            else
+            {
+                lstFuzzFile.DataSource = null;
+            }
 
             ShowDefault();
         }
@@ -159,7 +170,10 @@ namespace VSUtil
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (!FuzzFileValid)
+            {
+                return;
+            }
             if (!initialized)
             {
                 init();
@@ -219,6 +233,11 @@ namespace VSUtil
 
         private void workItemHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!FuzzFileValid)
+            {
+                return;
+            }
+
             var f = new frmWorkItemHistory(connect);
             f.Show();
         }
@@ -334,6 +353,11 @@ namespace VSUtil
 
         private void developmentMetricsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!FuzzFileValid)
+            {
+                return;
+            }
+
             if (!initialized)
             {
                 init();
@@ -371,8 +395,62 @@ namespace VSUtil
             }
         }
 
+        private bool FuzzFileValid
+        {
+            get
+            {
+                if (StaticUtil.CurrentFuzzFile == null)
+                {
+                    //Attempt to load.
+                    if (SelectedAreaId > 0)
+                    {
+                        SortedDictionary<string, TFSStateManager> fuzzfiles = TFSStateManager
+                            .LoadFuzzFiles(Path.GetDirectoryName(TFSRegistry.GetTFSMdbPath()));
+
+                        if (fuzzfiles.Any())
+                        {
+                            StaticUtil.CurrentFuzzFile =
+                                fuzzfiles.Values.FirstOrDefault(x => x.AreaId == SelectedAreaId);
+                            if (StaticUtil.CurrentFuzzFile == null)
+                            {
+                                MessageBox.Show("Cannot Load Fuzz File for Area Id " + SelectedAreaId);
+                                return false;
+                            }
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cannot Load Fuzz File for Area Id " + SelectedAreaId);
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (StaticUtil.CurrentFuzzFile.AreaId == SelectedAreaId)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        StaticUtil.CurrentFuzzFile = null;
+                        return FuzzFileValid;
+                    }
+                }
+            }
+        }
+
         private void dynamicChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!FuzzFileValid)
+            {
+                return;
+            }
+
             if (!initialized)
             {
                 init();

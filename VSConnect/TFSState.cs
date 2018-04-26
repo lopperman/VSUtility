@@ -1,8 +1,8 @@
 using System;
+using System.Xml.Serialization;
 
 namespace VSConnect
 {
-    [Serializable]
     public class TFSState
     {
 
@@ -20,5 +20,14 @@ namespace VSConnect
         public bool DevDone { get; set; }
         public bool QADone { get; set; }
         public bool UATDone { get; set; }
+
+        public string Key => $"{SystemState}-{KanbanColumn}-{KanbanColumnDone}";
+
+
+        public override string ToString()
+        {
+            return string.Format("Idx: {0}, Category: {1}, CatIdx: {6}, KanbanColumn {2}, SysState: {3}, Doing: {4}, Done:{5}",
+                Index, Category, KanbanColumn, SystemState, KanbanColumnDoing, KanbanColumnDone,CategoryIndex);
+        }
     }
 }
