@@ -77,7 +77,7 @@ namespace VSConnect
             ds = new DumpDataSet();
 
             //string query1 = string.Format("SELECT * FROM WorkItems WHERE System.AreaId = {0}", systemAreadId);
-            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature') or System.AreaPath Under 'Marketing Temp\\{1}'", projectname,systemAreaPath);
+            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed') or (System.State <> 'Removed' and System.AreaPath Under 'Marketing Temp\\{1}')", projectname,systemAreaPath);
             Notify("fetching WorkItems from TFS");
             List<WorkItem> results = connect.ExecuteWorkItemWIQL(query1);
 
@@ -97,6 +97,8 @@ namespace VSConnect
 
             foreach (WorkItem wi in results)
             {
+
+
 
                 if (!workItems.Contains(wi.Type.Name))
                 {

@@ -76,6 +76,13 @@ namespace VSConnect
                 witem.BoardColumn = "Backlog";
             }
 
+            if (witem.State == "Removed")
+            {
+                //we have a work item that was removed, but later re-instated
+                witem.State = "Backlog";
+                witem.BoardColumn = "Backlog";
+            }
+
             var state = _states.SingleOrDefault(x => x.SystemState == witem.State &&
                                                     x.KanbanColumn == witem.BoardColumn &&
                                                     x.KanbanColumnDone == witem.BoardColumnDone);

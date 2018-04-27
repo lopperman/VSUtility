@@ -182,6 +182,50 @@ namespace VSConnect.Test
 
             TFSStateManager.SaveFuzzFile(Path.GetDirectoryName(TFSRegistry.GetTFSMdbPath()),sm);
 
+
+            //------------------------------------------------------------------
+            sm = new TFSStateManager();
+
+            sm.ProjectUri = "https://wegmans.visualstudio.com/";
+            sm.ProjectName = "MARKETING TEMP";
+            sm.TeamName = "DevCXOne";
+            sm.AreaId = 405;
+
+
+            //cat, kanban col, sys state
+            sm.AddState("Backlog", "New", "New", false, true);
+            sm.AddState("Backlog", "New", "New", true, false);
+            sm.AddState("Backlog", "Backlog", "New", false, true);
+            sm.AddState("Backlog", "Backlog", "New", true, false);
+            sm.AddState("Backlog", "Backlog", "Backlog", true, false);
+            sm.AddState("Backlog", "Backlog", "Backlog", false, true);
+            sm.AddState("Backlog", "Story Authoring", "New", false, true);
+            sm.AddState("Backlog", "Story Authoring", "New", true, false);
+            sm.AddState("Backlog", "Ready For Dev", "New", false, true);
+            sm.AddState("Backlog", "Ready For Dev", "New", true, false); 
+
+            sm.AddState("Development", "Active", "Active", true, false);
+            sm.AddState("Development", "Active", "Active", false, true);
+            sm.AddState("Development", "Development", "Active", true, false);
+            sm.AddState("DevelopmentDone", "Development", "Active", false, true, true); //dev done
+    
+            sm.AddState("CodeReview","Code Review","Active",true,false);
+            sm.AddState("CodeReviewDone","CodeReviewDone","Active",false,true); 
+
+            sm.AddState("QA","QA","Resolved",true,false);
+            sm.AddState("QADone","QA","Resolved",false,true,false,true); //qa done
+
+            sm.AddState("ReadyForProduction","Ready for Production","Resolved",true,false);
+            sm.AddState("ReadyForProduction","Ready for Production","Resolved",false,true);
+
+            sm.AddState("Closed","Closed","Closed",false,true); 
+            sm.AddState("Closed","Closed","Closed",true,false); 
+
+            TFSStateManager.SaveFuzzFile(Path.GetDirectoryName(TFSRegistry.GetTFSMdbPath()),sm);
+
+
+
+
         }
     }
 }
