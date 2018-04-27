@@ -419,7 +419,7 @@ namespace VSUtil.Forms
             table.Columns.Add(new DataColumn("ID", typeof(int)));
             table.Columns.Add(new DataColumn("Type", typeof(string)));
             table.Columns.Add(new DataColumn("Title", typeof(string)));
-            table.Columns.Add(new DataColumn("CompletedDt", typeof(DateTime)));
+            table.Columns.Add(new DataColumn("WeekEnding", typeof(DateTime)));
             table.Columns.Add(new DataColumn("ParentID", typeof(int)));
             table.Columns.Add(new DataColumn("Parent", typeof(string)));
             table.Columns.Add(new DataColumn("Priority", typeof(int)));
@@ -427,47 +427,48 @@ namespace VSUtil.Forms
             int categoryIndex =
                 StaticUtil.CurrentFuzzFile.GetCategoryIndex(lstBoxCompletedWorkTFSStateList.SelectedValue.ToString());
 
-
+            if (dtCompletedWorkEnd.Value.DayOfWeek != DayOfWeek.Friday)
+            {
+                while (true)
+                {
+                    dtCompletedWorkEnd.Value = dtCompletedWorkEnd.Value.AddDays(1);
+                    if (dtCompletedWorkEnd.Value.DayOfWeek == DayOfWeek.Friday)
+                    {
+                        break;
+                    }
+                }
+            }
 
 
             string filter = string.Empty;
-//            if (chkBaseOffQA.Checked)
-//            {
-//                filter = "QAEnd";
-//            }
-//            else
-//            {
-//                filter = "ActiveEnd";
-//            }
 
+            filter = "WeekEnding = '" + dtCompletedWorkEnd.Value.ToShortDateString() + "'";
 
+            var state = lstBoxCompletedWorkTFSStateList.SelectedItem.ToString();
 
-            DataView view = new DataView(ds.WorkItemLife,
-                filter + ">= #" + dtCompletedWorkStart.Value.Date.ToShortDateString() + "# and " + filter + " < #" +
-                dtCompletedWorkEnd.Value.Date.AddDays(1).AddMinutes(-1) + "#", "WorkItemType asc", DataViewRowState.CurrentRows);
-
-            foreach (DataRowView drv in view)
+            string stateXEnteredCol = "";
+            for (int i = 1; i <= 15; i++)
             {
-                table.Rows.Add(new object[] { drv["ID"], drv["WorkItemType"], drv["Title"], drv[filter] });
+                var value = ds.UserStoryFlow.Rows[0][string.Format("State{0}Desc", i)].ToString();
+                if (value == state)
+                {
+                    stateXEnteredCol = string.Format("State{0}Entered",i);
+                    break;
+                }
             }
 
-            view = new DataView(ds.WorkItemLife_Task,
-                "Closed >= #" + dtCompletedWorkStart.Value.Date.ToShortDateString() + "# and Closed < #" +
-                dtCompletedWorkEnd.Value.Date.AddDays(1).AddMinutes(-1) + "#", "WorkItemType asc", DataViewRowState.CurrentRows);
+            filter = filter + " and " + stateXEnteredCol + " = 1";
 
-            foreach (DataRowView drv in view)
+            foreach (DataRowView drv in new DataView(ds.UserStoryFlow, filter, "ID", DataViewRowState.CurrentRows))
             {
-                table.Rows.Add(new object[] { drv["ID"], drv["WorkItemType"], drv["Title"], drv["Closed"] });
-            }
+                int id = Convert.ToInt32(drv["ID"].ToString());
 
-            view = new DataView(ds.WorkItem,
-                "Type='Feature' and State = 'Done' and StateChangeDate >=#" +
-                dtCompletedWorkStart.Value.Date.ToShortDateString() + "# and StateChangeDate < #" +
-                dtCompletedWorkEnd.Value.Date.AddDays(1).AddMinutes(-1) + "#", "StateChangeDate asc",
-                DataViewRowState.CurrentRows);
-            foreach (DataRowView drv in view)
-            {
-                table.Rows.Add(new object[] { drv["ID"], drv["Type"], drv["Title"], drv["StateChangeDate"] });
+                DataRow[] rows = ds.WorkItem.Select("ID = " + id);
+                if (rows.Length == 1)
+                {
+                    table.Rows.Add(new object[] {rows[0]["ID"], rows[0]["Type"], rows[0]["Title"], dtCompletedWorkEnd.Value.Date});
+                }
+
             }
 
             foreach (DataRow row in table.Rows)

@@ -67,6 +67,42 @@ namespace VSConnect
 
         }
 
+        public TFSState[] GetDevDoneStates
+        {
+            get
+            {
+                if (_states.Any(x => x.DevDone))
+                {
+                    return _states.Where(x => x.DevDone).ToArray();
+                }
+                return null;
+            }
+        }
+
+        public TFSState[] GetQADoneStates
+        {
+            get
+            {
+                if (_states.Any(x => x.QADone))
+                {
+                    return _states.Where(x => x.QADone).ToArray();
+                }
+                return null;
+            }
+        }
+
+        public TFSState[] GetUATDoneStates
+        {
+            get
+            {
+                if (_states.Any(x => x.UATDone))
+                {
+                    return _states.Where(x => x.UATDone).ToArray();
+                }
+                return null;
+            }
+        }
+
         public TFSState GetCurrentWorkItemState(WItem witem)
         {
             if (witem == null) return null;

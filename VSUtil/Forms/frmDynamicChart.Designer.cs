@@ -33,22 +33,22 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpConfig = new System.Windows.Forms.TabPage();
+            this.cmdRender = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtStartDt = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbBug = new System.Windows.Forms.RadioButton();
             this.rbUserStory = new System.Windows.Forms.RadioButton();
             this.tpRender = new System.Windows.Forms.TabPage();
+            this.chartDynamic = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdPrint = new System.Windows.Forms.Button();
-            this.chartDynamic = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtStartDt = new System.Windows.Forms.DateTimePicker();
-            this.cmdRender = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpConfig.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpRender.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDynamic)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -75,6 +75,35 @@
             this.tpConfig.TabIndex = 0;
             this.tpConfig.Text = "Configure";
             this.tpConfig.UseVisualStyleBackColor = true;
+            // 
+            // cmdRender
+            // 
+            this.cmdRender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdRender.Location = new System.Drawing.Point(496, 42);
+            this.cmdRender.Name = "cmdRender";
+            this.cmdRender.Size = new System.Drawing.Size(129, 23);
+            this.cmdRender.TabIndex = 50;
+            this.cmdRender.Text = "Update Chart";
+            this.cmdRender.UseVisualStyleBackColor = true;
+            this.cmdRender.Click += new System.EventHandler(this.cmdRender_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(242, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Show Data From:";
+            // 
+            // dtStartDt
+            // 
+            this.dtStartDt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDt.Location = new System.Drawing.Point(338, 45);
+            this.dtStartDt.Name = "dtStartDt";
+            this.dtStartDt.Size = new System.Drawing.Size(123, 20);
+            this.dtStartDt.TabIndex = 48;
+            this.dtStartDt.Value = new System.DateTime(2017, 9, 1, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
@@ -121,25 +150,6 @@
             this.tpRender.Text = "Render";
             this.tpRender.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cmdPrint);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 68);
-            this.panel1.TabIndex = 4;
-            // 
-            // cmdPrint
-            // 
-            this.cmdPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdPrint.Location = new System.Drawing.Point(961, 39);
-            this.cmdPrint.Name = "cmdPrint";
-            this.cmdPrint.Size = new System.Drawing.Size(129, 23);
-            this.cmdPrint.TabIndex = 10;
-            this.cmdPrint.Text = "Print";
-            this.cmdPrint.UseVisualStyleBackColor = true;
-            // 
             // chartDynamic
             // 
             chartArea1.AxisX.Interval = 7D;
@@ -169,34 +179,25 @@
             this.chartDynamic.TabIndex = 5;
             this.chartDynamic.Text = "chart1";
             // 
-            // label5
+            // panel1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Show Data From:";
+            this.panel1.Controls.Add(this.cmdPrint);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1098, 68);
+            this.panel1.TabIndex = 4;
             // 
-            // dtStartDt
+            // cmdPrint
             // 
-            this.dtStartDt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStartDt.Location = new System.Drawing.Point(338, 45);
-            this.dtStartDt.Name = "dtStartDt";
-            this.dtStartDt.Size = new System.Drawing.Size(123, 20);
-            this.dtStartDt.TabIndex = 48;
-            this.dtStartDt.Value = new System.DateTime(2017, 9, 1, 0, 0, 0, 0);
-            // 
-            // cmdRender
-            // 
-            this.cmdRender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdRender.Location = new System.Drawing.Point(496, 42);
-            this.cmdRender.Name = "cmdRender";
-            this.cmdRender.Size = new System.Drawing.Size(129, 23);
-            this.cmdRender.TabIndex = 50;
-            this.cmdRender.Text = "Update Chart";
-            this.cmdRender.UseVisualStyleBackColor = true;
-            this.cmdRender.Click += new System.EventHandler(this.cmdRender_Click);
+            this.cmdPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdPrint.Location = new System.Drawing.Point(961, 39);
+            this.cmdPrint.Name = "cmdPrint";
+            this.cmdPrint.Size = new System.Drawing.Size(129, 23);
+            this.cmdPrint.TabIndex = 10;
+            this.cmdPrint.Text = "Print";
+            this.cmdPrint.UseVisualStyleBackColor = true;
+            this.cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
             // frmDynamicChart
             // 
@@ -212,8 +213,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tpRender.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartDynamic)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

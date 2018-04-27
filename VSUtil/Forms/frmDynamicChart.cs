@@ -219,5 +219,14 @@ namespace VSUtil.Forms
 
             tpConfig.TabIndex = 1;
         }
+
+        private void cmdPrint_Click(object sender, EventArgs e)
+        {
+            PrintHelper.SetOrientation(chartDynamic, true);
+            PrintHelper.SetMargins(chartDynamic, 10, 10, 10, 10);
+
+            chartDynamic.Printing.PrintPreview();
+
+        }
     }
 }
