@@ -12,11 +12,14 @@ using Microsoft.TeamFoundation.Framework.Common;
 using Microsoft.TeamFoundation.ProcessConfiguration.Client;
 using Microsoft.TeamFoundation.Server;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
+using Microsoft.TeamFoundation.Proxy;
+using Microsoft.VisualStudio.Services.Client;
 using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 using Field = Microsoft.TeamFoundation.WorkItemTracking.Client.Field;
 using ProjectInfo = Microsoft.TeamFoundation.Server.ProjectInfo;
 using WindowsCredential = Microsoft.TeamFoundation.Client.WindowsCredential;
+
 
 namespace VSConnect
 {
@@ -24,6 +27,7 @@ namespace VSConnect
     {
         Uri tfsUri = null;
         TfsTeamProjectCollection tfs = null;
+        private VssConnection vssConn = null;
 
         public Connect(Uri vsUri, string userName, string password, string domain)
         {
@@ -37,6 +41,26 @@ namespace VSConnect
             NetworkCredential cred = new NetworkCredential(userName, password, domain);
             ProjectCollection.Credentials = cred;
         }
+
+        public Connect(Uri vsUri, string userName, string vstsToken)
+        {
+
+            tfsUri = vsUri;
+            this.UserName = userName;
+
+            VssClientCredentials clientCredentials = new VssClientCredentials(new VssBasicCredential(userName, vstsToken));
+            //ProjectCollection.Credentials = clientCredentials;
+            VssConnection vssConnection = new VssConnection(vsUri, clientCredentials);
+            vssConn = vssConnection;
+            
+
+            //   tfs = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(tfsUri);
+
+//            tfs = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(tfsUri);
+//            tfs.EnsureAuthenticated();
+
+        }
+
 
         public string Domain
         { get; set; }
@@ -90,7 +114,7 @@ namespace VSConnect
             TfsTeamService _teamService = tfs.GetService<TfsTeamService>();
             IEnumerable<TeamFoundationTeam> _teams = _teamService.QueryTeams(project.Uri.ToString());
 
-            
+        
 
             return _teams.ToList();
 
@@ -200,6 +224,7 @@ namespace VSConnect
 
             return store.Query(wiql).Cast<WorkItem>().ToList();
         }
+
 
         public WorkItem GetWorkItem(int id)
         {
@@ -385,6 +410,7 @@ ORDER BY [System.Id] mode(Recursive)", parentId);
 
         public T GetService<T>() where T : ITfsTeamProjectCollectionObject
         {
+
             return ProjectCollection.GetService<T>();
         }
 

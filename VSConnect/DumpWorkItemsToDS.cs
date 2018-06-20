@@ -77,7 +77,7 @@ namespace VSConnect
             ds = new DumpDataSet();
 
             //string query1 = string.Format("SELECT * FROM WorkItems WHERE System.AreaId = {0}", systemAreadId);
-            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed') or (System.State <> 'Removed' and System.AreaPath Under 'Marketing Temp\\{1}')", projectname,systemAreaPath);
+            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed') or (System.State <> 'Removed' and System.AreaPath = 'Marketing Temp\\{1}')", projectname,systemAreaPath);
             Notify("fetching WorkItems from TFS");
             List<WorkItem> results = connect.ExecuteWorkItemWIQL(query1);
 
@@ -240,10 +240,15 @@ namespace VSConnect
 
             Notify("creating user story cumulative data ...");
             UserStoryCumulativeFlow.CreateUserStoryCumulativeData(connect,ds,systemAreadId);
+            UserStoryCumulativeFlow.CreateUserStoryCumulativeDataByDay(connect,ds,systemAreadId);
             Notify("saving user story cumulative data ...");
             DumpDataSetTableAdapters.UserStoryFlowTableAdapter usfAdap = new DumpDataSetTableAdapters.UserStoryFlowTableAdapter();
             usfAdap.Connection.ConnectionString = connString;
             usfAdap.Update(ds.UserStoryFlow);
+
+            DumpDataSetTableAdapters.UserStoryFlow_ByDayTableAdapter usfdAdap = new DumpDataSetTableAdapters.UserStoryFlow_ByDayTableAdapter();
+            usfdAdap.Connection.ConnectionString = connString;
+            usfdAdap.Update(ds.UserStoryFlow_ByDay);
 
             ds.AcceptChanges();
 

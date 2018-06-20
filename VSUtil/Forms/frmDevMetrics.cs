@@ -233,6 +233,8 @@ namespace VSUtil.Forms
             try
             {
                 bool excludeCurrentWeek = chkExcludeCurrentWeek.Checked;
+                
+
 
                 chartDevelopment.ChartAreas[0].BackColor = Color.LightGray;
 
@@ -263,7 +265,15 @@ namespace VSUtil.Forms
                     Series series = CreateSeries("count", SeriesChartType.Line, 2, Color.Blue, ChartDashStyle.Solid,
                         ChartValueType.DateTime, "Dev Complete");
                     chartDevelopment.Series.Add(series);
-                    DataView devview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    DataView devview = null;
+                    if (!chkDevMetrics_IncludeBugs.Checked)
+                    {
+                        devview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    }
+                    else
+                    {
+                        devview = new DataView(ds.VW_VELOCITY_ALL, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    }
                     chartDevelopment.Series["count"].Points.DataBind(devview, "WeekEnding", "DevDone", "Tooltip=WeekEnding");
 
                     if (chkShowTrends.Checked)
@@ -288,7 +298,15 @@ namespace VSUtil.Forms
                         ChartValueType.DateTime, "QA Complete");
 
                     chartDevelopment.Series.Add(series);
-                    DataView qaview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    DataView qaview = null;
+                    if (!chkDevMetrics_IncludeBugs.Checked)
+                    {
+                        qaview = new DataView(ds.VW_VELOCITY, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    }
+                    else
+                    {
+                        qaview = new DataView(ds.VW_VELOCITY_ALL, s, "WeekEnding", DataViewRowState.CurrentRows);
+                    }
                     chartDevelopment.Series["qacount"].Points.DataBind(qaview, "WeekEnding", "QADone", "Tooltip=WeekEnding");
 
                     if (chkShowTrends.Checked)
@@ -423,6 +441,8 @@ namespace VSUtil.Forms
             table.Columns.Add(new DataColumn("ParentID", typeof(int)));
             table.Columns.Add(new DataColumn("Parent", typeof(string)));
             table.Columns.Add(new DataColumn("Priority", typeof(int)));
+
+
 
             int categoryIndex =
                 StaticUtil.CurrentFuzzFile.GetCategoryIndex(lstBoxCompletedWorkTFSStateList.SelectedValue.ToString());
@@ -1072,6 +1092,11 @@ namespace VSUtil.Forms
         private void chkBugsExcludeCurrentWeek_CheckedChanged(object sender, EventArgs e)
         {
             RenderBugs();
+        }
+
+        private void chkDevMetrics_IncludeBugs_CheckedChanged(object sender, EventArgs e)
+        {
+            Render();
         }
     }
 }

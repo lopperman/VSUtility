@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using Microsoft.TeamFoundation.Common;
+using Microsoft.TeamFoundation.Server;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
+using Microsoft.TeamFoundation.Proxy;
+using Microsoft.TeamFoundation.Client;
+using Microsoft.TeamFoundation.Common.Internal;
 using NUnit.Framework;
 
 namespace VSConnect.Test
@@ -17,7 +23,7 @@ namespace VSConnect.Test
         [OneTimeSetUp]
         public void setup()
         {
-            connect = new Connect(tfsUri,"","","");
+            connect = new Connect(tfsUri, "", "","");
         }
 
         [OneTimeTearDown]
@@ -67,6 +73,80 @@ namespace VSConnect.Test
 
             int count = results.Count;
         }
+
+        [Test]
+        public void TestGetListOfIterationPaths()
+        {
+            ICommonStructureService css = connect.ProjectCollection.GetService<ICommonStructureService>();
+
+            ProjectInfo projectInfo = css.GetProjectFromName("MARKETING TEMP");
+
+            NodeInfo[] nodes = css.ListStructures(projectInfo.Uri);
+
+
+
+            //GetNodes can use with:
+
+            //Area = 1
+
+            //Iteration = 0
+
+            XmlElement AreaTree = css.GetNodesXml(new string[] { nodes[1].Uri }, true);
+
+            XmlElement IterationsTree = css.GetNodesXml(new string[] { nodes[0].Uri }, true);
+
+            XmlNode AreaNodes = AreaTree.ChildNodes[0];
+
+            XmlNode IterationsNodes = IterationsTree.ChildNodes[0];
+
+            int myNodeCount = IterationsNodes.FirstChild.ChildNodes.Count;
+
+            List<string> list = new List<string>();
+
+            for (int i = 0; i < myNodeCount; i++)
+            {
+                XmlNode Node = IterationsNodes.ChildNodes[0].ChildNodes[i];
+
+
+                var x = AddNodeItem(Node);
+
+                list.Add(Node.Attributes["Name"].Value);
+
+                if (Node.HasChildNodes)
+                {
+                    foreach (XmlNodeList childNode in Node.ChildNodes)
+                    {
+                        //list.AddRange(AddNodeItem(Node, childNode.Item(0)));
+
+
+//                        foreach (XmlNode n in childNode)
+//                        {
+//
+//                        }
+
+                    }
+                }
+            }
+        }
+
+        private List<string> AddNodeItem(XmlNode node)
+        {
+            var ret = new List<string>();
+
+            if (node.Attributes["Path"] != null)
+            {
+                ret.Add(node.Attributes["Path"].Value);
+            }
+
+            if (node.FirstChild != null)
+            {
+                AddNodeItem(node.FirstChild);
+            }
+
+            return ret;
+        }
+
+
 
         [Test]
         public void GetParents()

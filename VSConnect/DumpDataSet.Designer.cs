@@ -44,6 +44,8 @@ namespace VSConnect {
         
         private UserStoryFlowDataTable tableUserStoryFlow;
         
+        private UserStoryFlow_ByDayDataTable tableUserStoryFlow_ByDay;
+        
         private WorkItemDataTable tableWorkItem;
         
         private WorkItemLifeDataTable tableWorkItemLife;
@@ -102,6 +104,8 @@ namespace VSConnect {
         
         private VW_VELOCITYDataTable tableVW_VELOCITY;
         
+        private VW_VELOCITY_ALLDataTable tableVW_VELOCITY_ALL;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -159,6 +163,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["UserStoryFlow"] != null)) {
                     base.Tables.Add(new UserStoryFlowDataTable(ds.Tables["UserStoryFlow"]));
+                }
+                if ((ds.Tables["UserStoryFlow_ByDay"] != null)) {
+                    base.Tables.Add(new UserStoryFlow_ByDayDataTable(ds.Tables["UserStoryFlow_ByDay"]));
                 }
                 if ((ds.Tables["WorkItem"] != null)) {
                     base.Tables.Add(new WorkItemDataTable(ds.Tables["WorkItem"]));
@@ -246,6 +253,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["VW_VELOCITY"] != null)) {
                     base.Tables.Add(new VW_VELOCITYDataTable(ds.Tables["VW_VELOCITY"]));
+                }
+                if ((ds.Tables["VW_VELOCITY_ALL"] != null)) {
+                    base.Tables.Add(new VW_VELOCITY_ALLDataTable(ds.Tables["VW_VELOCITY_ALL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -362,6 +372,16 @@ namespace VSConnect {
         public UserStoryFlowDataTable UserStoryFlow {
             get {
                 return this.tableUserStoryFlow;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public UserStoryFlow_ByDayDataTable UserStoryFlow_ByDay {
+            get {
+                return this.tableUserStoryFlow_ByDay;
             }
         }
         
@@ -657,6 +677,16 @@ namespace VSConnect {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_VELOCITY_ALLDataTable VW_VELOCITY_ALL {
+            get {
+                return this.tableVW_VELOCITY_ALL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -752,6 +782,9 @@ namespace VSConnect {
                 if ((ds.Tables["UserStoryFlow"] != null)) {
                     base.Tables.Add(new UserStoryFlowDataTable(ds.Tables["UserStoryFlow"]));
                 }
+                if ((ds.Tables["UserStoryFlow_ByDay"] != null)) {
+                    base.Tables.Add(new UserStoryFlow_ByDayDataTable(ds.Tables["UserStoryFlow_ByDay"]));
+                }
                 if ((ds.Tables["WorkItem"] != null)) {
                     base.Tables.Add(new WorkItemDataTable(ds.Tables["WorkItem"]));
                 }
@@ -838,6 +871,9 @@ namespace VSConnect {
                 }
                 if ((ds.Tables["VW_VELOCITY"] != null)) {
                     base.Tables.Add(new VW_VELOCITYDataTable(ds.Tables["VW_VELOCITY"]));
+                }
+                if ((ds.Tables["VW_VELOCITY_ALL"] != null)) {
+                    base.Tables.Add(new VW_VELOCITY_ALLDataTable(ds.Tables["VW_VELOCITY_ALL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -930,6 +966,12 @@ namespace VSConnect {
             if ((initTable == true)) {
                 if ((this.tableUserStoryFlow != null)) {
                     this.tableUserStoryFlow.InitVars();
+                }
+            }
+            this.tableUserStoryFlow_ByDay = ((UserStoryFlow_ByDayDataTable)(base.Tables["UserStoryFlow_ByDay"]));
+            if ((initTable == true)) {
+                if ((this.tableUserStoryFlow_ByDay != null)) {
+                    this.tableUserStoryFlow_ByDay.InitVars();
                 }
             }
             this.tableWorkItem = ((WorkItemDataTable)(base.Tables["WorkItem"]));
@@ -1106,6 +1148,12 @@ namespace VSConnect {
                     this.tableVW_VELOCITY.InitVars();
                 }
             }
+            this.tableVW_VELOCITY_ALL = ((VW_VELOCITY_ALLDataTable)(base.Tables["VW_VELOCITY_ALL"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_VELOCITY_ALL != null)) {
+                    this.tableVW_VELOCITY_ALL.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1136,6 +1184,8 @@ namespace VSConnect {
             base.Tables.Add(this.tableReleaseBurndown);
             this.tableUserStoryFlow = new UserStoryFlowDataTable();
             base.Tables.Add(this.tableUserStoryFlow);
+            this.tableUserStoryFlow_ByDay = new UserStoryFlow_ByDayDataTable();
+            base.Tables.Add(this.tableUserStoryFlow_ByDay);
             this.tableWorkItem = new WorkItemDataTable();
             base.Tables.Add(this.tableWorkItem);
             this.tableWorkItemLife = new WorkItemLifeDataTable();
@@ -1194,6 +1244,8 @@ namespace VSConnect {
             base.Tables.Add(this.tableVW_UserStory_Current);
             this.tableVW_VELOCITY = new VW_VELOCITYDataTable();
             base.Tables.Add(this.tableVW_VELOCITY);
+            this.tableVW_VELOCITY_ALL = new VW_VELOCITY_ALLDataTable();
+            base.Tables.Add(this.tableVW_VELOCITY_ALL);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1253,6 +1305,12 @@ namespace VSConnect {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeUserStoryFlow() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeUserStoryFlow_ByDay() {
             return false;
         }
         
@@ -1432,6 +1490,12 @@ namespace VSConnect {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVW_VELOCITY_ALL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1514,6 +1578,9 @@ namespace VSConnect {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void UserStoryFlowRowChangeEventHandler(object sender, UserStoryFlowRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void UserStoryFlow_ByDayRowChangeEventHandler(object sender, UserStoryFlow_ByDayRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void WorkItemRowChangeEventHandler(object sender, WorkItemRowChangeEvent e);
@@ -1601,6 +1668,9 @@ namespace VSConnect {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VW_VELOCITYRowChangeEventHandler(object sender, VW_VELOCITYRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void VW_VELOCITY_ALLRowChangeEventHandler(object sender, VW_VELOCITY_ALLRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5869,6 +5939,1066 @@ namespace VSConnect {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "UserStoryFlowDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class UserStoryFlow_ByDayDataTable : global::System.Data.TypedTableBase<UserStoryFlow_ByDayRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnType;
+            
+            private global::System.Data.DataColumn columnTitle;
+            
+            private global::System.Data.DataColumn columnWeekEnding;
+            
+            private global::System.Data.DataColumn columnNewThisWeek;
+            
+            private global::System.Data.DataColumn columnActiveThisWeek;
+            
+            private global::System.Data.DataColumn columnWeekEndingState;
+            
+            private global::System.Data.DataColumn columnClosed;
+            
+            private global::System.Data.DataColumn columnClosedThisWeek;
+            
+            private global::System.Data.DataColumn columnState1Desc;
+            
+            private global::System.Data.DataColumn columnState1;
+            
+            private global::System.Data.DataColumn columnState1Entered;
+            
+            private global::System.Data.DataColumn columnState2Desc;
+            
+            private global::System.Data.DataColumn columnState2;
+            
+            private global::System.Data.DataColumn columnState2Entered;
+            
+            private global::System.Data.DataColumn columnState3Desc;
+            
+            private global::System.Data.DataColumn columnState3;
+            
+            private global::System.Data.DataColumn columnState3Entered;
+            
+            private global::System.Data.DataColumn columnState4Desc;
+            
+            private global::System.Data.DataColumn columnState4;
+            
+            private global::System.Data.DataColumn columnState4Entered;
+            
+            private global::System.Data.DataColumn columnState5Desc;
+            
+            private global::System.Data.DataColumn columnState5;
+            
+            private global::System.Data.DataColumn columnState5Entered;
+            
+            private global::System.Data.DataColumn columnState6Desc;
+            
+            private global::System.Data.DataColumn columnState6;
+            
+            private global::System.Data.DataColumn columnState6Entered;
+            
+            private global::System.Data.DataColumn columnState7Desc;
+            
+            private global::System.Data.DataColumn columnState7;
+            
+            private global::System.Data.DataColumn columnState7Entered;
+            
+            private global::System.Data.DataColumn columnState8Desc;
+            
+            private global::System.Data.DataColumn columnState8;
+            
+            private global::System.Data.DataColumn columnState8Entered;
+            
+            private global::System.Data.DataColumn columnState9Desc;
+            
+            private global::System.Data.DataColumn columnState9;
+            
+            private global::System.Data.DataColumn columnState9Entered;
+            
+            private global::System.Data.DataColumn columnState10Desc;
+            
+            private global::System.Data.DataColumn columnState10;
+            
+            private global::System.Data.DataColumn columnState10Entered;
+            
+            private global::System.Data.DataColumn columnState11Desc;
+            
+            private global::System.Data.DataColumn columnState11;
+            
+            private global::System.Data.DataColumn columnState11Entered;
+            
+            private global::System.Data.DataColumn columnState12Desc;
+            
+            private global::System.Data.DataColumn columnState12;
+            
+            private global::System.Data.DataColumn columnState12Entered;
+            
+            private global::System.Data.DataColumn columnState13Desc;
+            
+            private global::System.Data.DataColumn columnState13;
+            
+            private global::System.Data.DataColumn columnState13Entered;
+            
+            private global::System.Data.DataColumn columnState14Desc;
+            
+            private global::System.Data.DataColumn columnState14;
+            
+            private global::System.Data.DataColumn columnState14Entered;
+            
+            private global::System.Data.DataColumn columnState15Desc;
+            
+            private global::System.Data.DataColumn columnState15;
+            
+            private global::System.Data.DataColumn columnState15Entered;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayDataTable() {
+                this.TableName = "UserStoryFlow_ByDay";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal UserStoryFlow_ByDayDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected UserStoryFlow_ByDayDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TitleColumn {
+                get {
+                    return this.columnTitle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingColumn {
+                get {
+                    return this.columnWeekEnding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NewThisWeekColumn {
+                get {
+                    return this.columnNewThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ActiveThisWeekColumn {
+                get {
+                    return this.columnActiveThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingStateColumn {
+                get {
+                    return this.columnWeekEndingState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedColumn {
+                get {
+                    return this.columnClosed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClosedThisWeekColumn {
+                get {
+                    return this.columnClosedThisWeek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1DescColumn {
+                get {
+                    return this.columnState1Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1Column {
+                get {
+                    return this.columnState1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State1EnteredColumn {
+                get {
+                    return this.columnState1Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2DescColumn {
+                get {
+                    return this.columnState2Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2Column {
+                get {
+                    return this.columnState2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State2EnteredColumn {
+                get {
+                    return this.columnState2Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3DescColumn {
+                get {
+                    return this.columnState3Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3Column {
+                get {
+                    return this.columnState3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State3EnteredColumn {
+                get {
+                    return this.columnState3Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4DescColumn {
+                get {
+                    return this.columnState4Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4Column {
+                get {
+                    return this.columnState4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State4EnteredColumn {
+                get {
+                    return this.columnState4Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5DescColumn {
+                get {
+                    return this.columnState5Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5Column {
+                get {
+                    return this.columnState5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State5EnteredColumn {
+                get {
+                    return this.columnState5Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6DescColumn {
+                get {
+                    return this.columnState6Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6Column {
+                get {
+                    return this.columnState6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State6EnteredColumn {
+                get {
+                    return this.columnState6Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7DescColumn {
+                get {
+                    return this.columnState7Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7Column {
+                get {
+                    return this.columnState7;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State7EnteredColumn {
+                get {
+                    return this.columnState7Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8DescColumn {
+                get {
+                    return this.columnState8Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8Column {
+                get {
+                    return this.columnState8;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State8EnteredColumn {
+                get {
+                    return this.columnState8Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9DescColumn {
+                get {
+                    return this.columnState9Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9Column {
+                get {
+                    return this.columnState9;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State9EnteredColumn {
+                get {
+                    return this.columnState9Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10DescColumn {
+                get {
+                    return this.columnState10Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10Column {
+                get {
+                    return this.columnState10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State10EnteredColumn {
+                get {
+                    return this.columnState10Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11DescColumn {
+                get {
+                    return this.columnState11Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11Column {
+                get {
+                    return this.columnState11;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State11EnteredColumn {
+                get {
+                    return this.columnState11Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12DescColumn {
+                get {
+                    return this.columnState12Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12Column {
+                get {
+                    return this.columnState12;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State12EnteredColumn {
+                get {
+                    return this.columnState12Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13DescColumn {
+                get {
+                    return this.columnState13Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13Column {
+                get {
+                    return this.columnState13;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State13EnteredColumn {
+                get {
+                    return this.columnState13Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14DescColumn {
+                get {
+                    return this.columnState14Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14Column {
+                get {
+                    return this.columnState14;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State14EnteredColumn {
+                get {
+                    return this.columnState14Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15DescColumn {
+                get {
+                    return this.columnState15Desc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15Column {
+                get {
+                    return this.columnState15;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn State15EnteredColumn {
+                get {
+                    return this.columnState15Entered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayRow this[int index] {
+                get {
+                    return ((UserStoryFlow_ByDayRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event UserStoryFlow_ByDayRowChangeEventHandler UserStoryFlow_ByDayRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event UserStoryFlow_ByDayRowChangeEventHandler UserStoryFlow_ByDayRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event UserStoryFlow_ByDayRowChangeEventHandler UserStoryFlow_ByDayRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event UserStoryFlow_ByDayRowChangeEventHandler UserStoryFlow_ByDayRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddUserStoryFlow_ByDayRow(UserStoryFlow_ByDayRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayRow AddUserStoryFlow_ByDayRow(
+                        int ID, 
+                        string Type, 
+                        string Title, 
+                        System.DateTime WeekEnding, 
+                        short NewThisWeek, 
+                        short ActiveThisWeek, 
+                        int WeekEndingState, 
+                        int Closed, 
+                        int ClosedThisWeek, 
+                        string State1Desc, 
+                        int State1, 
+                        int State1Entered, 
+                        string State2Desc, 
+                        int State2, 
+                        int State2Entered, 
+                        string State3Desc, 
+                        int State3, 
+                        int State3Entered, 
+                        string State4Desc, 
+                        int State4, 
+                        int State4Entered, 
+                        string State5Desc, 
+                        int State5, 
+                        int State5Entered, 
+                        string State6Desc, 
+                        int State6, 
+                        int State6Entered, 
+                        string State7Desc, 
+                        int State7, 
+                        int State7Entered, 
+                        string State8Desc, 
+                        int State8, 
+                        int State8Entered, 
+                        string State9Desc, 
+                        int State9, 
+                        int State9Entered, 
+                        string State10Desc, 
+                        int State10, 
+                        int State10Entered, 
+                        string State11Desc, 
+                        int State11, 
+                        int State11Entered, 
+                        string State12Desc, 
+                        int State12, 
+                        int State12Entered, 
+                        string State13Desc, 
+                        int State13, 
+                        int State13Entered, 
+                        string State14Desc, 
+                        int State14, 
+                        int State14Entered, 
+                        string State15Desc, 
+                        int State15, 
+                        int State15Entered) {
+                UserStoryFlow_ByDayRow rowUserStoryFlow_ByDayRow = ((UserStoryFlow_ByDayRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        Type,
+                        Title,
+                        WeekEnding,
+                        NewThisWeek,
+                        ActiveThisWeek,
+                        WeekEndingState,
+                        Closed,
+                        ClosedThisWeek,
+                        State1Desc,
+                        State1,
+                        State1Entered,
+                        State2Desc,
+                        State2,
+                        State2Entered,
+                        State3Desc,
+                        State3,
+                        State3Entered,
+                        State4Desc,
+                        State4,
+                        State4Entered,
+                        State5Desc,
+                        State5,
+                        State5Entered,
+                        State6Desc,
+                        State6,
+                        State6Entered,
+                        State7Desc,
+                        State7,
+                        State7Entered,
+                        State8Desc,
+                        State8,
+                        State8Entered,
+                        State9Desc,
+                        State9,
+                        State9Entered,
+                        State10Desc,
+                        State10,
+                        State10Entered,
+                        State11Desc,
+                        State11,
+                        State11Entered,
+                        State12Desc,
+                        State12,
+                        State12Entered,
+                        State13Desc,
+                        State13,
+                        State13Entered,
+                        State14Desc,
+                        State14,
+                        State14Entered,
+                        State15Desc,
+                        State15,
+                        State15Entered};
+                rowUserStoryFlow_ByDayRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUserStoryFlow_ByDayRow);
+                return rowUserStoryFlow_ByDayRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                UserStoryFlow_ByDayDataTable cln = ((UserStoryFlow_ByDayDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new UserStoryFlow_ByDayDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnType = base.Columns["Type"];
+                this.columnTitle = base.Columns["Title"];
+                this.columnWeekEnding = base.Columns["WeekEnding"];
+                this.columnNewThisWeek = base.Columns["NewThisWeek"];
+                this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
+                this.columnWeekEndingState = base.Columns["WeekEndingState"];
+                this.columnClosed = base.Columns["Closed"];
+                this.columnClosedThisWeek = base.Columns["ClosedThisWeek"];
+                this.columnState1Desc = base.Columns["State1Desc"];
+                this.columnState1 = base.Columns["State1"];
+                this.columnState1Entered = base.Columns["State1Entered"];
+                this.columnState2Desc = base.Columns["State2Desc"];
+                this.columnState2 = base.Columns["State2"];
+                this.columnState2Entered = base.Columns["State2Entered"];
+                this.columnState3Desc = base.Columns["State3Desc"];
+                this.columnState3 = base.Columns["State3"];
+                this.columnState3Entered = base.Columns["State3Entered"];
+                this.columnState4Desc = base.Columns["State4Desc"];
+                this.columnState4 = base.Columns["State4"];
+                this.columnState4Entered = base.Columns["State4Entered"];
+                this.columnState5Desc = base.Columns["State5Desc"];
+                this.columnState5 = base.Columns["State5"];
+                this.columnState5Entered = base.Columns["State5Entered"];
+                this.columnState6Desc = base.Columns["State6Desc"];
+                this.columnState6 = base.Columns["State6"];
+                this.columnState6Entered = base.Columns["State6Entered"];
+                this.columnState7Desc = base.Columns["State7Desc"];
+                this.columnState7 = base.Columns["State7"];
+                this.columnState7Entered = base.Columns["State7Entered"];
+                this.columnState8Desc = base.Columns["State8Desc"];
+                this.columnState8 = base.Columns["State8"];
+                this.columnState8Entered = base.Columns["State8Entered"];
+                this.columnState9Desc = base.Columns["State9Desc"];
+                this.columnState9 = base.Columns["State9"];
+                this.columnState9Entered = base.Columns["State9Entered"];
+                this.columnState10Desc = base.Columns["State10Desc"];
+                this.columnState10 = base.Columns["State10"];
+                this.columnState10Entered = base.Columns["State10Entered"];
+                this.columnState11Desc = base.Columns["State11Desc"];
+                this.columnState11 = base.Columns["State11"];
+                this.columnState11Entered = base.Columns["State11Entered"];
+                this.columnState12Desc = base.Columns["State12Desc"];
+                this.columnState12 = base.Columns["State12"];
+                this.columnState12Entered = base.Columns["State12Entered"];
+                this.columnState13Desc = base.Columns["State13Desc"];
+                this.columnState13 = base.Columns["State13"];
+                this.columnState13Entered = base.Columns["State13Entered"];
+                this.columnState14Desc = base.Columns["State14Desc"];
+                this.columnState14 = base.Columns["State14"];
+                this.columnState14Entered = base.Columns["State14Entered"];
+                this.columnState15Desc = base.Columns["State15Desc"];
+                this.columnState15 = base.Columns["State15"];
+                this.columnState15Entered = base.Columns["State15Entered"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTitle);
+                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEnding);
+                this.columnNewThisWeek = new global::System.Data.DataColumn("NewThisWeek", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewThisWeek);
+                this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActiveThisWeek);
+                this.columnWeekEndingState = new global::System.Data.DataColumn("WeekEndingState", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEndingState);
+                this.columnClosed = new global::System.Data.DataColumn("Closed", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosed);
+                this.columnClosedThisWeek = new global::System.Data.DataColumn("ClosedThisWeek", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedThisWeek);
+                this.columnState1Desc = new global::System.Data.DataColumn("State1Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1Desc);
+                this.columnState1 = new global::System.Data.DataColumn("State1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1);
+                this.columnState1Entered = new global::System.Data.DataColumn("State1Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState1Entered);
+                this.columnState2Desc = new global::System.Data.DataColumn("State2Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2Desc);
+                this.columnState2 = new global::System.Data.DataColumn("State2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2);
+                this.columnState2Entered = new global::System.Data.DataColumn("State2Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState2Entered);
+                this.columnState3Desc = new global::System.Data.DataColumn("State3Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3Desc);
+                this.columnState3 = new global::System.Data.DataColumn("State3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3);
+                this.columnState3Entered = new global::System.Data.DataColumn("State3Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState3Entered);
+                this.columnState4Desc = new global::System.Data.DataColumn("State4Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4Desc);
+                this.columnState4 = new global::System.Data.DataColumn("State4", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4);
+                this.columnState4Entered = new global::System.Data.DataColumn("State4Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState4Entered);
+                this.columnState5Desc = new global::System.Data.DataColumn("State5Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5Desc);
+                this.columnState5 = new global::System.Data.DataColumn("State5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5);
+                this.columnState5Entered = new global::System.Data.DataColumn("State5Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState5Entered);
+                this.columnState6Desc = new global::System.Data.DataColumn("State6Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6Desc);
+                this.columnState6 = new global::System.Data.DataColumn("State6", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6);
+                this.columnState6Entered = new global::System.Data.DataColumn("State6Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState6Entered);
+                this.columnState7Desc = new global::System.Data.DataColumn("State7Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7Desc);
+                this.columnState7 = new global::System.Data.DataColumn("State7", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7);
+                this.columnState7Entered = new global::System.Data.DataColumn("State7Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState7Entered);
+                this.columnState8Desc = new global::System.Data.DataColumn("State8Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8Desc);
+                this.columnState8 = new global::System.Data.DataColumn("State8", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8);
+                this.columnState8Entered = new global::System.Data.DataColumn("State8Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState8Entered);
+                this.columnState9Desc = new global::System.Data.DataColumn("State9Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9Desc);
+                this.columnState9 = new global::System.Data.DataColumn("State9", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9);
+                this.columnState9Entered = new global::System.Data.DataColumn("State9Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState9Entered);
+                this.columnState10Desc = new global::System.Data.DataColumn("State10Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10Desc);
+                this.columnState10 = new global::System.Data.DataColumn("State10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10);
+                this.columnState10Entered = new global::System.Data.DataColumn("State10Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState10Entered);
+                this.columnState11Desc = new global::System.Data.DataColumn("State11Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11Desc);
+                this.columnState11 = new global::System.Data.DataColumn("State11", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11);
+                this.columnState11Entered = new global::System.Data.DataColumn("State11Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState11Entered);
+                this.columnState12Desc = new global::System.Data.DataColumn("State12Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12Desc);
+                this.columnState12 = new global::System.Data.DataColumn("State12", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12);
+                this.columnState12Entered = new global::System.Data.DataColumn("State12Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState12Entered);
+                this.columnState13Desc = new global::System.Data.DataColumn("State13Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13Desc);
+                this.columnState13 = new global::System.Data.DataColumn("State13", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13);
+                this.columnState13Entered = new global::System.Data.DataColumn("State13Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState13Entered);
+                this.columnState14Desc = new global::System.Data.DataColumn("State14Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14Desc);
+                this.columnState14 = new global::System.Data.DataColumn("State14", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14);
+                this.columnState14Entered = new global::System.Data.DataColumn("State14Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState14Entered);
+                this.columnState15Desc = new global::System.Data.DataColumn("State15Desc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15Desc);
+                this.columnState15 = new global::System.Data.DataColumn("State15", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15);
+                this.columnState15Entered = new global::System.Data.DataColumn("State15Entered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState15Entered);
+                this.columnType.MaxLength = 255;
+                this.columnTitle.MaxLength = 255;
+                this.columnState1Desc.MaxLength = 255;
+                this.columnState2Desc.MaxLength = 255;
+                this.columnState3Desc.MaxLength = 255;
+                this.columnState4Desc.MaxLength = 255;
+                this.columnState5Desc.MaxLength = 255;
+                this.columnState6Desc.MaxLength = 255;
+                this.columnState7Desc.MaxLength = 255;
+                this.columnState8Desc.MaxLength = 255;
+                this.columnState9Desc.MaxLength = 255;
+                this.columnState10Desc.MaxLength = 255;
+                this.columnState11Desc.MaxLength = 255;
+                this.columnState12Desc.MaxLength = 255;
+                this.columnState13Desc.MaxLength = 255;
+                this.columnState14Desc.MaxLength = 255;
+                this.columnState15Desc.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayRow NewUserStoryFlow_ByDayRow() {
+                return ((UserStoryFlow_ByDayRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new UserStoryFlow_ByDayRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(UserStoryFlow_ByDayRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.UserStoryFlow_ByDayRowChanged != null)) {
+                    this.UserStoryFlow_ByDayRowChanged(this, new UserStoryFlow_ByDayRowChangeEvent(((UserStoryFlow_ByDayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.UserStoryFlow_ByDayRowChanging != null)) {
+                    this.UserStoryFlow_ByDayRowChanging(this, new UserStoryFlow_ByDayRowChangeEvent(((UserStoryFlow_ByDayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.UserStoryFlow_ByDayRowDeleted != null)) {
+                    this.UserStoryFlow_ByDayRowDeleted(this, new UserStoryFlow_ByDayRowChangeEvent(((UserStoryFlow_ByDayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.UserStoryFlow_ByDayRowDeleting != null)) {
+                    this.UserStoryFlow_ByDayRowDeleting(this, new UserStoryFlow_ByDayRowChangeEvent(((UserStoryFlow_ByDayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveUserStoryFlow_ByDayRow(UserStoryFlow_ByDayRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DumpDataSet ds = new DumpDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "UserStoryFlow_ByDayDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -21393,6 +22523,281 @@ namespace VSConnect {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_VELOCITY_ALLDataTable : global::System.Data.TypedTableBase<VW_VELOCITY_ALLRow> {
+            
+            private global::System.Data.DataColumn columnWeekEnding;
+            
+            private global::System.Data.DataColumn columnDevDone;
+            
+            private global::System.Data.DataColumn columnQADone;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLDataTable() {
+                this.TableName = "VW_VELOCITY_ALL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_VELOCITY_ALLDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected VW_VELOCITY_ALLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeekEndingColumn {
+                get {
+                    return this.columnWeekEnding;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DevDoneColumn {
+                get {
+                    return this.columnDevDone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QADoneColumn {
+                get {
+                    return this.columnQADone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLRow this[int index] {
+                get {
+                    return ((VW_VELOCITY_ALLRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITY_ALLRowChangeEventHandler VW_VELOCITY_ALLRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITY_ALLRowChangeEventHandler VW_VELOCITY_ALLRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITY_ALLRowChangeEventHandler VW_VELOCITY_ALLRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VW_VELOCITY_ALLRowChangeEventHandler VW_VELOCITY_ALLRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVW_VELOCITY_ALLRow(VW_VELOCITY_ALLRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLRow AddVW_VELOCITY_ALLRow(System.DateTime WeekEnding, double DevDone, double QADone) {
+                VW_VELOCITY_ALLRow rowVW_VELOCITY_ALLRow = ((VW_VELOCITY_ALLRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        WeekEnding,
+                        DevDone,
+                        QADone};
+                rowVW_VELOCITY_ALLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_VELOCITY_ALLRow);
+                return rowVW_VELOCITY_ALLRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_VELOCITY_ALLDataTable cln = ((VW_VELOCITY_ALLDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_VELOCITY_ALLDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWeekEnding = base.Columns["WeekEnding"];
+                this.columnDevDone = base.Columns["DevDone"];
+                this.columnQADone = base.Columns["QADone"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeekEnding);
+                this.columnDevDone = new global::System.Data.DataColumn("DevDone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDevDone);
+                this.columnQADone = new global::System.Data.DataColumn("QADone", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQADone);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLRow NewVW_VELOCITY_ALLRow() {
+                return ((VW_VELOCITY_ALLRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_VELOCITY_ALLRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_VELOCITY_ALLRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_VELOCITY_ALLRowChanged != null)) {
+                    this.VW_VELOCITY_ALLRowChanged(this, new VW_VELOCITY_ALLRowChangeEvent(((VW_VELOCITY_ALLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_VELOCITY_ALLRowChanging != null)) {
+                    this.VW_VELOCITY_ALLRowChanging(this, new VW_VELOCITY_ALLRowChangeEvent(((VW_VELOCITY_ALLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_VELOCITY_ALLRowDeleted != null)) {
+                    this.VW_VELOCITY_ALLRowDeleted(this, new VW_VELOCITY_ALLRowChangeEvent(((VW_VELOCITY_ALLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_VELOCITY_ALLRowDeleting != null)) {
+                    this.VW_VELOCITY_ALLRowDeleting(this, new VW_VELOCITY_ALLRowChangeEvent(((VW_VELOCITY_ALLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVW_VELOCITY_ALLRow(VW_VELOCITY_ALLRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DumpDataSet ds = new DumpDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_VELOCITY_ALLDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AttachmentRow : global::System.Data.DataRow {
@@ -25201,6 +26606,1533 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetState15EnteredNull() {
                 this[this.tableUserStoryFlow.State15EnteredColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class UserStoryFlow_ByDayRow : global::System.Data.DataRow {
+            
+            private UserStoryFlow_ByDayDataTable tableUserStoryFlow_ByDay;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal UserStoryFlow_ByDayRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableUserStoryFlow_ByDay = ((UserStoryFlow_ByDayDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Title {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.TitleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Title\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.TitleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime WeekEnding {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableUserStoryFlow_ByDay.WeekEndingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.WeekEndingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short NewThisWeek {
+                get {
+                    try {
+                        return ((short)(this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short ActiveThisWeek {
+                get {
+                    try {
+                        return ((short)(this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActiveThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int WeekEndingState {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEndingState\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Closed {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.ClosedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Closed\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.ClosedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ClosedThisWeek {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State1Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State1DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State1DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State1Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State1EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State1Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State1EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State2Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State2DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State2DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State2Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State2EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State2Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State2EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State3Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State3DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State3DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State3 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State3Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State3EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State3Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State3EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State4Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State4DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State4DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State4 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State4Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State4EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State4Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State4EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State5Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State5DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State5DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State5Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State5EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State5Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State5EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State6Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State6DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State6DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State6 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State6Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State6Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State6EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State6Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State6EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State7Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State7DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State7DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State7 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State7Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State7Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State7Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State7EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State7Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State7EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State8Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State8DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State8DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State8 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State8Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State8Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State8Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State8EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State8Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State8EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State9Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State9DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State9DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State9 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State9Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State9Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State9Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State9EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State9Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State9EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State10Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State10DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State10DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State10 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State10Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State10EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State10Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State10EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State11Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State11DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State11DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State11 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State11Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State11Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State11EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State11Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State11EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State12Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State12DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State12DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State12 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State12Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State12Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State12Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State12EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State12Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State12EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State13Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State13DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State13DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State13 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State13Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State13Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State13Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State13EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State13Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State13EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State14Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State14DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State14DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State14 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State14Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State14Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State14Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State14EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State14Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State14EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string State15Desc {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserStoryFlow_ByDay.State15DescColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15Desc\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State15DescColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State15 {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State15Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State15Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int State15Entered {
+                get {
+                    try {
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.State15EnteredColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State15Entered\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserStoryFlow_ByDay.State15EnteredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableUserStoryFlow_ByDay.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTypeNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTypeNull() {
+                this[this.tableUserStoryFlow_ByDay.TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTitleNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.TitleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTitleNull() {
+                this[this.tableUserStoryFlow_ByDay.TitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.WeekEndingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingNull() {
+                this[this.tableUserStoryFlow_ByDay.WeekEndingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNewThisWeekNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.NewThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNewThisWeekNull() {
+                this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsActiveThisWeekNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetActiveThisWeekNull() {
+                this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingStateNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.WeekEndingStateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingStateNull() {
+                this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.ClosedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedNull() {
+                this[this.tableUserStoryFlow_ByDay.ClosedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClosedThisWeekNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClosedThisWeekNull() {
+                this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State1DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State1DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1Null() {
+                this[this.tableUserStoryFlow_ByDay.State1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState1EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State1EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState1EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State1EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State2DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State2DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2Null() {
+                this[this.tableUserStoryFlow_ByDay.State2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState2EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State2EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState2EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State2EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State3DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State3DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3Null() {
+                this[this.tableUserStoryFlow_ByDay.State3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState3EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State3EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState3EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State3EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State4DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State4DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4Null() {
+                this[this.tableUserStoryFlow_ByDay.State4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState4EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State4EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState4EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State4EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State5DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State5DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5Null() {
+                this[this.tableUserStoryFlow_ByDay.State5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState5EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State5EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState5EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State5EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State6DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State6DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State6Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6Null() {
+                this[this.tableUserStoryFlow_ByDay.State6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState6EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State6EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState6EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State6EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State7DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State7DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State7Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7Null() {
+                this[this.tableUserStoryFlow_ByDay.State7Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState7EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State7EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState7EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State7EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State8DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State8DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State8Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8Null() {
+                this[this.tableUserStoryFlow_ByDay.State8Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState8EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State8EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState8EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State8EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State9DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State9DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State9Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9Null() {
+                this[this.tableUserStoryFlow_ByDay.State9Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState9EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State9EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState9EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State9EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State10DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State10DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10Null() {
+                this[this.tableUserStoryFlow_ByDay.State10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState10EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State10EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState10EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State10EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State11DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State11DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State11Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11Null() {
+                this[this.tableUserStoryFlow_ByDay.State11Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState11EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State11EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState11EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State11EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State12DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State12DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State12Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12Null() {
+                this[this.tableUserStoryFlow_ByDay.State12Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState12EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State12EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState12EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State12EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State13DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State13DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State13Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13Null() {
+                this[this.tableUserStoryFlow_ByDay.State13Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState13EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State13EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState13EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State13EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State14DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State14DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State14Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14Null() {
+                this[this.tableUserStoryFlow_ByDay.State14Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState14EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State14EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState14EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State14EnteredColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15DescNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State15DescColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15DescNull() {
+                this[this.tableUserStoryFlow_ByDay.State15DescColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15Null() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State15Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15Null() {
+                this[this.tableUserStoryFlow_ByDay.State15Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsState15EnteredNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.State15EnteredColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetState15EnteredNull() {
+                this[this.tableUserStoryFlow_ByDay.State15EnteredColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -40689,6 +43621,105 @@ namespace VSConnect {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VW_VELOCITY_ALLRow : global::System.Data.DataRow {
+            
+            private VW_VELOCITY_ALLDataTable tableVW_VELOCITY_ALL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VW_VELOCITY_ALLRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_VELOCITY_ALL = ((VW_VELOCITY_ALLDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime WeekEnding {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_VELOCITY_ALL.WeekEndingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'VW_VELOCITY_ALL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY_ALL.WeekEndingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DevDone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_VELOCITY_ALL.DevDoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DevDone\' in table \'VW_VELOCITY_ALL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY_ALL.DevDoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double QADone {
+                get {
+                    try {
+                        return ((double)(this[this.tableVW_VELOCITY_ALL.QADoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QADone\' in table \'VW_VELOCITY_ALL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_VELOCITY_ALL.QADoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeekEndingNull() {
+                return this.IsNull(this.tableVW_VELOCITY_ALL.WeekEndingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeekEndingNull() {
+                this[this.tableVW_VELOCITY_ALL.WeekEndingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDevDoneNull() {
+                return this.IsNull(this.tableVW_VELOCITY_ALL.DevDoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDevDoneNull() {
+                this[this.tableVW_VELOCITY_ALL.DevDoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQADoneNull() {
+                return this.IsNull(this.tableVW_VELOCITY_ALL.QADoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQADoneNull() {
+                this[this.tableVW_VELOCITY_ALL.QADoneColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -41014,6 +44045,40 @@ namespace VSConnect {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UserStoryFlowRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class UserStoryFlow_ByDayRowChangeEvent : global::System.EventArgs {
+            
+            private UserStoryFlow_ByDayRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayRowChangeEvent(UserStoryFlow_ByDayRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserStoryFlow_ByDayRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -42000,6 +45065,40 @@ namespace VSConnect {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_VELOCITYRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class VW_VELOCITY_ALLRowChangeEvent : global::System.EventArgs {
+            
+            private VW_VELOCITY_ALLRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLRowChangeEvent(VW_VELOCITY_ALLRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VW_VELOCITY_ALLRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -45156,6 +48255,707 @@ namespace VSConnect.DumpDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DumpDataSet dataSet) {
             return this.Adapter.Update(dataSet, "UserStoryFlow");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    int ID, 
+                    string Type, 
+                    string Title, 
+                    global::System.Nullable<global::System.DateTime> WeekEnding, 
+                    global::System.Nullable<short> NewThisWeek, 
+                    global::System.Nullable<short> ActiveThisWeek, 
+                    global::System.Nullable<int> WeekEndingState, 
+                    global::System.Nullable<int> Closed, 
+                    global::System.Nullable<int> ClosedThisWeek, 
+                    string State1Desc, 
+                    global::System.Nullable<int> State1, 
+                    global::System.Nullable<int> State1Entered, 
+                    string State2Desc, 
+                    global::System.Nullable<int> State2, 
+                    global::System.Nullable<int> State2Entered, 
+                    string State3Desc, 
+                    global::System.Nullable<int> State3, 
+                    global::System.Nullable<int> State3Entered, 
+                    string State4Desc, 
+                    global::System.Nullable<int> State4, 
+                    global::System.Nullable<int> State4Entered, 
+                    string State5Desc, 
+                    global::System.Nullable<int> State5, 
+                    global::System.Nullable<int> State5Entered, 
+                    string State6Desc, 
+                    global::System.Nullable<int> State6, 
+                    global::System.Nullable<int> State6Entered, 
+                    string State7Desc, 
+                    global::System.Nullable<int> State7, 
+                    global::System.Nullable<int> State7Entered, 
+                    string State8Desc, 
+                    global::System.Nullable<int> State8, 
+                    global::System.Nullable<int> State8Entered, 
+                    string State9Desc, 
+                    global::System.Nullable<int> State9, 
+                    global::System.Nullable<int> State9Entered, 
+                    string State10Desc, 
+                    global::System.Nullable<int> State10, 
+                    global::System.Nullable<int> State10Entered, 
+                    string State11Desc, 
+                    global::System.Nullable<int> State11, 
+                    global::System.Nullable<int> State11Entered, 
+                    string State12Desc, 
+                    global::System.Nullable<int> State12, 
+                    global::System.Nullable<int> State12Entered, 
+                    string State13Desc, 
+                    global::System.Nullable<int> State13, 
+                    global::System.Nullable<int> State13Entered, 
+                    string State14Desc, 
+                    global::System.Nullable<int> State14, 
+                    global::System.Nullable<int> State14Entered, 
+                    string State15Desc, 
+                    global::System.Nullable<int> State15, 
+                    global::System.Nullable<int> State15Entered) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
+            if ((Type == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Type));
+            }
+            if ((Title == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Title));
+            }
+            if ((WeekEnding.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(WeekEnding.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((NewThisWeek.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(NewThisWeek.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((ActiveThisWeek.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((short)(ActiveThisWeek.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((WeekEndingState.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(WeekEndingState.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Closed.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Closed.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((ClosedThisWeek.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ClosedThisWeek.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((State1Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(State1Desc));
+            }
+            if ((State1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(State1.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((State1Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(State1Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((State2Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(State2Desc));
+            }
+            if ((State2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(State2.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((State2Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(State2Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((State3Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(State3Desc));
+            }
+            if ((State3.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(State3.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((State3Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(State3Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((State4Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(State4Desc));
+            }
+            if ((State4.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(State4.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((State4Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((int)(State4Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((State5Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(State5Desc));
+            }
+            if ((State5.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((int)(State5.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((State5Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((int)(State5Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((State6Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(State6Desc));
+            }
+            if ((State6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(State6.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((State6Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((int)(State6Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((State7Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(State7Desc));
+            }
+            if ((State7.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((int)(State7.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((State7Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((int)(State7Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((State8Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(State8Desc));
+            }
+            if ((State8.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[31].Value = ((int)(State8.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((State8Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((int)(State8Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((State9Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((string)(State9Desc));
+            }
+            if ((State9.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(State9.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((State9Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((int)(State9Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((State10Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(State10Desc));
+            }
+            if ((State10.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((int)(State10.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((State10Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((int)(State10Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((State11Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((string)(State11Desc));
+            }
+            if ((State11.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[40].Value = ((int)(State11.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            if ((State11Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[41].Value = ((int)(State11Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((State12Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[42].Value = ((string)(State12Desc));
+            }
+            if ((State12.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[43].Value = ((int)(State12.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((State12Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[44].Value = ((int)(State12Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((State13Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[45].Value = ((string)(State13Desc));
+            }
+            if ((State13.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[46].Value = ((int)(State13.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((State13Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[47].Value = ((int)(State13Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            if ((State14Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[48].Value = ((string)(State14Desc));
+            }
+            if ((State14.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[49].Value = ((int)(State14.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            if ((State14Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[50].Value = ((int)(State14Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            if ((State15Desc == null)) {
+                this.Adapter.InsertCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[51].Value = ((string)(State15Desc));
+            }
+            if ((State15.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[52].Value = ((int)(State15.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((State15Entered.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[53].Value = ((int)(State15Entered.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class UserStoryFlow_ByDayTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public UserStoryFlow_ByDayTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "UserStoryFlow_ByDay";
+            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("Title", "Title");
+            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
+            tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
+            tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
+            tableMapping.ColumnMappings.Add("WeekEndingState", "WeekEndingState");
+            tableMapping.ColumnMappings.Add("Closed", "Closed");
+            tableMapping.ColumnMappings.Add("ClosedThisWeek", "ClosedThisWeek");
+            tableMapping.ColumnMappings.Add("State1Desc", "State1Desc");
+            tableMapping.ColumnMappings.Add("State1", "State1");
+            tableMapping.ColumnMappings.Add("State1Entered", "State1Entered");
+            tableMapping.ColumnMappings.Add("State2Desc", "State2Desc");
+            tableMapping.ColumnMappings.Add("State2", "State2");
+            tableMapping.ColumnMappings.Add("State2Entered", "State2Entered");
+            tableMapping.ColumnMappings.Add("State3Desc", "State3Desc");
+            tableMapping.ColumnMappings.Add("State3", "State3");
+            tableMapping.ColumnMappings.Add("State3Entered", "State3Entered");
+            tableMapping.ColumnMappings.Add("State4Desc", "State4Desc");
+            tableMapping.ColumnMappings.Add("State4", "State4");
+            tableMapping.ColumnMappings.Add("State4Entered", "State4Entered");
+            tableMapping.ColumnMappings.Add("State5Desc", "State5Desc");
+            tableMapping.ColumnMappings.Add("State5", "State5");
+            tableMapping.ColumnMappings.Add("State5Entered", "State5Entered");
+            tableMapping.ColumnMappings.Add("State6Desc", "State6Desc");
+            tableMapping.ColumnMappings.Add("State6", "State6");
+            tableMapping.ColumnMappings.Add("State6Entered", "State6Entered");
+            tableMapping.ColumnMappings.Add("State7Desc", "State7Desc");
+            tableMapping.ColumnMappings.Add("State7", "State7");
+            tableMapping.ColumnMappings.Add("State7Entered", "State7Entered");
+            tableMapping.ColumnMappings.Add("State8Desc", "State8Desc");
+            tableMapping.ColumnMappings.Add("State8", "State8");
+            tableMapping.ColumnMappings.Add("State8Entered", "State8Entered");
+            tableMapping.ColumnMappings.Add("State9Desc", "State9Desc");
+            tableMapping.ColumnMappings.Add("State9", "State9");
+            tableMapping.ColumnMappings.Add("State9Entered", "State9Entered");
+            tableMapping.ColumnMappings.Add("State10Desc", "State10Desc");
+            tableMapping.ColumnMappings.Add("State10", "State10");
+            tableMapping.ColumnMappings.Add("State10Entered", "State10Entered");
+            tableMapping.ColumnMappings.Add("State11Desc", "State11Desc");
+            tableMapping.ColumnMappings.Add("State11", "State11");
+            tableMapping.ColumnMappings.Add("State11Entered", "State11Entered");
+            tableMapping.ColumnMappings.Add("State12Desc", "State12Desc");
+            tableMapping.ColumnMappings.Add("State12", "State12");
+            tableMapping.ColumnMappings.Add("State12Entered", "State12Entered");
+            tableMapping.ColumnMappings.Add("State13Desc", "State13Desc");
+            tableMapping.ColumnMappings.Add("State13", "State13");
+            tableMapping.ColumnMappings.Add("State13Entered", "State13Entered");
+            tableMapping.ColumnMappings.Add("State14Desc", "State14Desc");
+            tableMapping.ColumnMappings.Add("State14", "State14");
+            tableMapping.ColumnMappings.Add("State14Entered", "State14Entered");
+            tableMapping.ColumnMappings.Add("State15Desc", "State15Desc");
+            tableMapping.ColumnMappings.Add("State15", "State15");
+            tableMapping.ColumnMappings.Add("State15Entered", "State15Entered");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow_ByDay` (`ID`, `Type`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `WeekEndingState`, `Closed`, `ClosedThisWeek`, `State1Desc`, `State1`, `State1Entered`, `State2Desc`, `State2`, `State2Entered`, `State3Desc`, `State3`, `State3Entered`, `State4Desc`, `State4`, `State4Entered`, `State5Desc`, `State5`, `State5Entered`, `State6Desc`, `State6`, `State6Entered`, `State7Desc`, `State7`, `State7Entered`, `State8Desc`, `State8`, `State8Entered`, `State9Desc`, `State9`, `State9Entered`, `State10Desc`, `State10`, `State10Entered`, `State11Desc`, `State11`, `State11Entered`, `State12Desc`, `State12`, `State12Entered`, `State13Desc`, `State13`, `State13Entered`, `State14Desc`, `State14`, `State14Entered`, `State15Desc`, `State15`, `State15Entered`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Type", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Title", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEnding", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEnding", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NewThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NewThisWeek", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ActiveThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ActiveThisWeek", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEndingState", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEndingState", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Closed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Closed", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ClosedThisWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ClosedThisWeek", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State2Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State2Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State3Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State3Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State4Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State4Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State5Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State5Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State6Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State6Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State7Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State7Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State8Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State8Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State9Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State9Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State10Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State10Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State11Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State11Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State12Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State12Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State13Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State13Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State14Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State14Entered", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15Desc", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State15Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State15Entered", global::System.Data.DataRowVersion.Current, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::VSConnect.Properties.Settings.Default.DumpConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, WeekEnding, NewThisWeek, ActiveThisWeek, WeekEndingState, Closed, ClosedThisWeek, State1Desc, State1, State1Entered, State2Desc, State2, State2Entered, State3Desc, State3, State3Entered, State4Desc, State4, State4Entered, State5Desc, State5, State5Entered, State6Desc, State6, State6Entered, State7Desc, State7, State7Entered, State8Desc, State8, State8Entered, State9Desc, State9, State9Entered, State10Desc, State10, State10Entered, State11Desc, State11, State11Entered, State12Desc, State12, State12Entered, State13Desc, State13, State13Entered, State14Desc, State14, State14Entered, State15Desc, State15, State15Entered FROM UserStoryFlow_ByDay";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DumpDataSet.UserStoryFlow_ByDayDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DumpDataSet.UserStoryFlow_ByDayDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DumpDataSet.UserStoryFlow_ByDayDataTable dataTable = new DumpDataSet.UserStoryFlow_ByDayDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DumpDataSet.UserStoryFlow_ByDayDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DumpDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "UserStoryFlow_ByDay");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -55461,6 +59261,175 @@ namespace VSConnect.DumpDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_VELOCITY_ALLTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public VW_VELOCITY_ALLTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_VELOCITY_ALL";
+            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
+            tableMapping.ColumnMappings.Add("DevDone", "DevDone");
+            tableMapping.ColumnMappings.Add("QADone", "QADone");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::VSConnect.Properties.Settings.Default.DumpConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT WeekEnding, DevDone, QADone FROM VW_VELOCITY_ALL";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DumpDataSet.VW_VELOCITY_ALLDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DumpDataSet.VW_VELOCITY_ALLDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DumpDataSet.VW_VELOCITY_ALLDataTable dataTable = new DumpDataSet.VW_VELOCITY_ALLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55491,6 +59460,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
         private ReleaseBurndownTableAdapter _releaseBurndownTableAdapter;
         
         private UserStoryFlowTableAdapter _userStoryFlowTableAdapter;
+        
+        private UserStoryFlow_ByDayTableAdapter _userStoryFlow_ByDayTableAdapter;
         
         private WorkItemTableAdapter _workItemTableAdapter;
         
@@ -55664,6 +59635,20 @@ namespace VSConnect.DumpDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
+        public UserStoryFlow_ByDayTableAdapter UserStoryFlow_ByDayTableAdapter {
+            get {
+                return this._userStoryFlow_ByDayTableAdapter;
+            }
+            set {
+                this._userStoryFlow_ByDayTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
         public WorkItemTableAdapter WorkItemTableAdapter {
             get {
                 return this._workItemTableAdapter;
@@ -55802,6 +59787,10 @@ namespace VSConnect.DumpDataSetTableAdapters {
                             && (this._userStoryFlowTableAdapter.Connection != null))) {
                     return this._userStoryFlowTableAdapter.Connection;
                 }
+                if (((this._userStoryFlow_ByDayTableAdapter != null) 
+                            && (this._userStoryFlow_ByDayTableAdapter.Connection != null))) {
+                    return this._userStoryFlow_ByDayTableAdapter.Connection;
+                }
                 if (((this._workItemTableAdapter != null) 
                             && (this._workItemTableAdapter.Connection != null))) {
                     return this._workItemTableAdapter.Connection;
@@ -55867,6 +59856,9 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._userStoryFlowTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._userStoryFlow_ByDayTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._workItemTableAdapter != null)) {
@@ -55979,6 +59971,24 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._userStoryFlowTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._userStoryFlowTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._userStoryFlow_ByDayTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.UserStoryFlow_ByDay.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._userStoryFlow_ByDayTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._workItemTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.WorkItem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -56030,15 +60040,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._workItemRevisionTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._userStoryFlowTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._userStoryFlowTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -56124,6 +60125,22 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._userStoryFlowTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._userStoryFlowTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._userStoryFlow_ByDayTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.UserStoryFlow_ByDay.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._userStoryFlow_ByDayTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._workItemTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.WorkItem.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -56172,14 +60189,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._userStoryFlowTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._userStoryFlowTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -56190,14 +60199,6 @@ namespace VSConnect.DumpDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DumpDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._userStoryFlowTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._userStoryFlowTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._workItemRevisionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.WorkItemRevision.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -56243,6 +60244,22 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._workItemTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._userStoryFlow_ByDayTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.UserStoryFlow_ByDay.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._userStoryFlow_ByDayTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._userStoryFlowTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.UserStoryFlow.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._userStoryFlowTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -56407,6 +60424,11 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._userStoryFlow_ByDayTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._userStoryFlow_ByDayTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             if (((this._workItemTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._workItemTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -56557,6 +60579,15 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     if (this._userStoryFlowTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._userStoryFlowTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._userStoryFlowTableAdapter.Adapter);
+                    }
+                }
+                if ((this._userStoryFlow_ByDayTableAdapter != null)) {
+                    revertConnections.Add(this._userStoryFlow_ByDayTableAdapter, this._userStoryFlow_ByDayTableAdapter.Connection);
+                    this._userStoryFlow_ByDayTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._userStoryFlow_ByDayTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._userStoryFlow_ByDayTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._userStoryFlow_ByDayTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._userStoryFlow_ByDayTableAdapter.Adapter);
                     }
                 }
                 if ((this._workItemTableAdapter != null)) {
@@ -56710,6 +60741,10 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 if ((this._userStoryFlowTableAdapter != null)) {
                     this._userStoryFlowTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._userStoryFlowTableAdapter]));
                     this._userStoryFlowTableAdapter.Transaction = null;
+                }
+                if ((this._userStoryFlow_ByDayTableAdapter != null)) {
+                    this._userStoryFlow_ByDayTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._userStoryFlow_ByDayTableAdapter]));
+                    this._userStoryFlow_ByDayTableAdapter.Transaction = null;
                 }
                 if ((this._workItemTableAdapter != null)) {
                     this._workItemTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._workItemTableAdapter]));

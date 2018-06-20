@@ -44,12 +44,14 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.lstFuzzFile = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lstIterationPaths = new System.Windows.Forms.CheckedListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(347, 146);
+            this.button1.Location = new System.Drawing.Point(886, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -179,11 +181,30 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Current Fuzz File";
             // 
+            // lstIterationPaths
+            // 
+            this.lstIterationPaths.FormattingEnabled = true;
+            this.lstIterationPaths.Location = new System.Drawing.Point(453, 146);
+            this.lstIterationPaths.Name = "lstIterationPaths";
+            this.lstIterationPaths.Size = new System.Drawing.Size(386, 94);
+            this.lstIterationPaths.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(369, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Iteration Paths:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 550);
+            this.Controls.Add(this.lstIterationPaths);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstFuzzFile);
             this.Controls.Add(this.lblInfo);
@@ -223,6 +244,8 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ListBox lstFuzzFile;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckedListBox lstIterationPaths;
+        private System.Windows.Forms.Label label5;
     }
 }
 
