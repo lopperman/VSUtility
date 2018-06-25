@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpDevMetrics = new System.Windows.Forms.TabPage();
             this.chartDevelopment = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlDevMetricsTop = new System.Windows.Forms.Panel();
+            this.chkDevMetrics_IncludeBugs = new System.Windows.Forms.CheckBox();
             this.chkUatComplete = new System.Windows.Forms.CheckBox();
             this.chkQAComplete = new System.Windows.Forms.CheckBox();
             this.chkDevComplete = new System.Windows.Forms.CheckBox();
@@ -127,7 +128,8 @@
             this.dtBugStartDate = new System.Windows.Forms.DateTimePicker();
             this.cmdRenderBugs = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.chkDevMetrics_IncludeBugs = new System.Windows.Forms.CheckBox();
+            this.numUpDownStoryCumFlowMonths = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.tcMain.SuspendLayout();
             this.tpDevMetrics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDevelopment)).BeginInit();
@@ -148,6 +150,7 @@
             this.tpBugs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownStoryCumFlowMonths)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMain
@@ -179,47 +182,47 @@
             // 
             // chartDevelopment
             // 
-            chartArea4.AxisX.Interval = 7D;
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorGrid.Interval = 0D;
-            chartArea4.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea4.AxisX.MajorTickMark.Interval = 0D;
-            chartArea4.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea4.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea4.Name = "ChartArea1";
-            this.chartDevelopment.ChartAreas.Add(chartArea4);
+            chartArea1.AxisX.Interval = 7D;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorGrid.Interval = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.AxisX.MajorTickMark.Interval = 0D;
+            chartArea1.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea1.Name = "ChartArea1";
+            this.chartDevelopment.ChartAreas.Add(chartArea1);
             this.chartDevelopment.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartDevelopment.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.chartDevelopment.Legends.Add(legend1);
             this.chartDevelopment.Location = new System.Drawing.Point(3, 71);
             this.chartDevelopment.Name = "chartDevelopment";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series14.Color = System.Drawing.Color.MediumBlue;
-            series14.IsValueShownAsLabel = true;
-            series14.Legend = "Legend1";
-            series14.LegendText = "Dev Completed";
-            series14.Name = "count";
-            series14.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series15.Color = System.Drawing.Color.Red;
-            series15.IsValueShownAsLabel = true;
-            series15.Legend = "Legend1";
-            series15.LegendText = "QA Completed";
-            series15.Name = "qacount";
-            series15.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series16.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series16.IsValueShownAsLabel = true;
-            series16.Legend = "Legend1";
-            series16.LegendText = "UAT Completed";
-            series16.Name = "uatcount";
-            series16.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartDevelopment.Series.Add(series14);
-            this.chartDevelopment.Series.Add(series15);
-            this.chartDevelopment.Series.Add(series16);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.MediumBlue;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Dev Completed";
+            series1.Name = "count";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.LegendText = "QA Completed";
+            series2.Name = "qacount";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.LegendText = "UAT Completed";
+            series3.Name = "uatcount";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartDevelopment.Series.Add(series1);
+            this.chartDevelopment.Series.Add(series2);
+            this.chartDevelopment.Series.Add(series3);
             this.chartDevelopment.Size = new System.Drawing.Size(994, 601);
             this.chartDevelopment.TabIndex = 1;
             this.chartDevelopment.Text = "chart1";
@@ -243,6 +246,17 @@
             this.pnlDevMetricsTop.Name = "pnlDevMetricsTop";
             this.pnlDevMetricsTop.Size = new System.Drawing.Size(994, 68);
             this.pnlDevMetricsTop.TabIndex = 0;
+            // 
+            // chkDevMetrics_IncludeBugs
+            // 
+            this.chkDevMetrics_IncludeBugs.AutoSize = true;
+            this.chkDevMetrics_IncludeBugs.Location = new System.Drawing.Point(554, 8);
+            this.chkDevMetrics_IncludeBugs.Name = "chkDevMetrics_IncludeBugs";
+            this.chkDevMetrics_IncludeBugs.Size = new System.Drawing.Size(88, 17);
+            this.chkDevMetrics_IncludeBugs.TabIndex = 19;
+            this.chkDevMetrics_IncludeBugs.Text = "Include Bugs";
+            this.chkDevMetrics_IncludeBugs.UseVisualStyleBackColor = true;
+            this.chkDevMetrics_IncludeBugs.CheckedChanged += new System.EventHandler(this.chkDevMetrics_IncludeBugs_CheckedChanged);
             // 
             // chkUatComplete
             // 
@@ -329,7 +343,6 @@
             // 
             // lastXMonths
             // 
-            this.lastXMonths.Enabled = false;
             this.lastXMonths.Location = new System.Drawing.Point(285, 32);
             this.lastXMonths.Maximum = new decimal(new int[] {
             24,
@@ -365,7 +378,6 @@
             // 
             // forecastWeeks
             // 
-            this.forecastWeeks.Enabled = false;
             this.forecastWeeks.Location = new System.Drawing.Point(99, 31);
             this.forecastWeeks.Maximum = new decimal(new int[] {
             26,
@@ -397,8 +409,8 @@
             // 
             this.gridFeatures.AllowUserToAddRows = false;
             this.gridFeatures.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridFeatures.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridFeatures.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridFeatures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFeatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridFeatures.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -542,8 +554,8 @@
             // 
             this.gridCompletedWork.AllowUserToAddRows = false;
             this.gridCompletedWork.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridCompletedWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridCompletedWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridCompletedWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCompletedWork.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCompletedWork.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -612,123 +624,125 @@
             // 
             // chartStoryCumulativeFlow
             // 
-            chartArea5.AxisX.Interval = 7D;
-            chartArea5.AxisX.MajorGrid.Enabled = false;
-            chartArea5.AxisX.MajorGrid.Interval = 0D;
-            chartArea5.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea5.AxisX.MajorTickMark.Interval = 0D;
-            chartArea5.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea5.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea5.Name = "ChartArea1";
-            this.chartStoryCumulativeFlow.ChartAreas.Add(chartArea5);
+            chartArea2.AxisX.Interval = 7D;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorGrid.Interval = 0D;
+            chartArea2.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.AxisX.MajorTickMark.Interval = 0D;
+            chartArea2.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea2.Name = "ChartArea1";
+            this.chartStoryCumulativeFlow.ChartAreas.Add(chartArea2);
             this.chartStoryCumulativeFlow.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartStoryCumulativeFlow.Legends.Add(legend5);
+            legend2.Name = "Legend1";
+            this.chartStoryCumulativeFlow.Legends.Add(legend2);
             this.chartStoryCumulativeFlow.Location = new System.Drawing.Point(0, 103);
             this.chartStoryCumulativeFlow.Name = "chartStoryCumulativeFlow";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series17.Color = System.Drawing.Color.DarkSeaGreen;
-            series17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series17.IsValueShownAsLabel = true;
-            series17.Legend = "Legend1";
-            series17.LegendText = "Done";
-            series17.Name = "done";
-            series17.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series18.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series18.IsValueShownAsLabel = true;
-            series18.Legend = "Legend1";
-            series18.LegendText = "In Progress";
-            series18.Name = "inProgress";
-            series18.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series19.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series19.IsValueShownAsLabel = true;
-            series19.Legend = "Legend1";
-            series19.LegendText = "Committed";
-            series19.Name = "committed";
-            series19.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series19.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series20.Color = System.Drawing.Color.LightCoral;
-            series20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series20.IsValueShownAsLabel = true;
-            series20.Legend = "Legend1";
-            series20.LegendText = "Approved";
-            series20.Name = "approved";
-            series20.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series20.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series21.Color = System.Drawing.Color.LightSlateGray;
-            series21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series21.IsValueShownAsLabel = true;
-            series21.LabelToolTip = "Backlog";
-            series21.Legend = "Legend1";
-            series21.LegendText = "Backlog";
-            series21.Name = "backlog";
-            series21.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series21.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series22.BorderWidth = 2;
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series22.Color = System.Drawing.Color.Yellow;
-            series22.Legend = "Legend1";
-            series22.LegendText = "New Features";
-            series22.Name = "newFeatures";
-            series22.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series23.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            series23.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series23.IsValueShownAsLabel = true;
-            series23.LabelToolTip = "Backlog_HighValue";
-            series23.Legend = "Legend1";
-            series23.LegendText = "Backlog High Value";
-            series23.Name = "Backlog_HighValue";
-            series23.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series24.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series24.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series24.IsValueShownAsLabel = true;
-            series24.LabelToolTip = "Analysis";
-            series24.Legend = "Legend1";
-            series24.LegendText = "Analysis";
-            series24.Name = "analysis";
-            series24.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series25.ChartArea = "ChartArea1";
-            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series25.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            series25.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            series25.IsValueShownAsLabel = true;
-            series25.LabelToolTip = "Verification";
-            series25.Legend = "Legend1";
-            series25.LegendText = "Verification";
-            series25.Name = "verification";
-            series25.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartStoryCumulativeFlow.Series.Add(series17);
-            this.chartStoryCumulativeFlow.Series.Add(series18);
-            this.chartStoryCumulativeFlow.Series.Add(series19);
-            this.chartStoryCumulativeFlow.Series.Add(series20);
-            this.chartStoryCumulativeFlow.Series.Add(series21);
-            this.chartStoryCumulativeFlow.Series.Add(series22);
-            this.chartStoryCumulativeFlow.Series.Add(series23);
-            this.chartStoryCumulativeFlow.Series.Add(series24);
-            this.chartStoryCumulativeFlow.Series.Add(series25);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series4.Color = System.Drawing.Color.DarkSeaGreen;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.LegendText = "Done";
+            series4.Name = "done";
+            series4.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.LegendText = "In Progress";
+            series5.Name = "inProgress";
+            series5.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series6.IsValueShownAsLabel = true;
+            series6.Legend = "Legend1";
+            series6.LegendText = "Committed";
+            series6.Name = "committed";
+            series6.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series7.Color = System.Drawing.Color.LightCoral;
+            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series7.IsValueShownAsLabel = true;
+            series7.Legend = "Legend1";
+            series7.LegendText = "Approved";
+            series7.Name = "approved";
+            series7.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series8.Color = System.Drawing.Color.LightSlateGray;
+            series8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series8.IsValueShownAsLabel = true;
+            series8.LabelToolTip = "Backlog";
+            series8.Legend = "Legend1";
+            series8.LegendText = "Backlog";
+            series8.Name = "backlog";
+            series8.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Color = System.Drawing.Color.Yellow;
+            series9.Legend = "Legend1";
+            series9.LegendText = "New Features";
+            series9.Name = "newFeatures";
+            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            series10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series10.IsValueShownAsLabel = true;
+            series10.LabelToolTip = "Backlog_HighValue";
+            series10.Legend = "Legend1";
+            series10.LegendText = "Backlog High Value";
+            series10.Name = "Backlog_HighValue";
+            series10.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series11.IsValueShownAsLabel = true;
+            series11.LabelToolTip = "Analysis";
+            series11.Legend = "Legend1";
+            series11.LegendText = "Analysis";
+            series11.Name = "analysis";
+            series11.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            series12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            series12.IsValueShownAsLabel = true;
+            series12.LabelToolTip = "Verification";
+            series12.Legend = "Legend1";
+            series12.LegendText = "Verification";
+            series12.Name = "verification";
+            series12.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartStoryCumulativeFlow.Series.Add(series4);
+            this.chartStoryCumulativeFlow.Series.Add(series5);
+            this.chartStoryCumulativeFlow.Series.Add(series6);
+            this.chartStoryCumulativeFlow.Series.Add(series7);
+            this.chartStoryCumulativeFlow.Series.Add(series8);
+            this.chartStoryCumulativeFlow.Series.Add(series9);
+            this.chartStoryCumulativeFlow.Series.Add(series10);
+            this.chartStoryCumulativeFlow.Series.Add(series11);
+            this.chartStoryCumulativeFlow.Series.Add(series12);
             this.chartStoryCumulativeFlow.Size = new System.Drawing.Size(1000, 572);
             this.chartStoryCumulativeFlow.TabIndex = 5;
             this.chartStoryCumulativeFlow.Text = "chart1";
             // 
             // pnlStoryCumFlowTop
             // 
+            this.pnlStoryCumFlowTop.Controls.Add(this.numUpDownStoryCumFlowMonths);
+            this.pnlStoryCumFlowTop.Controls.Add(this.label7);
             this.pnlStoryCumFlowTop.Controls.Add(this.cmdFlowUncheckAll);
             this.pnlStoryCumFlowTop.Controls.Add(this.cmdFlowCheckAll);
             this.pnlStoryCumFlowTop.Controls.Add(this.clrClosed);
@@ -1077,29 +1091,29 @@
             // 
             // chartBugs
             // 
-            chartArea6.AxisX.Interval = 7D;
-            chartArea6.AxisX.MajorGrid.Enabled = false;
-            chartArea6.AxisX.MajorGrid.Interval = 0D;
-            chartArea6.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea6.AxisX.MajorTickMark.Interval = 0D;
-            chartArea6.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea6.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
-            chartArea6.Name = "ChartArea1";
-            this.chartBugs.ChartAreas.Add(chartArea6);
+            chartArea3.AxisX.Interval = 7D;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.MajorGrid.Interval = 0D;
+            chartArea3.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.AxisX.MajorTickMark.Interval = 0D;
+            chartArea3.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks;
+            chartArea3.Name = "ChartArea1";
+            this.chartBugs.ChartAreas.Add(chartArea3);
             this.chartBugs.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.chartBugs.Legends.Add(legend6);
+            legend3.Name = "Legend1";
+            this.chartBugs.Legends.Add(legend3);
             this.chartBugs.Location = new System.Drawing.Point(0, 68);
             this.chartBugs.Name = "chartBugs";
-            series26.ChartArea = "ChartArea1";
-            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series26.Color = System.Drawing.Color.MediumBlue;
-            series26.IsValueShownAsLabel = true;
-            series26.Legend = "Legend1";
-            series26.LegendText = "New";
-            series26.Name = "countNew";
-            series26.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.chartBugs.Series.Add(series26);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Color = System.Drawing.Color.MediumBlue;
+            series13.IsValueShownAsLabel = true;
+            series13.Legend = "Legend1";
+            series13.LegendText = "New";
+            series13.Name = "countNew";
+            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.chartBugs.Series.Add(series13);
             this.chartBugs.Size = new System.Drawing.Size(1000, 607);
             this.chartBugs.TabIndex = 2;
             this.chartBugs.Text = "chart1";
@@ -1197,16 +1211,31 @@
             this.cmdRenderBugs.UseVisualStyleBackColor = true;
             this.cmdRenderBugs.Click += new System.EventHandler(this.cmdRenderBugs_Click);
             // 
-            // chkDevMetrics_IncludeBugs
+            // numUpDownStoryCumFlowMonths
             // 
-            this.chkDevMetrics_IncludeBugs.AutoSize = true;
-            this.chkDevMetrics_IncludeBugs.Location = new System.Drawing.Point(554, 8);
-            this.chkDevMetrics_IncludeBugs.Name = "chkDevMetrics_IncludeBugs";
-            this.chkDevMetrics_IncludeBugs.Size = new System.Drawing.Size(88, 17);
-            this.chkDevMetrics_IncludeBugs.TabIndex = 19;
-            this.chkDevMetrics_IncludeBugs.Text = "Include Bugs";
-            this.chkDevMetrics_IncludeBugs.UseVisualStyleBackColor = true;
-            this.chkDevMetrics_IncludeBugs.CheckedChanged += new System.EventHandler(this.chkDevMetrics_IncludeBugs_CheckedChanged);
+            this.numUpDownStoryCumFlowMonths.Location = new System.Drawing.Point(712, 10);
+            this.numUpDownStoryCumFlowMonths.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.numUpDownStoryCumFlowMonths.Name = "numUpDownStoryCumFlowMonths";
+            this.numUpDownStoryCumFlowMonths.Size = new System.Drawing.Size(51, 20);
+            this.numUpDownStoryCumFlowMonths.TabIndex = 37;
+            this.numUpDownStoryCumFlowMonths.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(594, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Show Last \'X\' Months:";
             // 
             // frmDevMetrics
             // 
@@ -1243,6 +1272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartBugs)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownStoryCumFlowMonths)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1328,5 +1358,7 @@
         private System.Windows.Forms.ListBox lstBoxCompletedWorkTFSStateList;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chkDevMetrics_IncludeBugs;
+        private System.Windows.Forms.NumericUpDown numUpDownStoryCumFlowMonths;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,7 @@ using Microsoft.TeamFoundation.Client;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
 using TFSUtilities.Forms;
 using VSConnect;
+using VSConnect.Lifecycle;
 using VSUtil.Classes.Util;
 using VSUtil.Forms;
 
@@ -180,6 +182,17 @@ namespace VSUtil
                 initialized = true;
             }
 
+            TFSRegistry.SetDefaultIterationPath(txtIterationPath.Text.Trim());
+
+            if (chkIterationPath_Under.Checked || chkIterationPath_Equals.Checked)
+            {
+                if (string.IsNullOrWhiteSpace(txtIterationPath.Text))
+                {
+                    MessageBox.Show(
+                        "You must enter a valid iteration path if either of the Iteration Path checkboxes are checked.");
+                    return;
+                }
+            }
 
             string message = string.Format("This application will automatically update the 'TFS dump' file if it is more than 4 hours old?{0}{0}Would you like to update the file anyway?", Environment.NewLine);
             if (MessageBox.Show(message, "TFS", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -201,7 +214,7 @@ namespace VSUtil
                 wait.Show(this);
                 Application.DoEvents();
 
-                DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, SelectedProject.Name, TFSRegistry.LastDayOfWeek);
+                DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, SelectedProject.Name, TFSRegistry.LastDayOfWeek,txtIterationPath.Text.Trim(),chkIterationPath_Under.Checked,chkIterationPath_Equals.Checked);
                 dump.DumpWorkItems(path);
 
                 wait.Close();
@@ -260,6 +273,8 @@ namespace VSUtil
                 cboTeam.SelectedValue =
                     teams.First(x => x.Name == TFSRegistry.GetDefaultTeamName("Wegmans Mobile App")).Identity;
             }
+
+            txtIterationPath.Text = TFSRegistry.GetIterationPath(@"Marketing Temp\Asynchrony");
 
             UpdateTeamAreas();
 
@@ -338,7 +353,7 @@ namespace VSUtil
             wait.Show(this);
             Application.DoEvents();
 
-            DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, "Marketing Temp", TFSRegistry.LastDayOfWeek);
+            DumpWorkItemsToDS dump = new DumpWorkItemsToDS(connect, SelectedAreaId, wait, "Marketing Temp", TFSRegistry.LastDayOfWeek, txtIterationPath.Text.Trim(),chkIterationPath_Under.Checked,chkIterationPath_Equals.Checked);
             dump.DumpWorkItems(path);
 
             wait.Close();
@@ -497,6 +512,49 @@ namespace VSUtil
             {
                 UpdateTeamAreas();
             }
+        }
+
+        private void chkIterationPath_Under_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkIterationPath_Under.Checked)
+            {
+                chkIterationPath_Equals.Checked = false;
+            }
+        }
+
+        private void chkIterationPath_Equals_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkIterationPath_Equals.Checked)
+            {
+                chkIterationPath_Under.Checked = false;
+            }
+
+        }
+
+        private void saveStoryFlowToExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (StaticUtil.CurrentFuzzFile == null)
+            {
+                MessageBox.Show("You must dump data first");
+                return;
+            }
+
+            Cursor = Cursors.WaitCursor;
+            var ds = VSCommon.LoadDumpDataset(TFSRegistry.GetTFSMdbPath());
+
+            var saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "xls files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            saveFileDialog1.Title = "To Excel";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = saveFileDialog1.FileName;
+                UserStoryCumulativeFlow.BuildStoryFlowDump(ds,fileName);
+                Cursor = Cursors.Default;
+
+                Process.Start(fileName);
+            }
+
         }
     }
 }

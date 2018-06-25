@@ -44,8 +44,11 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.lstFuzzFile = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lstIterationPaths = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtIterationPath = new System.Windows.Forms.TextBox();
+            this.chkIterationPath_Under = new System.Windows.Forms.CheckBox();
+            this.chkIterationPath_Equals = new System.Windows.Forms.CheckBox();
+            this.saveStoryFlowToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +77,8 @@
             this.utilitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workItemHistoryToolStripMenuItem,
             this.developmentMetricsToolStripMenuItem,
-            this.dynamicChartToolStripMenuItem});
+            this.dynamicChartToolStripMenuItem,
+            this.saveStoryFlowToExcelToolStripMenuItem});
             this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
             this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.utilitiesToolStripMenuItem.Text = "&Utilities";
@@ -82,21 +86,21 @@
             // workItemHistoryToolStripMenuItem
             // 
             this.workItemHistoryToolStripMenuItem.Name = "workItemHistoryToolStripMenuItem";
-            this.workItemHistoryToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.workItemHistoryToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.workItemHistoryToolStripMenuItem.Text = "&Work Item History";
             this.workItemHistoryToolStripMenuItem.Click += new System.EventHandler(this.workItemHistoryToolStripMenuItem_Click);
             // 
             // developmentMetricsToolStripMenuItem
             // 
             this.developmentMetricsToolStripMenuItem.Name = "developmentMetricsToolStripMenuItem";
-            this.developmentMetricsToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.developmentMetricsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.developmentMetricsToolStripMenuItem.Text = "&Development Metrics";
             this.developmentMetricsToolStripMenuItem.Click += new System.EventHandler(this.developmentMetricsToolStripMenuItem_Click);
             // 
             // dynamicChartToolStripMenuItem
             // 
             this.dynamicChartToolStripMenuItem.Name = "dynamicChartToolStripMenuItem";
-            this.dynamicChartToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.dynamicChartToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.dynamicChartToolStripMenuItem.Text = "Dynamic Chart";
             this.dynamicChartToolStripMenuItem.Click += new System.EventHandler(this.dynamicChartToolStripMenuItem_Click);
             // 
@@ -181,29 +185,60 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Current Fuzz File";
             // 
-            // lstIterationPaths
-            // 
-            this.lstIterationPaths.FormattingEnabled = true;
-            this.lstIterationPaths.Location = new System.Drawing.Point(453, 146);
-            this.lstIterationPaths.Name = "lstIterationPaths";
-            this.lstIterationPaths.Size = new System.Drawing.Size(386, 94);
-            this.lstIterationPaths.TabIndex = 53;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(369, 151);
+            this.label5.Location = new System.Drawing.Point(384, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 52;
-            this.label5.Text = "Iteration Paths:";
+            this.label5.Text = "Iteration Path:";
+            // 
+            // txtIterationPath
+            // 
+            this.txtIterationPath.Location = new System.Drawing.Point(468, 151);
+            this.txtIterationPath.Multiline = true;
+            this.txtIterationPath.Name = "txtIterationPath";
+            this.txtIterationPath.Size = new System.Drawing.Size(412, 28);
+            this.txtIterationPath.TabIndex = 53;
+            // 
+            // chkIterationPath_Under
+            // 
+            this.chkIterationPath_Under.AutoSize = true;
+            this.chkIterationPath_Under.Location = new System.Drawing.Point(468, 186);
+            this.chkIterationPath_Under.Name = "chkIterationPath_Under";
+            this.chkIterationPath_Under.Size = new System.Drawing.Size(127, 17);
+            this.chkIterationPath_Under.TabIndex = 54;
+            this.chkIterationPath_Under.Text = "Iteration Path - Under";
+            this.chkIterationPath_Under.UseVisualStyleBackColor = true;
+            this.chkIterationPath_Under.CheckedChanged += new System.EventHandler(this.chkIterationPath_Under_CheckedChanged);
+            // 
+            // chkIterationPath_Equals
+            // 
+            this.chkIterationPath_Equals.AutoSize = true;
+            this.chkIterationPath_Equals.Location = new System.Drawing.Point(601, 185);
+            this.chkIterationPath_Equals.Name = "chkIterationPath_Equals";
+            this.chkIterationPath_Equals.Size = new System.Drawing.Size(130, 17);
+            this.chkIterationPath_Equals.TabIndex = 55;
+            this.chkIterationPath_Equals.Text = "Iteration Path - Equals";
+            this.chkIterationPath_Equals.UseVisualStyleBackColor = true;
+            this.chkIterationPath_Equals.CheckedChanged += new System.EventHandler(this.chkIterationPath_Equals_CheckedChanged);
+            // 
+            // saveStoryFlowToExcelToolStripMenuItem
+            // 
+            this.saveStoryFlowToExcelToolStripMenuItem.Name = "saveStoryFlowToExcelToolStripMenuItem";
+            this.saveStoryFlowToExcelToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.saveStoryFlowToExcelToolStripMenuItem.Text = "Save Story Flow to Excel";
+            this.saveStoryFlowToExcelToolStripMenuItem.Click += new System.EventHandler(this.saveStoryFlowToExcelToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 550);
-            this.Controls.Add(this.lstIterationPaths);
+            this.Controls.Add(this.chkIterationPath_Equals);
+            this.Controls.Add(this.chkIterationPath_Under);
+            this.Controls.Add(this.txtIterationPath);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstFuzzFile);
@@ -244,8 +279,11 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ListBox lstFuzzFile;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox lstIterationPaths;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtIterationPath;
+        private System.Windows.Forms.CheckBox chkIterationPath_Under;
+        private System.Windows.Forms.CheckBox chkIterationPath_Equals;
+        private System.Windows.Forms.ToolStripMenuItem saveStoryFlowToExcelToolStripMenuItem;
     }
 }
 

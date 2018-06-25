@@ -13,12 +13,16 @@ using Microsoft.TeamFoundation.ProcessConfiguration.Client;
 using Microsoft.TeamFoundation.Server;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
 using Microsoft.TeamFoundation.Proxy;
+using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
 using Microsoft.VisualStudio.Services.Client;
 using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 using Field = Microsoft.TeamFoundation.WorkItemTracking.Client.Field;
 using ProjectInfo = Microsoft.TeamFoundation.Server.ProjectInfo;
 using WindowsCredential = Microsoft.TeamFoundation.Client.WindowsCredential;
+using WorkItem = Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem;
+using WorkItemType = Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemType;
 
 
 namespace VSConnect
@@ -224,6 +228,29 @@ namespace VSConnect
 
             return store.Query(wiql).Cast<WorkItem>().ToList();
         }
+
+        public List<string> QueryForSingleListOfString(string wql, string fieldName)
+        {
+            var ret = new List<string>();
+
+            var items = ExecuteWorkItemWIQL(wql);
+
+
+            foreach (var item in items)
+            {
+                if (item.Fields.Contains(fieldName))
+                {
+                    if (ret.All(x => x != item.Fields[fieldName].Value))
+                    {
+                        ret.Add(item.IterationPath);
+                    }
+                }
+            }
+            
+
+            return ret;
+        }
+
 
 
         public WorkItem GetWorkItem(int id)

@@ -10,6 +10,7 @@ namespace VSConnect
     {
 
         public static TFSStateManager CurrentFuzzFile { get; set; }
+//        public static string LastFuzzFilePath { get; set; }
 
     }
 }

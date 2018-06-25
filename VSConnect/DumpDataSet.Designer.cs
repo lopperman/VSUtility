@@ -5992,17 +5992,17 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnTitle;
             
-            private global::System.Data.DataColumn columnWeekEnding;
+            private global::System.Data.DataColumn columnDayEnding;
             
-            private global::System.Data.DataColumn columnNewThisWeek;
+            private global::System.Data.DataColumn columnNewThisDay;
             
-            private global::System.Data.DataColumn columnActiveThisWeek;
+            private global::System.Data.DataColumn columnActiveThisDay;
             
-            private global::System.Data.DataColumn columnWeekEndingState;
+            private global::System.Data.DataColumn columnDayEndingState;
             
             private global::System.Data.DataColumn columnClosed;
             
-            private global::System.Data.DataColumn columnClosedThisWeek;
+            private global::System.Data.DataColumn columnClosedThisDay;
             
             private global::System.Data.DataColumn columnState1Desc;
             
@@ -6153,33 +6153,33 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WeekEndingColumn {
+            public global::System.Data.DataColumn DayEndingColumn {
                 get {
-                    return this.columnWeekEnding;
+                    return this.columnDayEnding;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NewThisWeekColumn {
+            public global::System.Data.DataColumn NewThisDayColumn {
                 get {
-                    return this.columnNewThisWeek;
+                    return this.columnNewThisDay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ActiveThisWeekColumn {
+            public global::System.Data.DataColumn ActiveThisDayColumn {
                 get {
-                    return this.columnActiveThisWeek;
+                    return this.columnActiveThisDay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WeekEndingStateColumn {
+            public global::System.Data.DataColumn DayEndingStateColumn {
                 get {
-                    return this.columnWeekEndingState;
+                    return this.columnDayEndingState;
                 }
             }
             
@@ -6193,9 +6193,9 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ClosedThisWeekColumn {
+            public global::System.Data.DataColumn ClosedThisDayColumn {
                 get {
-                    return this.columnClosedThisWeek;
+                    return this.columnClosedThisDay;
                 }
             }
             
@@ -6600,12 +6600,12 @@ namespace VSConnect {
                         int ID, 
                         string Type, 
                         string Title, 
-                        System.DateTime WeekEnding, 
-                        short NewThisWeek, 
-                        short ActiveThisWeek, 
-                        int WeekEndingState, 
+                        System.DateTime DayEnding, 
+                        short NewThisDay, 
+                        short ActiveThisDay, 
+                        int DayEndingState, 
                         int Closed, 
-                        int ClosedThisWeek, 
+                        int ClosedThisDay, 
                         string State1Desc, 
                         int State1, 
                         int State1Entered, 
@@ -6656,12 +6656,12 @@ namespace VSConnect {
                         ID,
                         Type,
                         Title,
-                        WeekEnding,
-                        NewThisWeek,
-                        ActiveThisWeek,
-                        WeekEndingState,
+                        DayEnding,
+                        NewThisDay,
+                        ActiveThisDay,
+                        DayEndingState,
                         Closed,
-                        ClosedThisWeek,
+                        ClosedThisDay,
                         State1Desc,
                         State1,
                         State1Entered,
@@ -6732,12 +6732,12 @@ namespace VSConnect {
                 this.columnID = base.Columns["ID"];
                 this.columnType = base.Columns["Type"];
                 this.columnTitle = base.Columns["Title"];
-                this.columnWeekEnding = base.Columns["WeekEnding"];
-                this.columnNewThisWeek = base.Columns["NewThisWeek"];
-                this.columnActiveThisWeek = base.Columns["ActiveThisWeek"];
-                this.columnWeekEndingState = base.Columns["WeekEndingState"];
+                this.columnDayEnding = base.Columns["DayEnding"];
+                this.columnNewThisDay = base.Columns["NewThisDay"];
+                this.columnActiveThisDay = base.Columns["ActiveThisDay"];
+                this.columnDayEndingState = base.Columns["DayEndingState"];
                 this.columnClosed = base.Columns["Closed"];
-                this.columnClosedThisWeek = base.Columns["ClosedThisWeek"];
+                this.columnClosedThisDay = base.Columns["ClosedThisDay"];
                 this.columnState1Desc = base.Columns["State1Desc"];
                 this.columnState1 = base.Columns["State1"];
                 this.columnState1Entered = base.Columns["State1Entered"];
@@ -6794,18 +6794,18 @@ namespace VSConnect {
                 base.Columns.Add(this.columnType);
                 this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitle);
-                this.columnWeekEnding = new global::System.Data.DataColumn("WeekEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWeekEnding);
-                this.columnNewThisWeek = new global::System.Data.DataColumn("NewThisWeek", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNewThisWeek);
-                this.columnActiveThisWeek = new global::System.Data.DataColumn("ActiveThisWeek", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActiveThisWeek);
-                this.columnWeekEndingState = new global::System.Data.DataColumn("WeekEndingState", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWeekEndingState);
+                this.columnDayEnding = new global::System.Data.DataColumn("DayEnding", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDayEnding);
+                this.columnNewThisDay = new global::System.Data.DataColumn("NewThisDay", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewThisDay);
+                this.columnActiveThisDay = new global::System.Data.DataColumn("ActiveThisDay", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActiveThisDay);
+                this.columnDayEndingState = new global::System.Data.DataColumn("DayEndingState", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDayEndingState);
                 this.columnClosed = new global::System.Data.DataColumn("Closed", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClosed);
-                this.columnClosedThisWeek = new global::System.Data.DataColumn("ClosedThisWeek", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnClosedThisWeek);
+                this.columnClosedThisDay = new global::System.Data.DataColumn("ClosedThisDay", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClosedThisDay);
                 this.columnState1Desc = new global::System.Data.DataColumn("State1Desc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnState1Desc);
                 this.columnState1 = new global::System.Data.DataColumn("State1", typeof(int), null, global::System.Data.MappingType.Element);
@@ -7106,6 +7106,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public WorkItemDataTable() {
@@ -7381,6 +7383,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7446,7 +7456,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 WorkItemRow rowWorkItemRow = ((WorkItemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -7478,7 +7489,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowWorkItemRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWorkItemRow);
                 return rowWorkItemRow;
@@ -7539,6 +7551,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7604,6 +7617,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -7627,6 +7642,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9454,6 +9470,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnSeverity;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public WorkItemRevisionDataTable() {
@@ -9713,6 +9731,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9776,7 +9802,8 @@ namespace VSConnect {
                         int Priority, 
                         int BusinessPriority, 
                         int BusinessValue, 
-                        string Severity) {
+                        string Severity, 
+                        string IterationPath) {
                 WorkItemRevisionRow rowWorkItemRevisionRow = ((WorkItemRevisionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -9806,7 +9833,8 @@ namespace VSConnect {
                         Priority,
                         BusinessPriority,
                         BusinessValue,
-                        Severity};
+                        Severity,
+                        IterationPath};
                 rowWorkItemRevisionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWorkItemRevisionRow);
                 return rowWorkItemRevisionRow;
@@ -9865,6 +9893,7 @@ namespace VSConnect {
                 this.columnBusinessPriority = base.Columns["BusinessPriority"];
                 this.columnBusinessValue = base.Columns["BusinessValue"];
                 this.columnSeverity = base.Columns["Severity"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9926,6 +9955,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnBusinessValue);
                 this.columnSeverity = new global::System.Data.DataColumn("Severity", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSeverity);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -9946,6 +9977,7 @@ namespace VSConnect {
                 this.columnTags.MaxLength = 536870910;
                 this.columnClosedBy.MaxLength = 255;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10742,6 +10774,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_BugDataTable() {
@@ -11017,6 +11051,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -11082,7 +11124,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 VW_BugRow rowVW_BugRow = ((VW_BugRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -11114,7 +11157,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowVW_BugRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_BugRow);
                 return rowVW_BugRow;
@@ -11175,6 +11219,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11240,6 +11285,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -11263,6 +11310,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14687,6 +14735,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_FeatureDataTable() {
@@ -14962,6 +15012,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -15027,7 +15085,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 VW_FeatureRow rowVW_FeatureRow = ((VW_FeatureRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -15059,7 +15118,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowVW_FeatureRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_FeatureRow);
                 return rowVW_FeatureRow;
@@ -15120,6 +15180,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15185,6 +15246,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -15208,6 +15271,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18090,6 +18154,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_TaskDataTable() {
@@ -18365,6 +18431,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -18430,7 +18504,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 VW_TaskRow rowVW_TaskRow = ((VW_TaskRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -18462,7 +18537,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowVW_TaskRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_TaskRow);
                 return rowVW_TaskRow;
@@ -18523,6 +18599,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18588,6 +18665,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -18611,6 +18690,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19391,6 +19471,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_TechnicalStoryDataTable() {
@@ -19666,6 +19748,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -19731,7 +19821,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 VW_TechnicalStoryRow rowVW_TechnicalStoryRow = ((VW_TechnicalStoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -19763,7 +19854,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowVW_TechnicalStoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_TechnicalStoryRow);
                 return rowVW_TechnicalStoryRow;
@@ -19824,6 +19916,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19889,6 +19982,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -19912,6 +20007,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21013,6 +21109,8 @@ namespace VSConnect {
             
             private global::System.Data.DataColumn columnPriority;
             
+            private global::System.Data.DataColumn columnIterationPath;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VW_UserStoryDataTable() {
@@ -21288,6 +21386,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IterationPathColumn {
+                get {
+                    return this.columnIterationPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -21353,7 +21459,8 @@ namespace VSConnect {
                         int BusinessPriority, 
                         string TestCases, 
                         string Severity, 
-                        int Priority) {
+                        int Priority, 
+                        string IterationPath) {
                 VW_UserStoryRow rowVW_UserStoryRow = ((VW_UserStoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -21385,7 +21492,8 @@ namespace VSConnect {
                         BusinessPriority,
                         TestCases,
                         Severity,
-                        Priority};
+                        Priority,
+                        IterationPath};
                 rowVW_UserStoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVW_UserStoryRow);
                 return rowVW_UserStoryRow;
@@ -21446,6 +21554,7 @@ namespace VSConnect {
                 this.columnTestCases = base.Columns["TestCases"];
                 this.columnSeverity = base.Columns["Severity"];
                 this.columnPriority = base.Columns["Priority"];
+                this.columnIterationPath = base.Columns["IterationPath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21511,6 +21620,8 @@ namespace VSConnect {
                 base.Columns.Add(this.columnSeverity);
                 this.columnPriority = new global::System.Data.DataColumn("Priority", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriority);
+                this.columnIterationPath = new global::System.Data.DataColumn("IterationPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIterationPath);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID,
                                 this.columnRev}, true));
@@ -21534,6 +21645,7 @@ namespace VSConnect {
                 this.columnTargetRelease.MaxLength = 255;
                 this.columnTestCases.MaxLength = 536870910;
                 this.columnSeverity.MaxLength = 255;
+                this.columnIterationPath.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -26673,65 +26785,65 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime WeekEnding {
+            public System.DateTime DayEnding {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableUserStoryFlow_ByDay.WeekEndingColumn]));
+                        return ((global::System.DateTime)(this[this.tableUserStoryFlow_ByDay.DayEndingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEnding\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DayEnding\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUserStoryFlow_ByDay.WeekEndingColumn] = value;
+                    this[this.tableUserStoryFlow_ByDay.DayEndingColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short NewThisWeek {
+            public short NewThisDay {
                 get {
                     try {
-                        return ((short)(this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn]));
+                        return ((short)(this[this.tableUserStoryFlow_ByDay.NewThisDayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NewThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewThisDay\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn] = value;
+                    this[this.tableUserStoryFlow_ByDay.NewThisDayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short ActiveThisWeek {
+            public short ActiveThisDay {
                 get {
                     try {
-                        return ((short)(this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn]));
+                        return ((short)(this[this.tableUserStoryFlow_ByDay.ActiveThisDayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ActiveThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActiveThisDay\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn] = value;
+                    this[this.tableUserStoryFlow_ByDay.ActiveThisDayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int WeekEndingState {
+            public int DayEndingState {
                 get {
                     try {
-                        return ((int)(this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn]));
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.DayEndingStateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'WeekEndingState\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DayEndingState\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn] = value;
+                    this[this.tableUserStoryFlow_ByDay.DayEndingStateColumn] = value;
                 }
             }
             
@@ -26753,17 +26865,17 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ClosedThisWeek {
+            public int ClosedThisDay {
                 get {
                     try {
-                        return ((int)(this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn]));
+                        return ((int)(this[this.tableUserStoryFlow_ByDay.ClosedThisDayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisWeek\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClosedThisDay\' in table \'UserStoryFlow_ByDay\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn] = value;
+                    this[this.tableUserStoryFlow_ByDay.ClosedThisDayColumn] = value;
                 }
             }
             
@@ -27525,50 +27637,50 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWeekEndingNull() {
-                return this.IsNull(this.tableUserStoryFlow_ByDay.WeekEndingColumn);
+            public bool IsDayEndingNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.DayEndingColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWeekEndingNull() {
-                this[this.tableUserStoryFlow_ByDay.WeekEndingColumn] = global::System.Convert.DBNull;
+            public void SetDayEndingNull() {
+                this[this.tableUserStoryFlow_ByDay.DayEndingColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNewThisWeekNull() {
-                return this.IsNull(this.tableUserStoryFlow_ByDay.NewThisWeekColumn);
+            public bool IsNewThisDayNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.NewThisDayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNewThisWeekNull() {
-                this[this.tableUserStoryFlow_ByDay.NewThisWeekColumn] = global::System.Convert.DBNull;
+            public void SetNewThisDayNull() {
+                this[this.tableUserStoryFlow_ByDay.NewThisDayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsActiveThisWeekNull() {
-                return this.IsNull(this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn);
+            public bool IsActiveThisDayNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.ActiveThisDayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetActiveThisWeekNull() {
-                this[this.tableUserStoryFlow_ByDay.ActiveThisWeekColumn] = global::System.Convert.DBNull;
+            public void SetActiveThisDayNull() {
+                this[this.tableUserStoryFlow_ByDay.ActiveThisDayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWeekEndingStateNull() {
-                return this.IsNull(this.tableUserStoryFlow_ByDay.WeekEndingStateColumn);
+            public bool IsDayEndingStateNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.DayEndingStateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWeekEndingStateNull() {
-                this[this.tableUserStoryFlow_ByDay.WeekEndingStateColumn] = global::System.Convert.DBNull;
+            public void SetDayEndingStateNull() {
+                this[this.tableUserStoryFlow_ByDay.DayEndingStateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27585,14 +27697,14 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsClosedThisWeekNull() {
-                return this.IsNull(this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn);
+            public bool IsClosedThisDayNull() {
+                return this.IsNull(this.tableUserStoryFlow_ByDay.ClosedThisDayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetClosedThisWeekNull() {
-                this[this.tableUserStoryFlow_ByDay.ClosedThisWeekColumn] = global::System.Convert.DBNull;
+            public void SetClosedThisDayNull() {
+                this[this.tableUserStoryFlow_ByDay.ClosedThisDayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28622,6 +28734,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableWorkItem.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'WorkItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWorkItem.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableWorkItem.ProjectColumn);
             }
@@ -28954,6 +29082,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableWorkItem.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableWorkItem.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableWorkItem.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -30533,6 +30673,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableWorkItemRevision.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'WorkItemRevision\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWorkItemRevision.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableWorkItemRevision.ProjectColumn);
             }
@@ -30841,6 +30997,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSeverityNull() {
                 this[this.tableWorkItemRevision.SeverityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableWorkItemRevision.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableWorkItemRevision.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -31955,6 +32123,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_Bug.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'VW_Bug\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_Bug.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableVW_Bug.ProjectColumn);
             }
@@ -32287,6 +32471,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableVW_Bug.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableVW_Bug.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableVW_Bug.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -36217,6 +36413,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_Feature.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'VW_Feature\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_Feature.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableVW_Feature.ProjectColumn);
             }
@@ -36549,6 +36761,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableVW_Feature.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableVW_Feature.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableVW_Feature.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -39557,6 +39781,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_Task.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'VW_Task\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_Task.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableVW_Task.ProjectColumn);
             }
@@ -39889,6 +40129,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableVW_Task.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableVW_Task.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableVW_Task.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -40975,6 +41227,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_TechnicalStory.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'VW_TechnicalStory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_TechnicalStory.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableVW_TechnicalStory.ProjectColumn);
             }
@@ -41307,6 +41575,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableVW_TechnicalStory.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableVW_TechnicalStory.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableVW_TechnicalStory.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -42586,6 +42866,22 @@ namespace VSConnect {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IterationPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_UserStory.IterationPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IterationPath\' in table \'VW_UserStory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_UserStory.IterationPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProjectNull() {
                 return this.IsNull(this.tableVW_UserStory.ProjectColumn);
             }
@@ -42918,6 +43214,18 @@ namespace VSConnect {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriorityNull() {
                 this[this.tableVW_UserStory.PriorityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIterationPathNull() {
+                return this.IsNull(this.tableVW_UserStory.IterationPathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIterationPathNull() {
+                this[this.tableVW_UserStory.IterationPathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -48791,12 +49099,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("Type", "Type");
             tableMapping.ColumnMappings.Add("Title", "Title");
-            tableMapping.ColumnMappings.Add("WeekEnding", "WeekEnding");
-            tableMapping.ColumnMappings.Add("NewThisWeek", "NewThisWeek");
-            tableMapping.ColumnMappings.Add("ActiveThisWeek", "ActiveThisWeek");
-            tableMapping.ColumnMappings.Add("WeekEndingState", "WeekEndingState");
+            tableMapping.ColumnMappings.Add("DayEnding", "DayEnding");
+            tableMapping.ColumnMappings.Add("NewThisDay", "NewThisDay");
+            tableMapping.ColumnMappings.Add("ActiveThisDay", "ActiveThisDay");
+            tableMapping.ColumnMappings.Add("DayEndingState", "DayEndingState");
             tableMapping.ColumnMappings.Add("Closed", "Closed");
-            tableMapping.ColumnMappings.Add("ClosedThisWeek", "ClosedThisWeek");
+            tableMapping.ColumnMappings.Add("ClosedThisDay", "ClosedThisDay");
             tableMapping.ColumnMappings.Add("State1Desc", "State1Desc");
             tableMapping.ColumnMappings.Add("State1", "State1");
             tableMapping.ColumnMappings.Add("State1Entered", "State1Entered");
@@ -48845,17 +49153,17 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow_ByDay` (`ID`, `Type`, `Title`, `WeekEnding`, `NewThisWeek`, `ActiveThisWeek`, `WeekEndingState`, `Closed`, `ClosedThisWeek`, `State1Desc`, `State1`, `State1Entered`, `State2Desc`, `State2`, `State2Entered`, `State3Desc`, `State3`, `State3Entered`, `State4Desc`, `State4`, `State4Entered`, `State5Desc`, `State5`, `State5Entered`, `State6Desc`, `State6`, `State6Entered`, `State7Desc`, `State7`, `State7Entered`, `State8Desc`, `State8`, `State8Entered`, `State9Desc`, `State9`, `State9Entered`, `State10Desc`, `State10`, `State10Entered`, `State11Desc`, `State11`, `State11Entered`, `State12Desc`, `State12`, `State12Entered`, `State13Desc`, `State13`, `State13Entered`, `State14Desc`, `State14`, `State14Entered`, `State15Desc`, `State15`, `State15Entered`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `UserStoryFlow_ByDay` (`ID`, `Type`, `Title`, `DayEnding`, `NewThisDay`, `ActiveThisDay`, `DayEndingState`, `Closed`, `ClosedThisDay`, `State1Desc`, `State1`, `State1Entered`, `State2Desc`, `State2`, `State2Entered`, `State3Desc`, `State3`, `State3Entered`, `State4Desc`, `State4`, `State4Entered`, `State5Desc`, `State5`, `State5Entered`, `State6Desc`, `State6`, `State6Entered`, `State7Desc`, `State7`, `State7Entered`, `State8Desc`, `State8`, `State8Entered`, `State9Desc`, `State9`, `State9Entered`, `State10Desc`, `State10`, `State10Entered`, `State11Desc`, `State11`, `State11Entered`, `State12Desc`, `State12`, `State12Entered`, `State13Desc`, `State13`, `State13Entered`, `State14Desc`, `State14`, `State14Entered`, `State15Desc`, `State15`, `State15Entered`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Title", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEnding", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEnding", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NewThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NewThisWeek", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ActiveThisWeek", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ActiveThisWeek", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WeekEndingState", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WeekEndingState", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DayEnding", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DayEnding", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NewThisDay", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NewThisDay", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ActiveThisDay", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ActiveThisDay", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DayEndingState", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DayEndingState", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Closed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Closed", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ClosedThisWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ClosedThisWeek", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ClosedThisDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ClosedThisDay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Desc", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Desc", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State1Entered", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State1Entered", global::System.Data.DataRowVersion.Current, false, null));
@@ -48916,7 +49224,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, WeekEnding, NewThisWeek, ActiveThisWeek, WeekEndingState, Closed, ClosedThisWeek, State1Desc, State1, State1Entered, State2Desc, State2, State2Entered, State3Desc, State3, State3Entered, State4Desc, State4, State4Entered, State5Desc, State5, State5Entered, State6Desc, State6, State6Entered, State7Desc, State7, State7Entered, State8Desc, State8, State8Entered, State9Desc, State9, State9Entered, State10Desc, State10, State10Entered, State11Desc, State11, State11Entered, State12Desc, State12, State12Entered, State13Desc, State13, State13Entered, State14Desc, State14, State14Entered, State15Desc, State15, State15Entered FROM UserStoryFlow_ByDay";
+            this._commandCollection[0].CommandText = @"SELECT ID, Type, Title, DayEnding, NewThisDay, ActiveThisDay, DayEndingState, Closed, ClosedThisDay, State1Desc, State1, State1Entered, State2Desc, State2, State2Entered, State3Desc, State3, State3Entered, State4Desc, State4, State4Entered, State5Desc, State5, State5Entered, State6Desc, State6, State6Entered, State7Desc, State7, State7Entered, State8Desc, State8, State8Entered, State9Desc, State9, State9Entered, State10Desc, State10, State10Entered, State11Desc, State11, State11Entered, State12Desc, State12, State12Entered, State13Desc, State13, State13Entered, State14Desc, State14, State14Entered, State15Desc, State15, State15Entered FROM UserStoryFlow_ByDay";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -48981,12 +49289,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     int ID, 
                     string Type, 
                     string Title, 
-                    global::System.Nullable<global::System.DateTime> WeekEnding, 
-                    global::System.Nullable<short> NewThisWeek, 
-                    global::System.Nullable<short> ActiveThisWeek, 
-                    global::System.Nullable<int> WeekEndingState, 
+                    global::System.Nullable<global::System.DateTime> DayEnding, 
+                    global::System.Nullable<short> NewThisDay, 
+                    global::System.Nullable<short> ActiveThisDay, 
+                    global::System.Nullable<int> DayEndingState, 
                     global::System.Nullable<int> Closed, 
-                    global::System.Nullable<int> ClosedThisWeek, 
+                    global::System.Nullable<int> ClosedThisDay, 
                     string State1Desc, 
                     global::System.Nullable<int> State1, 
                     global::System.Nullable<int> State1Entered, 
@@ -49045,26 +49353,26 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Title));
             }
-            if ((WeekEnding.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(WeekEnding.Value));
+            if ((DayEnding.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(DayEnding.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((NewThisWeek.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(NewThisWeek.Value));
+            if ((NewThisDay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(NewThisDay.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((ActiveThisWeek.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((short)(ActiveThisWeek.Value));
+            if ((ActiveThisDay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((short)(ActiveThisDay.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((WeekEndingState.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(WeekEndingState.Value));
+            if ((DayEndingState.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(DayEndingState.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -49075,8 +49383,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((ClosedThisWeek.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ClosedThisWeek.Value));
+            if ((ClosedThisDay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ClosedThisDay.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -49519,6 +49827,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -49541,7 +49850,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 "R (`Uri` = ?)) AND ((? = 1 AND `TargetRelease` IS NULL) OR (`TargetRelease` = ?)" +
                 ") AND ((? = 1 AND `BusinessPriority` IS NULL) OR (`BusinessPriority` = ?)) AND (" +
                 "(? = 1 AND `Severity` IS NULL) OR (`Severity` = ?)) AND ((? = 1 AND `Priority` I" +
-                "S NULL) OR (`Priority` = ?)))";
+                "S NULL) OR (`Priority` = ?)) AND ((? = 1 AND `IterationPath` IS NULL) OR (`Itera" +
+                "tionPath` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Original, false, null));
@@ -49595,9 +49905,11 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_IterationPath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `WorkItem` (`ID`, `Rev`, `Project`, `Area`, `AreaId`, `Type`, `State`, `StateChangeDate`, `BoardLane`, `BoardColumn`, `BoardColumnDone`, `Tags`, `Title`, `StackRank`, `AreaPath`, `AttachedFileCount`, `AuthorizedDate`, `ChangedBy`, `ChangedDate`, `RevisedDate`, `CreatedBy`, `CreatedDate`, `Description`, `Reason`, `Uri`, `TargetRelease`, `BusinessPriority`, `TestCases`, `Severity`, `Priority`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `WorkItem` (`ID`, `Rev`, `Project`, `Area`, `AreaId`, `Type`, `State`, `StateChangeDate`, `BoardLane`, `BoardColumn`, `BoardColumnDone`, `Tags`, `Title`, `StackRank`, `AreaPath`, `AttachedFileCount`, `AuthorizedDate`, `ChangedBy`, `ChangedDate`, `RevisedDate`, `CreatedBy`, `CreatedDate`, `Description`, `Reason`, `Uri`, `TargetRelease`, `BusinessPriority`, `TestCases`, `Severity`, `Priority`, `IterationPath`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Current, false, null));
@@ -49629,6 +49941,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TestCases", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TestCases", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE `WorkItem` SET `ID` = ?, `Rev` = ?, `Project` = ?, `Area` = ?, `AreaId` = " +
@@ -49637,26 +49950,27 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 "h` = ?, `AttachedFileCount` = ?, `AuthorizedDate` = ?, `ChangedBy` = ?, `Changed" +
                 "Date` = ?, `RevisedDate` = ?, `CreatedBy` = ?, `CreatedDate` = ?, `Description` " +
                 "= ?, `Reason` = ?, `Uri` = ?, `TargetRelease` = ?, `BusinessPriority` = ?, `Test" +
-                "Cases` = ?, `Severity` = ?, `Priority` = ? WHERE ((`ID` = ?) AND (`Rev` = ?) AND" +
-                " ((? = 1 AND `Project` IS NULL) OR (`Project` = ?)) AND ((? = 1 AND `Area` IS NU" +
-                "LL) OR (`Area` = ?)) AND ((? = 1 AND `AreaId` IS NULL) OR (`AreaId` = ?)) AND ((" +
-                "? = 1 AND `Type` IS NULL) OR (`Type` = ?)) AND ((? = 1 AND `State` IS NULL) OR (" +
-                "`State` = ?)) AND ((? = 1 AND `StateChangeDate` IS NULL) OR (`StateChangeDate` =" +
-                " ?)) AND ((? = 1 AND `BoardLane` IS NULL) OR (`BoardLane` = ?)) AND ((? = 1 AND " +
-                "`BoardColumn` IS NULL) OR (`BoardColumn` = ?)) AND ((? = 1 AND `BoardColumnDone`" +
-                " IS NULL) OR (`BoardColumnDone` = ?)) AND ((? = 1 AND `Title` IS NULL) OR (`Titl" +
-                "e` = ?)) AND ((? = 1 AND `StackRank` IS NULL) OR (`StackRank` = ?)) AND ((? = 1 " +
-                "AND `AreaPath` IS NULL) OR (`AreaPath` = ?)) AND ((? = 1 AND `AttachedFileCount`" +
-                " IS NULL) OR (`AttachedFileCount` = ?)) AND ((? = 1 AND `AuthorizedDate` IS NULL" +
-                ") OR (`AuthorizedDate` = ?)) AND ((? = 1 AND `ChangedBy` IS NULL) OR (`ChangedBy" +
-                "` = ?)) AND ((? = 1 AND `ChangedDate` IS NULL) OR (`ChangedDate` = ?)) AND ((? =" +
-                " 1 AND `RevisedDate` IS NULL) OR (`RevisedDate` = ?)) AND ((? = 1 AND `CreatedBy" +
-                "` IS NULL) OR (`CreatedBy` = ?)) AND ((? = 1 AND `CreatedDate` IS NULL) OR (`Cre" +
-                "atedDate` = ?)) AND ((? = 1 AND `Reason` IS NULL) OR (`Reason` = ?)) AND ((? = 1" +
-                " AND `Uri` IS NULL) OR (`Uri` = ?)) AND ((? = 1 AND `TargetRelease` IS NULL) OR " +
-                "(`TargetRelease` = ?)) AND ((? = 1 AND `BusinessPriority` IS NULL) OR (`Business" +
-                "Priority` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (`Severity` = ?)) AND ((?" +
-                " = 1 AND `Priority` IS NULL) OR (`Priority` = ?)))";
+                "Cases` = ?, `Severity` = ?, `Priority` = ?, `IterationPath` = ? WHERE ((`ID` = ?" +
+                ") AND (`Rev` = ?) AND ((? = 1 AND `Project` IS NULL) OR (`Project` = ?)) AND ((?" +
+                " = 1 AND `Area` IS NULL) OR (`Area` = ?)) AND ((? = 1 AND `AreaId` IS NULL) OR (" +
+                "`AreaId` = ?)) AND ((? = 1 AND `Type` IS NULL) OR (`Type` = ?)) AND ((? = 1 AND " +
+                "`State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `StateChangeDate` IS NULL) OR" +
+                " (`StateChangeDate` = ?)) AND ((? = 1 AND `BoardLane` IS NULL) OR (`BoardLane` =" +
+                " ?)) AND ((? = 1 AND `BoardColumn` IS NULL) OR (`BoardColumn` = ?)) AND ((? = 1 " +
+                "AND `BoardColumnDone` IS NULL) OR (`BoardColumnDone` = ?)) AND ((? = 1 AND `Titl" +
+                "e` IS NULL) OR (`Title` = ?)) AND ((? = 1 AND `StackRank` IS NULL) OR (`StackRan" +
+                "k` = ?)) AND ((? = 1 AND `AreaPath` IS NULL) OR (`AreaPath` = ?)) AND ((? = 1 AN" +
+                "D `AttachedFileCount` IS NULL) OR (`AttachedFileCount` = ?)) AND ((? = 1 AND `Au" +
+                "thorizedDate` IS NULL) OR (`AuthorizedDate` = ?)) AND ((? = 1 AND `ChangedBy` IS" +
+                " NULL) OR (`ChangedBy` = ?)) AND ((? = 1 AND `ChangedDate` IS NULL) OR (`Changed" +
+                "Date` = ?)) AND ((? = 1 AND `RevisedDate` IS NULL) OR (`RevisedDate` = ?)) AND (" +
+                "(? = 1 AND `CreatedBy` IS NULL) OR (`CreatedBy` = ?)) AND ((? = 1 AND `CreatedDa" +
+                "te` IS NULL) OR (`CreatedDate` = ?)) AND ((? = 1 AND `Reason` IS NULL) OR (`Reas" +
+                "on` = ?)) AND ((? = 1 AND `Uri` IS NULL) OR (`Uri` = ?)) AND ((? = 1 AND `Target" +
+                "Release` IS NULL) OR (`TargetRelease` = ?)) AND ((? = 1 AND `BusinessPriority` I" +
+                "S NULL) OR (`BusinessPriority` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (`Se" +
+                "verity` = ?)) AND ((? = 1 AND `Priority` IS NULL) OR (`Priority` = ?)) AND ((? =" +
+                " 1 AND `IterationPath` IS NULL) OR (`IterationPath` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Current, false, null));
@@ -49688,6 +50002,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TestCases", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TestCases", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Project", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Project", global::System.Data.DataRowVersion.Original, true, null));
@@ -49740,6 +50055,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Priority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Priority", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_IterationPath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -49755,7 +50072,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM WorkItem";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM WorkItem";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -49843,7 +50160,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string Original_TargetRelease, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     string Original_Severity, 
-                    global::System.Nullable<int> Original_Priority) {
+                    global::System.Nullable<int> Original_Priority, 
+                    string Original_IterationPath) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Rev));
             if ((Original_Project == null)) {
@@ -50046,6 +50364,14 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
+            if ((Original_IterationPath == null)) {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_IterationPath));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -50096,7 +50422,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> BusinessPriority, 
                     string TestCases, 
                     string Severity, 
-                    global::System.Nullable<int> Priority) {
+                    global::System.Nullable<int> Priority, 
+                    string IterationPath) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Rev));
             if ((Project == null)) {
@@ -50267,6 +50594,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
+            if ((IterationPath == null)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(IterationPath));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -50318,6 +50651,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string TestCases, 
                     string Severity, 
                     global::System.Nullable<int> Priority, 
+                    string IterationPath, 
                     int Original_ID, 
                     int Original_Rev, 
                     string Original_Project, 
@@ -50344,7 +50678,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string Original_TargetRelease, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     string Original_Severity, 
-                    global::System.Nullable<int> Original_Priority) {
+                    global::System.Nullable<int> Original_Priority, 
+                    string Original_IterationPath) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Rev));
             if ((Project == null)) {
@@ -50515,207 +50850,221 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_Rev));
-            if ((Original_Project == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            if ((IterationPath == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Project));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(IterationPath));
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_Rev));
+            if ((Original_Project == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Project));
             }
             if ((Original_Area == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_Area));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Area));
             }
             if ((Original_AreaId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_AreaId.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_AreaId.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_Type == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_Type));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Type));
             }
             if ((Original_State == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_State));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_State));
             }
             if ((Original_StateChangeDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((System.DateTime)(Original_StateChangeDate.Value));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((System.DateTime)(Original_StateChangeDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             if ((Original_BoardLane == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_BoardLane));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_BoardLane));
             }
             if ((Original_BoardColumn == null)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_BoardColumn));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_BoardColumn));
             }
             if ((Original_BoardColumnDone == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_BoardColumnDone));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_BoardColumnDone));
             }
             if ((Original_Title == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_Title));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_Title));
             }
             if ((Original_StackRank.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((double)(Original_StackRank.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((double)(Original_StackRank.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             if ((Original_AreaPath == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_AreaPath));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_AreaPath));
             }
             if ((Original_AttachedFileCount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((int)(Original_AttachedFileCount.Value));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Original_AttachedFileCount.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             if ((Original_AuthorizedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((System.DateTime)(Original_AuthorizedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((System.DateTime)(Original_AuthorizedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             if ((Original_ChangedBy == null)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(Original_ChangedBy));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_ChangedBy));
             }
             if ((Original_ChangedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((System.DateTime)(Original_ChangedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((System.DateTime)(Original_ChangedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
             }
             if ((Original_RevisedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((System.DateTime)(Original_RevisedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((System.DateTime)(Original_RevisedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
             }
             if ((Original_CreatedBy == null)) {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((string)(Original_CreatedBy));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_CreatedBy));
             }
             if ((Original_CreatedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((System.DateTime)(Original_CreatedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((System.DateTime)(Original_CreatedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
             }
             if ((Original_Reason == null)) {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((string)(Original_Reason));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_Reason));
             }
             if ((Original_Uri == null)) {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((string)(Original_Uri));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_Uri));
             }
             if ((Original_TargetRelease == null)) {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((string)(Original_TargetRelease));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_TargetRelease));
             }
             if ((Original_BusinessPriority.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((int)(Original_BusinessPriority.Value));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((int)(Original_BusinessPriority.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             if ((Original_Severity == null)) {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((string)(Original_Severity));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_Severity));
             }
             if ((Original_Priority.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_Priority.Value));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_Priority.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+            }
+            if ((Original_IterationPath == null)) {
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_IterationPath));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -50766,6 +51115,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string TestCases, 
                     string Severity, 
                     global::System.Nullable<int> Priority, 
+                    string IterationPath, 
                     int Original_ID, 
                     int Original_Rev, 
                     string Original_Project, 
@@ -50792,8 +51142,9 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     string Original_TargetRelease, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     string Original_Severity, 
-                    global::System.Nullable<int> Original_Priority) {
-            return this.Update(Original_ID, Original_Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, Original_ID, Original_Rev, Original_Project, Original_Area, Original_AreaId, Original_Type, Original_State, Original_StateChangeDate, Original_BoardLane, Original_BoardColumn, Original_BoardColumnDone, Original_Title, Original_StackRank, Original_AreaPath, Original_AttachedFileCount, Original_AuthorizedDate, Original_ChangedBy, Original_ChangedDate, Original_RevisedDate, Original_CreatedBy, Original_CreatedDate, Original_Reason, Original_Uri, Original_TargetRelease, Original_BusinessPriority, Original_Severity, Original_Priority);
+                    global::System.Nullable<int> Original_Priority, 
+                    string Original_IterationPath) {
+            return this.Update(Original_ID, Original_Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath, Original_ID, Original_Rev, Original_Project, Original_Area, Original_AreaId, Original_Type, Original_State, Original_StateChangeDate, Original_BoardLane, Original_BoardColumn, Original_BoardColumnDone, Original_Title, Original_StackRank, Original_AreaPath, Original_AttachedFileCount, Original_AuthorizedDate, Original_ChangedBy, Original_ChangedDate, Original_RevisedDate, Original_CreatedBy, Original_CreatedDate, Original_Reason, Original_Uri, Original_TargetRelease, Original_BusinessPriority, Original_Severity, Original_Priority, Original_IterationPath);
         }
     }
     
@@ -53738,6 +54089,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("BusinessPriority", "BusinessPriority");
             tableMapping.ColumnMappings.Add("BusinessValue", "BusinessValue");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -53760,7 +54112,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 "`AttachedFileCount` IS NULL) OR (`AttachedFileCount` = ?)) AND ((? = 1 AND `Prio" +
                 "rity` IS NULL) OR (`Priority` = ?)) AND ((? = 1 AND `BusinessPriority` IS NULL) " +
                 "OR (`BusinessPriority` = ?)) AND ((? = 1 AND `BusinessValue` IS NULL) OR (`Busin" +
-                "essValue` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (`Severity` = ?)))";
+                "essValue` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (`Severity` = ?)) AND ((?" +
+                " = 1 AND `IterationPath` IS NULL) OR (`IterationPath` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Original, false, null));
@@ -53814,9 +54167,11 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BusinessValue", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessValue", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Severity", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_IterationPath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `WorkItemRevision` (`ID`, `Rev`, `Project`, `Area`, `AreaId`, `WorkItemType`, `StackRank`, `Title`, `State`, `BoardLane`, `BoardColumn`, `BoardColumnDone`, `TargetRelease`, `CreatedBy`, `CreatedDate`, `ChangedBy`, `ChangedDate`, `RevisedDate`, `AssignedTo`, `Tags`, `ClosedBy`, `ClosedDate`, `StateChangeDate`, `AttachedFileCount`, `Priority`, `BusinessPriority`, `BusinessValue`, `Severity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `WorkItemRevision` (`ID`, `Rev`, `Project`, `Area`, `AreaId`, `WorkItemType`, `StackRank`, `Title`, `State`, `BoardLane`, `BoardColumn`, `BoardColumnDone`, `TargetRelease`, `CreatedBy`, `CreatedDate`, `ChangedBy`, `ChangedDate`, `RevisedDate`, `AssignedTo`, `Tags`, `ClosedBy`, `ClosedDate`, `StateChangeDate`, `AttachedFileCount`, `Priority`, `BusinessPriority`, `BusinessValue`, `Severity`, `IterationPath`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Current, false, null));
@@ -53846,6 +54201,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessPriority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessPriority", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessValue", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessValue", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE `WorkItemRevision` SET `ID` = ?, `Rev` = ?, `Project` = ?, `Area` = ?, `Ar" +
@@ -53854,26 +54210,28 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 "edBy` = ?, `CreatedDate` = ?, `ChangedBy` = ?, `ChangedDate` = ?, `RevisedDate` " +
                 "= ?, `AssignedTo` = ?, `Tags` = ?, `ClosedBy` = ?, `ClosedDate` = ?, `StateChang" +
                 "eDate` = ?, `AttachedFileCount` = ?, `Priority` = ?, `BusinessPriority` = ?, `Bu" +
-                "sinessValue` = ?, `Severity` = ? WHERE ((`ID` = ?) AND (`Rev` = ?) AND ((? = 1 A" +
-                "ND `Project` IS NULL) OR (`Project` = ?)) AND ((? = 1 AND `Area` IS NULL) OR (`A" +
-                "rea` = ?)) AND ((? = 1 AND `AreaId` IS NULL) OR (`AreaId` = ?)) AND ((? = 1 AND " +
-                "`WorkItemType` IS NULL) OR (`WorkItemType` = ?)) AND ((? = 1 AND `StackRank` IS " +
-                "NULL) OR (`StackRank` = ?)) AND ((? = 1 AND `Title` IS NULL) OR (`Title` = ?)) A" +
-                "ND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `BoardLane` IS" +
-                " NULL) OR (`BoardLane` = ?)) AND ((? = 1 AND `BoardColumn` IS NULL) OR (`BoardCo" +
-                "lumn` = ?)) AND ((? = 1 AND `BoardColumnDone` IS NULL) OR (`BoardColumnDone` = ?" +
-                ")) AND ((? = 1 AND `TargetRelease` IS NULL) OR (`TargetRelease` = ?)) AND ((? = " +
-                "1 AND `CreatedBy` IS NULL) OR (`CreatedBy` = ?)) AND ((? = 1 AND `CreatedDate` I" +
-                "S NULL) OR (`CreatedDate` = ?)) AND ((? = 1 AND `ChangedBy` IS NULL) OR (`Change" +
-                "dBy` = ?)) AND ((? = 1 AND `ChangedDate` IS NULL) OR (`ChangedDate` = ?)) AND ((" +
-                "? = 1 AND `RevisedDate` IS NULL) OR (`RevisedDate` = ?)) AND ((? = 1 AND `Assign" +
-                "edTo` IS NULL) OR (`AssignedTo` = ?)) AND ((? = 1 AND `ClosedBy` IS NULL) OR (`C" +
-                "losedBy` = ?)) AND ((? = 1 AND `ClosedDate` IS NULL) OR (`ClosedDate` = ?)) AND " +
-                "((? = 1 AND `StateChangeDate` IS NULL) OR (`StateChangeDate` = ?)) AND ((? = 1 A" +
-                "ND `AttachedFileCount` IS NULL) OR (`AttachedFileCount` = ?)) AND ((? = 1 AND `P" +
-                "riority` IS NULL) OR (`Priority` = ?)) AND ((? = 1 AND `BusinessPriority` IS NUL" +
-                "L) OR (`BusinessPriority` = ?)) AND ((? = 1 AND `BusinessValue` IS NULL) OR (`Bu" +
-                "sinessValue` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (`Severity` = ?)))";
+                "sinessValue` = ?, `Severity` = ?, `IterationPath` = ? WHERE ((`ID` = ?) AND (`Re" +
+                "v` = ?) AND ((? = 1 AND `Project` IS NULL) OR (`Project` = ?)) AND ((? = 1 AND `" +
+                "Area` IS NULL) OR (`Area` = ?)) AND ((? = 1 AND `AreaId` IS NULL) OR (`AreaId` =" +
+                " ?)) AND ((? = 1 AND `WorkItemType` IS NULL) OR (`WorkItemType` = ?)) AND ((? = " +
+                "1 AND `StackRank` IS NULL) OR (`StackRank` = ?)) AND ((? = 1 AND `Title` IS NULL" +
+                ") OR (`Title` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? =" +
+                " 1 AND `BoardLane` IS NULL) OR (`BoardLane` = ?)) AND ((? = 1 AND `BoardColumn` " +
+                "IS NULL) OR (`BoardColumn` = ?)) AND ((? = 1 AND `BoardColumnDone` IS NULL) OR (" +
+                "`BoardColumnDone` = ?)) AND ((? = 1 AND `TargetRelease` IS NULL) OR (`TargetRele" +
+                "ase` = ?)) AND ((? = 1 AND `CreatedBy` IS NULL) OR (`CreatedBy` = ?)) AND ((? = " +
+                "1 AND `CreatedDate` IS NULL) OR (`CreatedDate` = ?)) AND ((? = 1 AND `ChangedBy`" +
+                " IS NULL) OR (`ChangedBy` = ?)) AND ((? = 1 AND `ChangedDate` IS NULL) OR (`Chan" +
+                "gedDate` = ?)) AND ((? = 1 AND `RevisedDate` IS NULL) OR (`RevisedDate` = ?)) AN" +
+                "D ((? = 1 AND `AssignedTo` IS NULL) OR (`AssignedTo` = ?)) AND ((? = 1 AND `Clos" +
+                "edBy` IS NULL) OR (`ClosedBy` = ?)) AND ((? = 1 AND `ClosedDate` IS NULL) OR (`C" +
+                "losedDate` = ?)) AND ((? = 1 AND `StateChangeDate` IS NULL) OR (`StateChangeDate" +
+                "` = ?)) AND ((? = 1 AND `AttachedFileCount` IS NULL) OR (`AttachedFileCount` = ?" +
+                ")) AND ((? = 1 AND `Priority` IS NULL) OR (`Priority` = ?)) AND ((? = 1 AND `Bus" +
+                "inessPriority` IS NULL) OR (`BusinessPriority` = ?)) AND ((? = 1 AND `BusinessVa" +
+                "lue` IS NULL) OR (`BusinessValue` = ?)) AND ((? = 1 AND `Severity` IS NULL) OR (" +
+                "`Severity` = ?)) AND ((? = 1 AND `IterationPath` IS NULL) OR (`IterationPath` = " +
+                "?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Current, false, null));
@@ -53903,6 +54261,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessPriority", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessPriority", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BusinessValue", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessValue", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rev", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rev", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Project", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Project", global::System.Data.DataRowVersion.Original, true, null));
@@ -53955,6 +54314,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BusinessValue", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BusinessValue", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Severity", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Severity", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Severity", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_IterationPath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IterationPath", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IterationPath", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53970,7 +54331,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, WorkItemType, StackRank, Title, State, BoardLane, BoardColumn, BoardColumnDone, TargetRelease, CreatedBy, CreatedDate, ChangedBy, ChangedDate, RevisedDate, AssignedTo, Tags, ClosedBy, ClosedDate, StateChangeDate, AttachedFileCount, Priority, BusinessPriority, BusinessValue, Severity FROM WorkItemRevision";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, WorkItemType, StackRank, Title, State, BoardLane, BoardColumn, BoardColumnDone, TargetRelease, CreatedBy, CreatedDate, ChangedBy, ChangedDate, RevisedDate, AssignedTo, Tags, ClosedBy, ClosedDate, StateChangeDate, AttachedFileCount, Priority, BusinessPriority, BusinessValue, Severity, IterationPath FROM WorkItemRevision";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -54058,7 +54419,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> Original_Priority, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     global::System.Nullable<int> Original_BusinessValue, 
-                    string Original_Severity) {
+                    string Original_Severity, 
+                    string Original_IterationPath) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Rev));
             if ((Original_Project == null)) {
@@ -54261,6 +54623,14 @@ namespace VSConnect.DumpDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_Severity));
             }
+            if ((Original_IterationPath == null)) {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_IterationPath));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -54309,7 +54679,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> Priority, 
                     global::System.Nullable<int> BusinessPriority, 
                     global::System.Nullable<int> BusinessValue, 
-                    string Severity) {
+                    string Severity, 
+                    string IterationPath) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Rev));
             if ((Project == null)) {
@@ -54468,6 +54839,12 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[27].Value = ((string)(Severity));
             }
+            if ((IterationPath == null)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(IterationPath));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -54517,6 +54894,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> BusinessPriority, 
                     global::System.Nullable<int> BusinessValue, 
                     string Severity, 
+                    string IterationPath, 
                     int Original_ID, 
                     int Original_Rev, 
                     string Original_Project, 
@@ -54543,7 +54921,8 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> Original_Priority, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     global::System.Nullable<int> Original_BusinessValue, 
-                    string Original_Severity) {
+                    string Original_Severity, 
+                    string Original_IterationPath) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Rev));
             if ((Project == null)) {
@@ -54702,207 +55081,221 @@ namespace VSConnect.DumpDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Severity));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_Rev));
-            if ((Original_Project == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            if ((IterationPath == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Project));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(IterationPath));
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Rev));
+            if ((Original_Project == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Project));
             }
             if ((Original_Area == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Area));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Area));
             }
             if ((Original_AreaId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_AreaId.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_AreaId.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_WorkItemType == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_WorkItemType));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_WorkItemType));
             }
             if ((Original_StackRank.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((double)(Original_StackRank.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((double)(Original_StackRank.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_Title == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_Title));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_Title));
             }
             if ((Original_State == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_State));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_State));
             }
             if ((Original_BoardLane == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_BoardLane));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_BoardLane));
             }
             if ((Original_BoardColumn == null)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_BoardColumn));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_BoardColumn));
             }
             if ((Original_BoardColumnDone == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_BoardColumnDone));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_BoardColumnDone));
             }
             if ((Original_TargetRelease == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_TargetRelease));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_TargetRelease));
             }
             if ((Original_CreatedBy == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_CreatedBy));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_CreatedBy));
             }
             if ((Original_CreatedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((System.DateTime)(Original_CreatedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((System.DateTime)(Original_CreatedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             if ((Original_ChangedBy == null)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_ChangedBy));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_ChangedBy));
             }
             if ((Original_ChangedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((System.DateTime)(Original_ChangedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((System.DateTime)(Original_ChangedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             if ((Original_RevisedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((System.DateTime)(Original_RevisedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((System.DateTime)(Original_RevisedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
             if ((Original_AssignedTo == null)) {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((string)(Original_AssignedTo));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_AssignedTo));
             }
             if ((Original_ClosedBy == null)) {
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(Original_ClosedBy));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_ClosedBy));
             }
             if ((Original_ClosedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((System.DateTime)(Original_ClosedDate.Value));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((System.DateTime)(Original_ClosedDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
             }
             if ((Original_StateChangeDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((System.DateTime)(Original_StateChangeDate.Value));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((System.DateTime)(Original_StateChangeDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
             }
             if ((Original_AttachedFileCount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((int)(Original_AttachedFileCount.Value));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((int)(Original_AttachedFileCount.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
             }
             if ((Original_Priority.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((int)(Original_Priority.Value));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((int)(Original_Priority.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
             }
             if ((Original_BusinessPriority.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((int)(Original_BusinessPriority.Value));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((int)(Original_BusinessPriority.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
             if ((Original_BusinessValue.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((int)(Original_BusinessValue.Value));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((int)(Original_BusinessValue.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             if ((Original_Severity == null)) {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((string)(Original_Severity));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_Severity));
+            }
+            if ((Original_IterationPath == null)) {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(Original_IterationPath));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -54951,6 +55344,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> BusinessPriority, 
                     global::System.Nullable<int> BusinessValue, 
                     string Severity, 
+                    string IterationPath, 
                     int Original_ID, 
                     int Original_Rev, 
                     string Original_Project, 
@@ -54977,8 +55371,9 @@ namespace VSConnect.DumpDataSetTableAdapters {
                     global::System.Nullable<int> Original_Priority, 
                     global::System.Nullable<int> Original_BusinessPriority, 
                     global::System.Nullable<int> Original_BusinessValue, 
-                    string Original_Severity) {
-            return this.Update(Original_ID, Original_Rev, Project, Area, AreaId, WorkItemType, StackRank, Title, State, BoardLane, BoardColumn, BoardColumnDone, TargetRelease, CreatedBy, CreatedDate, ChangedBy, ChangedDate, RevisedDate, AssignedTo, Tags, ClosedBy, ClosedDate, StateChangeDate, AttachedFileCount, Priority, BusinessPriority, BusinessValue, Severity, Original_ID, Original_Rev, Original_Project, Original_Area, Original_AreaId, Original_WorkItemType, Original_StackRank, Original_Title, Original_State, Original_BoardLane, Original_BoardColumn, Original_BoardColumnDone, Original_TargetRelease, Original_CreatedBy, Original_CreatedDate, Original_ChangedBy, Original_ChangedDate, Original_RevisedDate, Original_AssignedTo, Original_ClosedBy, Original_ClosedDate, Original_StateChangeDate, Original_AttachedFileCount, Original_Priority, Original_BusinessPriority, Original_BusinessValue, Original_Severity);
+                    string Original_Severity, 
+                    string Original_IterationPath) {
+            return this.Update(Original_ID, Original_Rev, Project, Area, AreaId, WorkItemType, StackRank, Title, State, BoardLane, BoardColumn, BoardColumnDone, TargetRelease, CreatedBy, CreatedDate, ChangedBy, ChangedDate, RevisedDate, AssignedTo, Tags, ClosedBy, ClosedDate, StateChangeDate, AttachedFileCount, Priority, BusinessPriority, BusinessValue, Severity, IterationPath, Original_ID, Original_Rev, Original_Project, Original_Area, Original_AreaId, Original_WorkItemType, Original_StackRank, Original_Title, Original_State, Original_BoardLane, Original_BoardColumn, Original_BoardColumnDone, Original_TargetRelease, Original_CreatedBy, Original_CreatedDate, Original_ChangedBy, Original_ChangedDate, Original_RevisedDate, Original_AssignedTo, Original_ClosedBy, Original_ClosedDate, Original_StateChangeDate, Original_AttachedFileCount, Original_Priority, Original_BusinessPriority, Original_BusinessValue, Original_Severity, Original_IterationPath);
         }
     }
     
@@ -55322,6 +55717,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -55338,7 +55734,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM VW_Bug";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM VW_Bug";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -56635,6 +57031,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -56651,7 +57048,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM VW_Feature";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM VW_Feature";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -57918,6 +58315,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -57934,7 +58332,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM VW_Task";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM VW_Task";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -58302,6 +58700,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -58318,7 +58717,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM VW_TechnicalStory";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM VW_TechnicalStory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -58858,6 +59257,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TestCases", "TestCases");
             tableMapping.ColumnMappings.Add("Severity", "Severity");
             tableMapping.ColumnMappings.Add("Priority", "Priority");
+            tableMapping.ColumnMappings.Add("IterationPath", "IterationPath");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -58874,7 +59274,7 @@ namespace VSConnect.DumpDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority FROM VW_UserStory";
+            this._commandCollection[0].CommandText = @"SELECT ID, Rev, Project, Area, AreaId, Type, State, StateChangeDate, BoardLane, BoardColumn, BoardColumnDone, Tags, Title, StackRank, AreaPath, AttachedFileCount, AuthorizedDate, ChangedBy, ChangedDate, RevisedDate, CreatedBy, CreatedDate, Description, Reason, Uri, TargetRelease, BusinessPriority, TestCases, Severity, Priority, IterationPath FROM VW_UserStory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

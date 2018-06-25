@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using ClosedXML.Excel;
+using Microsoft.TeamFoundation.Client;
 
 namespace VSConnect.Lifecycle
 {
@@ -29,7 +32,7 @@ namespace VSConnect.Lifecycle
 
                 DateTime searchBeginning = searchDate.AddDays(-7);
 
-                foreach (var workItem in ds.WorkItem.Where(x => x.CreatedDate <= searchDate))
+                foreach (var workItem in Enumerable.Where(ds.WorkItem, x => x.CreatedDate <= searchDate))
                 {
 
                     if (workItem.Type != "User Story" && workItem.Type != "Bug")
@@ -134,6 +137,9 @@ namespace VSConnect.Lifecycle
 
             DateTime currentDayEnding = FirstFriday(ds.WorkItem);
 
+
+            SortedList<int,int> lastState = new SortedList<int, int>(); //key = work item ID, value = last day state
+
             while (currentDayEnding <= new DateTime(DateTime.Today.Year,DateTime.Today.Month,DateTime.Today.Day,23,59,59))
             {
 
@@ -142,9 +148,9 @@ namespace VSConnect.Lifecycle
 
                 DateTime searchBeginning = searchDate.Date;
 
-                foreach (var workItem in ds.WorkItem.Where(x => x.CreatedDate <= searchDate))
-                {
 
+                foreach (var workItem in Enumerable.Where(ds.WorkItem, x => x.CreatedDate <= searchDate))
+                {
                     if (workItem.Type != "User Story" && workItem.Type != "Bug")
                     {
                         continue;
@@ -158,15 +164,26 @@ namespace VSConnect.Lifecycle
                         continue;
                     }
 
+
+
                     DumpDataSet.UserStoryFlow_ByDayRow row = ds.UserStoryFlow_ByDay.NewUserStoryFlow_ByDayRow();
                     row.ID = workItem.ID;
                     row.Title = workItem.Title;
                     row.Type = workItem.Type;
-                    row.WeekEndingState = StaticUtil.CurrentFuzzFile.GetCurrentWorkItemState(revisions.Last()).CategoryIndex;
+                    row.DayEndingState = StaticUtil.CurrentFuzzFile.GetCurrentWorkItemState(revisions.Last()).CategoryIndex;
+
+
+                    if (lastState.Any(x => x.Key == workItem.ID))
+                    {
+                        if (lastState[workItem.ID] == row.DayEndingState)
+                        {
+                            continue;
+                        }
+                    }
 
                     if (workItem.CreatedDate <= searchDate && workItem.CreatedDate >= searchBeginning)
                     {
-                        row.NewThisWeek = 1;
+                        row.NewThisDay = 1;
                     }
 
 
@@ -193,17 +210,17 @@ namespace VSConnect.Lifecycle
                         }
                     }
 
-                    row.WeekEnding = currentDayEnding;
+                    row.DayEnding = currentDayEnding;
 
-                    if (row.IsNewThisWeekNull()) row.NewThisWeek = 0;
+                    if (row.IsNewThisDayNull()) row.NewThisDay = 0;
 
-                    if (!row.IsState2Null() && row.State2 == 1) row.ActiveThisWeek = 1;
-                    if (!row.IsState4Null() && row.State4 == 1) row.ActiveThisWeek = 1;
+                    if (!row.IsState2Null() && row.State2 == 1) row.ActiveThisDay = 1;
+                    if (!row.IsState4Null() && row.State4 == 1) row.ActiveThisDay = 1;
 
-                    if (row.IsActiveThisWeekNull()) row.ActiveThisWeek = 0;
+                    if (row.IsActiveThisDayNull()) row.ActiveThisDay = 0;
 
                     //closed logic should be:  state was <=4 before this week, and >=5 by the end of this week
-                    bool wasInClosedDuringThisWeek = row.WeekEndingState >= 5;
+                    bool wasInClosedDuringThisWeek = row.DayEndingState >= 5;
                     bool wasClosedBeforeThisWeek = false;
 
                     var latestRevFromLastWeek = revisions.Where(x => x.ChangedDate < searchBeginning)
@@ -220,13 +237,21 @@ namespace VSConnect.Lifecycle
 
                     if (!wasClosedBeforeThisWeek && wasInClosedDuringThisWeek)
                     {
-                        row.ClosedThisWeek = 1;
+                        row.ClosedThisDay = 1;
                     }
                     else
                     {
-                        row.ClosedThisWeek = 0;
+                        row.ClosedThisDay = 0;
                     }
 
+                    if (lastState.Any(x => x.Key == workItem.ID))
+                    {
+                        lastState[workItem.ID] = row.DayEndingState;
+                    }
+                    else
+                    {
+                        lastState.Add(workItem.ID,row.DayEndingState);
+                    }
 
                     ds.UserStoryFlow_ByDay.AddUserStoryFlow_ByDayRow(row);
                 }
@@ -235,9 +260,152 @@ namespace VSConnect.Lifecycle
             }
         }
 
+        public static void BuildStoryFlowDump(DumpDataSet ds, string saveFilePath)
+        {
+            XLWorkbook wb = new XLWorkbook();
+
+            DataTable table = CreateTransformedUserFlowTable(ds);
+
+            wb.Worksheets.Add(table, "UserStoryFlowByDay");
+
+            wb.SaveAs(saveFilePath);
+        }
+
+        private static DataTable CreateTransformedUserFlowTable(DumpDataSet ds)
+        {
+            DataTable table = new DataTable("Table1");
+
+
+            table.Columns.Add(new DataColumn("ID", typeof(Int32)));
+            table.Columns.Add(new DataColumn("Type", typeof(string)));
+            table.Columns.Add(new DataColumn("Title", typeof(string)));
+            table.Columns.Add(new DataColumn("Tags", typeof(string)));
+            table.Columns.Add(new DataColumn("DayEnding", typeof(DateTime)));
+            table.Columns.Add(new DataColumn("NewThisDay", typeof(bool)));
+            table.Columns.Add(new DataColumn("ActiveThisDay", typeof(bool)));
+            table.Columns.Add(new DataColumn("DayEndingState", typeof(string)));
+
+            DumpDataSet.UserStoryFlow_ByDayRow row = ds.UserStoryFlow_ByDay.FirstOrDefault(x => x.ID > 0);
+
+            for (int i = 1; i <= 15; i++)
+            {
+                string colName1 = string.Format("State{0}Desc", i);
+                if (row.IsNull(colName1))
+                {
+                    continue;
+                }
+                else
+                {
+                    string newColName1 = $"Was_{row[colName1]}";
+                    string newColName2 = $"Entered_{row[colName1]}";
+                    table.Columns.Add(new DataColumn(newColName1,typeof(bool)));
+                    table.Columns.Add(new DataColumn(newColName2,typeof(bool)));
+                }
+            }
+
+            foreach (DataColumn col in table.Columns)
+            {
+                col.AllowDBNull = true;
+            }
+
+            foreach (DumpDataSet.UserStoryFlow_ByDayRow dayRow in ds.UserStoryFlow_ByDay)
+            {
+                DataRow newRow = table.NewRow();
+                newRow["ID"] = dayRow.ID;
+                newRow["Type"] = dayRow.Type;
+                newRow["Title"] = dayRow.Title;
+                newRow["Tags"] = GetTags(ds,dayRow.ID);
+                newRow["DayEnding"] = dayRow.DayEnding;
+                newRow["NewThisDay"] = dayRow.NewThisDay == 1;
+                newRow["ActiveThisDay"] = dayRow.ActiveThisDay == 1;
+                newRow["DayEndingState"] = StaticUtil.CurrentFuzzFile.GetStates(dayRow.DayEndingState).First().Category;
+
+                for (int i = 1; i <= 15; i++)
+                {
+                    string colName1 = string.Format("State{0}Desc", i);
+                    string colNameBase = dayRow[colName1].ToString();
+
+                    if (dayRow.IsNull(colName1))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        string wasInCol = string.Format("State{0}", i);
+                        string enteredCol = string.Format("State{0}Entered", i);
+
+                        string newColName1 = $"Was_{colNameBase}";
+                        string newColName2 = $"Entered_{colNameBase}";
+
+                        if (!dayRow.IsNull(wasInCol))
+                        {
+                            newRow[newColName1] = Convert.ToBoolean(dayRow[wasInCol]);
+                        }
+                        if (!dayRow.IsNull(enteredCol))
+                        {
+                            newRow[newColName2] = Convert.ToBoolean(dayRow[enteredCol]);
+                        }
+
+                    }
+                }
+
+                table.Rows.Add(newRow);
+
+            }
+
+            table.AcceptChanges();
+
+            FillInBetweenStates(table);
+
+            return table;
+
+
+        }
+
+        private static void FillInBetweenStates(DataTable table)
+        {
+//            var distinctIds = table.AsEnumerable()
+//                .Select(s => new {
+//                    id = s.Field<int>("ID"),
+//                })
+//                .Distinct().ToList();
+
+
+            List<int> distinctIds = table.AsEnumerable()
+                .Select(s => s.Field<int>("ID"))
+                .Distinct().ToList();
+            
+
+            foreach (int id in distinctIds)
+            {
+                DataRow[] array = table.Select("ID = " + id, "Order By DayEnding Asc");
+
+                for (int i = array.Length - 1; i > 0; i--)
+                {
+                    
+                }
+            }
+
+
+        }
+
+        private static string GetTags(DumpDataSet ds, int id)
+        {
+            string ret = "none";
+
+            DumpDataSet.WorkItemRow wiRow = ds.WorkItem.FirstOrDefault(x => x.ID == id);
+            if (wiRow != null && !wiRow.IsTagsNull())
+            {
+                ret = wiRow.Tags;
+            }
+
+            return ret;
+
+        }
+
         private static DateTime FirstFriday(DumpDataSet.WorkItemDataTable table)
         {
-            DateTime ret = table.OrderBy(x => x.CreatedDate).First().CreatedDate;
+            DateTime ret = Enumerable.OrderBy(table, x => x.CreatedDate).First().CreatedDate;
 
             if (ret.DayOfWeek == DayOfWeek.Friday)
             {

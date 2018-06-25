@@ -169,6 +169,26 @@ public static class TFSRegistry
         return ret;
     }
 
+    public static string GetIterationPath(string defaultIterationPath)
+    {
+        string ret = GetRegistryKey("IterationPath");
+
+        if (string.IsNullOrWhiteSpace(ret))
+        {
+            SetDefaultIterationPath(defaultIterationPath);
+            ret = defaultIterationPath;
+        }
+
+        return ret;
+    }
+
+    public static void SetDefaultIterationPath(string path)
+    {
+        SetRegistryKey("IterationPath",path);
+    }
+
+    
+
     public static void SetDefaultTeamName(string defaultTeamName)
     {
         SetRegistryKey("TeamName",defaultTeamName);

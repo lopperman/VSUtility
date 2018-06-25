@@ -720,7 +720,11 @@ namespace VSUtil.Forms
 
             chartStoryCumulativeFlow.ChartAreas[0].BackColor = Color.LightGray;
 
-            string date = DateTime.Today.AddMonths(-Convert.ToInt32(lastXMonths.Value)).ToShortDateString();
+            string date = DateTime.Today.AddMonths(-Convert.ToInt32(numUpDownStoryCumFlowMonths.Value)).ToShortDateString();
+
+            string sFilter = "";
+            sFilter = "WeekEnding>='" + date + "'";
+
 
             while (true)
             {
@@ -731,7 +735,7 @@ namespace VSUtil.Forms
                 }
             }
 
-            DataView fview = new DataView(ds.VW_STORY_CUMULATIVE_FLOW, "", "WeekEnding", DataViewRowState.CurrentRows);
+            DataView fview = new DataView(ds.VW_STORY_CUMULATIVE_FLOW, sFilter, "WeekEnding", DataViewRowState.CurrentRows);
 
             Series series = null;
 

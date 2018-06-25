@@ -39,6 +39,12 @@ namespace VSConnect
         INotify notify = null;
         private string projectname = string.Empty;
         private DayOfWeek lastDayOfWeek;
+
+        private string _iterationPath;
+
+        private bool _iterationUnder;
+
+        private bool _iterationEquals;
         //private TFSStateManager lcStates = null;
 
         private void Notify(string message)
@@ -49,7 +55,7 @@ namespace VSConnect
             }
         }
 
-        public DumpWorkItemsToDS(Connect conn, int systemAreaId, INotify notify, string projectName, DayOfWeek lastDayOfWeek)
+        public DumpWorkItemsToDS(Connect conn, int systemAreaId, INotify notify, string projectName, DayOfWeek lastDayOfWeek, string iterationPath, bool iterationUnder, bool iterationEquals)
         {
             this.lastDayOfWeek = lastDayOfWeek;
             this.projectname = projectName;
@@ -58,7 +64,10 @@ namespace VSConnect
             Notify("connectiong to: " + conn.ProjectCollection.Uri);
             this.systemAreadId = systemAreaId;
 
-            
+            this._iterationPath = iterationPath;
+            this._iterationUnder = iterationUnder;
+            this._iterationEquals = iterationEquals;
+
         }
 
         public void DumpWorkItems(string saveFilePath)
@@ -76,8 +85,20 @@ namespace VSConnect
 
             ds = new DumpDataSet();
 
-            //string query1 = string.Format("SELECT * FROM WorkItems WHERE System.AreaId = {0}", systemAreadId);
-            string query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed') or (System.State <> 'Removed' and System.AreaPath = 'Marketing Temp\\{1}')", projectname,systemAreaPath);
+            string query1 = "";
+
+            if (_iterationUnder)
+            {
+                query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed' AND System.IterationPath UNDER '{2}') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed' AND System.IterationPath UNDER '{2}') or (System.State <> 'Removed' and System.AreaPath = 'Marketing Temp\\{1}' AND System.IterationPath UNDER '{2}')", projectname, systemAreaPath,_iterationPath);
+            }
+            else if (_iterationEquals)
+            {
+                query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed' AND System.IterationPath = '{2}') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed' AND System.IterationPath = '{2}') or (System.State <> 'Removed' and System.AreaPath UNDER 'Marketing Temp\\{1}' AND System.IterationPath = '{2}')", projectname, systemAreaPath, _iterationPath);
+            }
+            else
+            {
+                query1 = string.Format("SELECT * FROM WorkItems WHERE (System.TeamProject = '{0}' and System.WorkItemType = 'Epic' and System.State <> 'Removed') or (System.TeamProject = '{0}' and System.WorkItemType = 'Feature' and System.State <> 'Removed') or (System.State <> 'Removed' and System.AreaPath = 'Marketing Temp\\{1}')", projectname, systemAreaPath);
+            }
             Notify("fetching WorkItems from TFS");
             List<WorkItem> results = connect.ExecuteWorkItemWIQL(query1);
 
@@ -1038,6 +1059,7 @@ namespace VSConnect
             row.ChangedBy = wi.ChangedBy;
             row.ChangedDate = wi.ChangedDate;
             row.RevisedDate = wi.RevisedDate;
+            row.IterationPath = wi.IterationPath;
             if (wi.RevisedDate > DateTime.Today.AddYears(1))
             {
                 row.RevisedDate = row.ChangedDate;
@@ -1064,6 +1086,8 @@ namespace VSConnect
             
             ds.WorkItem.AddWorkItemRow(row);
         }
+
+
 
 
         private void AddWorkItemRevisions(WorkItem wi)
@@ -1107,6 +1131,7 @@ namespace VSConnect
             SetRowValue(row, "BoardLane", rev.Fields, "Board Lane");
             SetRowValue(row, "BoardColumnDone", rev.Fields, "Board Column Done");
             SetRowValue(row, "BoardColumn", rev.Fields, "Board Column");
+            SetRowValue(row, "IterationPath", rev.Fields, "Iteration Path"); 
 
             if (row.RevisedDate > DateTime.Today.AddYears(1))
             {

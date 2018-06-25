@@ -10,7 +10,9 @@ using Microsoft.TeamFoundation.WorkItemTracking.Client;
 using Microsoft.TeamFoundation.Proxy;
 using Microsoft.TeamFoundation.Client;
 using Microsoft.TeamFoundation.Common.Internal;
+using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
 using NUnit.Framework;
+using WorkItem = Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem;
 
 namespace VSConnect.Test
 {
@@ -196,6 +198,15 @@ namespace VSConnect.Test
         }
 
         [Test]
+        public void testSpecialQuery()
+        {
+            var Query = "Select System.IterationPath From WorkItems Where [System.TeamProject] = '" +
+                        connect.GetProject("Marketing Temp").Name + "'";
+
+            var restuls = connect.QueryForSingleListOfString(Query, "Iteration Path");
+        }
+
+        [Test]
         public void DisectTheShitOutOfAWorkItem()
         {
             List<string> includeFields = new List<string>();
@@ -208,7 +219,7 @@ namespace VSConnect.Test
             includeFields.Add("Revised Date");
 
 
-            WorkItem wi = connect.GetWorkItem(88317);
+            WorkItem wi = connect.GetWorkItem(125197);
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Format("{0} - {1}", wi.Id, wi.Title));
